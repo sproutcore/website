@@ -414,19 +414,23 @@ pre {
 [role="banner"] nav li {
   display: inline-block;
   padding: 16px 15px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 [role="banner"] nav li.active {
   background: url(../img/glow.png) no-repeat 50% 0;
 }
 
+[role="banner"] nav li.disabled {
+  opacity: 0.25;
+}
+
 [role="banner"] nav a:link,
 [role="banner"] nav a:visited {
-  display: inline-block;
   color: #fff;
-  font-weight: bold;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-  text-transform: uppercase;
 }
 
 .green [role="banner"] nav a:hover,
