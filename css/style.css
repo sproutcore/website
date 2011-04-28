@@ -106,12 +106,21 @@ body {
   background: url(../img/cross.png), linear-gradient(top, #c387e9, #f6e7ff 62%);
 }
 
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Inputs */
+
 input,
 textarea,
 select,
 button {
   font: 12px "Helvetica Neue", Arial, sans-serif;
 }
+
+/* Links */
 
 a:link,
 a:visited {
@@ -163,6 +172,8 @@ a:visited {
 	color: #745487;
 }
 
+/* Code */
+
 pre,
 code,
 kbd,
@@ -186,10 +197,7 @@ pre {
   word-wrap: break-word;
 }
 
-.container {
-  width: 960px;
-  margin: 0 auto;
-}
+/* Buttons */
 
 .button.primary {
   display: inline-block;
@@ -395,6 +403,31 @@ pre {
   background-position: 0 -72px;
 }
 
+/* Date */
+
+.date {
+  width: 44px;
+  height: 44px;
+  display: block;
+  padding: 1px 2px 3px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  background: url(../img/calendar.png);
+}
+
+.date abbr {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 13px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+
 
 /* Banner
 --------------------------------------------- */
@@ -550,8 +583,10 @@ pre {
 
 /* Sections */
 
-#home section {
+#home [role="main"] > section,
+#home .box {
   clear: both;
+  overflow: hidden;
   margin-bottom: 44px;
   padding: 30px;
   border: 1px solid #000; /* Find more suitable fallback color */
@@ -577,10 +612,6 @@ pre {
 }
 
 /* Features */
-
-#home #features {
-  overflow: hidden;
-}
 
 #home #features li {
   width: 218px;
@@ -623,4 +654,37 @@ pre {
 
 #home #features .theme {
   background-image: url(../img/theme.png);
+}
+
+/* Callouts */
+
+#home .box section {
+  width: 276px;
+  float: left;
+}
+
+#home .box section:nth-child(2) {
+  margin: 0 35px;
+}
+
+/* Upcoming Events */
+
+#home .events li {
+  position: relative;
+  line-height: 1.2;
+}
+
+#home .events li:nth-child(2) {
+  margin: 35px 0;
+}
+
+#home .events time {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#home .events h2,
+#home .events p {
+  padding-left: 58px;
 }
