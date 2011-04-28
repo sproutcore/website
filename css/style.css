@@ -193,12 +193,11 @@ pre {
 
 .button.primary {
   display: inline-block;
-  padding: 9px 20px;
+  padding: 9px 15px;
   border-width: 1px;
   border-style: solid;
   font-weight: bold;
   font-size: 14px;
-  text-align: center;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   -webkit-border-radius: 4px;
@@ -375,6 +374,27 @@ pre {
   background: linear-gradient(top, #b680d9, #dda9ff);
 }
 
+.button.primary span {
+  padding-left: 26px;
+  background-repeat: no-repeat;
+}
+
+.pink .button.primary span {
+  background-position: 0 -18px;
+}
+
+.blue .button.primary span {
+  background-position: 0 -36px;
+}
+
+.orange .button.primary span {
+  background-position: 0 -54px;
+}
+
+.purple .button.primary span {
+  background-position: 0 -72px;
+}
+
 
 /* Banner
 --------------------------------------------- */
@@ -514,7 +534,18 @@ pre {
 }
 
 #home #action a {
-  width: 142px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#home #action .download {
+  background-image: url(../img/download.png);
+}
+
+#home #action .github {
+  background-image: url(../img/octocat.png);
 }
 
 /* Sections */
