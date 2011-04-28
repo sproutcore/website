@@ -61,7 +61,7 @@ body {
   background: url(../img/cross.png), -moz-linear-gradient(top, #72cb47, #e8f4e3 62%);
   background: url(../img/cross.png), -ms-linear-gradient(top, #72cb47, #e8f4e3 62%);
   background: url(../img/cross.png), -o-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#72cb47), to(62%, #e8f4e3));
+  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#72cb47), color-stop(62%, #e8f4e3));
   background: url(../img/cross.png), -webkit-linear-gradient(top, #72cb47, #e8f4e3 62%);
   background: url(../img/cross.png), linear-gradient(top, #72cb47, #e8f4e3 62%);
 }
@@ -71,7 +71,7 @@ body {
   background: url(../img/cross.png), -moz-linear-gradient(top, #e52b6d, #f4e3ed 62%);
   background: url(../img/cross.png), -ms-linear-gradient(top, #e52b6d, #f4e3ed 62%);
   background: url(../img/cross.png), -o-linear-gradient(top, #e52b6d, #f4e3ed 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#e52b6d), to(62%, #f4e3ed));
+  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#e52b6d), color-stop(62%, #f4e3ed));
   background: url(../img/cross.png), -webkit-linear-gradient(top, #e52b6d, #f4e3ed 62%);
   background: url(../img/cross.png), linear-gradient(top, #e52b6d, #f4e3ed 62%);
 }
@@ -81,7 +81,7 @@ body {
   background: url(../img/cross.png), -moz-linear-gradient(top, #3a9bee, #e4f3ff 62%);
   background: url(../img/cross.png), -ms-linear-gradient(top, #3a9bee, #e4f3ff 62%);
   background: url(../img/cross.png), -o-linear-gradient(top, #3a9bee, #e4f3ff 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#3a9bee), to(62%, #e4f3ff));
+  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#3a9bee), color-stop(62%, #e4f3ff));
   background: url(../img/cross.png), -webkit-linear-gradient(top, #3a9bee, #e4f3ff 62%);
   background: url(../img/cross.png), linear-gradient(top, #3a9bee, #e4f3ff 62%);
 }
@@ -91,7 +91,7 @@ body {
   background: url(../img/cross.png), -moz-linear-gradient(top, #f48e33, #ffeedf 62%);
   background: url(../img/cross.png), -ms-linear-gradient(top, #f48e33, #ffeedf 62%);
   background: url(../img/cross.png), -o-linear-gradient(top, #f48e33, #ffeedf 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#f48e33), to(62%, #ffeedf));
+  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#f48e33), color-stop(62%, #ffeedf));
   background: url(../img/cross.png), -webkit-linear-gradient(top, #f48e33, #ffeedf 62%);
   background: url(../img/cross.png), linear-gradient(top, #f48e33, #ffeedf 62%);
 }
@@ -101,7 +101,7 @@ body {
   background: url(../img/cross.png), -moz-linear-gradient(top, #c387e9, #f6e7ff 62%);
   background: url(../img/cross.png), -ms-linear-gradient(top, #c387e9, #f6e7ff 62%);
   background: url(../img/cross.png), -o-linear-gradient(top, #c387e9, #f6e7ff 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#c387e9), to(62%, #f6e7ff));
+  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#c387e9), color-stop(62%, #f6e7ff));
   background: url(../img/cross.png), -webkit-linear-gradient(top, #c387e9, #f6e7ff 62%);
   background: url(../img/cross.png), linear-gradient(top, #c387e9, #f6e7ff 62%);
 }
