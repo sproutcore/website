@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DoctypE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -6,6 +6,7 @@
   <meta name="description" content="A framework for building fast, desktop caliber web applications." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/lib/modernizr-1.5.min.js"></script>
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -30,12 +31,14 @@
       </form>
     </div>
   </header>
+  
   <div role="main" class="container">
-    <p id="blurb">SproutCore is an open-source framework for building blazingly fast, innovative user experiences on the web.</p>
+      <p id="blurb">SproutCore is an open-source framework for building blazingly fast, innovative user experiences on the web.</p>
     <ul id="action">
       <li><a href="#" class="button primary"><span class="download">Download Latest</span></a></li>
       <li><a href="#" class="button primary"><span class="github">View on GitHub</span></a></li>
     </ul>
+
     <section>
       <h1>Getting Started Is Easy!</h1>
       <pre><code>$ [sudo] gem install sproutcore</code></pre>
@@ -126,9 +129,12 @@
       </section>
     </div>
   </div>
+  
   <footer></footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='js/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script>window.jQuery || document.write("<script src='js/lib/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script src="js/plugin.js"></script>
+  <script src="js/script.js"></script>
   <script>
     var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
