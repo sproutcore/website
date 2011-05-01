@@ -669,8 +669,7 @@ html.ready header[role="banner"] {
 }
 
 #ribbon li.active {
-  border-color: #000;
-  border-color: rgba(0, 0, 0, 0.36);
+  border-color: #674329;
   background: #fbfbfb;
 }
 
