@@ -656,14 +656,24 @@ a.button.secondary {
 
 #home section h2,
 #home article h1 {
-  margin-bottom: 0;
+  height: 17px;
+  margin-bottom: 3px;
   font-weight: bold;
   font-size: 14px;
+  line-height: 17px;
+  overflow: hidden;
 }
 
+#home section p,
 #home article h2 {
   font-weight: normal;
   font-size: 12px;
+  line-height: 14px;
+}
+
+#home article h2 {
+  height: 14px;
+  overflow: hidden;
 }
 
 /* Features */
@@ -722,25 +732,10 @@ a.button.secondary {
   margin: 0 35px;
 }
 
-#home .events time,
-#home article img {
+#home .box time,
+#home .box img {
   float: left;
   margin-right: 10px;
-}
-
-#home .events h2,
-#home article h1 {
-  height: 17px;
-  margin-bottom: 3px;
-  line-height: 17px;
-  overflow: hidden;
-}
-
-#home .events p,
-#home article h2,
-#home article p {
-  line-height: 14px;
-  overflow: hidden;
 }
 
 #home .box .button {
@@ -756,6 +751,7 @@ a.button.secondary {
 
 #home .events p {
   height: 28px;
+  overflow: hidden;
 }
 
 /* Blog & Spotlight */
@@ -779,8 +775,4 @@ a.button.secondary {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-#home article h2 {
-  height: 14px;
 }
