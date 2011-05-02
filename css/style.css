@@ -648,8 +648,12 @@ html.ready [role="main"] > div {
   transition: all 1s ease-in-out .5s;
 }
 
+[role="main"] > div > section {
+  margin: 0 30px;
+}
+
 [role="main"] > h1 {
-  margin-bottom: 44px;
+  margin-bottom: 30px;
   color: #161616;
   font-weight: bold;
   font-size: 54px;
@@ -850,6 +854,7 @@ html.ready [role="main"] > div {
 #home [role="main"] > div section {
   width: 276px;
   float: left;
+  margin: 0;
 }
 
 #home [role="main"] > div section:nth-child(2) {
