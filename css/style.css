@@ -112,11 +112,11 @@ body {
 }
 
 html.js .container {
-  opacity:0;
+  opacity: 0;
 }
 
 html.ready .container {
-  opacity:1;
+  opacity: 1;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -510,11 +510,13 @@ header[role="banner"] {
   -ms-transition: all 1s ease-in-out .5s;
   transition: all 1s ease-in-out .5s;
 }
+
 html.js header[role="banner"] {
-  top:-5em;
+  top: -5em;
 }
+
 html.ready header[role="banner"] {
-  top:0;
+  top: 0;
 }
 
 #logo,
@@ -616,6 +618,36 @@ html.ready header[role="banner"] {
   padding-top: 80px;
 }
 
+[role="main"] > section,
+[role="main"] > div {
+  margin-bottom: 44px;
+  padding: 30px 0;
+  border: 1px solid #000; /* Find more suitable fallback color */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fbfbfb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 2px #fff;
+  -moz-box-shadow: inset 0 0 2px #fff;
+  box-shadow: inset 0 0 2px #fff;
+}
+
+html.js [role="main"] > section,
+html.js [role="main"] > div {
+  opacity: 0;
+}
+
+html.ready [role="main"] > section,
+html.ready [role="main"] > div {
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out .5s;
+  -moz-transition: all 1s ease-in-out .5s;
+  -o-transition: all 1s ease-in-out .5s;
+  -ms-transition: all 1s ease-in-out .5s;
+  transition: all 1s ease-in-out .5s;
+}
+
 [role="main"] > h1 {
   margin-bottom: 44px;
   color: #161616;
@@ -693,6 +725,13 @@ html.ready header[role="banner"] {
 /* Home
 --------------------------------------------- */
 
+#home [role="main"] > section,
+#home [role="main"] > div {
+  clear: both;
+  overflow: hidden;
+  padding: 30px; 
+}
+
 /* Blurb */
 
 #home #blurb {
@@ -732,39 +771,6 @@ html.ready header[role="banner"] {
 }
 
 /* Sections */
-
-#home [role="main"] > section,
-#home .box {
-  clear: both;
-  overflow: hidden;
-  margin-bottom: 44px;
-  padding: 30px;
-  border: 1px solid #000; /* Find more suitable fallback color */
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #fbfbfb;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 0 2px #fff;
-  -moz-box-shadow: inset 0 0 2px #fff;
-  box-shadow: inset 0 0 2px #fff;
-}
-
-html.js #home [role="main"] > section,
-html.js #home .box {
-  opacity:0;
-}
-
-html.ready #home [role="main"] > section,
-html.ready #home .box {
-  opacity:1;
-  -webkit-transition: all 1s ease-in-out .5s;
-  -moz-transition: all 1s ease-in-out .5s;
-  -o-transition: all 1s ease-in-out .5s;
-  -ms-transition: all 1s ease-in-out .5s;
-  transition: all 1s ease-in-out .5s;
-}
-
 
 #home section h1 {
   margin-bottom: 15px;
@@ -841,22 +847,22 @@ html.ready #home .box {
 
 /* Callouts */
 
-#home .box section {
+#home [role="main"] > div section {
   width: 276px;
   float: left;
 }
 
-#home .box section:nth-child(2) {
+#home [role="main"] > div section:nth-child(2) {
   margin: 0 35px;
 }
 
-#home .box time,
-#home .box img {
+#home [role="main"] > div time,
+#home [role="main"] > div img {
   float: left;
   margin-right: 10px;
 }
 
-#home .box .button {
+#home [role="main"] > div .button {
   float: right;
   margin-top: 25px;
 }
@@ -894,7 +900,3 @@ html.ready #home .box {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-
-
-/* About
---------------------------------------------- */
