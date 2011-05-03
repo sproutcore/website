@@ -495,6 +495,31 @@ a.button.secondary {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
 }
 
+/* Steps */
+
+.step {
+  width: 46px;
+  height: 40px;
+  text-indent: -999em;
+  background: url(../img/steps.png);
+}
+
+.step.two {
+  background-position: 0 -40px;
+}
+
+.step.three {
+  background-position: 0 -80px;
+}
+
+.step.four {
+  background-position: 0 -120px;
+}
+
+.step.five {
+  background-position: 0 -160px;
+}
+
 
 /* Banner
 --------------------------------------------- */
@@ -731,11 +756,22 @@ html.ready #home [role="main"] > div {
   margin: 0 30px;
 }
 
-#tabs h1 {
+#tabs > section > h1 {
   margin: 25px 0 33px;
   font-weight: bold;
   font-size: 22px;
   text-align: center;
+}
+
+#tabs > section > section {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+#tabs > section > section > h1 {
+  margin-bottom: 9px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #tabs p {
@@ -744,8 +780,13 @@ html.ready #home [role="main"] > div {
   line-height: 1.2;
 }
 
+#tabs > section > section:last-child,
 #tabs p:last-child {
   margin: 0;
+}
+
+#tabs p + pre {
+  margin-top: -9px;
 }
 
 
@@ -932,7 +973,6 @@ html.ready #home [role="main"] > div {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-<<<<<<< HEAD
 #home [role="main"] > div footer li {
   float: right;
   padding: 5px 10px 5px 20px;
@@ -968,6 +1008,7 @@ html.ready #home [role="main"] > div {
   background: url(../img/fast.jpg) no-repeat;
 }
 
+
 /* Application slider 
 ----------------------------------------------*/
 
@@ -984,6 +1025,7 @@ html.js #application-slider {
   width:928px;
   height:180px;
 }
+
 html.js #application-slider .panel {
   position:absolute;
   top:0; left:928px;
@@ -993,9 +1035,11 @@ html.js #application-slider .panel {
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
+
 html.js #application-slider .panel.active {
   left:0;
 }
+
 html.js #application-slider .panel.old {
   left:-928px;
 }
@@ -1025,6 +1069,7 @@ html.js #application-slider .panel.old {
        -ms-transition: all .4s ease-in-out .1s;
            transition: all .4s ease-in-out .1s;
 }
+
 #application-slider .panel a:hover div.caption {
   bottom:-50%;
 }
@@ -1045,6 +1090,7 @@ html.js #application-slider .panel.old {
 #application-slider-tray {
   display:none;
 }
+
 html.js #application-slider-tray {
   position:absolute;
   display:block;
@@ -1074,6 +1120,7 @@ html.js #application-slider-tray {
   background-image: linear-gradient(top, #d6d6d6, #bcbcbc);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#d6d6d6', EndColorStr='#bcbcbc'); /* IE6–IE9 */
 }
+
 #application-slider-tray a.active {
   background-color: #93df70;
   background-image: -moz-linear-gradient(top, #93df70, #61bb35); /* FF3.6 */
@@ -1093,4 +1140,25 @@ html.js #application-slider-tray {
   background:none;
   border:none;
   cursor:pointer;
+}
+
+
+/* Docs
+--------------------------------------------- */
+
+#docs .step {
+  float: left;
+  margin: 0 11px 0 0;
+}
+
+#docs .step + pre {
+  width: 817px;
+  float: left;
+  margin: 0 0 22px;
+}
+
+#docs .step + p {
+  width: 841px;
+  float: left;
+  margin: 9px 0 22px;
 }

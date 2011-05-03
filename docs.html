@@ -40,6 +40,41 @@
       </nav>
       <section>
         <h1>Building Your First SproutCore App Is Easier Than You Think. Here's How...</h1>
+        <section>
+          <h1>Installing SproutCore</h1>
+          <p>The easiest way to install SproutCore is as a RubyGem:</p>
+          <pre><code>$ [sudo] gem install sproutcore</code></pre>
+        </section>
+        <section>
+          <h1>Creating Your First Application</h1>
+          <p class="step">Step 1</p>
+          <pre><code>$ sc-init HelloWorld
+~ Created directory at hello_world
+~ Created file at hello_world/Buildfile
+~ Created file at hello_world/README
+~ Created directory at apps
+~ Created directory at apps/hello_world
+~ Created file at apps/hello_world/core.js
+~ Created file at apps/hello_world/main.js
+~ Created directory at apps/hello_world/resources
+~ Created file at apps/hello_world/resources/loading.rhtml
+~ Created file at apps/hello_world/resources/main_page.js
+Your new SproutCore project is ready!
+
+To get started, you can find your initial application in the "apps" directory.</code></pre>
+          <p class="step two">Step 2</p>
+          <pre><code>$ cd hello_world</code></pre>
+          <p class="step three">Step 3</p>
+          <pre><code>$ sc-server
+SproutCore v1.0.1037 Development Server
+Starting server at http://0.0.0.0:4020 in debug mode
+To quit sc-server, press Control-C
+>> Thin web server (v1.2.5 codename This Is Not A Web Server)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4020, CTRL+C to stop</code></pre>
+          <p class="step four">Step 4</p>
+          <p>Open <a href="http://localhost:4020/hello_world">http://localhost:4020/hello_world</a> in your browser and you should see the following:</p>
+        </section>
       </section>
       <section>
         <h1>A Technology Is Only As Good As Its API. This Is Where To Learn About Ours.</h1>
