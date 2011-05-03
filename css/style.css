@@ -58,52 +58,52 @@ body {
 
 .green {
   background: #e8f4e3 url(../img/cross.png);
-  background: url(../img/cross.png), -moz-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/cross.png), -ms-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/cross.png), -o-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#72cb47), color-stop(62%, #e8f4e3));
-  background: url(../img/cross.png), -webkit-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/cross.png), linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -moz-linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -ms-linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -o-linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#72cb47), color-stop(62%, #e8f4e3));
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), linear-gradient(top, #72cb47, #e8f4e3 62%);
 }
 
 .pink {
   background: #f4e3ed url(../img/cross.png);
-  background: url(../img/cross.png), -moz-linear-gradient(top, #e52b6d, #f4e3ed 62%);
-  background: url(../img/cross.png), -ms-linear-gradient(top, #e52b6d, #f4e3ed 62%);
-  background: url(../img/cross.png), -o-linear-gradient(top, #e52b6d, #f4e3ed 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#e52b6d), color-stop(62%, #f4e3ed));
-  background: url(../img/cross.png), -webkit-linear-gradient(top, #e52b6d, #f4e3ed 62%);
-  background: url(../img/cross.png), linear-gradient(top, #e52b6d, #f4e3ed 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -moz-linear-gradient(top, #e52b6d, #f4e3ed 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -ms-linear-gradient(top, #e52b6d, #f4e3ed 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -o-linear-gradient(top, #e52b6d, #f4e3ed 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#e52b6d), color-stop(62%, #f4e3ed));
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-linear-gradient(top, #e52b6d, #f4e3ed 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), linear-gradient(top, #e52b6d, #f4e3ed 62%);
 }
 
 .blue {
   background: #e4f3ff url(../img/cross.png);
-  background: url(../img/cross.png), -moz-linear-gradient(top, #3a9bee, #e4f3ff 62%);
-  background: url(../img/cross.png), -ms-linear-gradient(top, #3a9bee, #e4f3ff 62%);
-  background: url(../img/cross.png), -o-linear-gradient(top, #3a9bee, #e4f3ff 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#3a9bee), color-stop(62%, #e4f3ff));
-  background: url(../img/cross.png), -webkit-linear-gradient(top, #3a9bee, #e4f3ff 62%);
-  background: url(../img/cross.png), linear-gradient(top, #3a9bee, #e4f3ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -moz-linear-gradient(top, #3a9bee, #e4f3ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -ms-linear-gradient(top, #3a9bee, #e4f3ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -o-linear-gradient(top, #3a9bee, #e4f3ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#3a9bee), color-stop(62%, #e4f3ff));
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-linear-gradient(top, #3a9bee, #e4f3ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), linear-gradient(top, #3a9bee, #e4f3ff 62%);
 }
 
 .orange {
   background: #ffeedf url(../img/cross.png);
-  background: url(../img/cross.png), -moz-linear-gradient(top, #f48e33, #ffeedf 62%);
-  background: url(../img/cross.png), -ms-linear-gradient(top, #f48e33, #ffeedf 62%);
-  background: url(../img/cross.png), -o-linear-gradient(top, #f48e33, #ffeedf 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#f48e33), color-stop(62%, #ffeedf));
-  background: url(../img/cross.png), -webkit-linear-gradient(top, #f48e33, #ffeedf 62%);
-  background: url(../img/cross.png), linear-gradient(top, #f48e33, #ffeedf 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -moz-linear-gradient(top, #f48e33, #ffeedf 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -ms-linear-gradient(top, #f48e33, #ffeedf 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -o-linear-gradient(top, #f48e33, #ffeedf 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#f48e33), color-stop(62%, #ffeedf));
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-linear-gradient(top, #f48e33, #ffeedf 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), linear-gradient(top, #f48e33, #ffeedf 62%);
 }
 
 .purple {
   background: #f6e7ff url(../img/cross.png);
-  background: url(../img/cross.png), -moz-linear-gradient(top, #c387e9, #f6e7ff 62%);
-  background: url(../img/cross.png), -ms-linear-gradient(top, #c387e9, #f6e7ff 62%);
-  background: url(../img/cross.png), -o-linear-gradient(top, #c387e9, #f6e7ff 62%);
-  background: url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#c387e9), color-stop(62%, #f6e7ff));
-  background: url(../img/cross.png), -webkit-linear-gradient(top, #c387e9, #f6e7ff 62%);
-  background: url(../img/cross.png), linear-gradient(top, #c387e9, #f6e7ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -moz-linear-gradient(top, #c387e9, #f6e7ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -ms-linear-gradient(top, #c387e9, #f6e7ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -o-linear-gradient(top, #c387e9, #f6e7ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#c387e9), color-stop(62%, #f6e7ff));
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-linear-gradient(top, #c387e9, #f6e7ff 62%);
+  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), linear-gradient(top, #c387e9, #f6e7ff 62%);
 }
 
 .container {
@@ -958,11 +958,11 @@ html.ready #home [role="main"] > div {
 
 #about #slow {
   margin-bottom: 60px;
-  padding-right: 385px;
+  padding-right: 392px;
   background: url(../img/slow.jpg) no-repeat 100% 0;
 }
 
 #about #fast {
-  padding-left: 385px;
+  padding-left: 392px;
   background: url(../img/fast.jpg) no-repeat;
 }
