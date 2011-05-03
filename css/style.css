@@ -951,3 +951,18 @@ html.ready [role="main"] > div {
   color: #1294d1;
   background-image: url(../img/tweets.png);
 }
+
+
+/* About
+--------------------------------------------- */
+
+#about #slow {
+  margin-bottom: 60px;
+  padding-right: 385px;
+  background: url(../img/slow.jpg) no-repeat 100% 0;
+}
+
+#about #fast {
+  padding-left: 385px;
+  background: url(../img/fast.jpg) no-repeat;
+}
