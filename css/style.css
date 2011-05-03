@@ -206,7 +206,7 @@ samp {
 }
 
 pre {
-  padding: 15px;
+  padding: 12px;
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.75);
@@ -567,27 +567,27 @@ html.ready #home header[role="banner"] {
 }
 
 .green [role="banner"] nav a:hover,
-.green [role="banner"] nav .active a {
+.green [role="banner"] nav .active {
   color: #beff9d;
 }
 
 .pink [role="banner"] nav a:hover,
-.pink [role="banner"] nav .active a {
+.pink [role="banner"] nav .active {
   color: #ffc2da;
 }
 
 .blue [role="banner"] nav a:hover,
-.blue [role="banner"] nav .active a {
+.blue [role="banner"] nav .active {
   color: #bae0ff;
 }
 
 .orange [role="banner"] nav a:hover,
-.orange [role="banner"] nav .active a {
+.orange [role="banner"] nav .active {
   color: #ffd8b4;
 }
 
 .purple [role="banner"] nav a:hover,
-.purple [role="banner"] nav .active a {
+.purple [role="banner"] nav .active {
   color: #ebcaff;
 }
 
