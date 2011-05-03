@@ -968,7 +968,8 @@ html.ready #home [role="main"] > div {
   background: url(../img/fast.jpg) no-repeat;
 }
 
-/** application sslider */
+/* Application slider 
+----------------------------------------------*/
 
 #application-slider {
   overflow:hidden;
