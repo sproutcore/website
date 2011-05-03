@@ -932,6 +932,7 @@ html.ready #home [role="main"] > div {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+<<<<<<< HEAD
 #home [role="main"] > div footer li {
   float: right;
   padding: 5px 10px 5px 20px;
@@ -965,4 +966,130 @@ html.ready #home [role="main"] > div {
 #about #fast {
   padding-left: 392px;
   background: url(../img/fast.jpg) no-repeat;
+}
+
+/** application sslider */
+
+#application-slider {
+  overflow:hidden;
+  position:relative;
+  top:1em;
+}
+html.js #application-slider {
+  height:220px;
+}
+
+#application-slider .panel {
+  width:928px;
+  height:180px;
+}
+html.js #application-slider .panel {
+  position:absolute;
+  top:0; left:928px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+html.js #application-slider .panel.active {
+  left:0;
+}
+html.js #application-slider .panel.old {
+  left:-928px;
+}
+
+#application-slider .panel a{
+  float:left;
+  position:relative;
+  width:202px;
+  height:159px;
+  margin-right:30px;
+  overflow:hidden;
+}
+
+#application-slider .panel a div.caption {
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  background:#000;
+  color:#CCC;
+  text-align:center;
+  opacity:.8;
+  border-top:1px solid #777;
+  padding:.4em 0em;
+   -webkit-transition: all .4s ease-in-out .1s;
+      -moz-transition: all .4s ease-in-out .1s;
+        -o-transition: all .4s ease-in-out .1s;
+       -ms-transition: all .4s ease-in-out .1s;
+           transition: all .4s ease-in-out .1s;
+}
+#application-slider .panel a:hover div.caption {
+  bottom:-50%;
+}
+
+#application-slider .panel a img {
+  opacity: .7;
+  -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+       -o-transition: all .4s ease-in-out;
+      -ms-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+}
+
+#application-slider .panel a:hover img {
+  opacity:1;
+}
+
+#application-slider-tray {
+  display:none;
+}
+html.js #application-slider-tray {
+  position:absolute;
+  display:block;
+  top:175px;
+  width:100%;
+  text-align:center;
+}
+
+#application-slider-tray a {
+  display:inline-block;
+  height:.8em;
+  width:.8em;
+     -moz-border-radius: .5em; /* FF1+ */
+  -webkit-border-radius: .5em; /* Saf3-4, iOS 1+, Android 1.5+ */
+          border-radius: .5em; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+  background:#00CC11;
+  border:1px solid #A8A8A8;
+  margin:0px 5px;
+  text-indent:100em;
+  overflow:hidden;
+  background-color: #d6d6d6;
+  background-image: -moz-linear-gradient(top, #d6d6d6, #bcbcbc); /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #d6d6d6, #bcbcbc); /* IE10 */
+  background-image: -o-linear-gradient(top, #d6d6d6, #bcbcbc); /* Opera 11.10+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d6d6d6), to(#bcbcbc)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #d6d6d6, #bcbcbc); /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(top, #d6d6d6, #bcbcbc);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#d6d6d6', EndColorStr='#bcbcbc'); /* IE6–IE9 */
+}
+#application-slider-tray a.active {
+  background-color: #93df70;
+  background-image: -moz-linear-gradient(top, #93df70, #61bb35); /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #93df70, #61bb35); /* IE10 */
+  background-image: -o-linear-gradient(top, #93df70, #61bb35); /* Opera 11.10+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#93df70), to(#61bb35)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #93df70, #61bb35); /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(top, #93df70, #61bb35);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#93df70', EndColorStr='#61bb35'); /* IE6–IE9 */
+}
+
+#application-slider-tray button {
+  display:inline-block;
+  font-size:1.5em;
+  font-weight: bold;
+  color: #b3b3b3;
+  background:none;
+  border:none;
+  cursor:pointer;
 }
