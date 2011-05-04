@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <title>SproutCore - Mac OS X Install</title>
+  <meta name="description" content="Documentation for the SproutCore framework." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/lib/modernizr-1.7.min.js"></script>
+</head>
+<body id="docs" class="green">
+  <header role="banner">
+    <div class="container">
+      <h1 id="logo">
+        <a href="index.html"><img src="img/logo.png" alt="SproutCore" /></a>
+      </h1>
+      <nav role="navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="http://guides.sproutcore.com">Guides</a></li>
+          <li class="active">Install</li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="http://blog.sproutcore.com">Blog</a></li>
+        </ul>
+      </nav>
+      <form action="#" role="search">
+        <input type="text" />
+      </form>
+    </div>
+  </header>
+  <article role="main" class="container">
+    <h1>SproutCore on Mac OS X</h1>
+    <div id="tabs">
+      <nav>
+        <ul>
+          <li class="active"><a href="#">Package Install</a></li>
+          <li><a href="#">Advanced Install</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h1>SproutCore Dev Tools on Mac OS X with Package</h1>
+        <section>
+          <h1>Download the Package</h1>
+          <p>The SproutCore Package for Mac OS X runs on all recent versions of OS X. <a href="#">Download Now!</a></p>
+        </section>
+        <section>
+          <h1>Using the Dev Tools</h1>
+          <p>
+            The SproutCore Dev Tools run via the Terminal. From the terminal you can use any of the
+            sc-* tools (sc-init, sc-gen, sc-server, ...)
+          </p>
+        </section>
+      </section>
+      <section>
+        <h1>Advanced Installation</h1>
+        <section>
+          <p>If you already do Ruby development on your Mac or would just like to have greater flexibility,
+            you can install the SproutCore Dev Tools as a Ruby gem. However, it is not recommended that you use
+            the system installation, so we show you how to install with RVM. If you already have a non-system Ruby
+            installation, skip to Step B.</p>
+        </section>
+        <section>
+          <h1>Step A: Installing RVM and Ruby</h1>
+          <ol class="steps">
+            <li>
+              <strong>With Git:</strong>
+              <pre><code>$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)</code></pre>
+            </li>
+            <li>
+              <strong>Without Git:</strong>
+              <pre><code>$ curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
+$ chmod +x rvm-installer
+$ ./rvm-installer --version latest</code></pre>
+            </li>
+            <li>
+              If installing for a single user instead of root, add the following to your ~/.bash_profile
+              <pre><code>[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session</code></pre>
+            </li>
+            <li>
+              <strong>Install Ruby:</strong>
+              <pre><code>$ rvm install ruby-1.9.2
+$ rvm use 1.9.2</code></pre>
+            </li>
+            <li>
+              If you would like to set this as your primary Ruby version, run:
+              <pre><code>$ rvm --default use 1.9.2</code></pre>
+            </li>
+            <li>Continue to Step B</li>
+          </ol>
+        </section>
+        <section>
+          <h1>Step B: Installing SproutCore</h1>
+          <p>This is the easy part, just run:</p>
+          <pre><code>$ gem install sproutcore</code></pre>
+          <p>From the Terminal prompt you can now use any of the sc-* tools (sc-init, sc-gen, sc-server, ...)</p>
+        <section>
+      </section>
+    </div>
+  </article>
+  <footer></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='js/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script>
+    var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+</body>
+</html>
