@@ -759,6 +759,7 @@ html.ready #home [role="main"] > div {
 #tabs > section {
   margin: 0 30px;
   font-size: 14px;
+  overflow: hidden;
 }
 
 #tabs > section > h1 {
