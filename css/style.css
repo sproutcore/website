@@ -497,27 +497,31 @@ a.button.secondary {
 
 /* Steps */
 
-.step {
-  width: 46px;
-  height: 40px;
-  text-indent: -999em;
-  background: url(../img/steps.png);
+.steps li {
+  min-height: 33px;
+  margin-bottom: 22px;
+  padding: 7px 0 0 57px;
+  background-repeat: no-repeat;
 }
 
-.step.two {
-  background-position: 0 -40px;
+.steps li:nth-child(1) {
+  background-image: url(../img/steps/1.png);
 }
 
-.step.three {
-  background-position: 0 -80px;
+.steps li:nth-child(2) {
+  background-image: url(../img/steps/2.png);
 }
 
-.step.four {
-  background-position: 0 -120px;
+.steps li:nth-child(3) {
+  background-image: url(../img/steps/3.png);
 }
 
-.step.five {
-  background-position: 0 -160px;
+.steps li:nth-child(4) {
+  background-image: url(../img/steps/4.png);
+}
+
+.steps li:nth-child(5) {
+  background-image: url(../img/steps/5.png);
 }
 
 
@@ -754,6 +758,7 @@ html.ready #home [role="main"] > div {
 
 #tabs > section {
   margin: 0 30px;
+  font-size: 14px;
 }
 
 #tabs > section > h1 {
@@ -765,7 +770,10 @@ html.ready #home [role="main"] > div {
 
 #tabs > section > section {
   margin-bottom: 30px;
-  overflow: hidden;
+}
+
+#tabs > section > section:last-child {
+  margin: 0;
 }
 
 #tabs > section > section > h1 {
@@ -774,15 +782,14 @@ html.ready #home [role="main"] > div {
   font-size: 18px;
 }
 
-#tabs p {
-  margin-bottom: 17px;
-  font-size: 14px;
-  line-height: 1.2;
+#tabs section ul li {
+  margin-left: 2em;
+  list-style: outside url(../img/bullet.png);
 }
 
-#tabs > section > section:last-child,
-#tabs p:last-child {
-  margin: 0;
+#tabs p {
+  margin-bottom: 17px;
+  line-height: 1.2;
 }
 
 #tabs p + pre {
@@ -1146,19 +1153,7 @@ html.js #application-slider-tray {
 /* Docs
 --------------------------------------------- */
 
-#docs .step {
-  float: left;
-  margin: 0 11px 0 0;
-}
-
-#docs .step + pre {
-  width: 817px;
-  float: left;
-  margin: 0 0 22px;
-}
-
-#docs .step + p {
-  width: 841px;
-  float: left;
-  margin: 9px 0 22px;
+#docs .steps img {
+  display: block;
+  margin: 10px 0 0 -6px;
 }
