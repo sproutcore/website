@@ -497,30 +497,30 @@ a.button.secondary {
 
 /* Steps */
 
-.steps li {
+.steps > li {
   min-height: 33px;
   margin-bottom: 22px;
   padding: 7px 0 0 57px;
   background-repeat: no-repeat;
 }
 
-.steps li:nth-child(1) {
+.steps > li:nth-child(1) {
   background-image: url(../img/steps/1.png);
 }
 
-.steps li:nth-child(2) {
+.steps > li:nth-child(2) {
   background-image: url(../img/steps/2.png);
 }
 
-.steps li:nth-child(3) {
+.steps > li:nth-child(3) {
   background-image: url(../img/steps/3.png);
 }
 
-.steps li:nth-child(4) {
+.steps > li:nth-child(4) {
   background-image: url(../img/steps/4.png);
 }
 
-.steps li:nth-child(5) {
+.steps > li:nth-child(5) {
   background-image: url(../img/steps/5.png);
 }
 
@@ -784,7 +784,7 @@ html.ready #home [role="main"] > div {
   font-size: 18px;
 }
 
-#tabs section ul li {
+#tabs section ul > li {
   margin-left: 2em;
   list-style: outside url(../img/bullet.png);
 }
