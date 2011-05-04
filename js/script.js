@@ -64,6 +64,18 @@ app.slider = (function() {
 	}
 })();
 
+app.gotoInstall = (function(){
+  var url = "install.html";
+
+  // This probably sucks and is unreliable
+  if (navigator.appVersion.indexOf("Win")!=-1) { url = "install_win.html"; }
+  if (navigator.appVersion.indexOf("Mac")!=-1) { url = "install_mac.html"; }
+  if (navigator.appVersion.indexOf("X11")!=-1 ||
+      navigator.appVersion.indexOf("Linux")!=-1) { url = "install_linux.html"; }
+
+  return function(){ window.location.href = url; }
+})();
+
 // add 'ready' to html when the dom's ready to go
 app.ready.domReadyClass = function() {
 	$( 'html' ).addClass( 'ready' );
