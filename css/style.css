@@ -777,8 +777,7 @@ html.ready #home [role="main"] > div {
 }
 
 #tabs > section > section > h1,
-#tabs > section > .container h1,
-#tabs > section > .container + h1 {
+#tabs > section h2 {
   margin-bottom: 9px;
   font-weight: bold;
   font-size: 18px;
@@ -1019,12 +1018,7 @@ html.ready #home [role="main"] > div {
 
 /* Core Team */
 
-#about #core-team .container {
-	overflow: auto;
-	width: 100%
-}
-
-#about #core-team .container div {
+#about #core-team li {
 	float: left;
 	padding-left: 140px;
 	margin-bottom: 30px;
@@ -1033,34 +1027,30 @@ html.ready #home [role="main"] > div {
 	background: url(../img/avatars/blank-large.png) no-repeat;
 }
 
-#about #core-team .container div:nth-child(odd) {
+#about #core-team li:nth-child(odd) {
 	padding-right: 50px;
 }
 
-#about #core-team .container h1 {
+#about #core-team h2 {
 	margin-bottom: 0;
 }
 
-#about #core-team .container em {
+#about #core-team em {
 	display: block;
 	padding-bottom: 6px;
 	color: #888;
 }
 
-#about #core-team .container p {
+#about #core-team p {
 	font-size: 12px;
 }
 
-#about #core-team .container.not-shown div {
-	padding-left: 60px;
+#about #core-team .not-shown li {
+	padding: 0 35px 0 60px;
 	margin-bottom: 30px;
 	min-height: 60px;
 	width: 200px;
 	background: url(../img/avatars/blank-small.png) no-repeat;
-}
-
-#about #core-team .container.not-shown div {
-	padding-right: 35px;
 }
 
 
@@ -1277,12 +1267,7 @@ html.js #application-slider-tray {
 
 /* Ecosystem */
 
-#community #ecosystem .container {
-	overflow: auto;
-	width: 100%
-}
-
-#community #ecosystem .container div {
+#community #ecosystem li {
 	float: left;
 	padding: 0 10px 0 82px;
 	margin-bottom: 30px;
@@ -1291,6 +1276,6 @@ html.js #application-slider-tray {
 	background: url(../img/ecosystem.png) no-repeat;
 }
 
-#community #ecosystem .container h1 {
+#community #ecosystem h2 {
 	margin-bottom: 2px;
 }
