@@ -1021,10 +1021,19 @@ html.ready #home [role="main"] > div {
 #about #core-team li {
 	float: left;
 	padding-left: 140px;
-	margin-bottom: 30px;
+	margin: 0 0 30px 0;
 	min-height: 137px;
 	width: 270px;
+	list-style: none;
 	background: url(../img/avatars/blank-large.png) no-repeat;
+}
+
+#about #core-team #mike-ball {
+	background: url(../img/avatars/mike-ball-large.png) no-repeat;
+}
+
+#about #core-team #evin-grano {
+	background: url(../img/avatars/evin-grano-large.png) no-repeat;
 }
 
 #about #core-team li:nth-child(odd) {
@@ -1035,7 +1044,7 @@ html.ready #home [role="main"] > div {
 	margin-bottom: 0;
 }
 
-#about #core-team em {
+#about #core-team i {
 	display: block;
 	padding-bottom: 6px;
 	color: #888;
@@ -1270,9 +1279,10 @@ html.js #application-slider-tray {
 #community #ecosystem li {
 	float: left;
 	padding: 0 10px 0 82px;
-	margin-bottom: 30px;
+	margin: 0 0 30px 0;
 	min-height: 70px;
 	width: 39%;
+	list-style: none;
 	background: url(../img/ecosystem.png) no-repeat;
 }
 
