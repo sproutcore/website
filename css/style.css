@@ -1236,19 +1236,12 @@ html.js #application-slider-tray {
 }
 
 #community #ecosystem .container div {
-	padding-left: 82px;
+	float: left;
+	padding: 0 10px 0 82px;
 	margin-bottom: 30px;
 	min-height: 70px;
 	width: 39%;
 	background: url(../img/ecosystem.png) no-repeat;
-}
-
-#community #ecosystem .container div.left {
-	float: left;
-}
-
-#community #ecosystem .container div.right {
-	float: right;
 }
 
 #community #ecosystem div h1 {
