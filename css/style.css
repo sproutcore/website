@@ -777,7 +777,8 @@ html.ready #home [role="main"] > div {
 }
 
 #tabs > section > section > h1,
-#tabs > section > .container h1 {
+#tabs > section > .container h1,
+#tabs > section > .container + h1 {
   margin-bottom: 9px;
   font-weight: bold;
   font-size: 18px;
@@ -1016,6 +1017,51 @@ html.ready #home [role="main"] > div {
   background: url(../img/fast.jpg) no-repeat;
 }
 
+/* Core Team */
+
+#about #core-team .container {
+	overflow: auto;
+	width: 100%
+}
+
+#about #core-team .container div {
+	float: left;
+	padding-left: 140px;
+	margin-bottom: 30px;
+	min-height: 137px;
+	width: 270px;
+	background: url(../img/avatars/blank-large.png) no-repeat;
+}
+
+#about #core-team .container div:nth-child(odd) {
+	padding-right: 50px;
+}
+
+#about #core-team .container h1 {
+	margin-bottom: 0;
+}
+
+#about #core-team .container em {
+	display: block;
+	padding-bottom: 6px;
+}
+
+#about #core-team .container p {
+	font-size: 12px;
+}
+
+#about #core-team .container.not-shown div {
+	padding-left: 60px;
+	margin-bottom: 30px;
+	min-height: 60px;
+	width: 200px;
+	background: url(../img/avatars/blank-small.png) no-repeat;
+}
+
+#about #core-team .container.not-shown div {
+	padding-right: 35px;
+}
+
 
 /* Application slider 
 ----------------------------------------------*/
@@ -1244,6 +1290,6 @@ html.js #application-slider-tray {
 	background: url(../img/ecosystem.png) no-repeat;
 }
 
-#community #ecosystem div h1 {
+#community #ecosystem .container h1 {
 	margin-bottom: 2px;
 }
