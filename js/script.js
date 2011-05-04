@@ -65,7 +65,7 @@ app.slider = (function() {
 })();
 
 app.gotoInstall = (function(){
-  var url = "install.html";
+  var url = "docs.html#install";
 
   // This probably sucks and is unreliable
   if (navigator.appVersion.indexOf("Win")!=-1) { url = "install_win.html"; }
