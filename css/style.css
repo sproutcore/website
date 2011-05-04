@@ -658,7 +658,7 @@ html.ready #home header[role="banner"] {
   margin-bottom: 44px;
   padding: 13px 0 30px;
   border: 1px solid #000; /* Find more suitable fallback color */
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   background: #fbfbfb;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -776,7 +776,8 @@ html.ready #home [role="main"] > div {
   margin: 0;
 }
 
-#tabs > section > section > h1 {
+#tabs > section > section > h1,
+#tabs > section > .container h1 {
   margin-bottom: 9px;
   font-weight: bold;
   font-size: 18px;
@@ -1222,4 +1223,34 @@ html.js #application-slider-tray {
 #docs .steps img {
   display: block;
   margin: 10px 0 0 -6px;
+}
+
+/* Community
+--------------------------------------------- */
+
+/* Ecosystem */
+
+#community #ecosystem .container {
+	overflow: auto;
+	width: 100%
+}
+
+#community #ecosystem .container div {
+	padding-left: 82px;
+	margin-bottom: 30px;
+	min-height: 70px;
+	width: 39%;
+	background: url(../img/ecosystem.png) no-repeat;
+}
+
+#community #ecosystem .container div.left {
+	float: left;
+}
+
+#community #ecosystem .container div.right {
+	float: right;
+}
+
+#community #ecosystem div h1 {
+	margin-bottom: 2px;
 }
