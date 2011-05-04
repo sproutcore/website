@@ -1044,6 +1044,7 @@ html.ready #home [role="main"] > div {
 #about #core-team .container em {
 	display: block;
 	padding-bottom: 6px;
+	color: #888;
 }
 
 #about #core-team .container p {
