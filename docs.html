@@ -39,107 +39,113 @@
           <li><a href="#">Resources</a></li>
         </ul>
       </nav>
-      <section>
-        <h1>Building Your First SproutCore App Is Easier Than You Think. Here's How...</h1>
-        <section>
-          <h1>Installing SproutCore</h1>
-          <p>The easiest way to install SproutCore is as a RubyGem:</p>
-          <pre><code>$ [sudo] gem install sproutcore</code></pre>
-        </section>
-        <section>
-          <h1>Creating Your First Application</h1>
-          <ol class="steps">
-            <li>
-              <pre><code>$ sc-init HelloWorld
-~ Created directory at hello_world
-~ Created file at hello_world/Buildfile
-~ Created file at hello_world/README
-~ Created directory at apps
-~ Created directory at apps/hello_world
-~ Created file at apps/hello_world/core.js
-~ Created file at apps/hello_world/main.js
-~ Created directory at apps/hello_world/resources
-~ Created file at apps/hello_world/resources/loading.rhtml
-~ Created file at apps/hello_world/resources/main_page.js
-Your new SproutCore project is ready!
+      <div id="clip">
+        <div id="left" class="clip-border"></div>
+        <div id="right" class="clip-border"></div>
+        <div id="panel" style="display: none;">
+          <section>
+            <h1>Building Your First SproutCore App Is Easier Than You Think. Here's How...</h1>
+            <section>
+              <h1>Installing SproutCore</h1>
+              <p>The easiest way to install SproutCore is as a RubyGem:</p>
+              <pre><code>$ [sudo] gem install sproutcore</code></pre>
+            </section>
+            <section>
+              <h1>Creating Your First Application</h1>
+              <ol class="steps">
+                <li>
+                  <pre><code>$ sc-init HelloWorld
+    ~ Created directory at hello_world
+    ~ Created file at hello_world/Buildfile
+    ~ Created file at hello_world/README
+    ~ Created directory at apps
+    ~ Created directory at apps/hello_world
+    ~ Created file at apps/hello_world/core.js
+    ~ Created file at apps/hello_world/main.js
+    ~ Created directory at apps/hello_world/resources
+    ~ Created file at apps/hello_world/resources/loading.rhtml
+    ~ Created file at apps/hello_world/resources/main_page.js
+    Your new SproutCore project is ready!
 
-To get started, you can find your initial application in the "apps" directory.</code></pre>
-            </li>
-            <li><pre><code>$ cd hello_world</code></pre></li>
-            <li>
-              <pre><code>$ sc-server
-SproutCore v1.0.1037 Development Server
-Starting server at http://0.0.0.0:4020 in debug mode
-To quit sc-server, press Control-C
->> Thin web server (v1.2.5 codename This Is Not A Web Server)
->> Maximum connections set to 1024
->> Listening on 0.0.0.0:4020, CTRL+C to stop</code></pre>
-            </li>
-            <li>Open <a href="http://localhost:4020/hello_world">http://localhost:4020/hello_world</a> in your browser and you should see the following: <img src="img/hello_world.jpg" alt="Hello World SproutCore Application" /></li>
-            <li><strong>Congratulations, you've just built your first SproutCore application!</strong></li>
-          </ol>
-        </section>
-        <section>
-          <h1>Getting Help</h1>
-          <p>If you have questions, or trouble installing SproutCore, these are the places to go:</p>
-          <ul>
-            <li><a href="http://wiki.sproutcore.com">SproutCore Wiki</a></li>
-            <li><a href="http://groups.google.com/group/sproutcore">SproutCore Google Group</a></li>
-            <li>Our IRC channel, #sproutcore on irc.freenode.net</li>
-          </ul>
-        </section>
-        <section>
-          <h1>What’s Next?</h1>
-          <p>SproutCore is a full application framework. It’s designed to assist you in creating the fastest and most robust apps possible. We offer a lot of things to help you achieve that, but familiarizing yourself with all of those tools can be daunting at first. Here are some places you can start:</p>
-          <ul>
-            <li>
-              <a href="http://wiki.sproutcore.com/Todos%C2%A0Intro">Todos Tutorial</a>
-              <br />
-              A step-by-step tutorial that will show you how to build an entire app from scratch.
-            </li>
-            <li>
-              <a href="http://www.sproutcore.com/demos">Sample Code</a>
-              <br />
-              A list of demos with available source code.
-            </li>
-            <li><a href="http://docs.sproutcore.com">SproutCore Wiki or the reference documentation</a></li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <h1>Installing the SproutCore Dev Tools has never been easier!</h1>
-        <section>
-          <h1>The SproutCore Dev Tools are supported by all major platforms.</h1>
-          <p>While a compiled SproutCore app is pure JavaScript, HTML and CSS and can run in any modern browser,
-            you'll still want to install our Dev Tools to make things easier while creating your app. The
-            SproutCore Dev Tools run on all major platforms, including Windows, Mac OS X, and Linux.</p>
-        </section>
-        <section>
-          <h1>SproutCore on Windows</h1>
-          <p>SproutCore can be installed on Windows via an easy one-click installer or, for more advanced users,
-            as a Ruby gem. <a href="install_win.html">Install Now!</a></p>
-        </section>
-        <section>
-          <h1>SproutCore on Mac OS X</h1>
-          <p>SproutCore can be installed on Mac OS X via an easy package installer or, for more advanced users,
-            as a Ruby gem. <a href="install_mac.html">Install Now!</a></p>
-        </section>
-        <section>
-          <h1>SproutCore on Linux</h1>
-          <p>SproutCore can be installed on most Linux systems as a Ruby gem. <a href="install_linux.html">Install Now!</a></p>
-        </section>
-        <section>
-          <h1>SproutCore on Other Platforms</h1>
-          <p>While other platforms are not officially supported, you may be able to install SproutCore as a Ruby gem.
-            <a href="install_other.html">Learn More!</a></p>
-        </section>
-      </section>
-      <section>
-        <h1>A Technology Is Only As Good As Its API. This Is Where To Learn About Ours.</h1>
-      </section>
-      <section>
-        <h1></h1>
-      </section>
+    To get started, you can find your initial application in the "apps" directory.</code></pre>
+                </li>
+                <li><pre><code>$ cd hello_world</code></pre></li>
+                <li>
+                  <pre><code>$ sc-server
+    SproutCore v1.0.1037 Development Server
+    Starting server at http://0.0.0.0:4020 in debug mode
+    To quit sc-server, press Control-C
+    >> Thin web server (v1.2.5 codename This Is Not A Web Server)
+    >> Maximum connections set to 1024
+    >> Listening on 0.0.0.0:4020, CTRL+C to stop</code></pre>
+                </li>
+                <li>Open <a href="http://localhost:4020/hello_world">http://localhost:4020/hello_world</a> in your browser and you should see the following: <img src="img/hello_world.jpg" alt="Hello World SproutCore Application" /></li>
+                <li><strong>Congratulations, you've just built your first SproutCore application!</strong></li>
+              </ol>
+            </section>
+            <section>
+              <h1>Getting Help</h1>
+              <p>If you have questions, or trouble installing SproutCore, these are the places to go:</p>
+              <ul>
+                <li><a href="http://wiki.sproutcore.com">SproutCore Wiki</a></li>
+                <li><a href="http://groups.google.com/group/sproutcore">SproutCore Google Group</a></li>
+                <li>Our IRC channel, #sproutcore on irc.freenode.net</li>
+              </ul>
+            </section>
+            <section>
+              <h1>What’s Next?</h1>
+              <p>SproutCore is a full application framework. It’s designed to assist you in creating the fastest and most robust apps possible. We offer a lot of things to help you achieve that, but familiarizing yourself with all of those tools can be daunting at first. Here are some places you can start:</p>
+              <ul>
+                <li>
+                  <a href="http://wiki.sproutcore.com/Todos%C2%A0Intro">Todos Tutorial</a>
+                  <br />
+                  A step-by-step tutorial that will show you how to build an entire app from scratch.
+                </li>
+                <li>
+                  <a href="http://www.sproutcore.com/demos">Sample Code</a>
+                  <br />
+                  A list of demos with available source code.
+                </li>
+                <li><a href="http://docs.sproutcore.com">SproutCore Wiki or the reference documentation</a></li>
+              </ul>
+            </section>
+          </section>
+          <section>
+            <h1>Installing the SproutCore Dev Tools has never been easier!</h1>
+            <section>
+              <h1>The SproutCore Dev Tools are supported by all major platforms.</h1>
+              <p>While a compiled SproutCore app is pure JavaScript, HTML and CSS and can run in any modern browser,
+                you'll still want to install our Dev Tools to make things easier while creating your app. The
+                SproutCore Dev Tools run on all major platforms, including Windows, Mac OS X, and Linux.</p>
+            </section>
+            <section>
+              <h1>SproutCore on Windows</h1>
+              <p>SproutCore can be installed on Windows via an easy one-click installer or, for more advanced users,
+                as a Ruby gem. <a href="install_win.html">Install Now!</a></p>
+            </section>
+            <section>
+              <h1>SproutCore on Mac OS X</h1>
+              <p>SproutCore can be installed on Mac OS X via an easy package installer or, for more advanced users,
+                as a Ruby gem. <a href="install_mac.html">Install Now!</a></p>
+            </section>
+            <section>
+              <h1>SproutCore on Linux</h1>
+              <p>SproutCore can be installed on most Linux systems as a Ruby gem. <a href="install_linux.html">Install Now!</a></p>
+            </section>
+            <section>
+              <h1>SproutCore on Other Platforms</h1>
+              <p>While other platforms are not officially supported, you may be able to install SproutCore as a Ruby gem.
+                <a href="install_other.html">Learn More!</a></p>
+            </section>
+          </section>
+          <section>
+            <h1>A Technology Is Only As Good As Its API. This Is Where To Learn About Ours.</h1>
+          </section>
+          <section>
+            <h1></h1>
+          </section>
+        </div>
+      </div>
     </div>
   </article>
   <footer>
@@ -180,6 +186,7 @@ To quit sc-server, press Control-C
   <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/tab_slider.js"></script>
   <script>
     var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
