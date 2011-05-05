@@ -13,6 +13,62 @@
 	window.app = app;
 })( jQuery, document, this );
 
+app.carousel = (function() {
+	var $carousel, $panels, currentPanel, $buttons, $tray, $trayLinks,
+	goto = function( id, force ) {
+		// cap
+		currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
+
+		// active the target panel
+		$panels.eq( currentPanel ).addClass( 'active' ).removeClass( 'old' );
+
+		// if we're at 0, there is no prior elements to animate
+		if ( currentPanel > 0 ) {
+			$panels.slice( 0, currentPanel ).addClass( 'old' ).removeClass( 'active' );
+		}
+
+		//make sure any slides ahead of the current one aren't active or old
+		$panels.slice( currentPanel + 1 ).removeClass( 'old active' );
+		
+		//set the tray's panel button thingy to active
+		$trayLinks.removeClass( 'active' ).filter( '.panel' + currentPanel ).addClass( 'active' );
+	};
+	
+	app.ready.carousel = function() {
+		// cache dom elems
+		$carousel = $( '#carousel' );
+		$tray = $carousel.find( '.tray' );
+		$buttons = $carousel.find( 'button' );
+		$trayLinks = $tray.find( 'a' );
+		$panels = $carousel.find( '.panel' );
+		
+		// get the index of the 'active' panel
+		var index = $panels.filter( 'active' ).prevAll().length;
+		
+		// if there is no active panel, assume the first
+		currentPanel = ( index || 1 ) - 1;
+		
+		$buttons.click(function(e) {
+		  e.preventDefault();
+			// handle name="previous" and name="next"
+			if ( e.target.name ) {
+				goto( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
+			}
+		})
+		
+		// get all the clicks in the tray
+		$tray.click( function(e) {
+			e.preventDefault();
+			// go to a particular panel
+			var match = /panel([0-9]+)/.exec( e.target.className );
+			if ( match && typeof match[1] !== "undefined" ) {
+				goto( +match[1] );
+			}
+		});
+	}
+})();
+
+
 app.slider = (function() {
 	var $slider, $panels, currentPanel, $tray, $trayLinks,
 	goto = function( id, force ) {
