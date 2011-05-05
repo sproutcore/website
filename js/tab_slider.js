@@ -36,6 +36,8 @@ app.tabSlider = (function() {
     if (tabIndex !== 0) {
       $(links[0]).parent().toggleClass('active');
       $(links[tabIndex]).parent().toggleClass('active');
+      $(sections[0]).toggleClass('visible');
+      $(sections[tabIndex]).toggleClass('visible');
     }
     
     // Show the panel once our sections are laid out
@@ -53,8 +55,9 @@ app.tabSlider = (function() {
       newTabIndex = links.index(this);
       
       if (tabIndex !== newTabIndex) {
-        // 1. Remove active class from the current tab
+        // 1. Remove active class from the current tab and visible class from current section
         $(links[tabIndex]).parent().toggleClass('active');
+        $(sections[tabIndex]).toggleClass('visible');
         
         // 2. Stretch/shrink the window to fit
         height = $(sections[newTabIndex]).height();
@@ -65,6 +68,8 @@ app.tabSlider = (function() {
           left: -newTabIndex * width
           }, 500, function() {
           // Animation complete.
+          // 4. Set the section's visible class (used to trigger CSS animations)
+          $(sections[newTabIndex]).toggleClass('visible');
         });
         
         // 4. Add active class to the new tab
