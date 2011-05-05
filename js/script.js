@@ -1,11 +1,24 @@
+// Enum like object for identifying platforms
+var PLATFORM = {
+  windows: 'win',
+  mac: 'mac',
+  linux: 'linux',
+  unknown: 'unknown'
+};
+
 // basic app object
+var app = {
+  platform: 'unknown',
+	  
+	ready: {}
+};
+
 (function($,document, window) {
-	var app = {
-		ready: {}
-	};
-	
+
+
 	// run any function on app.ready
 	$( document ).ready( function() {
+	  app.platform = app.detectPlatform();
 		$.each( app.ready, function() {
 				typeof this === "function" && this.call( app );
 		});
@@ -15,7 +28,7 @@
 
 app.carousel = (function() {
 	var $carousel, $panels, currentPanel, $buttons, $tray, $trayLinks,
-	goto = function( id, force ) {
+	gotoPanel = function( id, force ) {
 		// cap
 		currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
 
@@ -52,9 +65,9 @@ app.carousel = (function() {
 		  e.preventDefault();
 			// handle name="previous" and name="next"
 			if ( e.target.name ) {
-				goto( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
+				gotoPanel( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
 			}
-		})
+		});
 		
 		// get all the clicks in the tray
 		$tray.click( function(e) {
@@ -62,16 +75,16 @@ app.carousel = (function() {
 			// go to a particular panel
 			var match = /panel([0-9]+)/.exec( e.target.className );
 			if ( match && typeof match[1] !== "undefined" ) {
-				goto( +match[1] );
+				gotoPanel( +match[1] );
 			}
 		});
-	}
+	};
 })();
 
 
 app.slider = (function() {
 	var $slider, $panels, currentPanel, $tray, $trayLinks,
-	goto = function( id, force ) {
+	gotoPanel = function( id, force ) {
 		// cap
 		currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
 
@@ -108,32 +121,58 @@ app.slider = (function() {
 			e.preventDefault();
 			// handle name="previous" and name="next"
 			if ( e.target.name ) {
-				goto( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
+				gotoPanel( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
 				return;
 			}
 			// go to a particular panel
 			var match = /panel([0-9]+)/.exec( e.target.className );
 			if ( match && typeof match[1] !== "undefined" ) {
-				goto( +match[1] );
+				gotoPanel( +match[1] );
 			}
 		});
-	}
+	};
 })();
 
-app.gotoInstall = (function(){
-  var url = "docs.html#install";
-
+/**
+  Detects the current platform.
+  
+  @returns {app.PLATFORM}
+*/
+app.detectPlatform = function() {
   // This probably sucks and is unreliable
-  if (navigator.appVersion.indexOf("Win")!=-1) { url = "install_win.html"; }
-  if (navigator.appVersion.indexOf("Mac")!=-1) { url = "install_mac.html"; }
+  if (navigator.appVersion.indexOf("Win")!=-1) { return PLATFORM.windows; }
+  if (navigator.appVersion.indexOf("Mac")!=-1) { return PLATFORM.mac; }
   if (navigator.appVersion.indexOf("X11")!=-1 ||
-      navigator.appVersion.indexOf("Linux")!=-1) { url = "install_linux.html"; }
+      navigator.appVersion.indexOf("Linux")!=-1) { return PLATFORM.linux; }
+      
+  return PLATFORM.unknown;
+};
 
-  return function(){ window.location.href = url; }
-})();
+app.gotoInstall = function() {
+  var url = "docs.html#install";
+  
+  switch (app.platform) {
+    case PLATFORM.windows:
+      url = "install_win.html";
+      break;
+    
+    case PLATFORM.mac:
+      url = "install_mac.html";
+      break;
+    
+    case PLATFORM.linux:
+      url = "install_linux.html";
+      break;
+    
+    default:
+      url = "install.html";
+  }
+  
+  window.location.href = url;
+};
 
 // add 'ready' to html when the dom's ready to go
 app.ready.domReadyClass = function() {
 	$( 'html' ).addClass( 'ready' );
-}
+};
 
