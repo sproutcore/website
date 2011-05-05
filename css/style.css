@@ -608,27 +608,27 @@ html.ready #home header[role="banner"] {
 }
 
 .green [role="banner"] nav a:hover,
-.green [role="banner"] nav .active {
+.green [role="banner"] nav .active a {
   color: #beff9d;
 }
 
 .pink [role="banner"] nav a:hover,
-.pink [role="banner"] nav .active {
+.pink [role="banner"] nav .active a {
   color: #ffc2da;
 }
 
 .blue [role="banner"] nav a:hover,
-.blue [role="banner"] nav .active {
+.blue [role="banner"] nav .active a {
   color: #bae0ff;
 }
 
 .orange [role="banner"] nav a:hover,
-.orange [role="banner"] nav .active {
+.orange [role="banner"] nav .active a {
   color: #ffd8b4;
 }
 
 .purple [role="banner"] nav a:hover,
-.purple [role="banner"] nav .active {
+.purple [role="banner"] nav .active a {
   color: #ebcaff;
 }
 
@@ -704,6 +704,14 @@ html.ready #home [role="main"] > div {
   font-size: 54px;
   line-height: 1.3;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#tabs {
+  margin-bottom: 0;
+  border-bottom: 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 #tabs nav {
@@ -1102,6 +1110,7 @@ html.ready #home [role="main"] > div {
 	margin-bottom: 40px;
 }
 
+
 /* Homepage carousel 
 ----------------------------------------------*/
 
@@ -1296,7 +1305,6 @@ html.js #carousel .tray {
   background-position: -48px -98px;
 }
 
-
 #carousel .panel h2, #carousel .panel p, #carousel .panel ul {
   font-family: Arvo, Georgia, Times, "Times New Roman", serif;
 }
@@ -1309,7 +1317,6 @@ html.js #carousel .tray {
 #carousel .panel p, #carousel .panel ul {
   font-size: 16px;
 }
-
 
 #carousel .panel.tutorials {
   background: url(../img/carousel/tutorials/bg.png) no-repeat;
@@ -1374,7 +1381,6 @@ html.js #carousel .tray {
 #carousel .panel.guides .button span {
   background: url(../img/carousel/guides/button_icon.png) no-repeat;
 }
-
 
 #carousel .panel.wwdc-bash {
   background: url(../img/carousel/wwdc_bash/bg.png) no-repeat;
@@ -1651,16 +1657,19 @@ body > footer .col:nth-child(3) {
   width: 285px;
 }
 
+/* Logo */
+
+body > footer .col:nth-child(1) > a {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 /* Headers */
 
 body > footer h1 {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 13px;
-}
-
-body > footer .legal {
-  margin-top: 20px;
 }
 
 /* Nav */
