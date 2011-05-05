@@ -18,7 +18,7 @@ app.tabSlider = (function() {
     tabs = $('#tabs');
     clip = tabs.find('#clip');
     panel = clip.find('#panel');
-    sections = panel.find('section'); //$('#tabs #sections > section');
+    sections = panel.find('> section'); //$('#tabs #sections > section');
     links = tabs.find('nav ul > li a');
     
     // The first tab is selected by default
