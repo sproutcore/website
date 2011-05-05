@@ -1143,7 +1143,6 @@ html.js #carousel {
 html.js #carousel .panel {
   left: 880px;
   position: absolute;
-  right: -880px;
   top: 0;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
@@ -1151,19 +1150,16 @@ html.js #carousel .panel {
   -o-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 html.js #carousel .panel.active {
   left: 0;
   opacity: 1;
-  right: auto;
 }
 
 html.js #carousel .panel.old {
   left: -880px;
   opacity: 0;
-  right: auto;
 }
 
 #carousel .tray {
