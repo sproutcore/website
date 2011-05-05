@@ -473,13 +473,14 @@ a.button.secondary {
 
 .button.secondary.large {
 	line-height: 42px;
-	padding: 0 40px;
+	padding: 0 30px;
 	font-size: 16px;
 }
 
-.button.secondary.large .download-cloud {
-	padding-left: 34px;
-	background: url(../img/download_cloud.png) no-repeat;
+.button.secondary.large span {
+  padding: 2px 0 2px 34px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
 
 /* Date */
@@ -1159,6 +1160,10 @@ html.ready #home [role="main"] > div {
 	margin-bottom: 40px;
 }
 
+#about #logos .download-cloud {
+	background-image: url(../img/download_cloud.png);
+}
+
 
 /* Homepage carousel 
 ----------------------------------------------*/
@@ -1671,7 +1676,9 @@ html.js #application-slider-tray {
   display: block; 
 }
 
-#community #map .pin {
+#community #map .pin,
+#community #map p,
+#community #map a {
   position: absolute;
 }
 
@@ -1770,6 +1777,24 @@ html.ready #community #map .ny {
 
 html.ready #community #map .bos {
   top: 93px;
+}
+
+#community #map p {
+  bottom: 68px;
+  right: 94px;
+  color: #465a70;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+#community #map a {
+  bottom: 33px;
+  right: 33px;
+}
+
+#community #map a span {
+  background-image: url(../img/meetup_loc.png);
 }
 
 /* Ecosystem */
