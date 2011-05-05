@@ -1135,8 +1135,8 @@ html.js #carousel {
 
 #carousel .panel {
   width: 775px;
-  height: 380px;
-  padding: 80px 50px 0 50px;
+  height: 400px;
+  padding: 60px 50px 0 50px;
   position: relative;
 }
 
@@ -1354,8 +1354,8 @@ html.js #carousel > button {
 
 #carousel .panel.guides {
   background: url(../img/carousel/guides/bg.png) no-repeat;
-  height: 410px;
-  padding-top: 50px;
+  height: 420px;
+  padding-top: 40px;
 }
 
 #carousel .panel.guides > div {
@@ -1386,7 +1386,7 @@ html.js #carousel > button {
 
 #carousel .panel.wwdc-bash .button {
   float: none;
-  margin-top: 290px;
+  margin-top: 310px;
 }
 
 #carousel .panel.wwdc-bash .button span {
