@@ -784,7 +784,7 @@ html.ready #home [role="main"] > div {
   position: relative;
 }
 
-#tabs #clip .clip-border {
+#tabs #clip .clip-border, #application-slider .clip-border {
   bottom: 0;
   position: absolute;
   width: 25px;
@@ -792,7 +792,11 @@ html.ready #home [role="main"] > div {
   z-index: 1;
 }
 
-#tabs #clip #left {
+#application-slider .clip-border {
+  width: 15px;
+}
+
+#tabs #clip #left, #application-slider #left {
   background-image: -moz-linear-gradient(left, white, rgba(255, 255, 255, 0));
   background-image: -ms-linear-gradient(left, white, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(left, white, rgba(255, 255, 255, 0));
@@ -802,7 +806,7 @@ html.ready #home [role="main"] > div {
   left: 0;
 }
 
-#tabs #clip #right {
+#tabs #clip #right, #application-slider #right {
   background-image: -moz-linear-gradient(right, white, rgba(255, 255, 255, 0));
   background-image: -ms-linear-gradient(right, white, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(right, white, rgba(255, 255, 255, 0));
@@ -1458,6 +1462,8 @@ html.js #carousel .tray {
   overflow: hidden;
   position: relative;
   top: 1em;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 html.js #application-slider {
@@ -1472,7 +1478,7 @@ html.js #application-slider {
 html.js #application-slider .panel {
   position: absolute;
   top: 0;
-  left: 928px;
+  left: 958px;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -1481,7 +1487,7 @@ html.js #application-slider .panel {
 }
 
 html.js #application-slider .panel.active {
-  left: 0;
+  left: 15px;
 }
 
 html.js #application-slider .panel.old {
