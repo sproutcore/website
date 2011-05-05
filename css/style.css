@@ -432,8 +432,6 @@ pre {
   background-position: 0 -72px;
 }
 
-/* Call to action */
-
 #action {
   float: right;
 }
@@ -511,6 +509,20 @@ a.button.secondary {
   padding-left: 34px;
   background-repeat: no-repeat;
   background-position: 0 50%;
+}
+
+.button-center {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.download-cloud {
+	background-image: url(../img/download_cloud.png);
+}
+
+.app {
+	background-image: url(../img/app.png);
 }
 
 /* Date */
@@ -1168,16 +1180,6 @@ html.ready #home [role="main"] > div {
 	font-size: 12px;
 }
 
-#about #logos .center {
-	width: 100%;
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-#about #logos .download-cloud {
-	background-image: url(../img/download_cloud.png);
-}
-
 
 /* Homepage carousel 
 ----------------------------------------------*/
@@ -1523,6 +1525,7 @@ html.js #application-slider .panel.old {
   width: 100%;
   background: rgba(0, 0, 0, .8);
   color: #fff;
+	font-size: 12px;
 	font-weight: bold;
   text-align: center;
   border-top: 1px solid #000;
