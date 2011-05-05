@@ -1667,10 +1667,11 @@ html.js #application-slider-tray {
 /* Community
 --------------------------------------------- */
 
-/* User Groups */
+/* User Groups - Map */
 
 #community #map {
   position: relative;
+  margin-bottom: 60px;
   border: 1px solid #c1c1c1;
   padding: 9px;
   background: #fff;
@@ -1802,6 +1803,85 @@ html.ready #community .visible #map .bos {
 
 #community #map a span {
   background-image: url(../img/meetup_loc.png);
+}
+
+html.js #community #map p,
+html.js #community #map a {
+  opacity: 0;
+}
+
+html.ready #community .visible #map p,
+html.ready #community .visible #map a {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out 1.8s;
+  -moz-transition: opacity 0.5s ease-in-out 1.8s;
+  -o-transition: opacity 0.5s ease-in-out 1.8s;
+  -ms-transition: opacity 0.5s ease-in-out 1.8s;
+  transition: opacity 0.5s ease-in-out 1.8s;
+}
+
+/* User Groups - Meetups */
+
+#community #meetups li {
+  width: 186px;
+  height: 133px;
+  float: left;
+  margin: 0 43px 43px 0;
+  padding: 1px 4px 5px 2px;
+  list-style: none;
+  background: url(../img/meetup_sticker.png);
+}
+
+#community #meetups li:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+#community #meetups a {
+  width: 149px;
+  height: 35px;
+  display: block;
+  padding: 58px 18px 40px 19px;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  background-position: 21px 59px;
+  overflow: hidden;
+}
+
+#community #meetups .sf {
+  background-image: url(../img/cities/sf.png);
+}
+
+#community #meetups .la {
+  background-image: url(../img/cities/la.png);
+}
+
+#community #meetups .chi {
+  background-image: url(../img/cities/chi.png);
+}
+
+#community #meetups .was {
+  background-image: url(../img/cities/was.png);
+}
+
+#community #meetups .ny {
+  background-image: url(../img/cities/ny.png);
+}
+
+#community #meetups .bos {
+  background-image: url(../img/cities/bos.png);
+}
+
+#community #meetups .soon {
+  background-position: 0 -139px;
+}
+
+#community #meetups .soon strong {
+  display: block;
+  margin-top: 65px;
+  color: #465a70;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* Ecosystem */
