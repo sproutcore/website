@@ -1788,7 +1788,7 @@ html.ready #community .visible #map .bos {
 }
 
 #community #map p {
-  bottom: 68px;
+  bottom: 78px;
   right: 94px;
   color: #465a70;
   font-weight: bold;
@@ -1797,7 +1797,7 @@ html.ready #community .visible #map .bos {
 }
 
 #community #map a {
-  bottom: 33px;
+  bottom: 43px;
   right: 33px;
 }
 
