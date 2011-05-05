@@ -411,6 +411,7 @@ pre {
 }
 
 .button.primary span {
+  display: inline-block;
   padding-left: 26px;
   background-repeat: no-repeat;
 }
@@ -472,13 +473,13 @@ a.button.secondary {
 }
 
 .button.secondary.large {
-	line-height: 42px;
-	padding: 0 30px;
-	font-size: 16px;
+  padding: 9px 30px;
+  font-size: 16px;
 }
 
 .button.secondary.large span {
-  padding: 2px 0 2px 34px;
+  display: inline-block;
+  padding-left: 34px;
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
