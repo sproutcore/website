@@ -1654,11 +1654,11 @@ html.ready #community #map .bos {
 
 #community #map .sf {
   left: 48px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 html.ready #community #map .sf {
@@ -1667,11 +1667,11 @@ html.ready #community #map .sf {
 
 #community #map .la {
   left: 96px;
-  -webkit-transition: all 1s ease-in-out 0.5s;
-  -moz-transition: all 1s ease-in-out 0.5s;
-  -o-transition: all 1s ease-in-out 0.5s;
-  -ms-transition: all 1s ease-in-out 0.5s;
-  transition: all 1s ease-in-out 0.5s;
+  -webkit-transition: all 0.5s ease-in-out 0.3s;
+  -moz-transition: all 0.5s ease-in-out 0.3s;
+  -o-transition: all 0.5s ease-in-out 0.3s;
+  -ms-transition: all 0.5s ease-in-out 0.3s;
+  transition: all 0.5s ease-in-out 0.3s;
 }
 
 html.ready #community #map .la {
@@ -1680,11 +1680,11 @@ html.ready #community #map .la {
 
 #community #map .chi {
   left: 444px;
-  -webkit-transition: all 1s ease-in-out 1s;
-  -moz-transition: all 1s ease-in-out 1s;
-  -o-transition: all 1s ease-in-out 1s;
-  -ms-transition: all 1s ease-in-out 1s;
-  transition: all 1s ease-in-out 1s;
+  -webkit-transition: all 0.5s ease-in-out 0.6s;
+  -moz-transition: all 0.5s ease-in-out 0.6s;
+  -o-transition: all 0.5s ease-in-out 0.6s;
+  -ms-transition: all 0.5s ease-in-out 0.6s;
+  transition: all 0.5s ease-in-out 0.6s;
 }
 
 html.ready #community #map .chi {
@@ -1693,11 +1693,11 @@ html.ready #community #map .chi {
 
 #community #map .was {
   left: 567px;
-  -webkit-transition: all 1s ease-in-out 1.5s;
-  -moz-transition: all 1s ease-in-out 1.5s;
-  -o-transition: all 1s ease-in-out 1.5s;
-  -ms-transition: all 1s ease-in-out 1.5s;
-  transition: all 1s ease-in-out 1.5s;
+  -webkit-transition: all 0.5s ease-in-out 0.9s;
+  -moz-transition: all 0.5s ease-in-out 0.9s;
+  -o-transition: all 0.5s ease-in-out 0.9s;
+  -ms-transition: all 0.5s ease-in-out 0.9s;
+  transition: all 0.5s ease-in-out 0.9s;
 }
 
 html.ready #community #map .was {
@@ -1706,11 +1706,11 @@ html.ready #community #map .was {
 
 #community #map .ny {
   left: 598px;
-  -webkit-transition: all 1s ease-in-out 2.0s;
-  -moz-transition: all 1s ease-in-out 2.0s;
-  -o-transition: all 1s ease-in-out 2.0s;
-  -ms-transition: all 1s ease-in-out 2.0s;
-  transition: all 1s ease-in-out 2.0s;
+  -webkit-transition: all 0.5s ease-in-out 1.2s;
+  -moz-transition: all 0.5s ease-in-out 1.2s;
+  -o-transition: all 0.5s ease-in-out 1.2s;
+  -ms-transition: all 0.5s ease-in-out 1.2s;
+  transition: all 0.5s ease-in-out 1.2s;
 }
 
 html.ready #community #map .ny {
@@ -1719,11 +1719,11 @@ html.ready #community #map .ny {
 
 #community #map .bos {
   left: 635px;
-  -webkit-transition: all 1s ease-in-out 2.5s;
-  -moz-transition: all 1s ease-in-out 2.5s;
-  -o-transition: all 1s ease-in-out 2.5s;
-  -ms-transition: all 1s ease-in-out 2.5s;
-  transition: all 1s ease-in-out 2.5s;
+  -webkit-transition: all 0.5s ease-in-out 1.5s;
+  -moz-transition: all 0.5s ease-in-out 1.5s;
+  -o-transition: all 0.5s ease-in-out 1.5s;
+  -ms-transition: all 0.5s ease-in-out 1.5s;
+  transition: all 0.5s ease-in-out 1.5s;
 }
 
 html.ready #community #map .bos {
