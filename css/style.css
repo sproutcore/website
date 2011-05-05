@@ -1107,7 +1107,7 @@ html.ready #home [role="main"] > div {
 	padding-right: 50px;
 }
 
-#about #core-team h2 {
+#about #core-team > ul > li > h2 {
 	margin-bottom: 0;
 }
 
