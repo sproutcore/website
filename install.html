@@ -36,34 +36,40 @@
           <li class="active"><a href="#">Platforms</a></li>
         </ul>
       </nav>
-      <section>
-        <h1>Installing the SproutCore Dev Tools has never been easier!</h1>
-        <section>
-          <h1>The SproutCore Dev Tools are supported by all major platforms.</h1>
-          <p>While a compiled SproutCore app is pure JavaScript, HTML and CSS and can run in any modern browser,
-            you'll still want to install our Dev Tools to make things easier while creating your app. The
-            SproutCore Dev Tools run on all major platforms, including Windows, Mac OS X, and Linux.</p>
-        </section>
-        <section>
-          <h1>SproutCore on Windows</h1>
-          <p>SproutCore can be installed on Windows via an easy one-click installer or, for more advanced users,
-            as a Ruby gem. <a href="install_win.html">Install Now!</a></p>
-        </section>
-        <section>
-        <h1>SproutCore on Mac OS X</h1>
-        <p>SproutCore can be installed on Mac OS X via an easy package installer or, for more advanced users,
-            as a Ruby gem. <a href="install_mac.html">Install Now!</a></p>
-        </section>
-        <section>
-          <h1>SproutCore on Linux</h1>
-          <p>SproutCore can be installed on most Linux systems as a Ruby gem. <a href="install_linux.html">Install Now!</a></p>
-        </section>
-        <section>
-          <h1>SproutCore on Other Platforms</h1>
-          <p>While other platforms are not officially supported, you may be able to install SproutCore as a Ruby gem.
-            <a href="install_other.html">Learn More!</a></p>
-        </section>
-      </section>
+      <div id="clip">
+        <div id="left" class="clip-border"></div>
+        <div id="right" class="clip-border"></div>
+        <div id="panel" style="display: none;">
+          <section>
+            <h1>Installing the SproutCore Dev Tools has never been easier!</h1>
+            <section>
+              <h1>The SproutCore Dev Tools are supported by all major platforms.</h1>
+              <p>While a compiled SproutCore app is pure JavaScript, HTML and CSS and can run in any modern browser,
+                you'll still want to install our Dev Tools to make things easier while creating your app. The
+                SproutCore Dev Tools run on all major platforms, including Windows, Mac OS X, and Linux.</p>
+            </section>
+            <section>
+              <h1>SproutCore on Windows</h1>
+              <p>SproutCore can be installed on Windows via an easy one-click installer or, for more advanced users,
+                as a Ruby gem. <a href="install_win.html">Install Now!</a></p>
+            </section>
+            <section>
+            <h1>SproutCore on Mac OS X</h1>
+            <p>SproutCore can be installed on Mac OS X via an easy package installer or, for more advanced users,
+                as a Ruby gem. <a href="install_mac.html">Install Now!</a></p>
+            </section>
+            <section>
+              <h1>SproutCore on Linux</h1>
+              <p>SproutCore can be installed on most Linux systems as a Ruby gem. <a href="install_linux.html">Install Now!</a></p>
+            </section>
+            <section>
+              <h1>SproutCore on Other Platforms</h1>
+              <p>While other platforms are not officially supported, you may be able to install SproutCore as a Ruby gem.
+                <a href="install_other.html">Learn More!</a></p>
+            </section>
+          </section>
+        </div>
+      </div>
     </div>
   </article>
   <footer>
@@ -104,6 +110,7 @@
   <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/tab_slider.js"></script>
   <script>
     var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;

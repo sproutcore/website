@@ -37,64 +37,70 @@
           <li><a href="#">Advanced Install</a></li>
         </ul>
       </nav>
-      <section>
-        <h1>SproutCore Dev Tools on Mac OS X with Package</h1>
-        <section>
-          <h1>Download the Package</h1>
-          <p>The SproutCore Package for Mac OS X runs on all recent versions of OS X. <a href="#">Download Now!</a></p>
-        </section>
-        <section>
-          <h1>Using the Dev Tools</h1>
-          <p>
-            The SproutCore Dev Tools run via the Terminal. From the terminal you can use any of the
-            sc-* tools (sc-init, sc-gen, sc-server, ...)
-          </p>
-        </section>
-      </section>
-      <section>
-        <h1>Advanced Installation</h1>
-        <section>
-          <p>If you already do Ruby development on your Mac or would just like to have greater flexibility,
-            you can install the SproutCore Dev Tools as a Ruby gem. However, it is not recommended that you use
-            the system installation, so we show you how to install with RVM. If you already have a non-system Ruby
-            installation, skip to Step B.</p>
-        </section>
-        <section>
-          <h1>Step A: Installing RVM and Ruby</h1>
-          <ol class="steps">
-            <li>
-              <strong>With Git:</strong>
-              <pre><code>$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)</code></pre>
-            </li>
-            <li>
-              <strong>Without Git:</strong>
-              <pre><code>$ curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
-$ chmod +x rvm-installer
-$ ./rvm-installer --version latest</code></pre>
-            </li>
-            <li>
-              If installing for a single user instead of root, add the following to your ~/.bash_profile
-              <pre><code>[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session</code></pre>
-            </li>
-            <li>
-              <strong>Install Ruby:</strong>
-              <pre><code>$ rvm install ruby-1.9.2
-$ rvm use 1.9.2</code></pre>
-            </li>
-            <li>
-              If you would like to set this as your primary Ruby version, run:
-              <pre><code>$ rvm --default use 1.9.2</code></pre>
-            </li>
-            <li>Continue to Step B</li>
-          </ol>
-        </section>
-        <section>
-          <h1>Step B: Installing SproutCore</h1>
-          <p>This is the easy part, just run:</p>
-          <pre><code>$ gem install sproutcore</code></pre>
-          <p>From the Terminal prompt you can now use any of the sc-* tools (sc-init, sc-gen, sc-server, ...)</p>
-        <section>
-      </section>
+      <div id="clip">
+        <div id="left" class="clip-border"></div>
+        <div id="right" class="clip-border"></div>
+        <div id="panel" style="display: none;">
+          <section>
+            <h1>SproutCore Dev Tools on Mac OS X with Package</h1>
+            <section>
+              <h1>Download the Package</h1>
+              <p>The SproutCore Package for Mac OS X runs on all recent versions of OS X. <a href="#">Download Now!</a></p>
+            </section>
+            <section>
+              <h1>Using the Dev Tools</h1>
+              <p>
+                The SproutCore Dev Tools run via the Terminal. From the terminal you can use any of the
+                sc-* tools (sc-init, sc-gen, sc-server, ...)
+              </p>
+            </section>
+          </section>
+          <section>
+            <h1>Advanced Installation</h1>
+            <section>
+              <p>If you already do Ruby development on your Mac or would just like to have greater flexibility,
+                you can install the SproutCore Dev Tools as a Ruby gem. However, it is not recommended that you use
+                the system installation, so we show you how to install with RVM. If you already have a non-system Ruby
+                installation, skip to Step B.</p>
+            </section>
+            <section>
+              <h1>Step A: Installing RVM and Ruby</h1>
+              <ol class="steps">
+                <li>
+                  <strong>With Git:</strong>
+                  <pre><code>$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)</code></pre>
+                </li>
+                <li>
+                  <strong>Without Git:</strong>
+                  <pre><code>$ curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
+    $ chmod +x rvm-installer
+    $ ./rvm-installer --version latest</code></pre>
+                </li>
+                <li>
+                  If installing for a single user instead of root, add the following to your ~/.bash_profile
+                  <pre><code>[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session</code></pre>
+                </li>
+                <li>
+                  <strong>Install Ruby:</strong>
+                  <pre><code>$ rvm install ruby-1.9.2
+    $ rvm use 1.9.2</code></pre>
+                </li>
+                <li>
+                  If you would like to set this as your primary Ruby version, run:
+                  <pre><code>$ rvm --default use 1.9.2</code></pre>
+                </li>
+                <li>Continue to Step B</li>
+              </ol>
+            </section>
+            <section>
+              <h1>Step B: Installing SproutCore</h1>
+              <p>This is the easy part, just run:</p>
+              <pre><code>$ gem install sproutcore</code></pre>
+              <p>From the Terminal prompt you can now use any of the sc-* tools (sc-init, sc-gen, sc-server, ...)</p>
+            <section>
+          </section>
+        </div>
+      </div>
     </div>
   </article>
   <footer>
@@ -135,6 +141,7 @@ $ rvm use 1.9.2</code></pre>
   <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/tab_slider.js"></script>
   <script>
     var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
