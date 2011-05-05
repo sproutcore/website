@@ -12,28 +12,28 @@
 #tabs #clip .clip-border {
   bottom: 0;
   position: absolute;
-  width: 30px;
+  width: 25px;
   top: 0;
   z-index: 1;
 }
 
 #tabs #clip #left {
-  background-image: -moz-linear-gradient(left, white, rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(left, white, rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left, white, rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, white, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, white, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, white, rgba(255, 255, 255, 0));
   background-image: -webkit-gradient(linear,  left center, right center, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0))); 
-  background-image: -webkit-linear-gradient(left, white, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(left, white, rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(left, white, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, white, rgba(255, 255, 255, 0));
   left: 0;
 }
 
 #tabs #clip #right {
-  background-image: -moz-linear-gradient(right, white, rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(right, white, rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(right, white, rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(right, white, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(right, white, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(right, white, rgba(255, 255, 255, 0));
   background-image: -webkit-gradient(linear,  right center, left center, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0))); 
-  background-image: -webkit-linear-gradient(right, white, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(right, white, rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(right, white, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(right, white, rgba(255, 255, 255, 0));
   right: 0;
 }
 
