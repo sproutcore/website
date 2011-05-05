@@ -27,15 +27,22 @@ app.tabSlider = (function() {
     // Layout the individual sections left to right
     width = 960;
     $(panel).css('width', sections.length * width);
+    $(panel).css('left', -tabIndex * width);
     $.each(sections, function(index, section) {
       $(section).css('left', index * width);
     });
+    
+    // FUTURE: Allow the setting of a different initial tab
+    if (tabIndex !== 0) {
+      $(links[0]).parent().toggleClass('active');
+      $(links[tabIndex]).parent().toggleClass('active');
+    }
     
     // Show the panel once our sections are laid out
     $(panel).show();
     
     // Resize to fit the first section
-    height = $(sections[0]).height();
+    height = $(sections[tabIndex]).height();
     $(clip).css('height', height);
     
     // The transition function
