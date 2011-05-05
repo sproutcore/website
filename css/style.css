@@ -1698,17 +1698,21 @@ html.js #community #map .bos {
   opacity: 0;
 }
 
-html.ready #community #map .sf,
-html.ready #community #map .la,
-html.ready #community #map .chi,
-html.ready #community #map .was,
-html.ready #community #map .ny,
-html.ready #community #map .bos {
+html.ready #community .visible #map .sf,
+html.ready #community .visible #map .la,
+html.ready #community .visible #map .chi,
+html.ready #community .visible #map .was,
+html.ready #community .visible #map .ny,
+html.ready #community .visible #map .bos {
   opacity: 1;
 }
 
 #community #map .sf {
   left: 48px;
+}
+
+html.ready #community .visible #map .sf {
+  top: 156px;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -1716,12 +1720,12 @@ html.ready #community #map .bos {
   transition: all 0.5s ease-in-out;
 }
 
-html.ready #community #map .sf {
-  top: 156px;
-}
-
 #community #map .la {
   left: 96px;
+}
+
+html.ready #community .visible #map .la {
+  top: 209px;
   -webkit-transition: all 0.5s ease-in-out 0.3s;
   -moz-transition: all 0.5s ease-in-out 0.3s;
   -o-transition: all 0.5s ease-in-out 0.3s;
@@ -1729,12 +1733,12 @@ html.ready #community #map .sf {
   transition: all 0.5s ease-in-out 0.3s;
 }
 
-html.ready #community #map .la {
-  top: 209px;
-}
-
 #community #map .chi {
   left: 444px;
+}
+
+html.ready #community .visible #map .chi {
+  top: 95px;
   -webkit-transition: all 0.5s ease-in-out 0.6s;
   -moz-transition: all 0.5s ease-in-out 0.6s;
   -o-transition: all 0.5s ease-in-out 0.6s;
@@ -1742,12 +1746,12 @@ html.ready #community #map .la {
   transition: all 0.5s ease-in-out 0.6s;
 }
 
-html.ready #community #map .chi {
-  top: 95px;
-}
-
 #community #map .was {
   left: 567px;
+}
+
+html.ready #community .visible #map .was {
+  top: 142px;
   -webkit-transition: all 0.5s ease-in-out 0.9s;
   -moz-transition: all 0.5s ease-in-out 0.9s;
   -o-transition: all 0.5s ease-in-out 0.9s;
@@ -1755,12 +1759,12 @@ html.ready #community #map .chi {
   transition: all 0.5s ease-in-out 0.9s;
 }
 
-html.ready #community #map .was {
-  top: 142px;
-}
-
 #community #map .ny {
   left: 598px;
+}
+
+html.ready #community .visible #map .ny {
+  top: 114px;
   -webkit-transition: all 0.5s ease-in-out 1.2s;
   -moz-transition: all 0.5s ease-in-out 1.2s;
   -o-transition: all 0.5s ease-in-out 1.2s;
@@ -1768,21 +1772,17 @@ html.ready #community #map .was {
   transition: all 0.5s ease-in-out 1.2s;
 }
 
-html.ready #community #map .ny {
-  top: 114px;
-}
-
 #community #map .bos {
   left: 635px;
+}
+
+html.ready #community .visible #map .bos {
+  top: 93px;
   -webkit-transition: all 0.5s ease-in-out 1.5s;
   -moz-transition: all 0.5s ease-in-out 1.5s;
   -o-transition: all 0.5s ease-in-out 1.5s;
   -ms-transition: all 0.5s ease-in-out 1.5s;
   transition: all 0.5s ease-in-out 1.5s;
-}
-
-html.ready #community #map .bos {
-  top: 93px;
 }
 
 #community #map p {
