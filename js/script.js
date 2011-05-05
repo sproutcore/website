@@ -9,8 +9,18 @@ var PLATFORM = {
 // basic app object
 var app = {
   platform: 'unknown',
-	  
-	ready: {}
+	platformMap: { Win: 'windows', Mac: 'mac', X11: 'linux', Linux: 'linux' },
+	ready: {},
+	messages: {
+		subscribe: {
+			success: "Thanks, Sign-Up Successful",
+			validation: "Please enter a valid email address",
+			processing: "Processing",
+			signup: "Sign-Up",
+			commError: "An communication error occured",
+			done: "Done"
+		}
+	}
 };
 
 (function($,document, window) {
@@ -140,12 +150,13 @@ app.slider = (function() {
 */
 app.detectPlatform = function() {
   // This probably sucks and is unreliable
-  if (navigator.appVersion.indexOf("Win")!=-1) { return PLATFORM.windows; }
-  if (navigator.appVersion.indexOf("Mac")!=-1) { return PLATFORM.mac; }
-  if (navigator.appVersion.indexOf("X11")!=-1 ||
-      navigator.appVersion.indexOf("Linux")!=-1) { return PLATFORM.linux; }
-      
-  return PLATFORM.unknown;
+	var platform = PLATFORM.unknown;
+  $.each( app.platformMap, function(i,v) {
+		if ((new RegExp( i )).test( navigator.appVersion ) ) {
+		  platform = PLATFORM[ v ];
+		}
+	});
+	return platform;
 };
 
 /**
@@ -200,6 +211,108 @@ app.gotoInstall = function() {
   
   window.location.href = url;
 };
+
+app.subscribe = (function( $, window ) {
+	// dom elements
+	var $subscribe, $subscribeButton, $subscribeInput, $subscribeError, $subscribeProcessing,
+	
+	// email regex from jquery-validate
+	rEmail = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i,
+	
+	// prevent double submissions
+	processed = false,
+	
+	// old width of the container
+	width,
+	
+			// handles all rendering of text, animations, etc
+			views = {
+				
+				processing: function() {
+					width = width || $subscribe.width();
+					$subscribe.animate({ 
+							width: $subscribeButton.width() + $subscribeProcessing.width() +  10
+						}, { 
+							duration:1200
+						});
+					$subscribeProcessing.fadeIn();
+					$subscribeInput.fadeOut();		
+					$subscribeButton.html( app.messages.subscribe.processing );		
+				},
+				
+				done:  function( errorMessage, email ) {
+					$subscribe.find( '.processing' ).fadeOut();
+					$subscribe.animate({ 
+							width: width
+						}, { 
+							duration:1200, 
+							complete: function() {
+								if ( errorMessage && errorMessage !== "success" ) {
+									$subscribeInput.val( email ).fadeIn();
+									views.error( errorMessage );
+								}	else {
+									$subscribeInput.val( app.messages.subscribe.success ).addClass( 'processed' ).fadeIn().attr( 'readonly', true );
+									$subscribeButton.html( app.messages.subscribe.done ).attr( 'disabled', true);
+									processed = true;
+								}											
+							}
+					});
+				},
+				
+				error: function( errorMessage ) {
+					$subscribeError.html( errorMessage ).stop(true, true).fadeIn();
+					$subscribeButton.html( app.messages.subscribe.signup );
+				}
+			},
+			
+			// all of the actions
+			subscribe = function( email ) {
+				if ( processed ) {
+					return false;
+				}
+
+				if ( !email.length || !rEmail.test( email ) ) {
+				  views.error( app.messages.subscribe.validation );
+					return false;
+				}
+				
+				views.processing();
+				
+				views.done();
+				return;
+				
+				// view.done() for success, view.done( errorMessage, email ) for comm error and orig. email
+				$.ajax({
+					url: "subscribe.php",
+					type: 'post',
+					data: { email: email }
+				}).done( function( data, success ) {
+					if ( success === "success" ) {
+						view.done();
+					}
+				}).fail( function() {
+					views.done( app.messages.subscribe.commError, email );
+				});
+			};
+	
+	app.ready.subscribe = function() {
+		// cache this stuff, ya
+		$subscribe = $( '#subscribe' );
+		$subscribeButton = $subscribe.find( 'button[name="subscribe"]' );
+		$subscribeError = $subscribe.find( '.error' );
+		$subscribeInput = $subscribe.find( 'input' );
+	  $subscribeProcessing = $subscribe.find( '.processing' );
+
+		// event listeners
+		$subscribe.bind( 'click keydown submit' , function( e ) {
+			$subscribeError.fadeOut();
+			if ( e.type === "submit" ) {
+				e.preventDefault();
+				subscribe( $subscribeInput.val() );
+			}
+		});
+	};
+})(jQuery, this);
 
 // add 'ready' to html when the dom's ready to go
 app.ready.domReadyClass = function() {

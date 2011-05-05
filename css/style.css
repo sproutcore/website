@@ -1690,6 +1690,77 @@ html.js #application-slider-tray {
 	background: url(../img/slider-next.png) no-repeat;
 }
 
+/* Subscribe
+--------------------------------------------- */
+
+#subscribe {
+  position: relative;
+  border:1px solid #000;
+  height:28px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background:#282828;
+  -webkit-box-shadow: inset 0px 0px 11px #1b1b1b;
+  -moz-box-shadow: inset 0px 0px 11px #1b1b1b;
+  box-shadow: inset 0px 0px 11px #1b1b1b;
+}
+
+#subscribe .error {
+  position:absolute;
+  top:100%;
+  margin-top:.5em;
+  display:none;
+  color: #c23b3b;
+}
+
+#subscribe .processing {
+  position: absolute;
+  top:0; left:0;
+  height:24px;
+  display:none;
+}
+
+#subscribe input[name="email"] {
+  position:absolute;
+  font-size:1.2em;
+  top:2px; left:0;
+  right:5.5em;
+  height:22px;
+  color:#CCC;
+  background:none;
+  border:0px;    
+}
+
+#subscribe input[name="email"]:active, #subscribe input[name="email"]:focus {
+  background:#323232;
+  outline:none;
+  -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+#subscribe button[name="subscribe"] {
+  position:absolute;
+  top:-1px; right:-1px; 
+  height:30px;
+  color:#FFF;
+  width: 7em;
+  background:#111;
+  cursor: pointer;
+  border:1px solid #000;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #494949; /* Old browsers */
+  background: -moz-linear-gradient(top, #494949 0%, #404040 50%, #393939 51%, #303030 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#494949), color-stop(50%,#404040), color-stop(51%,#393939), color-stop(100%,#303030)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#303030',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); /* W3C */
+}
+#subscribe button[name="subscribe"]:disabled {
+  background: #282828;
+}
 
 /* Docs
 --------------------------------------------- */
@@ -1984,7 +2055,8 @@ body > footer .col:nth-child(1) > a {
 
 /* Headers */
 
-body > footer h1 {
+body > footer h1,
+body > footer h2 {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 13px;
