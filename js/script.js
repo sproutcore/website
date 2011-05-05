@@ -148,6 +148,36 @@ app.detectPlatform = function() {
   return PLATFORM.unknown;
 };
 
+/**
+  Starts a download of the installer package for the current platform. After
+  a short delay, goes to the install page for the current platform.
+  
+ */
+app.startDownload = function() {
+  
+  // Download the correct file
+  switch (app.platform) {
+    case PLATFORM.windows:
+      window.location.href = "installers/SproutCore Installer.zip";
+      break;
+    
+    case PLATFORM.mac:
+      window.location.href = "installers/SproutCore Installer.dmg";
+      break;
+    
+    default:
+      // Do nothing
+  }
+  
+  setTimeout(function () {
+    app.gotoInstall();
+  }, 700);
+};
+
+/**
+  Goes to the install page for the current platform.
+  
+ */
 app.gotoInstall = function() {
   var url = "docs.html#install";
   
