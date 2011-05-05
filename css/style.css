@@ -1269,34 +1269,35 @@ html.js #carousel .tray {
 	top: 50%;
 }
 
-html.js #carousel > button {
+#carousel > button {
+  background: url(../img/carousel/arrows.png) no-repeat;
   display: block;
 }
 
 #carousel > button.previous {
-  background: url(../img/carousel/previous.png) no-repeat;
+  background-position: 0 0;
   left: -60px;
 }
 
 #carousel > button.previous:hover {
-  background: url(../img/carousel/previous-hover.png) no-repeat;
+  background-position: 0 -49px;
 }
 
 #carousel > button.previous:active {
-  background: url(../img/carousel/previous-active.png) no-repeat;
+  background-position: 0 -98px;
 }
 
 #carousel > button.next {
-  background: url(../img/carousel/next.png) no-repeat;
+  background-position: -48px 0;
   right: -60px;
 }
 
 #carousel > button.next:hover {
-  background: url(../img/carousel/next-hover.png) no-repeat;
+  background-position: -48px -49px;
 }
 
 #carousel > button.next:active {
-  background: url(../img/carousel/next-active.png) no-repeat;
+  background-position: -48px -98px;
 }
 
 
