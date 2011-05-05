@@ -25,7 +25,7 @@ app.tabSlider = (function() {
     tabIndex = 0;
     
     // Layout the individual sections left to right
-    width = 960;
+    width = 958;
     $(panel).css('width', sections.length * width);
     $(panel).css('left', -tabIndex * width);
     $.each(sections, function(index, section) {
