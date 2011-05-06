@@ -24,23 +24,30 @@
   z-index: 100;
 }
 
-#modals section.modal-pane .close-button {
-  background-color: #000;  
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  border-radius: 13px;
-  left: -12px;
-  height: 26px;
-  position: absolute;
-  text-align: center;
-  top: -12px;
-  width: 26px;
-}
-
 #modals section.modal-pane .close-button a {
+  background-color: #000;  
+/*  border: 2px solid white;*/
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   color: white;
   font-size: 24px;
-  line-height: 20px;
+  height: 28px;
+  line-height: 21px;
+  left: -13px;
+  position: absolute;
+  text-align: center;
+  top: -13px;
+  width: 28px;
+}
+
+#modals section.modal-pane .close-button a:hover {
+  background-color: #262626;  
+}
+
+#modals section.modal-pane .close-button a:active {
+  background-color: #000;  
+  color: #BEBEBE;
 }
 
 #modals section#contact-us {
