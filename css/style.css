@@ -1113,44 +1113,21 @@ html.ready #home [role="main"] > div {
 
 #about #core-team li {
 	float: left;
-	padding-left: 140px;
 	margin: 0 0 30px 0;
 	min-height: 137px;
-	width: 270px;
+	width: 420px;
 	list-style: none;
-	background: url(../img/avatars/blank-large.png) no-repeat;
 }
 
-#about #core-team #mike-ball {
-	background: url(../img/avatars/mike-ball-large.png) no-repeat;
-}
-
-#about #core-team #colin-campbell {
-	background: url(../img/avatars/colin-campbell-large.png) no-repeat;
-}
-
-#about #core-team #michael-cohen {
-	background: url(../img/avatars/michael-cohen-large.png) no-repeat;
-}
-
-#about #core-team #tom-dale {
-	background: url(../img/avatars/tom-dale-large.png) no-repeat;
-}
-
-#about #core-team #evin-grano {
-	background: url(../img/avatars/evin-grano-large.png) no-repeat;
-}
-
-#about #core-team #charles-jolley {
-	background: url(../img/avatars/charles-jolley-large.png) no-repeat;
-}
-
-#about #core-team #yehuda-katz {
-	background: url(../img/avatars/yehuda-katz-large.png) no-repeat;
-}
-
-#about #core-team #peter-wagenet {
-	background: url(../img/avatars/peter-wagenet-large.png) no-repeat;
+#about #core-team img{
+	float: left;
+	margin-right: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 #about #core-team li:nth-child(odd) {
