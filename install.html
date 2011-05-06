@@ -6,6 +6,7 @@
   <meta name="description" content="Installing SproutCore" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/modal.css" />
   <script src="js/libs/modernizr-1.7.min.js"></script>
 </head>
 <body id="docs" class="green">
@@ -76,6 +77,26 @@
       </div>
     </div>
   </article>
+  <div id="modals">
+    <div id="modal" style="display: none;"></div>
+    <section role="complementary" id="contact-us" class="modal-pane" style="display: none;">
+      <div class="close-button"><a href="#" onclick="app.closeModal($('#contact-us')); return false;">&times;</a></div>
+      <!-- Embed WUFOO Form -->
+      <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+      <script type="text/javascript">
+        var r7x3q1 = new WufooForm();
+        r7x3q1.initialize({
+        'userName':'strobecorp', 
+        'formHash':'r7x3q1', 
+        'autoResize':true,
+        'height':'574', 
+        'ssl':true});
+        r7x3q1.display();
+      </script>
+      <!-- End Embed -->]
+    </section>
+  </div>
   <footer>
     <div class="container">
      	<div class="col">
@@ -95,7 +116,7 @@
           <li><a href="#">Downloads</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="https://github.com/sproutcore/sproutcore">GitHub</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#" onclick="app.openModal($('#contact-us')); return false;">Contact Us</a></li>
           <li><a href="http://guides.sproutcore.com">Guides</a></li>
         </ul>
         <a href="http://www.w3.org/html/logo/"><img src="img/html5_tech.png" alt="HTML5 Powered" /></a>
@@ -115,6 +136,7 @@
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="js/tab_slider.js"></script>
+  <script src="js/modals.js"></script>
   <script>
     var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
