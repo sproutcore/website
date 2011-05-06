@@ -6,6 +6,7 @@
   <meta name="description" content="A framework for building fast, desktop caliber web applications." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/modal.css" />
   <link href='http://fonts.googleapis.com/css?family=Arvo:regular,bold' rel='stylesheet' type='text/css' />
   <script src="js/libs/modernizr-1.7.min.js"></script>
 </head>
@@ -232,6 +233,56 @@
       </section>
     </div>
   </div>
+  <div id="modals">
+    <div id="modal" style="display: none;"></div>
+    <section role="complementary" id="contact-us" class="modal-pane" style="display: none;">
+      <div class="close-button"><a href="#" onclick="app.closeModal($('#contact-us')); return false;">&times;</a></div>
+      <h1>Contact Us</h1>
+      <!-- Embed WUFOO Form -->
+      <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+      <script type="text/javascript">
+        var r7x3q1 = new WufooForm();
+        r7x3q1.initialize({
+        'userName':'strobecorp', 
+        'formHash':'r7x3q1', 
+        'autoResize':true,
+        'height':'574', 
+        'ssl':true});
+        r7x3q1.display();
+      </script>
+      <!-- Unused Form -->
+      <!--
+      <form action="#" method="post">
+        <div id="right">
+          <p>
+            <label for="message">Message:</label>
+            <textarea name="message" type="email" required></textarea>
+          </p>
+        </div>
+        <div id="left">
+          <p>
+            <label for="name">First and Last Name:</label>
+            <input name="name" type="text" required />
+          </p>
+          <p>
+            <label for="company">Company:</label>
+            <input name="company" type="text" />
+          </p>
+          <p>
+            <label for="title">Job Title:</label>
+            <input name="title" type="text" />
+          </p>
+          <p>
+            <label for="email">Email Address:</label>
+            <input name="email" type="email" required />
+          </p>
+        </div>
+        <div class="submit"><a href="#" class="button primary" onclick="app.submitContactForm(); return false;"><span class="mail">Send Inquiry</span></a></div>
+      </form>
+      -->
+    </section>
+  </div>
   <footer>
     <div class="container">
       <div class="col">
@@ -251,7 +302,8 @@
           <li><a href="#">Downloads</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="https://github.com/sproutcore/sproutcore">GitHub</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#" onclick="app.openModal($('#contact-us')); return false;">Contact Us</a></li>
+          <!-- <li><a href="https://strobecorp.wufoo.com/forms/r7x3q1/" onclick="window.open(this.href,  null, 'height=574, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Contact Us Form">Contact Us</a></li> -->
           <li><a href="http://guides.sproutcore.com">Guides</a></li>
         </ul>
         <a href="http://www.w3.org/html/logo/"><img src="img/html5_tech.png" alt="HTML5 Powered" /></a>
@@ -280,6 +332,7 @@
   <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/modals.js"></script>
   <script>
     var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
