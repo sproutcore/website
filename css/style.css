@@ -518,7 +518,7 @@ a.button.secondary {
 }
 
 .download-cloud {
-	background-image: url(../img/download_cloud.png);
+	background-image: url(../img/download-cloud.png);
 }
 
 .app {
@@ -1038,13 +1038,23 @@ html.ready #home [role="main"] > div {
 
 /* Upcoming Events */
 
-#home .events li:nth-child(2) {
+.events li:nth-child(2) {
   margin: 37px 0;
 }
 
-#home .events p {
+.events h2.title,
+#tabs #panel > section .events h2.title {
+	font-size: 14px;
+	line-height: 17px;
+	margin-bottom: 3px;
+}
+
+.events p {
   height: 28px;
   overflow: hidden;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 /* Blog & Spotlight */
@@ -1752,6 +1762,47 @@ html.js #application-slider-tray {
 /* Community
 --------------------------------------------- */
 
+/* Get Involved */
+
+#community #get-involved div {
+	float: left;
+}
+
+#community #get-involved #ipad {
+	width: 492px;
+	height: 351px;
+  background-image: url(../img/ipad-get-involved.png);
+}
+
+#community #get-involved #upcoming-events,
+#community #get-involved #upcoming-meetups {
+	margin-top: 66px;
+	width: 45%;
+}
+
+#community #get-involved #upcoming-events {
+	margin-right: 81px;
+}
+
+#community #get-involved .events li:nth-child(2) {
+  margin: 14px 0;
+}
+
+#community #get-involved ul.events .date {
+	float: left;
+	margin-right: 10px;
+}
+
+#community #get-involved ul.events > li {
+	margin-left: 0;
+	list-style: none;
+}
+
+#community #get-involved footer {
+	float: right;
+}
+
+
 /* User Groups - Map */
 
 #community #map {
@@ -1982,8 +2033,24 @@ html.ready #community .visible #map a {
 	min-height: 70px;
 	width: 39%;
 	list-style: none;
-	background: url(../img/ecosystem.png) no-repeat;
 }
+
+#community #ecosystem li .editors {
+	background-image: url(../img/editors.png);
+}
+
+#community #ecosystem li .hosting {
+	background-image: url(../img/hosting.png);
+}
+
+#community #ecosystem li .support {
+	background-image: url(../img/support.png);
+}
+
+#community #ecosystem li .consulting {
+  background-image: url(../img/consulting.png);
+}
+
 
 #community #ecosystem h2 {
 	margin-bottom: 2px;
