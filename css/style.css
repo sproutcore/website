@@ -417,19 +417,19 @@ pre {
 }
 
 .pink .button.primary span {
-  background-position: 0 -18px;
+ background-position: 0 -21px;
 }
 
 .blue .button.primary span {
-  background-position: 0 -36px;
+ background-position: 0 -42px;
 }
 
 .orange .button.primary span {
-  background-position: 0 -54px;
+ background-position: 0 -63px;
 }
 
 .purple .button.primary span {
-  background-position: 0 -72px;
+ background-position: 0 -84px;
 }
 
 #action {
