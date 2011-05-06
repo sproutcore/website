@@ -62,7 +62,7 @@
               <img src="img/pin.png" alt="New York" class="pin ny" />
               <img src="img/pin.png" alt="Boston" class="pin bos" />
               <p>Don't See Your City?</p>
-              <a href="#" class="button secondary large"><span>Start A Local Meetup!</span></a>
+              <a href="#" class="button secondary large" onclick="app.openModal($('#local-meetup')); return false;"><span>Start A Local Meetup!</span></a>
             </div>
             <h2>Upcoming Meetups</h2>
             <ul id="meetups">
@@ -119,6 +119,23 @@
         'height':'574', 
         'ssl':true});
         r7x3q1.display();
+      </script>
+      <!-- End Embed -->
+    </section>
+    <section role="complementary" id="local-meetup" class="modal-pane" style="display: none;">
+      <div class="close-button"><a href="#" onclick="app.closeModal($('#local-meetup')); return false;">&times;</a></div>
+      <!-- Embed WUFOO Form -->
+      <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+      <script type="text/javascript">
+        var m7x3p9 = new WufooForm();
+        m7x3p9.initialize({
+        'userName':'strobecorp', 
+        'formHash':'m7x3p9', 
+        'autoResize':true,
+        'height':'565', 
+        'ssl':true});
+        m7x3p9.display();
       </script>
       <!-- End Embed -->
     </section>
