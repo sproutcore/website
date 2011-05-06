@@ -891,7 +891,7 @@ html.ready #home [role="main"] > div {
 }
 
 #tabs #panel > section > section > h1,
-#tabs #panel > section h2 {
+#tabs #panel > section h2, #core-member-modal-content h2 {
   margin-bottom: 9px;
   font-weight: bold;
   font-size: 18px;
@@ -902,7 +902,7 @@ html.ready #home [role="main"] > div {
   list-style: outside url(../img/bullet.png);
 }
 
-#tabs p {
+#tabs p, #core-member-modal-content p {
   margin-bottom: 17px;
   line-height: 1.2;
 }
@@ -1129,7 +1129,7 @@ html.ready #home [role="main"] > div {
 	list-style: none;
 }
 
-#about #core-team img{
+#about #core-team img, #core-member-modal-content img {
 	float: left;
 	margin-right: 10px;
 	border: 1px solid #444;
@@ -1145,18 +1145,19 @@ html.ready #home [role="main"] > div {
 	padding-right: 50px;
 }
 
-#about #core-team > ul > li > h2 {
+#about #core-team > ul > li > h2, #core-member-modal-content h2 {
 	margin-bottom: 0;
 }
 
-#about #core-team i {
+#about #core-team i, #core-member-modal-content i {
 	display: block;
 	padding-bottom: 6px;
 	color: #888;
 }
 
-#about #core-team p {
+#about #core-team p, #core-member-modal-content p {
 	font-size: 12px;
+	margin-left: 138px;
 }
 
 #about #core-team .not-shown li {

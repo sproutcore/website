@@ -63,3 +63,11 @@
   margin-top: -331px;
   width: 310px;
 }
+
+#modals section#core-member-modal {
+  font-size: 14px;
+  margin-left: -315px;
+  margin-top: -140px;
+  padding: 40px;
+  width: 630px;
+}
