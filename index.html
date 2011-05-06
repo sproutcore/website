@@ -237,7 +237,6 @@
     <div id="modal" style="display: none;"></div>
     <section role="complementary" id="contact-us" class="modal-pane" style="display: none;">
       <div class="close-button"><a href="#" onclick="app.closeModal($('#contact-us')); return false;">&times;</a></div>
-      <h1>Contact Us</h1>
       <!-- Embed WUFOO Form -->
       <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
 
@@ -251,35 +250,37 @@
         'ssl':true});
         r7x3q1.display();
       </script>
+      <!-- End Embed -->
       <!-- Unused Form -->
       <!--
-      <form action="#" method="post">
-        <div id="right">
-          <p>
-            <label for="message">Message:</label>
-            <textarea name="message" type="email" required></textarea>
-          </p>
-        </div>
-        <div id="left">
-          <p>
-            <label for="name">First and Last Name:</label>
-            <input name="name" type="text" required />
-          </p>
-          <p>
-            <label for="company">Company:</label>
-            <input name="company" type="text" />
-          </p>
-          <p>
-            <label for="title">Job Title:</label>
-            <input name="title" type="text" />
-          </p>
-          <p>
-            <label for="email">Email Address:</label>
-            <input name="email" type="email" required />
-          </p>
-        </div>
-        <div class="submit"><a href="#" class="button primary" onclick="app.submitContactForm(); return false;"><span class="mail">Send Inquiry</span></a></div>
-      </form>
+        <h1>Contact Us</h1>
+        <form action="#" method="post">
+          <div id="right">
+            <p>
+              <label for="message">Message:</label>
+              <textarea name="message" type="email" required></textarea>
+            </p>
+          </div>
+          <div id="left">
+            <p>
+              <label for="name">First and Last Name:</label>
+              <input name="name" type="text" required />
+            </p>
+            <p>
+              <label for="company">Company:</label>
+              <input name="company" type="text" />
+            </p>
+            <p>
+              <label for="title">Job Title:</label>
+              <input name="title" type="text" />
+            </p>
+            <p>
+              <label for="email">Email Address:</label>
+              <input name="email" type="email" required />
+            </p>
+          </div>
+          <div class="submit"><a href="#" class="button primary" onclick="app.submitContactForm(); return false;"><span class="mail">Send Inquiry</span></a></div>
+        </form>
       -->
     </section>
   </div>
@@ -303,7 +304,6 @@
           <li><a href="community.html">Community</a></li>
           <li><a href="https://github.com/sproutcore/sproutcore">GitHub</a></li>
           <li><a href="#" onclick="app.openModal($('#contact-us')); return false;">Contact Us</a></li>
-          <!-- <li><a href="https://strobecorp.wufoo.com/forms/r7x3q1/" onclick="window.open(this.href,  null, 'height=574, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" title="Contact Us Form">Contact Us</a></li> -->
           <li><a href="http://guides.sproutcore.com">Guides</a></li>
         </ul>
         <a href="http://www.w3.org/html/logo/"><img src="img/html5_tech.png" alt="HTML5 Powered" /></a>

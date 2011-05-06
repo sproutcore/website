@@ -1,0 +1,51 @@
+#modals #modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+
+#modals section.modal-pane {
+  background-color: #F9F9F9;  
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px #000;
+  -moz-box-shadow: 0 0 4px #000;
+  box-shadow: 0 0 4px #000;
+  color: #3B3B3B;
+  left: 50%;
+  padding: 18px 50px 10px;
+  position: fixed;
+  top: 50%;
+  z-index: 100;
+}
+
+#modals section.modal-pane .close-button {
+  background-color: #000;  
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  left: -12px;
+  height: 26px;
+  position: absolute;
+  text-align: center;
+  top: -12px;
+  width: 26px;
+}
+
+#modals section.modal-pane .close-button a {
+  color: white;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+#modals section#contact-us {
+  height: 626px;
+  margin-left: -205px;
+  margin-top: -326px;
+  width: 310px;
+}
