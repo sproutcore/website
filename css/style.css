@@ -1437,7 +1437,7 @@ html.js #carousel .tray {
 #carousel .panel.guides > div {
   background: url(../img/carousel/guides/icon.png) no-repeat 0 15px;
   margin: 0 50px;
-  padding-left: 90px;
+  padding: 0 0 10px 90px;
 }
 
 #carousel .panel.guides h2 {
