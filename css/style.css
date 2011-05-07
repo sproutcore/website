@@ -2237,6 +2237,18 @@ html.ready #community .visible #map a {
 }
 
 
+/* Search Results
+--------------------------------------------- */
+
+#search #tabs nav li.active {
+	border: none;
+	background: none;
+}
+
+#search #tabs nav li:first-child {
+	margin-left: 0;
+}
+
 /* Footer
 --------------------------------------------- */
 

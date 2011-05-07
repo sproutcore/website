@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <title>SproutCore - About</title>
+  <meta name="description" content="SproutCore, the team behind it and those using it." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <script src="js/libs/modernizr-1.7.min.js"></script>
+</head>
+<body id="search" class="green">
+  <header role="banner">
+    <div class="container">
+      <h1 id="logo">
+        <a href="index.html"><img src="img/logo.png" alt="SproutCore" /></a>
+      </h1>
+      <nav role="navigation">
+        <ul>
+          <li class="active"><a href="about.html">About</a></li>
+          <li><a href="http://guides.sproutcore.com">Guides</a></li>
+          <li><a href="http://docs.sproutcore.com">Docs</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="http://blog.sproutcore.com">Blog</a></li>
+        </ul>
+      </nav>
+      <form action="#" role="search">
+        <input type="text" />
+      </form>
+    </div>
+  </header>
+  <article role="main" class="container">
+    <h1>Search Our Sites
+	    <ul id="action">
+	      <li><a href="#" class="button primary" onclick="app.startDownload(); return false;"><span class="download">Download Latest</span></a></li>
+			</ul>
+		</h1>
+
+    <div id="tabs">
+      <nav>
+        <div id="tab"></div>
+        <ul>
+          <li class="active"><a href="#">Displaying 1-20 of 150 results for Lebowski</a></li>
+        </ul>
+      </nav>
+      <div id="clip">
+        <div id="left" class="clip-border"></div>
+        <div id="right" class="clip-border"></div>
+        <div id="panel" style="display: none;">
+          <section id="search-results" class="visible">
+						<div id="cse" style="width: 100%;">Loading</div>
+						<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+						<script type="text/javascript"> 
+						  google.load('search', '1', {language : 'en'});
+						  google.setOnLoadCallback(function() {
+						    var customSearchControl = new google.search.CustomSearchControl('010803036737098308835:zpz3rt7h_7y');
+						    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+						    customSearchControl.draw('cse');
+						  }, true);
+						</script>
+						<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+  <div id="modals">
+    <div id="modal" style="display: none;"></div>
+    <section role="complementary" id="contact-us" class="modal-pane" style="display: none;">
+      <div class="close-button"><a href="#" onclick="app.closeModal($('#contact-us')); return false;">&times;</a></div>
+      <!-- Embed WUFOO Form -->
+      <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+      <script type="text/javascript">
+        var r7x3q1 = new WufooForm();
+        r7x3q1.initialize({
+        'userName':'strobecorp', 
+        'formHash':'r7x3q1', 
+        'autoResize':true,
+        'height':'574', 
+        'ssl':true});
+        r7x3q1.display();
+      </script>
+      <!-- End Embed -->
+    </section>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="col">
+        <a href="index.html"><img src="img/logos/png/sc_logo_medium.png" alt="SproutCore" /></a>
+        <p>
+          Copyright 2011 <a href="http://www.strobecorp.com">Strobe Inc</a>.
+          <br />
+          SproutCore framework is under MIT License.
+        </p>
+      </div>
+      <nav class="col">
+        <h1>Site Navigation</h1>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="http://blog.sproutcore.com">Blog</a></li>
+          <li><a href="#">Downloads</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="https://github.com/sproutcore/sproutcore">GitHub</a></li>
+          <li><a href="#" onclick="app.openModal($('#contact-us')); return false;">Contact Us</a></li>
+          <li><a href="http://guides.sproutcore.com">Guides</a></li>
+        </ul>
+        <a href="http://www.w3.org/html/logo/"><img src="img/html5_tech.png" alt="HTML5 Powered" /></a>
+      </nav>
+      <div class="col">
+        <h1>Get in Touch, Stay Informed</h1>
+        <ul class="social">
+          <li><a href="http://twitter.com/sproutcore"><img src="img/twitter.png" alt="Twitter" /></a></li>
+          <li><a href="http://www.facebook.com/sproutcore"><img src="img/facebook.png" alt="Facebook" /></a></li>
+          <li><a href="http://groups.google.com/group/sproutcore"><img src="img/google.png" alt="Google Groups" />Subscribe To Mailing List</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/tab_slider.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/core_members.js"></script>
+  <script>
+    var _gaq=[["_setAccount","UA-19584397-1"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+</body>
+</html>
