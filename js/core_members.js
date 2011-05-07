@@ -7,7 +7,7 @@ var VISIBLE_MEMBERS = [
     src: 'img/avatars/charles-jolley-large.png',
     name: "Charles Jolley",
     location: "Los Altos, CA, USA",
-    shortBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the SproutCore open source framework. Before founding Strobe, Charles was ",
+    shortBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the SproutCore open source framework. Before founding Strobe, Charles was responsible ",
     fullBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the SproutCore open source framework. Before founding Strobe, Charles was responsible for Mobile Me application development at Apple."
   },
   {
@@ -28,7 +28,7 @@ var VISIBLE_MEMBERS = [
     src: 'img/avatars/michael-cohen-large.png',
     name: "Michael Cohen",
     location: "San Francisco, CA, USA",
-    shortBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the framework for two years. As a core team member, he is the creator of two SproutCore frame ",
+    shortBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the framework for 2 years. As a core team member, he is the creator of two SproutCore frameworks ",
     fullBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the framework for two years. As a core team member, he is the creator of two SproutCore frameworks: Ki, a full featured statechart framework that is now part of latest SproutCore release, version 1.5; and Lebowski, a test integration framework for SproutCore applications. Michael also maintains a blog focused on helping people learn about SproutCore."
   },
   {
@@ -49,14 +49,14 @@ var VISIBLE_MEMBERS = [
     src: 'img/avatars/tyler-keating-large.jpg',
     name: "Tyler Keating",
     location: "Regina, SK, Canada",
-    shortBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina.  A persistent desire to write software eventually led him to new work writing OS X desktop apps, Rails web ",
+    shortBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina.  A persistent desire to write software eventually led him to new work writing OS X desktop apps ",
     fullBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina.  A persistent desire to write software eventually led him to new work writing OS X desktop apps, Rails web apps, iPhone & Blackberry mobile apps and most recently, SproutCore, best of all worlds, apps.  He currently works for Strobe Inc., where he works on improving SproutCore, developing applications and supporting other companies with their mobile strategies.<br><br>He lives in Regina Saskatchewan with his wife and two daughters."
   },
   {
     src: 'img/avatars/tom-dale-large.png',
     name: "Tom Dale",
     location: "San Francisco, CA, USA",
-    shortBio: "Tom graduated from UC Irvine with a degree in criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time using SproutCore, his first exposure to JavaScript, and his first time meeting Charles ",
+    shortBio: "Tom graduated from UC Irvine with a degree in criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time using SproutCore, his first exposure to JavaScript, and his first time meeting Charles Jolley ",
     fullBio: "Tom graduated from UC Irvine with a degree in Criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time using SproutCore, his first exposure to JavaScript, and his first time meeting Charles Jolley. From 2009 to the end of 2010, he helped maintain SproutCore at Apple and assisted building the next generation of their web applications. Now he works at Strobe where he couldn’t be more excited about making web applications the big thing instead of just the next big thing. In his spare time he runs a cash-for-beer exchange program at many local San Francisco dive bars."
   },
   {
