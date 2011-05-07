@@ -1798,8 +1798,8 @@ html.js #application-slider-tray {
 	line-height: 23px;
 	font-size: 13px;
 	text-align: center;
-	text-shadow: 0 1px 0 rgba(0,0,0,.6);
-	color: #fff;
+	text-shadow: 0 1px 0 rgba(255,255,255,.25);
+	color: rgba(0,0,0,.7);
 	font-weight: 420;
 }
 
