@@ -62,9 +62,9 @@ body {
   background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -moz-linear-gradient(top, #72cb47, #e8f4e3 62%);
   background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -ms-linear-gradient(top, #72cb47, #e8f4e3 62%);
   background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -o-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(#72cb47), color-stop(62%, #e8f4e3));
-  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), -webkit-linear-gradient(top, #72cb47, #e8f4e3 62%);
-  background: url(../img/pixels.png) repeat-x, url(../img/cross.png), linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, -webkit-gradient(linear, left top, left bottom, from(#72cb47), color-stop(62%, #e8f4e3));
+  background: url(../img/pixels.png) repeat-x, -webkit-linear-gradient(top, #72cb47, #e8f4e3 62%);
+  background: url(../img/pixels.png) repeat-x, linear-gradient(top, #72cb47, #e8f4e3 62%);
 }
 
 .pink {
@@ -1704,15 +1704,14 @@ html.js #application-slider-tray {
 
 #subscribe .processing {
   position: absolute;
-  top:0; left:0;
-  height:24px;
+  top:6px; left:8px;
   display:none;
 }
 
 #subscribe input[name="email"] {
   position:absolute;
-  font-size:1.2em;
-  top:2px; left:0;
+  font-size:12px;
+  top:2px; left:4px;
   right:5.5em;
   height:22px;
   color:#CCC;
@@ -1721,8 +1720,8 @@ html.js #application-slider-tray {
 }
 
 #subscribe input[name="email"]:active, #subscribe input[name="email"]:focus {
-  background:#323232;
-  outline:none;
+  outline: none;
+	border: none;
   -moz-border-radius: 5px;
    border-radius: 5px;
 }
@@ -1748,7 +1747,7 @@ html.js #application-slider-tray {
   background: linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); /* W3C */
 }
 #subscribe button[name="subscribe"]:disabled {
-  background: #282828;
+  opacity: .5;
 }
 
 /* Docs
@@ -2233,7 +2232,7 @@ html.ready #community .visible #map a {
 
 
 #community #ecosystem h2 {
-	margin-bottom: 2px;
+	margin-bottom: 0 !important;
 }
 
 
