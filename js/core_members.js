@@ -41,7 +41,7 @@ var VISIBLE_MEMBERS = [
   {
     src: 'img/avatars/peter-wagenet-large.png',
     name: "Peter Wagenet",
-    location: "",
+    location: "Orange County, CA, USA",
     shortBio: "Peter Wagenet is a member of the SproutCore Core Team and a SproutCore engineer at Strobe. Prior to working at Strobe, Peter was also a Ruby on Rails engineer and still enjoys tinkering around with it in his free time. His projects can be found ",
     fullBio: "Peter Wagenet is a member of the SproutCore Core Team and a SproutCore engineer at Strobe. Prior to working at Strobe, Peter was also a Ruby on Rails engineer and still enjoys tinkering around with it in his free time. His projects can be found at <a href=\"http://github.com/rxcfc\" target=\"_blank\">http://github.com/rxcfc</a> and his Twitter at @wagenet."
   },
