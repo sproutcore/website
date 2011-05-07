@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/modal.css" />
   <script src="js/libs/modernizr-1.7.min.js"></script>
+	<script type="text/javascript">
+		function setVisible() {
+			var defaultPage = document.getElementById("get-involved");
+			defaultPage.className = 'visible';
+		}
+		window.onload = setVisible;
+	</script>
 </head>
 <body id="community" class="green">
   <header role="banner">
@@ -48,11 +55,11 @@
         <div id="left" class="clip-border"></div>
         <div id="right" class="clip-border"></div>
         <div id="panel" style="display: none;">
-          <section id="get-involved" class="visible">
+          <section id="get-involved">
             <h1>Getting Involved With The SproutCore Community Is Easier Than You Think...</h1>
 						<div id="ipad">
+							<img src="img/ipad-text.png" alt="Stay on top of things" class="instructions">
 							<div id="items">
-								<img src="img/ipad-text.png" alt="Stay on top of things">
 								<a href="http://groups.google.com/group/sproutcore?pli=1" class="button secondary red">Subscribe to the mailing list</a>
 		          	<a href="#" class="button secondary orange">Subscribe to blog via rss</a>
 		          	<a href="http://twitter.com/sproutcore" class="button secondary aqua">follow us on twitter</a>

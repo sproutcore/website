@@ -1769,19 +1769,42 @@ html.js #application-slider-tray {
 }
 
 /* iPad Graphic */
+
 #community #get-involved #ipad {
 	width: 492px;
 	height: 351px;
   background-image: url(../img/ipad-get-involved.png);
 }
 
-#community #get-involved #ipad #items {
-	width: 258px;
-	margin: 0 116px;
+html.ready #community #get-involved.visible #ipad {
+	background-position: bottom;
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
 }
 
-#community #get-involved #ipad #items > img {
+html.js #community #get-involved #ipad img.instructions {
 	margin: 80px 0 10px 10px;
+	position: absolute;
+	top: 100px;
+  opacity: 0;
+	left: 116px;
+}
+
+html.ready #community  #get-involved.visible #ipad > img.instructions {
+	opacity: 1;
+	-webkit-transition: all 0.4s ease-in-out 0.8s;
+	-moz-transition: all 0.4s ease-in-out 0.8s;
+	-o-transition: all 0.4s ease-in-out 0.8s;
+	-ms-transition: all 0.4s ease-in-out 0.8s;
+	transition: all 0.4s ease-in-out 0.8s;
+}
+
+#community #get-involved #ipad #items {
+	width: 258px;
+	margin: 146px 0 0 116px;
 }
 
 #community #get-involved #ipad > img {
@@ -1801,8 +1824,17 @@ html.js #application-slider-tray {
 	text-shadow: 0 1px 0 rgba(255,255,255,.25);
 	color: rgba(0,0,0,.7);
 	font-weight: 420;
+	opacity: 0;
 }
 
+html.ready #community #get-involved.visible #ipad a.red {
+	opacity: 1;
+	-webkit-transition: all 0.4s ease-in-out 1.1s;
+	-moz-transition: all 0.4s ease-in-out 1.1s;
+	-o-transition: all 0.4s ease-in-out 1.1s;
+	-ms-transition: all 0.4s ease-in-out 1.1s; 
+	transition: all 0.4s ease-in-out 1.1s;
+}
 #community #get-involved #ipad a.red {
 	border-color: #480000;
 	background: #ed474c;
@@ -1832,6 +1864,14 @@ html.js #application-slider-tray {
   background: linear-gradient(top, #e43c41, #f9575c);
 }
 
+html.ready #community #get-involved.visible #ipad a.orange {
+	opacity: 1;
+	-webkit-transition: all 0.4s ease-in-out 1.3s;
+	-moz-transition: all 0.4s ease-in-out 1.3s;
+	-o-transition: all 0.4s ease-in-out 1.3s;
+	-ms-transition: all 0.4s ease-in-out 1.3s; 
+	transition: all 0.4s ease-in-out 1.3s;
+}
 #community #get-involved #ipad a.orange {
 	border-color: #442600;
 	background: #f08f33;
@@ -1861,6 +1901,14 @@ html.js #application-slider-tray {
   background: linear-gradient(top, #e87c2f, #f9a438);
 }
 
+html.ready #community #get-involved.visible #ipad a.aqua {
+	opacity: 1;
+	-webkit-transition: all 0.4s ease-in-out 1.5s;
+	-moz-transition: all 0.4s ease-in-out 1.5s;
+	-o-transition: all 0.4s ease-in-out 1.5s;
+	-ms-transition: all 0.4s ease-in-out 1.5s; 
+	transition: all 0.4s ease-in-out 1.5s;
+}
 #community #get-involved #ipad a.aqua {
 	border-color: #003348;
 	background: #169fc4;
@@ -1890,6 +1938,14 @@ html.js #application-slider-tray {
   background: linear-gradient(top, #0189b3, #34bedd);
 }
 
+html.ready #community #get-involved.visible #ipad a.blue {
+	opacity: 1;
+	-webkit-transition: all 0.4s ease-in-out 1.7s;
+	-moz-transition: all 0.4s ease-in-out 1.7s;
+	-o-transition: all 0.4s ease-in-out 1.7s;
+	-ms-transition: all 0.4s ease-in-out 1.7s; 
+	transition: all 0.4s ease-in-out 1.7s;
+}
 #community #get-involved #ipad a.blue {
 	border-color: #001e48;
 	background: #4666a8;
