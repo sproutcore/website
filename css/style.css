@@ -1193,7 +1193,6 @@ html.ready #home [role="main"] > div {
 	font-size: 12px;
 }
 
-
 /* Homepage carousel 
 ----------------------------------------------*/
 
@@ -1237,11 +1236,11 @@ html.js #carousel .panel {
   position: absolute;
   top: 0;
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
 html.js #carousel .panel.active {
@@ -2252,6 +2251,136 @@ html.ready #community .visible #map a {
   font-size: 18px;
   text-align: center;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+
+/* Calendar */
+
+#community #calendar {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 0 10px 10px;
+  width: 435px;
+}
+
+#community #calendar .month {
+  background-color: #fbfbfb;
+  border: 1px solid #b9b9b9;
+  overflow: hidden;
+  width: 433px;
+}
+
+#community #calendar .month-nav {
+  height: 36px;
+  position: relative;
+}
+
+#community #calendar .month-nav button {
+  border: 0;
+  display: inline-block;
+  position: absolute;
+  text-indent: -999px;
+  top: 0;
+}
+
+#community #calendar .month-nav button.previous {
+  background-image: url(../img/calendar/left.png);
+  height: 36px;
+  left: 0;
+  width: 43px;
+}
+
+#community #calendar .month-nav .month-name {
+  background: url(../img/calendar/name-bg.png) repeat-x;
+  font-weight: bold;
+  font-size: 16px;
+  left: 43px;
+  line-height: 38px;
+  position: absolute;
+  right: 44px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+  text-transform: uppercase;
+}
+
+#community #calendar .month-nav button.next {
+  background-image: url(../img/calendar/right.png);
+  height: 36px;
+  right: 0;
+  width: 44px;
+}
+
+#community #calendar .month-container {
+  height: 395px;
+  position: relative;
+  overflow: hidden;
+}
+
+#community #calendar .month {
+  height: 395px;
+  position: absolute;
+  top: 0;
+}
+
+#community #calendar .month .day-names {
+  background-color: #eaecf2;
+  border-bottom: 1px solid #e1e1e1;
+  color: #6b6d75;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  text-shadow: 0 1px 1px #fff;
+  text-transform: uppercase;
+}
+
+#community #calendar .month .day-names .day-name {
+  display: inline-block;
+  text-align: center;
+  width: 62px;
+}
+#community #calendar .month .day-names .day-name:last-child { width: 61px; }
+
+#community #calendar .month .week {
+  height: 62px;
+}
+
+#community #calendar .month .day {
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  color: #2f2f2f;
+  display: inline-block;
+  height: 55px;
+  padding: 3px;
+  position: relative;
+  width: 55px;
+}
+
+#community #calendar .month .week .day:first-child { border-left: 0 none; }
+#community #calendar .month .week .day:last-child { border-right: 0 none; }
+#community #calendar .month .week:last-child .day { border-bottom: 0 none; }
+
+#community #calendar .month .day.other-month {
+  color: #b3b3b3;
+}
+
+#community #calendar .month .day span {
+  float: right;
+}
+
+#community #calendar .month .day .event {
+  bottom: 3px;
+  left: 3px;
+  line-height: 14px;
+  position: absolute;
+  overflow: hidden;
+  right: 3px;
+  padding: 2px 3px;
+  text-align: center;
+  top: 24px;
 }
 
 /* Ecosystem */

@@ -20,12 +20,14 @@ var app = {
 			commError: "An communication error occured",
 			done: "Done"
 		}
-	}
+	},
+	events: [
+    {year: 2011, month: 5, day: 20, title: "Event 1"},
+    {year: 2011, month: 5, day: 21, title: "ZOMG"}
+  ]
 };
 
 (function($,document, window) {
-
-
 	// run any function on app.ready
 	$( document ).ready( function() {
 	  app.platform = app.detectPlatform();
