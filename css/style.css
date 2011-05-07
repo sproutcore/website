@@ -1765,14 +1765,192 @@ html.js #application-slider-tray {
 
 /* Get Involved */
 
-#community #get-involved div {
+#community #get-involved > div {
 	float: left;
 }
 
+/* iPad Graphic */
 #community #get-involved #ipad {
 	width: 492px;
 	height: 351px;
   background-image: url(../img/ipad-get-involved.png);
+}
+
+#community #get-involved #ipad #items {
+	width: 258px;
+	margin: 0 116px;
+}
+
+#community #get-involved #ipad #items > img {
+	margin: 80px 0 10px 10px;
+}
+
+#community #get-involved #ipad > img {
+	margin-top: 5px;
+}
+
+/* social buttons (inside ipad graphic) */
+
+#community #get-involved #ipad a {
+	display: block;
+	width: 226px;
+	height: 22px;
+	margin: 14px 0;
+	line-height: 23px;
+	font-size: 13px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0,0,0,.6);
+	color: #fff;
+	font-weight: 420;
+}
+
+#community #get-involved #ipad a.red {
+	border-color: #480000;
+	background: #ed474c;
+  background: -moz-linear-gradient(top, #fa666b, #f0595e 50%, #ed474c 51%, #e43c41);
+  background: -ms-linear-gradient(top, #fa666b, #f0595e 50%, #ed474c 51%, #e43c41);
+  background: -o-linear-gradient(top, #fa666b, #f0595e 50%, #ed474c 51%, #e43c41);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fa666b), color-stop(50%, #f0595e), color-stop(51%, #ed474c), to(#e43c41));
+  background: -webkit-linear-gradient(top, #fa666b, #f0595e 50%, #ed474c 51%, #e43c41);
+  background: linear-gradient(top, #fa666b, #f0595e 50%, #ed474c 51%, #e43c41);
+}
+#community #get-involved #ipad a.red:hover {
+	background: #f9575c;
+  background: -moz-linear-gradient(top, #f9575c, #e43c41);
+  background: -ms-linear-gradient(top, #f9575c, #e43c41);
+  background: -o-linear-gradient(top, #f9575c, #e43c41);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9575c), to(#e43c41));
+  background: -webkit-linear-gradient(top, #f9575c, #e43c41);
+  background: linear-gradient(top, #f9575c, #e43c41);
+}
+#community #get-involved #ipad a.red:active {
+	background: #e43c41;
+  background: -moz-linear-gradient(top, #e43c41, #f9575c);
+  background: -ms-linear-gradient(top, #e43c41, #f9575c);
+  background: -o-linear-gradient(top, #e43c41, #f9575c);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e43c41), to(#f9575c));
+  background: -webkit-linear-gradient(top, #e43c41, #f9575c);
+  background: linear-gradient(top, #e43c41, #f9575c);
+}
+
+#community #get-involved #ipad a.orange {
+	border-color: #442600;
+	background: #f08f33;
+  background: -moz-linear-gradient(top, #faaa42, #f3983e 50%, #f08f33 51%, #e87c2f);
+  background: -ms-linear-gradient(top, #faaa42, #f3983e 50%, #f08f33 51%, #e87c2f);
+  background: -o-linear-gradient(top, #faaa42, #f3983e 50%, #f08f33 51%, #e87c2f);
+  background: -webkit-gradient(linear, left top, left bottom, from(#faaa42), color-stop(50%, #f3983e), color-stop(51%, #f08f33), to(#e87c2f));
+  background: -webkit-linear-gradient(top, #faaa42, #f3983e 50%, #f08f33 51%, #e87c2f);
+  background: linear-gradient(top, #faaa42, #f3983e 50%, #f08f33 51%, #e87c2f);
+}
+#community #get-involved #ipad a.orange:hover {
+	background: #f9a438;
+  background: -moz-linear-gradient(top, #f9a438, #e87c2f);
+  background: -ms-linear-gradient(top, #f9a438, #e87c2f);
+  background: -o-linear-gradient(top, #f9a438, #e87c2f);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9a438), to(#e87c2f));
+  background: -webkit-linear-gradient(top, #f9a438, #e87c2f);
+  background: linear-gradient(top, #f9a438, #e87c2f);
+}
+#community #get-involved #ipad a.orange:active {
+	background: #e87c2f;
+  background: -moz-linear-gradient(top, #e87c2f, #f9a438);
+  background: -ms-linear-gradient(top, #e87c2f, #f9a438);
+  background: -o-linear-gradient(top, #e87c2f, #f9a438);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e87c2f), to(#f9a438));
+  background: -webkit-linear-gradient(top, #e87c2f, #f9a438);
+  background: linear-gradient(top, #e87c2f, #f9a438);
+}
+
+#community #get-involved #ipad a.aqua {
+	border-color: #003348;
+	background: #169fc4;
+  background: -moz-linear-gradient(top, #3ec1df, #26a8ca 50%, #169fc4 51%, #0189b3);
+  background: -ms-linear-gradient(top, #3ec1df, #26a8ca 50%, #169fc4 51%, #0189b3);
+  background: -o-linear-gradient(top, #3ec1df, #26a8ca 50%, #169fc4 51%, #0189b3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3ec1df), color-stop(50%, #26a8ca), color-stop(51%, #169fc4), to(#0189b3));
+  background: -webkit-linear-gradient(top, #3ec1df, #26a8ca 50%, #169fc4 51%, #0189b3);
+  background: linear-gradient(top, #3ec1df, #26a8ca 50%, #169fc4 51%, #0189b3);
+}
+#community #get-involved #ipad a.aqua:hover {
+	background: #34bedd;
+  background: -moz-linear-gradient(top, #34bedd, #0189b3);
+  background: -ms-linear-gradient(top, #34bedd, #0189b3);
+  background: -o-linear-gradient(top, #34bedd, #0189b3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#34bedd), to(#0189b3));
+  background: -webkit-linear-gradient(top, #34bedd, #0189b3);
+  background: linear-gradient(top, #34bedd, #0189b3);
+}
+#community #get-involved #ipad a.aqua:active {
+	background: #0189b3;
+  background: -moz-linear-gradient(top, #0189b3, #34bedd);
+  background: -ms-linear-gradient(top, #0189b3, #34bedd);
+  background: -o-linear-gradient(top, #0189b3, #34bedd);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0189b3), to(#34bedd));
+  background: -webkit-linear-gradient(top, #0189b3, #34bedd);
+  background: linear-gradient(top, #0189b3, #34bedd);
+}
+
+#community #get-involved #ipad a.blue {
+	border-color: #001e48;
+	background: #4666a8;
+  background: -moz-linear-gradient(top, #5f7ebf, #5170ae 50%, #4666a8 51%, #3b5a99);
+  background: -ms-linear-gradient(top, #5f7ebf, #5170ae 50%, #4666a8 51%, #3b5a99);
+  background: -o-linear-gradient(top, #5f7ebf, #5170ae 50%, #4666a8 51%, #3b5a99);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5f7ebf), color-stop(50%, #5170ae), color-stop(51%, #4666a8), to(#3b5a99));
+  background: -webkit-linear-gradient(top, #5f7ebf, #5170ae 50%, #4666a8 51%, #3b5a99);
+  background: linear-gradient(top, #5f7ebf, #5170ae 50%, #4666a8 51%, #3b5a99);
+}
+#community #get-involved #ipad a.blue:hover {
+	background: #5677bd;
+  background: -moz-linear-gradient(top, #5677bd, #3b5a99);
+  background: -ms-linear-gradient(top, #5677bd, #3b5a99);
+  background: -o-linear-gradient(top, #5677bd, #3b5a99);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5677bd), to(#3b5a99));
+  background: -webkit-linear-gradient(top, #5677bd, #3b5a99);
+  background: linear-gradient(top, #5677bd, #3b5a99);
+}
+#community #get-involved #ipad a.blue:active {
+	background: #3b5a99;
+  background: -moz-linear-gradient(top, #3b5a99, #5677bd);
+  background: -ms-linear-gradient(top, #3b5a99, #5677bd);
+  background: -o-linear-gradient(top, #3b5a99, #5677bd);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3b5a99), to(#5677bd));
+  background: -webkit-linear-gradient(top, #3b5a99, #5677bd);
+  background: linear-gradient(top, #3b5a99, #5677bd);
+}
+
+/* iPad Animation */
+
+
+
+/* Tweet Stream */
+
+#community #get-involved .twtr-hd,
+#community #get-involved .twtr-ft {
+	display: none;
+}
+
+#community #get-involved .twtr-widget .twtr-tweet-wrap {
+	padding: 6px 8px 6px 0;
+}
+
+#community #get-involved .bottom-clip {
+	position: absolute;
+	top: 400px;
+	z-index: 99;
+	width: 100%;
+	height: 30px;
+  background: -moz-linear-gradient(top, rgba(251,251,251,0), #fbfbfb);
+  background: -ms-linear-gradient(top,  rgba(251,251,251,0), #fbfbfb);
+  background: -o-linear-gradient(top,  rgba(251,251,251,0), #fbfbfb);
+  background: -webkit-gradient(linear, left top, left bottom, from( rgba(251,251,251,0)), to(#fbfbfb));
+  background: -webkit-linear-gradient(top,  rgba(251,251,251,0), #fbfbfb);
+  background: linear-gradient(top,  rgba(251,251,251,0), #fbfbfb);
+}
+
+#community #get-involved .twtr-widget {
+  font: 12px/1.5 "Helvetica Neue", Arial, sans-serif !important;
 }
 
 #community #get-involved #upcoming-events,
@@ -1926,7 +2104,7 @@ html.ready #community .visible #map .bos {
 
 #community #map p {
   bottom: 78px;
-  right: 94px;
+  right: 78px;
   color: #465a70;
   font-weight: bold;
   font-size: 18px;

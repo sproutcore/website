@@ -51,10 +51,51 @@
           <section id="get-involved" class="visible">
             <h1>Getting Involved With The SproutCore Community Is Easier Than You Think...</h1>
 						<div id="ipad">
+							<div id="items">
+								<img src="img/ipad-text.png" alt="Stay on top of things">
+								<a href="#" class="button secondary red">Subscribe to the mailing list</a>
+		          	<a href="#" class="button secondary orange">Subscribe to blog via rss</a>
+		          	<a href="#" class="button secondary aqua">follow us on twitter</a>
+		          	<a href="#" class="button secondary blue">check us out on facebook</a>
+							</div>
+							<img src="img/ipad-shadow.png">
 						</div>
 						<div id="twitter">
 							<h2>What People Are Saying About Us</h2>
-							<img src="" width="400" height="320">
+							<div class="bottom-clip"></div>
+							<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+							<script>
+							new TWTR.Widget({
+							  version: 2,
+							  type: 'faves',
+							  rpp: 15,
+							  interval: 4000,
+							  title: '',
+							  subject: '',
+							  width: 400,
+							  height: 300,
+							  theme: {
+							    shell: {
+							      background: '#fbfbfb',
+							      color: '#ffffff'
+							    },
+							    tweets: {
+							      background: '#fbfbfb',
+							      color: '#444444',
+							      links: '#73b3f0'
+							    }
+							  },
+							  features: {
+							    scrollbar: false,
+							    loop: true,
+							    live: true,
+							    hashtags: false,
+							    timestamp: true,
+							    avatars: true,
+							    behavior: 'default'
+							  }
+							}).render().setUser('sproutcorefaves').start();
+							</script>
 						</div>
 						<div id="upcoming-events">
 							<h2>Upcoming Community Events</h2>
