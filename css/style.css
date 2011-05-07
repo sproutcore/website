@@ -1787,13 +1787,14 @@ html.ready #community #get-involved.visible #ipad {
 html.js #community #get-involved #ipad img.instructions {
 	margin: 80px 0 10px 10px;
 	position: absolute;
-	top: 100px;
+	top: 0;
   opacity: 0;
 	left: 116px;
 }
 
 html.ready #community  #get-involved.visible #ipad > img.instructions {
 	opacity: 1;
+	top: 100px;
 	-webkit-transition: all 0.4s ease-in-out 0.8s;
 	-moz-transition: all 0.4s ease-in-out 0.8s;
 	-o-transition: all 0.4s ease-in-out 0.8s;
@@ -1808,6 +1809,7 @@ html.ready #community  #get-involved.visible #ipad > img.instructions {
 
 #community #get-involved #ipad > img {
 	margin-top: 5px;
+	opacity: .3;
 }
 
 /* social buttons (inside ipad graphic) */
