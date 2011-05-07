@@ -2212,21 +2212,22 @@ html.ready #community .visible #map a {
 	min-height: 70px;
 	width: 39%;
 	list-style: none;
+	background-repeat: no-repeat;
 }
 
-#community #ecosystem li .editors {
+#community #ecosystem li.editors {
 	background-image: url(../img/editors.png);
 }
 
-#community #ecosystem li .hosting {
+#community #ecosystem li.hosting {
 	background-image: url(../img/hosting.png);
 }
 
-#community #ecosystem li .support {
+#community #ecosystem li.support {
 	background-image: url(../img/support.png);
 }
 
-#community #ecosystem li .consulting {
+#community #ecosystem li.consulting {
   background-image: url(../img/consulting.png);
 }
 
