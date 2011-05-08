@@ -1272,12 +1272,11 @@ html.js #carousel .tray {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  background:#00CC11;
-  border: 1px solid #999;
-  margin: 0 2px;
+	border: 1px solid rgba(0, 0, 0, .3);
+	margin: 0 2px;
+  background: rgba(0,0,0,.1);
   text-indent: 100em;
   overflow: hidden;
-  background-color: #d8d8d8;
 	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
   -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
@@ -1809,7 +1808,7 @@ html.ready #community  #get-involved.visible #ipad > img.instructions {
 
 #community #get-involved #ipad > img {
 	margin-top: 5px;
-	opacity: .3;
+	opacity: .5;
 }
 
 /* social buttons (inside ipad graphic) */
