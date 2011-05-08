@@ -1388,7 +1388,7 @@ html.js #carousel .tray {
 }
 
 #carousel .panel h2, #carousel .panel p, #carousel .panel ul {
-  font-family: Arvo, Georgia, Times, "Times New Roman", serif;
+	font-family: 'Carter One', 'Helvetica Neue', sans-serif;
 }
 
 #carousel .panel h2 {
