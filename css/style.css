@@ -1484,13 +1484,12 @@ html.js #carousel .tray {
 #application-slider {
   overflow: hidden;
   position: relative;
-  top: 1em;
   margin-left: -15px;
   margin-right: -15px;
 }
 
 html.js #application-slider {
-  height: 220px;
+  height: 164px;
 }
 
 #application-slider .panel {
