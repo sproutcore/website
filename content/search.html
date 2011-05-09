@@ -28,6 +28,19 @@ subnav:
         return '';
       }
  
+      var handler = {
+        // Stretch the clipping window to fit
+        searchCompleted: function() {
+          var tabs = $('#tabs'),
+              clip = tabs.find('#clip'),
+              panel = clip.find('#panel'),
+              sections = panel.find('> section'),
+              height = $(sections[0]).height();
+
+          $(clip).css('height', height);
+        }
+      };
+        
       function onLoad() {
         // Create a custom search control that uses a CSE restricted to
         // code.google.com
@@ -40,10 +53,13 @@ subnav:
         // Draw the control in content div
         customSearchControl.draw('results', drawOptions);
  
+        // Register our handler function be called on completion
+        customSearchControl.setSearchCompleteCallback(handler, handler.searchCompleted);
+      
         // Run a query
         customSearchControl.execute(getQuery());
-      }
- 
+      };
+      
       google.setOnLoadCallback(onLoad);
     </script>
 
