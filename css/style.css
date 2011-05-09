@@ -1176,13 +1176,18 @@ html.ready #home [role="main"] > div {
 
 #about #logos li {
 	float: left;
-	margin: 0 0 54px 0;
-	width: 420px;
+	margin: 0 0 54px 18px;
+	width: 380px;
 	list-style: none;
 }
 
 #about #logos li:nth-child(odd) {
-	padding: 0 50px 0 6px;
+	padding: 0 20px 0 0;
+}
+
+#about #logos li:nth-child(even) {
+	float: right;
+	padding: 0;
 }
 
 #about #logos img.outdent {
