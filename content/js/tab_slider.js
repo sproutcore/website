@@ -21,8 +21,12 @@ app.tabSlider = (function() {
     sections = panel.find('> section'); //$('#tabs #sections > section');
     links = tabs.find('nav ul > li a');
     
-    // The first tab is selected by default
-    tabIndex = 0;
+    // Get the currently selected tab
+    // If none, default to index 0
+    var tab = $.bbq.getState("tab");
+    var link = $("#tabs nav ul > li a[href='" + tab + "']");
+    tabIndex = links.index(link);
+    tabIndex = (tabIndex === -1) ? 0 : tabIndex;
     
     // Layout the individual sections left to right
     width = 958;
@@ -32,12 +36,15 @@ app.tabSlider = (function() {
       $(section).css('left', index * width);
     });
     
-    // FUTURE: Allow the setting of a different initial tab
-    if (tabIndex !== 0) {
-      $(links[0]).parent().toggleClass('active');
-      $(links[tabIndex]).parent().toggleClass('active');
-      $(sections[0]).toggleClass('visible');
-      $(sections[tabIndex]).toggleClass('visible');
+    $(links[tabIndex]).parent().toggleClass('active');
+    // Invoke in a different run loop so CSS transitions are invoked
+
+    var map = $("#map img[src*=map]");
+
+    if(tab === "user-groups") {
+      map.load(function() {
+        $(sections[tabIndex]).toggleClass('visible');
+      });
     }
     
     // Show the panel once our sections are laid out
@@ -77,11 +84,19 @@ app.tabSlider = (function() {
         
         tabIndex = newTabIndex;
       }
+
+      var href = $(e.target).attr("href");
+      $.bbq.pushState({ tab: href });
+
+      return false;
     };
-    
-    // Add click events to the tab links
-    $.each(links, function(index, link) {
-      $(link).click(transitionFunc);
+
+    $("#tabs nav ul > li a").live("click", transitionFunc);
+
+    $(window).bind("hashchange", function() {
+      var tab = $.bbq.getState("tab");
+      var link = $("#tabs nav ul > li a[href='" + tab + "']");
+      link.click();
     });
   };
 })();

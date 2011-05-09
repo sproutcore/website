@@ -81,7 +81,7 @@ app.coreMembers = (function() {
     // Insert the visible members in the list dynamically
     for (i = 0; i < length; i++) {
       member = VISIBLE_MEMBERS[i];
-      target.append('<li><img src="' + member.src + '"><h2>' + member.name + '</h2><i>' + member.location + '</i><p>' + member.shortBio + '<a href="#" onclick="app.setUpMemberModal(' + i + '); app.openModal($(\'#core-member-modal\')); return false;">...cont’d</a></p></li>');
+      target.append('<li><img src="' + member.src + '" width="128" height="128"><h2>' + member.name + '</h2><i>' + member.location + '</i><p>' + member.shortBio + '<a href="#" onclick="app.setUpMemberModal(' + i + '); app.openModal($(\'#core-member-modal\')); return false;">...cont’d</a></p></li>');
     }
   };
 })();

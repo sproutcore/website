@@ -1,7 +1,7 @@
 <nav>
   <ul>
-    <% @item[:subnav].each_with_index do |name, i| %>
-      <li<%= ' class="active"' if i.zero? %>><a href="#"><%= name %></a></li>
+    <% @item[:subnav].each do |slug,name| %>
+    <li><a href="<%= slug %>"><%= name %></a></li>
     <% end %>
   </ul>
 </nav>
