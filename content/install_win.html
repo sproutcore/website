@@ -8,53 +8,53 @@ subnav:
 ---
 
 <section>
-  <h1>SproutCore Dev Tools on Windows with One-Click</h1>
+  <h1>Congratulations! You're downloading the SproutCore installer.</h1>
+  <p>Once it's done downloading, follow the steps below.</p>
+
   <section>
-    <h1>Download the Installer</h1>
-    <p>The SproutCore Installer for Windows currently requires Windows 7 or Vista. XP support is coming soon.
-      <a href="#">Download Now!</a></p>
-  </section>
-  <section>
-    <h1>Using the Dev Tools</h1>
     <ol class="steps">
-      <li>
-        The SproutCore Dev Tools run via a special Windows Command Prompt. To start the prompt, run SproutCore/SproutCore Prompt
-        from the Start Menu.
-      </li>
-      <li>
-        From the command prompt you can use any of the sc-* tools (sc-init, sc-gen, sc-server, ...)
-      </li>
+      <li>Double-click "SproutCore Installer.exe"</li>
+      <li>Click the "Next" button a few times</li>
+      <li>Click the "Install" button</li>
+      <li>Click the "SproutCore Prompt" icon in the "SproutCore"
+      directory in your Start Menu</li>
+      <li><a href="http://guides.sproutcore.com/html_based.html"
+        class="button secondary">Proceed
+        to the tutorial.</a>
     </ol>
   </section>
 </section>
 <section>
   <h1>Advanced Installation</h1>
   <section>
-    <p>If you already do Ruby development on Windows or would just like to have greater flexibility,
-      you can install the SproutCore Dev Tools as a Ruby gem. If you want to install Ruby, start on
-      Step A. If you already have a Ruby installation, skip to Step B.</p>
+  <p>If you already do Ruby development on Windows or would just like
+    to have greater flexibility, you can install the SproutCore Dev
+    Tools as a Ruby gem. If you want to install Ruby, start on Step A.
+    If you already have a Ruby installation, skip to Step B</p>
   </section>
   <section>
     <h1>Step A: Installing Ruby</h1>
-    <p>There are multiple options for installing Ruby on Windows. We recommend using either the One-Click
-      Ruby Installer or Cygwin with RVM.</p>
+    <p>There are multiple options for installing Ruby on Windows. We
+    recommend using either the One-Click Ruby Installer or Cygwin with RVM.</p>
   </section>
   <section>
-    <h1>One-Click Ruby Installer</h1>
+    <h1>Easiest: One-Click Ruby Installer</h1>
     <ol class="steps">
       <li>First download and install Ruby 1.9.2 from http://rubyinstaller.org/downloads/.</li>
       <li>Next open "Ruby-1.9.2-*/Command Prompt with Ruby" from your Start Menu.
         (If you installed to your system $PATH, you can just open a normal command prompt.)</li>
-      <li>Continue on to Step B to install SproutCore Dev Tools.</li>
+      <li>Continue to Step B.</li>
     </ol>
   </section>
   <section>
-    <h1>Cygwin with RVM</h1>
-    <p>This option gives you the most flexibility but is also the most work to set up.</p>
+    <h1>Most Flexibility: Cygwin with RVM</h1>
+    <p>This option gives you the most flexibility but is also the most
+    work to set up.</p>
     <section>
       <h2>Install Cygwin</h2>
       <ol class="steps">
-        <li>Begin by downloading the Cygwin setup.exe from http://www.cygwin.com/</li>
+        <li>Begin by downloading the Cygwin setup.exe from
+        http://www.cygwin.com/</li>
         <li>When selecting packages for Cygwin make sure to select the following:
           <ul>
             <li>Devel-&gt;gcc-core</li>
@@ -67,7 +67,8 @@ subnav:
           </ul>
         </li>
         <li>
-          Next you'll need to set up proper SSL certs. To do so, run the following code:
+        Next you'll need to set up proper SSL certs. To do so, run the
+        following code:
           <pre><code>$ mkdir -p /usr/ssl/certs
 $ cd /usr/ssl/certs
 $ curl http://curl.haxx.se/ca/cacert.pem | awk 'split_after==1{n++;split_after=0} /-----END CERTIFICATE-----/ {split_after=1} {print > "cert" n ".pem"}'
@@ -79,11 +80,10 @@ $ c_rehash</code></pre>
       <h2>Install RVM and Ruby</h2>
       <ol class="steps">
         <li>
-          <strong>With Git:</strong>
+          <strong>If you have Git:</strong>
           <pre><code>$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)</code></pre>
-        </li>
-        <li>
-          <strong>Without Git:</strong>
+          <br>
+          <strong>If you don't have Git:</strong>
           <pre><code>$ curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
 $ chmod +x rvm-installer
 $ ./rvm-installer --version latest</code></pre>
@@ -91,11 +91,7 @@ $ ./rvm-installer --version latest</code></pre>
         <li>
           <strong>Install Ruby:</strong>
           <pre><code>$ rvm install ruby-1.9.2
-$ rvm use 1.9.2</code></pre>
-        </li>
-        <li>
-          If you would like to set this as your primary Ruby version, run:
-          <pre><code>$ rvm --default use 1.9.2</code></pre>
+$ rvm --default use 1.9.2</code></pre>
         </li>
         <li>Continue to Step B</li>
       </ol>
@@ -103,8 +99,13 @@ $ rvm use 1.9.2</code></pre>
   </section>
   <section>
     <h1>Step B: Installing SproutCore</h1>
-    <p>This is the easy part, just run:</p>
-    <pre><code>$ gem install sproutcore</code></pre>
-    <p>From the Cygwin prompt you can now use any of the sc-* tools (sc-init, sc-gen, sc-server, ...)</p>
+    <ol class="steps">
+      <li>This part is easy.
+        <pre><code>$ gem install sproutcore</code></pre>
+      </li>
+      </li>
+      <li><a href="http://guides.sproutcore.com/html_based.html"
+        class="button secondary">Proceed to
+        the tutorial.</a></li>
   <section>
 </section>

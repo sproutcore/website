@@ -8,60 +8,61 @@ subnav:
 ---
 
 <section>
-  <h1>SproutCore Dev Tools on Mac OS X with Package</h1>
+  <h1>Congratulations! You're downloading the SproutCore installer.</h1>
+  <p>Once it's done downloading, follow the steps below.</p>
+
   <section>
-    <h1>Download the Package</h1>
-    <p>The SproutCore Package for Mac OS X runs on all recent versions of OS X. <a href="#">Download Now!</a></p>
-  </section>
-  <section>
-    <h1>Using the Dev Tools</h1>
-    <p>
-      The SproutCore Dev Tools run via the Terminal. From the terminal you can use any of the
-      sc-* tools (sc-init, sc-gen, sc-server, ...)
-    </p>
+    <ol class="steps">
+      <li>Double-click "SproutCore Installer.pkg".</li>
+      <li>Click "Install...".</li>
+      <li>Type in your administrator password.</li>
+      <li>Once the installation has completed, close the window.</li>
+      <li>Open Terminal.app and <a
+        href="http://guides.sproutcore.com/html_based.html"
+        class="button secondary">proceed to
+        the tutorial.</a></li>
+    </ol>
   </section>
 </section>
 <section>
   <h1>Advanced Installation</h1>
   <section>
-    <p>If you already do Ruby development on your Mac or would just like to have greater flexibility,
-      you can install the SproutCore Dev Tools as a Ruby gem. However, it is not recommended that you use
-      the system installation, so we show you how to install with RVM. If you already have a non-system Ruby
-      installation, skip to Step B.</p>
+    <p>If you already do Ruby development on your Mac or would just like
+    to have greater flexibility, you can install the SproutCore Dev Tools
+    as a Ruby gem.</p>
+    <p>However, it is not recommended that you use the system installation,
+    so we show you how to install with RVM. If you already have rvm
+    installed, skip to Step 4.</p>
   </section>
   <section>
-    <h1>Step A: Installing RVM and Ruby</h1>
+    <h1>Installing Ruby and SproutCore</h1>
     <ol class="steps">
       <li>
-        <strong>With Git:</strong>
+        <strong>If you have Git:</strong>
         <pre><code>$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)</code></pre>
-      </li>
-      <li>
-        <strong>Without Git:</strong>
+        <br>
+        <strong>If you don't have Git:</strong>
         <pre><code>$ curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
 $ chmod +x rvm-installer
 $ ./rvm-installer --version latest</code></pre>
       </li>
       <li>
-        If installing for a single user instead of root, add the following to your ~/.bash_profile
+        Add the following to your ~/.bash_profile so the build tools
+        will be in your path.
         <pre><code>[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session</code></pre>
       </li>
       <li>
         <strong>Install Ruby:</strong>
         <pre><code>$ rvm install ruby-1.9.2
-$ rvm use 1.9.2</code></pre>
+$ rvm --default use 1.9.2</code></pre>
       </li>
       <li>
-        If you would like to set this as your primary Ruby version, run:
-        <pre><code>$ rvm --default use 1.9.2</code></pre>
+        <strong>Install SproutCore:</strong> This part is easy.
+        <pre><code>$ gem install sproutcore</code></pre>
       </li>
-      <li>Continue to Step B</li>
+      <li><a href="http://guides.sproutcore.com/html_based.html"
+        class="button secondary">Proceed to
+        the tutorial.</a></li>
     </ol>
   </section>
-  <section>
-    <h1>Step B: Installing SproutCore</h1>
-    <p>This is the easy part, just run:</p>
-    <pre><code>$ gem install sproutcore</code></pre>
-    <p><br>From the Terminal prompt you can now use any of the sc-* tools (sc-init, sc-gen, sc-server, ...)</p>
-  <section>
 </section>
