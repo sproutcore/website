@@ -1258,19 +1258,20 @@ html.ready #home [role="main"] > div {
 }
 
 #about #core-team > ul > li > h2, #core-member-modal-content h2 {
-	margin-bottom: 0;
+	margin-bottom: 4px;
+	line-height: 14px;
 }
 
 #about #core-team i, #core-member-modal-content i {
 	display: block;
-	padding-bottom: 4px;
+	margin-bottom: 2px;
 	color: #888;
 }
 
 #about #core-team p, #core-member-modal-content p {
 	font-size: 12px;
 	margin-left: 138px;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 
 #about #core-team .not-shown li {
