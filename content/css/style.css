@@ -2298,6 +2298,10 @@ html.ready #community .visible #map a {
 
 /* Calendar */
 
+#community #events {
+  height: 550px;
+}
+
 #community #calendar {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -2306,7 +2310,9 @@ html.ready #community .visible #map a {
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 0 0 10px 10px;
+  position: absolute;
   width: 435px;
+  z-index: 5;
 }
 
 #community #calendar .month {
@@ -2423,6 +2429,44 @@ html.ready #community .visible #map a {
   padding: 2px 3px;
   text-align: center;
   top: 24px;
+}
+
+#community #event-info {
+  height: 431px;
+  left: 445px;
+  position: absolute;
+  top: 92px;
+  width: 435px;
+  z-index: 4;
+}
+
+#community #event-info .event {
+  height: 431px;
+  left: -435px;
+  padding-left: 30px;
+  position: absolute;
+  width: 405px;
+}
+
+#community #event-info .event h3.title {
+  color: #4aa021;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#community #event-info .event h4 {
+  color: #858585;
+  font-size: 14px;
+}
+
+#community #event-info .event p {
+  color: #4a4a4a;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+#community #event-info .event a.button {
+  float: right;
 }
 
 /* Ecosystem */

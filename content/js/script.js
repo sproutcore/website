@@ -22,8 +22,9 @@ var app = {
     }
   },
   events: [
-    {year: 2011, month: 5, day: 20, title: "Event 1"},
-    {year: 2011, month: 5, day: 21, title: "ZOMG"}
+    {year: 2011, month: 5, day: 12, title: "WD"},
+    {year: 2011, month: 5, day: 18, title: "Rails Conf"},
+    {year: 2011, month: 6, day: 15, title: "Velocity"}
   ]
 };
 

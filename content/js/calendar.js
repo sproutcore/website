@@ -13,6 +13,13 @@
       year: now.getYear() + 1900
     }, options);
 
+    var len = settings.events.length,
+        idx, e;
+
+    for (idx = 0; idx < len; idx++) {
+      settings.events[idx].id = idx;
+    }
+
     function eventsForMonth(month, year) {
       var all = settings.events,
           len = all.length,
@@ -42,9 +49,13 @@
     }
 
     function renderMonth(month, year) {
-      var events = eventsForMonth(month, year),
+      var currentEvents = eventsForMonth(month, year),
           previousMonth = month === 0 ? 11 : month - 1,
           previousYear = previousMonth === 11 ? year - 1 : year,
+          previousEvents = eventsForMonth(previousMonth, previousYear),
+          nextMonth = month === 11 ? 0 : month + 1,
+          nextYear = month === 11 ? year + 1 : year,
+          nextEvents = eventsForMonth(nextMonth, nextYear),
           s = '', idx, len, e;
 
       s += '<div class="month">';
@@ -72,13 +83,19 @@
         s += '<div class="week">';
         previousDays -= firstDay; // start of days from last month to display
         for (idx = 0; idx < firstDay; idx++) {
-          s += '<div class="day other-month last-month"><span>' + (previousDays + idx + 1) + '</span></div>';
+          e = previousEvents[previousDays + idx + 1];
+          s += '<div class="day other-month last-month' + (e ? ' has-event' : '') + '">';
+          s += '<span>' + (previousDays + idx + 1) + '</span>';
+          if (e) {
+            s +=  '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
+          }
+          s += '</div>';
         }
       }
 
       // render days for current month
       for (; idx < firstDay + days; idx++) {
-        e = events[idx - firstDay + 1];
+        e = currentEvents[idx - firstDay + 1];
 
         if (idx % 7 === 0) {
           s += '<div class="week">'; // open the week
@@ -87,7 +104,7 @@
         s += '<div class="day current-month' + (e ? ' has-event' : '') + '">';
         s += '<span>' + (idx - firstDay + 1) + '</span>';
         if (e) {
-          s +=  '<a href="#" class="event button secondary">' + e.title + '</a>';
+          s +=  '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
         }
         s += '</div>';
 
@@ -99,12 +116,21 @@
       // render days for next month
       var i = 1;
       for (; idx < 42; idx++) {
+        e = nextEvents[i];
+
         if (idx % 7 === 0) {
           s += '<div class="week">'; // open the week
         }
 
-        s += '<div class="day other-month next-month"><span>' + i + '</span></div>';
+        s += '<div class="day other-month next-month' + (e ? ' has-event' : '') + '">';
+        s += '<span>' + i + '</span>';
         i++;
+
+        if (e) {
+          s +=  '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
+        }
+
+        s += '</div>';
 
         if (idx % 7 === 6) {
           s += '</div>'; // close the week
@@ -122,9 +148,11 @@
           monthContainer = calendar.find('.month-container'),
           monthHeader = calendar.find('.month-nav .month-name'),
           buttons = calendar.find('.month-nav button'),
+          eventButtons = monthContainer.find('.event'),
           now = new Date(),
           depth = 10,
-          currentMonth, currentYear;
+          self = this,
+          currentMonth, currentYear, lastEvent;
 
       function gotoMonth(month, year) {
         var $newMonth = $(renderMonth(month, year)),
@@ -164,7 +192,26 @@
         currentYear = year;
       }
 
+      function selectEvent(e) {
+        $('#event-button-' + e.id).addClass('sel');
+        if (lastEvent) { $('#event-button-' + lastEvent.id).removeClass('sel'); }
+
+        settings.onEventSelected.call(self, e);
+
+        lastEvent = e;
+      }
+
       gotoMonth(settings.month, settings.year);
+
+      var startEvents = eventsForMonth(currentMonth, currentYear),
+          len = startEvents.length, idx, e;
+
+      for (idx = 0; idx < len; idx++) {
+        e = startEvents[idx];
+        if (e) { break; }
+      }
+
+      selectEvent(e);
 
       buttons.click(function(e) {
         var month, year;
@@ -193,6 +240,20 @@
           gotoMonth(month, year);
         }
       });
+
+      eventButtons.live('click', function(event) {
+        var id = event.target.id,
+            e;
+
+        if (id) { id = id.replace(/event\-button\-/, ''); }
+
+        event.preventDefault();
+
+        e = settings.events[id];
+        if (e) {
+          selectEvent(e);
+        }
+      });
     });
 
   };
@@ -200,10 +261,22 @@
 })(jQuery);
 
 jQuery(document).ready(function() {
+  var info = $('#event-info');
+
   $('#calendar').calendar({
     events: app.events,
-    onEventSelected: function() {
-      
+    onEventSelected: function(e) {
+      var currentEvent = info.find('.event.active'),
+          newEvent = info.find('#event-' + e.id);
+
+      if (currentEvent.length > 0) {
+        currentEvent.removeClass('active').animate({
+          left: -435,
+          opacity: 0
+        }, 350);
+      }
+
+      newEvent.animate({left: 0, opacity: 1}, 350).addClass('active');
     }
   });
 });
