@@ -164,7 +164,7 @@
           $currentMonth.css('zIndex', ++depth);
           $newMonth.appendTo(monthContainer);
 
-          $currentMonth.animate({'top': -395, opacity: 0}, 500, function() {
+          $currentMonth.animate({'top': -395, opacity: 0}, 350, function() {
             $currentMonth.remove();
             depth--;
           });
@@ -177,7 +177,7 @@
           });
           $newMonth.appendTo(monthContainer);
 
-          $newMonth.animate({'top': 0, opacity: 1}, 500, function() {
+          $newMonth.animate({'top': 0, opacity: 1}, 250, function() {
             $currentMonth.remove();
             depth--;
           });
@@ -269,14 +269,14 @@ jQuery(document).ready(function() {
       var currentEvent = info.find('.event.active'),
           newEvent = info.find('#event-' + e.id);
 
-      if (currentEvent.length > 0) {
-        currentEvent.removeClass('active').animate({
-          left: -435,
-          opacity: 0
-        }, 350);
-      }
+      if (newEvent.hasClass('active')) { return; }
 
-      newEvent.animate({left: 0, opacity: 1}, 350).addClass('active');
+      if (currentEvent.length > 0) {
+        currentEvent.removeClass('active').animate({left: -435, opacity: 0}, 350);
+        newEvent.animate({left: 0, opacity: 1}, 350).addClass('active');
+      } else {
+        newEvent.css({left: 0, opacity: 1}).addClass('active');
+      }
     }
   });
 });

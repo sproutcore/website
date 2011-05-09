@@ -2443,6 +2443,7 @@ html.ready #community .visible #map a {
 #community #event-info .event {
   height: 431px;
   left: -435px;
+  opacity: 0;
   padding-left: 30px;
   position: absolute;
   width: 405px;
