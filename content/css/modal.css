@@ -1,4 +1,9 @@
-#modals #modal {
+
+#modals {
+  position: absolute; /* Ensure that modals don't screw up sticky footer */
+}
+
+#modals section.modal-pane {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   bottom: 0;
@@ -8,7 +13,7 @@
   z-index: 99;
 }
 
-#modals section.modal-pane {
+#modals section.modal-pane .modal-content {
   background-color: #fbfbfb;  
 	border: 1px solid #2a2a2a;
   -webkit-border-radius: 4px;
@@ -25,7 +30,7 @@
   z-index: 100;
 }
 
-#modals section.modal-pane .close-button a {
+#modals section.modal-pane .modal-content .close-button a {
   background-color: #000;  
   border: 2px solid white;
   -webkit-border-radius: 15px;
@@ -45,30 +50,30 @@
   width: 22px;
 }
 
-#modals section.modal-pane .close-button a:hover {
+#modals section.modal-pane .modal-content .close-button a:hover {
   background-color: #262626;  
 }
 
-#modals section.modal-pane .close-button a:active {
+#modals section.modal-pane .modal-content .close-button a:active {
   background-color: #000;  
   color: #BEBEBE;
 }
 
-#modals section#contact-us {
+#modals section#contact-us .modal-content {
   height: 626px;
   margin-left: -205px;
   margin-top: -326px;
   width: 310px;
 }
 
-#modals section#local-meetup {
+#modals section#local-meetup .modal-content {
   height: 636px;
   margin-left: -205px;
   margin-top: -331px;
   width: 310px;
 }
 
-#modals section#core-member-modal {
+#modals section#core-member-modal .modal-content {
   font-size: 14px;
   margin-left: -315px;
   margin-top: -140px;

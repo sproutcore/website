@@ -1,4 +1,6 @@
-<section role="complementary" id="<%= @id %>" class="modal-pane" style="display: none;">
-  <div class="close-button"><a href="#" onclick="app.closeModal($('#<%= @id %>')); return false;">&times;</a></div>
-  <%= @content %>
+<section role="complementary" id="<%= @id %>" class="modal-pane" style="display: none;" onclick="app.closeModal($('#<%= @id %>')); return false;">
+  <div class="modal-content">
+    <div class="close-button"><a href="#" onclick="app.closeModal($('#<%= @id %>')); return false;">&times;</a></div>
+    <%= @content %>
+  </div>
 </section>
