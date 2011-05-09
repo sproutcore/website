@@ -3,188 +3,186 @@ title: SproutCore
 id: home
 ---
 
-<div role="main" class="container">
-  <p id="blurb">SproutCore is an open-source framework for building blazingly fast, innovative user experiences on the web.</p>
-  <ul id="action">
-    <li><a href="#" class="button primary" onclick="app.startDownload(); return false;"><span class="download">Download Latest</span></a></li>
-    <li><a href="https://github.com/sproutcore/sproutcore/" class="button primary"><span class="github">View on GitHub</span></a></li>
+<p id="blurb">SproutCore is an open-source framework for building blazingly fast, innovative user experiences on the web.</p>
+<ul id="action">
+  <li><a href="#" class="button primary" onclick="app.startDownload(); return false;"><span class="download">Download Latest</span></a></li>
+  <li><a href="https://github.com/sproutcore/sproutcore/" class="button primary"><span class="github">View on GitHub</span></a></li>
+</ul>
+<div id="carousel">
+  <div class="panel tutorials green active">
+    <h2>New Tutorial to Help You Get Up and Running!</h2>
+    <div class="video">&nbsp;</div>
+    <p>You've heard all about SproutCore and now it's time to see for yourself. It's easier than ever to get started with our new tutorial. In it you'll learn:</p>
+    <ul>
+      <li>How to install SproutCore on your machine</li>
+      <li>How to build your first application</li>
+      <li>How to add new interactive elements</li>
+      <li>...and much more!</li>
+    </ul>
+    <a href="#" class="button primary"><span class="check-out">Get Started Now!</span></a>
+  </div>
+  <div class="panel guides blue">
+    <div>
+      <h2>The New SproutCore Guides Are Live!</h2>
+      <p>The community-generated Guides are designed to help you get up, running, and building, in no time at all. By developers, for developers.</p>
+    </div>
+    <a href="#" class="button primary"><span class="visit">Visit SproutCore Guides</span></a>
+  </div>
+  <div class="panel wwdc-bash pink">
+    <a href="#" class="button primary"><span class="visit">Register Now!</span></a>
+  </div>
+  <button name="previous" class="previous">&nbsp;</button>
+  <div class="tray">
+    <a class="panel0 active" href="#"></a>
+    <a class="panel1" href="#"></a>
+    <a class="panel2" href="#"></a>
+  </div>
+  <button name="next" class="next">&nbsp;</button>
+</div>
+<!-- <section>
+  <h1>Getting Started Is Easy!</h1>
+  <pre><code>$ [sudo] gem install sproutcore</code></pre>
+</section> -->
+<section id="features">
+  <h1>All The Tools For The Next Generation</h1>
+  <ul>
+    <li class="html5">
+      <h2>The Power of HTML5</h2>
+      <p>Leverage the latest in web technologies and specifications.</p>
+    </li>
+    <li class="mvc">
+      <h2>Clean MVC Architecture</h2>
+      <p>Keep your code sensible and organized for easy maintenance.</p>
+    </li>
+    <li class="speed">
+      <h2>Incredible Speed</h2>
+      <p>Client-side logic means no<br>more waiting on your servers.</p>
+    </li>
+    <li class="device">
+      <h2>Accessible Everywhere</h2>
+      <p>SproutCore apps give you a native experience—on the web.</p>
+    </li>
+    <li class="scale">
+      <h2>Scale, Scale, Scale</h2>
+      <p>Your app will grow with you,<br>no matter how big you get.</p>
+    </li>
+    <li class="theme">
+      <h2>Top Notch Theming</h2>
+      <p>Built-in tools to help you and your app look good. Seriously.</p>
+    </li>
   </ul>
-  <div id="carousel">
-    <div class="panel tutorials green active">
-      <h2>New Tutorial to Help You Get Up and Running!</h2>
-      <div class="video">&nbsp;</div>
-      <p>You've heard all about SproutCore and now it's time to see for yourself. It's easier than ever to get started with our new tutorial. In it you'll learn:</p>
-      <ul>
-        <li>How to install SproutCore on your machine</li>
-        <li>How to build your first application</li>
-        <li>How to add new interactive elements</li>
-        <li>...and much more!</li>
-      </ul>
-      <a href="#" class="button primary"><span class="check-out">Get Started Now!</span></a>
+</section>
+<section>
+  <h1>Applications Using SproutCore</h1>
+  <div id="application-slider">
+    <div id="left" class="clip-border"></div>
+    <div id="right" class="clip-border"></div>
+    <div class="panel active">
+      <a href="http://eloqua.com/" target="app-slider">
+        <img src="/img/showcase/eloqua-small.png" />
+        <div class="caption">Eloqua</div>
+      </a>
+      <a href="https://chrome.google.com/webstore/detail/hkpcelemhneoooapbbopolpjhmbfmnbf" target="app-slider">
+        <img src="/img/showcase/npr-small.png" />
+        <div class="caption">NPR</div>
+      </a>
+      <a href="http://www.turnitin.com/" target="app-slider">
+        <img src="/img/showcase/turnitin-small.png" />
+        <div class="caption">Turnitin</div>
+      </a>
+      <a href="https://insightify.com/home.html">
+        <img src="/img/showcase/insightify-small.png" />
+        <div class="caption">Insightify</div>
+      </a>
     </div>
-    <div class="panel guides blue">
-      <div>
-        <h2>The New SproutCore Guides Are Live!</h2>
-        <p>The community-generated Guides are designed to help you get up, running, and building, in no time at all. By developers, for developers.</p>
-      </div>
-      <a href="#" class="button primary"><span class="visit">Visit SproutCore Guides</span></a>
+    <!-- <div class="panel">
+      <a href="http://www.strobe.com" target="app-slider">
+        <img src="img/showcase-strobe.png" />
+        <div class="caption">Strobe</div>
+      </a>
+      <a href="#">
+        <img src="http://placehold.it/202x159" />
+        <div class="caption">Coming Soon!</div>
+      </a>
+      <a href="#">
+        <img src="http://placehold.it/202x159" />
+        <div class="caption">Coming Soon!</div>
+      </a>
+      <a href="#">
+        <img src="http://placehold.it/202x159" />
+        <div class="caption">Coming Soon!</div>
+      </a>
     </div>
-    <div class="panel wwdc-bash pink">
-      <a href="#" class="button primary"><span class="visit">Register Now!</span></a>
-    </div>
-    <button name="previous" class="previous">&nbsp;</button>
-    <div class="tray">
+    <div id="application-slider-tray">
+      <button name="previous" class="previous">&nbsp;</button>
       <a class="panel0 active" href="#"></a>
       <a class="panel1" href="#"></a>
-      <a class="panel2" href="#"></a>
-    </div>
-    <button name="next" class="next">&nbsp;</button>
+      <button name="next" class="next">&nbsp;</button>
+    </div> -->
+    <br clear="all" />
   </div>
-  <!-- <section>
-    <h1>Getting Started Is Easy!</h1>
-    <pre><code>$ [sudo] gem install sproutcore</code></pre>
-  </section> -->
-  <section id="features">
-    <h1>All The Tools For The Next Generation</h1>
-    <ul>
-      <li class="html5">
-        <h2>The Power of HTML5</h2>
-        <p>Leverage the latest in web technologies and specifications.</p>
+</section>
+<div> 
+  <section>
+    <h1>Upcoming Events</h1>
+    <ul class="events">
+      <li>
+        <time datetime="2011-05-12" class="date"><abbr>May</abbr> 12</time>
+        <h2 class="title"><a href="http://unplugged11.webdirections.org/">Web Directions: Portland, OR</a></h2>
+        <p>Yehuda Katz delivers a general introduction to SproutCore.</p>
       </li>
-      <li class="mvc">
-        <h2>Clean MVC Architecture</h2>
-        <p>Keep your code sensible and organized for easy maintenance.</p>
+      <li>
+        <time datetime="2011-05-18" class="date"><abbr>May</abbr> 18</time>
+        <h2 class="title"><a href="http://www.railsconf.com/">RailsConf 2011: Baltimore, MD</a></h2>
+        <p>Greg Moeck talks about TDD in JavaScript and SproutCore.</p>
       </li>
-      <li class="speed">
-        <h2>Incredible Speed</h2>
-        <p>Client-side logic means no<br>more waiting on your servers.</p>
-      </li>
-      <li class="device">
-        <h2>Accessible Everywhere</h2>
-        <p>SproutCore apps give you a native experience—on the web.</p>
-      </li>
-      <li class="scale">
-        <h2>Scale, Scale, Scale</h2>
-        <p>Your app will grow with you,<br>no matter how big you get.</p>
-      </li>
-      <li class="theme">
-        <h2>Top Notch Theming</h2>
-        <p>Built-in tools to help you and your app look good. Seriously.</p>
+      <li>
+        <time datetime="2011-05-19" class="date"><abbr>May</abbr> 19</time>
+        <h2 class="title"><a href="http://www.railsconf.com/">RailsConf 2011: Baltimore, MD</a></h2>
+        <p>Yehuda Katz on using SproutCore to write fast client-side code for Rails apps.</p>
       </li>
     </ul>
+    <footer>
+      <a href="community/#tab=events" class="button secondary">See All Events</a>
+    </footer>
   </section>
   <section>
-    <h1>Applications Using SproutCore</h1>
-    <div id="application-slider">
-      <div id="left" class="clip-border"></div>
-      <div id="right" class="clip-border"></div>
-      <div class="panel active">
-        <a href="http://eloqua.com/" target="app-slider">
-          <img src="/img/showcase/eloqua-small.png" />
-          <div class="caption">Eloqua</div>
-        </a>
-        <a href="https://chrome.google.com/webstore/detail/hkpcelemhneoooapbbopolpjhmbfmnbf" target="app-slider">
-          <img src="/img/showcase/npr-small.png" />
-          <div class="caption">NPR</div>
-        </a>
-        <a href="http://www.turnitin.com/" target="app-slider">
-          <img src="/img/showcase/turnitin-small.png" />
-          <div class="caption">Turnitin</div>
-        </a>
-        <a href="https://insightify.com/home.html">
-          <img src="/img/showcase/insightify-small.png" />
-          <div class="caption">Insightify</div>
-        </a>
-      </div>
-      <!-- <div class="panel">
-        <a href="http://www.strobe.com" target="app-slider">
-          <img src="img/showcase-strobe.png" />
-          <div class="caption">Strobe</div>
-        </a>
-        <a href="#">
-          <img src="http://placehold.it/202x159" />
-          <div class="caption">Coming Soon!</div>
-        </a>
-        <a href="#">
-          <img src="http://placehold.it/202x159" />
-          <div class="caption">Coming Soon!</div>
-        </a>
-        <a href="#">
-          <img src="http://placehold.it/202x159" />
-          <div class="caption">Coming Soon!</div>
-        </a>
-      </div>
-      <div id="application-slider-tray">
-        <button name="previous" class="previous">&nbsp;</button>
-        <a class="panel0 active" href="#"></a>
-        <a class="panel1" href="#"></a>
-        <button name="next" class="next">&nbsp;</button>
-      </div> -->
-      <br clear="all" />
-    </div>
+    <h1>Recently From Our Blog</h1>
+    <article>
+      <header>
+        <img src="img/avatars/tom-dale-small.png" alt="" />
+        <hgroup>
+          <h1>SproutCore 1.6 Beta Released</h1>
+          <h2><i>by</i> Tom Dale</h2>
+        </hgroup>
+      </header>
+      <p>We’re excited to announce the release of SproutCore 1.6 Beta 1. As we mentioned in our last blog post, we are switching to a six-week release cycle, and this is the first release in that new plan.</p>
+			<p>Because we will be releasing more frequently, each release will be less of a big-bang release and more incremental improvements to what we had before. SproutCore 1.5 shipped with a number of new features, including...</p>
+    </article>
+    <footer>
+      <a href="http://blog.sproutcore.com" class="button secondary">Visit The Blog</a>
+      <!-- <ul>
+        <li class="tweets">12</li>
+        <li class="comments">27</li>
+      </ul> -->
+    </footer>
   </section>
-  <div> 
-    <section>
-      <h1>Upcoming Events</h1>
-      <ul class="events">
-        <li>
-          <time datetime="2011-05-12" class="date"><abbr>May</abbr> 12</time>
-          <h2 class="title"><a href="http://unplugged11.webdirections.org/">Web Directions: Portland, OR</a></h2>
-          <p>Yehuda Katz delivers a general introduction to SproutCore.</p>
-        </li>
-        <li>
-          <time datetime="2011-05-18" class="date"><abbr>May</abbr> 18</time>
-          <h2 class="title"><a href="http://www.railsconf.com/">RailsConf 2011: Baltimore, MD</a></h2>
-          <p>Greg Moeck talks about TDD in JavaScript and SproutCore.</p>
-        </li>
-        <li>
-          <time datetime="2011-05-19" class="date"><abbr>May</abbr> 19</time>
-          <h2 class="title"><a href="http://www.railsconf.com/">RailsConf 2011: Baltimore, MD</a></h2>
-          <p>Yehuda Katz on using SproutCore to write fast client-side code for Rails apps.</p>
-        </li>
-      </ul>
-      <footer>
-        <a href="community/#tab=events" class="button secondary">See All Events</a>
-      </footer>
-    </section>
-    <section>
-      <h1>Recently From Our Blog</h1>
-      <article>
-        <header>
-          <img src="img/avatars/tom-dale-small.png" alt="" />
-          <hgroup>
-            <h1>SproutCore 1.6 Beta Released</h1>
-            <h2><i>by</i> Tom Dale</h2>
-          </hgroup>
-        </header>
-        <p>We’re excited to announce the release of SproutCore 1.6 Beta 1. As we mentioned in our last blog post, we are switching to a six-week release cycle, and this is the first release in that new plan.</p>
-				<p>Because we will be releasing more frequently, each release will be less of a big-bang release and more incremental improvements to what we had before. SproutCore 1.5 shipped with a number of new features, including...</p>
-      </article>
-      <footer>
-        <a href="http://blog.sproutcore.com" class="button secondary">Visit The Blog</a>
-        <!-- <ul>
-          <li class="tweets">12</li>
-          <li class="comments">27</li>
-        </ul> -->
-      </footer>
-    </section>
-    <section>
-      <h1>Team Spotlight</h1>
-      <article>
-        <header>
-          <img src="img/avatars/yehuda-katz-small.jpg" alt="" class/>
-          <hgroup>
-            <h1>Yehuda Katz</h1>
-            <h2>San Francisco, CA, USA</h2>
-          </hgroup>
-        </header>
-        <p>Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action, and is a contributor to Ruby in Practice.<p>
-				<p>He spends most of his time hacking on open source&mdash;his main projects, along with others, like Thor, Handlebars and Janus&mdash;or...</p>
-      </article>
-      <footer>
-        <a href="/about/#tab=core-team" class="button secondary">Meet The Team</a>
-      </footer>
-    </section>
-  </div>
+  <section>
+    <h1>Team Spotlight</h1>
+    <article>
+      <header>
+        <img src="img/avatars/yehuda-katz-small.jpg" alt="" class/>
+        <hgroup>
+          <h1>Yehuda Katz</h1>
+          <h2>San Francisco, CA, USA</h2>
+        </hgroup>
+      </header>
+      <p>Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action, and is a contributor to Ruby in Practice.<p>
+			<p>He spends most of his time hacking on open source&mdash;his main projects, along with others, like Thor, Handlebars and Janus&mdash;or...</p>
+    </article>
+    <footer>
+      <a href="/about/#tab=core-team" class="button secondary">Meet The Team</a>
+    </footer>
+  </section>
 </div>
 

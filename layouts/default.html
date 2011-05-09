@@ -29,29 +29,32 @@
   <script src="/js/libs/modernizr-1.7.min.js"></script>
 </head>
 <body id="<%= @item[:id] %>" class="green">
-  <header role="banner">
-    <div class="container">
-      <h1 id="logo">
-        <a href="/"><img src="/img/logo.png" alt="SproutCore" /></a>
-      </h1>
-      <nav role="navigation">
-        <ul>
-          <%= nav "About", "about" %>
-          <%= nav "Guides", "guides", "http://guides.sproutcore.com" %>
-          <%= nav "Docs", "docs", "http://docs.sproutcore.com" %>
-          <%= nav "Community", "community" %>
-          <%= nav "Blog", "blog", "http://blog.sproutcore.com" %>
-        </ul>
-      </nav>
-      <form action="#" role="search">
-        <input type="text" />
-      </form>
+  <div id="wrap">
+    <header role="banner">
+      <div class="container">
+        <h1 id="logo">
+          <a href="/"><img src="/img/logo.png" alt="SproutCore" /></a>
+        </h1>
+        <nav role="navigation">
+          <ul>
+            <%= nav "About", "about" %>
+            <%= nav "Guides", "guides", "http://guides.sproutcore.com" %>
+            <%= nav "Docs", "docs", "http://docs.sproutcore.com" %>
+            <%= nav "Community", "community" %>
+            <%= nav "Blog", "blog", "http://blog.sproutcore.com" %>
+          </ul>
+        </nav>
+        <form action="#" role="search">
+          <input type="text" />
+        </form>
+      </div>
+    </header>
+    <div id="main" role="main" class="container">
+      <%= yield %>
     </div>
-  </header>
-  <%= yield %>
-  <div id="modals">
-    <div id="modal" style="display: none;"></div>
-    <%= @item[:content_for_modals] %>
+    <div id="modals">
+      <%= @item[:content_for_modals] %>
+    </div>
   </div>
   <footer>
     <div class="container">
