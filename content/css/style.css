@@ -66,6 +66,7 @@ body {
 #main {
   overflow: visible;
 	padding-bottom: 275px;  /* must be same height as the footer (including paddings), took off 5px for overlap of #tabs bottom */
+  padding-top: 80px;
 }
 
 .green #wrap {
@@ -803,10 +804,6 @@ html.ready #home header[role="banner"] {
 
 /* Page
 --------------------------------------------- */
-
-[role="main"] {
-  padding-top: 80px;
-}
 
 [role="main"] > section,
 [role="main"] > div {
