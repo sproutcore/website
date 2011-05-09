@@ -166,10 +166,10 @@ app.detectPlatform = function() {
   a short delay, goes to the install page for the current platform.
   
  */
-app.startDownload = function() {
-  
+app.startDownload = function(platform) {
   // Download the correct file
-  switch (app.platform) {
+  platform = platform || app.platform;
+  switch (platform) {
     case PLATFORM.windows:
       window.location.href = "/installers/SproutCore Installer Windows.zip";
       break;
@@ -183,7 +183,7 @@ app.startDownload = function() {
   }
   
   setTimeout(function () {
-    app.gotoInstall();
+    app.gotoInstall(platform);
   }, 700);
 };
 
@@ -191,10 +191,10 @@ app.startDownload = function() {
   Goes to the install page for the current platform.
   
  */
-app.gotoInstall = function() {
+app.gotoInstall = function(platform) {
   var url = "docs.html#install";
   
-  switch (app.platform) {
+  switch (platform) {
     case PLATFORM.windows:
       url = "install_win";
       break;

@@ -19,6 +19,9 @@ compile '/' do
   layout 'default'
 end
 
+compile 'redirect_to_install' do
+end
+
 compile '*' do
   filter :erb
   layout 'main'
