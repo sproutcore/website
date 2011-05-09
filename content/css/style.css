@@ -2484,15 +2484,16 @@ body > footer {
 
 body > footer .col {
   float: left;
+  font-size: 15px;
 }
 
 body > footer .col:nth-child(1) {
-  width: 275px;
+  width: 305px;
 }
 
 body > footer .col:nth-child(2) {
   width: 200px;
-  margin: 0 100px;
+  margin: 0px 85px 0px 85px
 }
 
 body > footer .col:nth-child(3) {
@@ -2503,16 +2504,16 @@ body > footer .col:nth-child(3) {
 
 body > footer .col:nth-child(1) > a {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 /* Headers */
 
 body > footer h1,
 body > footer h2 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* Nav */
@@ -2528,14 +2529,15 @@ body > footer li {
 
 body > footer nav li {
   width: 100px;
+  margin-top: 5px;
 }
 
 body > footer .social li:nth-child(2) {
-  margin: 0 30px 0 8px;
+  margin: 0 8px 0 8px;
 }
 
 body > footer .social li:nth-child(3) {
-  width: 120px;
+  width: 160px;
 }
 
 body > footer .social li:nth-child(3) img {
