@@ -1151,13 +1151,14 @@ html.ready #home [role="main"] > div {
 
 #about #core-team i, #core-member-modal-content i {
 	display: block;
-	padding-bottom: 6px;
+	padding-bottom: 4px;
 	color: #888;
 }
 
 #about #core-team p, #core-member-modal-content p {
 	font-size: 12px;
 	margin-left: 138px;
+	line-height: 1.4;
 }
 
 #about #core-team .not-shown li {
@@ -1497,6 +1498,11 @@ html.js #application-slider {
   height: 164px;
 }
 
+html.js #application-slider.large {
+	margin-top: 50px;
+  height: 570px;
+}
+
 #application-slider .panel {
   width: 928px;
   height: 180px;
@@ -1532,6 +1538,20 @@ html.js #application-slider .panel.old {
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
   -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
   box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
+}
+
+#application-slider.large .panel a{
+  width: 360px;
+  height: 254px;
+	margin: 0 60px 60px 0;
+}
+
+#application-slider.large .panel a:nth-child(odd){
+	margin-left: 57px;
+}
+
+#application-slider.large .panel a:nth-child(even){
+	margin-right: 0;
 }
 
 #application-slider .panel a div.caption {
@@ -2018,7 +2038,7 @@ html.ready #community #get-involved.visible #ipad a.blue {
 	width: 45%;
 }
 
-#community #get-involved #upcoming-events {
+#community #get-involved #upcoming-meetups {
 	margin-right: 81px;
 }
 
@@ -2088,12 +2108,12 @@ html.ready #community .visible #map .bos {
 }
 
 html.ready #community .visible #map .sf {
-	top: 156px;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-ms-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+  top: 156px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 #community #map .la {
@@ -2102,11 +2122,11 @@ html.ready #community .visible #map .sf {
 
 html.ready #community .visible #map .la {
   top: 209px;
-	-webkit-transition: all 0.4s ease-in-out 0.2s;
-	-moz-transition: all 0.4s ease-in-out 0.2s;
-	-o-transition: all 0.4s ease-in-out 0.2s;
-	-ms-transition: all 0.4s ease-in-out 0.2s;
-	transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+  -moz-transition: all 0.4s ease-in-out 0.2s;
+  -o-transition: all 0.4s ease-in-out 0.2s;
+  -ms-transition: all 0.4s ease-in-out 0.2s;
+  transition: all 0.4s ease-in-out 0.2s;
 }
 
 #community #map .chi {
@@ -2115,11 +2135,11 @@ html.ready #community .visible #map .la {
 
 html.ready #community .visible #map .chi {
   top: 95px;
-	-webkit-transition: all 0.4s ease-in-out 0.4s;
-	-moz-transition: all 0.4s ease-in-out 0.4s;
-	-o-transition: all 0.4s ease-in-out 0.4s;
-	-ms-transition: all 0.4s ease-in-out 0.4s;
-	transition: all 0.4s ease-in-out 0.4s;
+  -webkit-transition: all 0.4s ease-in-out 0.4s;
+  -moz-transition: all 0.4s ease-in-out 0.4s;
+  -o-transition: all 0.4s ease-in-out 0.4s;
+  -ms-transition: all 0.4s ease-in-out 0.4s;
+  transition: all 0.4s ease-in-out 0.4s;
 }
 
 #community #map .was {
@@ -2128,11 +2148,11 @@ html.ready #community .visible #map .chi {
 
 html.ready #community .visible #map .was {
   top: 142px;
-	-webkit-transition: all 0.4s ease-in-out 0.6s;
-	-moz-transition: all 0.4s ease-in-out 0.6s;
-	-o-transition: all 0.4s ease-in-out 0.6s;
-	-ms-transition: all 0.4s ease-in-out 0.6s;
-	transition: all 0.4s ease-in-out 0.6s;
+  -webkit-transition: all 0.4s ease-in-out 0.6s;
+  -moz-transition: all 0.4s ease-in-out 0.6s;
+  -o-transition: all 0.4s ease-in-out 0.6s;
+  -ms-transition: all 0.4s ease-in-out 0.6s;
+  transition: all 0.4s ease-in-out 0.6s;
 }
 
 #community #map .ny {
@@ -2141,11 +2161,11 @@ html.ready #community .visible #map .was {
 
 html.ready #community .visible #map .ny {
   top: 114px;
-	-webkit-transition: all 0.4s ease-in-out 0.8s;
-	-moz-transition: all 0.4s ease-in-out 0.8s;
-	-o-transition: all 0.4s ease-in-out 0.8s;
-	-ms-transition: all 0.4s ease-in-out 0.8s;
-	transition: all 0.4s ease-in-out 0.8s;
+  -webkit-transition: all 0.4s ease-in-out 0.8s;
+  -moz-transition: all 0.4s ease-in-out 0.8s;
+  -o-transition: all 0.4s ease-in-out 0.8s;
+  -ms-transition: all 0.4s ease-in-out 0.8s;
+  transition: all 0.4s ease-in-out 0.8s;
 }
 
 #community #map .bos {
@@ -2154,11 +2174,11 @@ html.ready #community .visible #map .ny {
 
 html.ready #community .visible #map .bos {
   top: 93px;
-	-webkit-transition: all 0.4s ease-in-out 1s;
-	-moz-transition: all 0.4s ease-in-out 1s;
-	-o-transition: all 0.4s ease-in-out 1s;
-	-ms-transition: all 0.4s ease-in-out 1s;
-	transition: all 0.4s ease-in-out 1s;
+  -webkit-transition: all 0.4s ease-in-out 1s;
+  -moz-transition: all 0.4s ease-in-out 1s;
+  -o-transition: all 0.4s ease-in-out 1s;
+  -ms-transition: all 0.4s ease-in-out 1s;
+  transition: all 0.4s ease-in-out 1s;
 }
 
 #community #map p {
@@ -2187,11 +2207,11 @@ html.js #community #map a {
 html.ready #community .visible #map p,
 html.ready #community .visible #map a {
   opacity: 1;
-	-webkit-transition: opacity 0.5s ease-in-out 1.5s;
-	-moz-transition: opacity 0.5s ease-in-out 1.5s;
-	-o-transition: opacity 0.5s ease-in-out 1.5s;
-	-ms-transition: opacity 0.5s ease-in-out 1.5s;
-	transition: opacity 0.5s ease-in-out 1.5s;
+  -webkit-transition: opacity 0.5s ease-in-out 1.5s;
+  -moz-transition: opacity 0.5s ease-in-out 1.5s;
+  -o-transition: opacity 0.5s ease-in-out 1.5s;
+  -ms-transition: opacity 0.5s ease-in-out 1.5s;
+  transition: opacity 0.5s ease-in-out 1.5s;
 }
 
 /* User Groups - Meetups */
