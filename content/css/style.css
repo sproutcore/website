@@ -2438,10 +2438,16 @@ html.ready #community .visible #map a {
 }
 
 #community #event-info .event h3.title {
-  color: #4aa021;
   font-size: 18px;
   font-weight: bold;
 }
+
+.green#community #event-info .event h3.title { color: #73c44b; }
+.pink#community #event-info .event h3.title { color: #f26098; }
+.blue#community #event-info .event h3.title { color: #4098e1; }
+.orange#community #event-info .event h3.title { color: #f38f42; }
+.purple#community #event-info .event h3.title { color: #b36cea; }
+
 
 #community #event-info .event h4 {
   color: #858585;
