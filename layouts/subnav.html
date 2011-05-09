@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <% @item[:subnav].each_with_index do |name, i| %>
+      <li<%= ' class="active"' if i.zero? %>><a href="#"><%= name %></a></li>
+    <% end %>
+  </ul>
+</nav>
+

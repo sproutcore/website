@@ -1,0 +1,26 @@
+---
+title: Search Results
+id: search
+h1: Search Our Site
+download: true
+subnav:
+- 1-20 of 150
+---
+
+<section id="search-results" class="visible">
+  <div id="cse" style="width: 100%;">Loading</div>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript"> 
+    google.load('search', '1', {language : 'en'});
+    google.setOnLoadCallback(function() {
+      var customSearchControl = new google.search.CustomSearchControl('010803036737098308835:zpz3rt7h_7y');
+      customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+      customSearchControl.draw('cse');
+    }, true);
+  </script>
+  <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+</section>
+
+<% content_for :modals do %>
+
+<% end %>
