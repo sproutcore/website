@@ -22,9 +22,9 @@ var app = {
     }
   },
   events: [
-    {year: 2011, month: 5, day: 12, title: "WD"},
-    {year: 2011, month: 5, day: 18, title: "Rails Conf"},
-    {year: 2011, month: 6, day: 15, title: "Velocity"}
+    {year: 2011, month: 5, day: 12, title: "WD", lat: 47.561484, lng: -52.712681},
+    {year: 2011, month: 5, day: 18, title: "Rails Conf", lat: 47.561484, lng: -52.712681},
+    {year: 2011, month: 6, day: 15, title: "Velocity", lat: 47.561484, lng: -52.712681}
   ]
 };
 

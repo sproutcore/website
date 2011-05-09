@@ -1,4 +1,4 @@
-/*globals app */
+/*globals app google */
 
 (function($) {
 
@@ -260,14 +260,39 @@
 
 })(jQuery);
 
+app.mapsLoaded = false;
+
+function initialize() {
+  var currentEvent = jQuery("#event-info .event.active"),
+      e;
+
+  if (currentEvent.length > 0) {
+    e = app.events[currentEvent[0].id.replace(/event\-/, '')];
+    console.log(e);
+    var googleMap = new google.maps.Map(currentEvent.find('.map')[0], {
+      zoom: 12,
+      center: new google.maps.LatLng(e.lat, e.lng),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+  }
+
+  app.mapsLoaded = true;
+}
+
 jQuery(document).ready(function() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+  document.body.appendChild(script);
+  
   var info = $('#event-info');
 
   $('#calendar').calendar({
     events: app.events,
     onEventSelected: function(e) {
       var currentEvent = info.find('.event.active'),
-          newEvent = info.find('#event-' + e.id);
+          newEvent = info.find('#event-' + e.id),
+          map = newEvent.find('.map')[0];
 
       if (newEvent.hasClass('active')) { return; }
 
@@ -276,6 +301,14 @@ jQuery(document).ready(function() {
         newEvent.animate({left: 0, opacity: 1}, 350).addClass('active');
       } else {
         newEvent.css({left: 0, opacity: 1}).addClass('active');
+      }
+      console.log(app.mapsLoaded);
+      if (app.mapsLoaded) {
+        var googleMap = new google.maps.Map(map, {
+          zoom: 12,
+          center: new google.maps.LatLng(e.lat, e.lng),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
       }
     }
   });
