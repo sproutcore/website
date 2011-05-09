@@ -1104,14 +1104,21 @@ html.ready #home [role="main"] > div {
 /* About
 --------------------------------------------- */
 
+#about #tabs #what-is-sproutcore p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
 #about #slow {
-  margin-bottom: 60px;
+  margin-bottom: 18px;
   padding-right: 392px;
+  min-height: 255px;
   background: url(../img/slow.jpg) no-repeat 100% 0;
 }
 
 #about #fast {
   padding-left: 392px;
+  min-height: 255px;
   background: url(../img/fast.jpg) no-repeat;
 }
 
