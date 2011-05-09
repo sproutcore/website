@@ -25,7 +25,9 @@ var app = {
     {year: 2011, month: 5, day: 12, title: "WD", lat: 47.561484, lng: -52.712681},
     {year: 2011, month: 5, day: 18, title: "Rails Conf", lat: 47.561484, lng: -52.712681},
     {year: 2011, month: 6, day: 15, title: "Velocity", lat: 47.561484, lng: -52.712681}
-  ]
+  ],
+  colors: ['green', 'pink', 'blue', 'orange', 'purple'],
+  currentColor: document.body.className
 };
 
 (function($,document, window) {
@@ -39,41 +41,69 @@ var app = {
   window.app = app;
 })( jQuery, document, this );
 
+app.changeColor = function(color) {
+  var body = $(document.body);
+
+  body.removeClass(app.currentColor).addClass(color);
+  app.currentColor = color;
+  document.cookie = 'scColor=' + color;
+  console.log(document.cookie);
+};
+
 app.carousel = (function() {
-  var $carousel, $panels, currentPanel, $buttons, $tray, $trayLinks,
-  gotoPanel = function( id, force ) {
+  var $carousel = $( '#carousel' ),
+      $panels = $carousel.find( '.panel' ),
+      $buttons = $carousel.find( 'button' ),
+      $tray = $carousel.find( '.tray' ),
+      $trayLinks = $tray.find( 'a' ),
+      currentPanel;
+
+  var gotoPanel = function( id, force ) {
+    var $currentPanel, $oldPanels, $otherPanels;
+
+    if (force === undefined) force = false;
+
     // cap
     currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
 
     // active the target panel
-    $panels.eq( currentPanel ).addClass( 'active' ).removeClass( 'old' );
+    $currentPanel = $panels.eq( currentPanel );
+    $currentPanel.addClass( 'active' ).removeClass( 'old' );
+    if (!force) { $currentPanel.animate({left: 0, opacity: 1}, 1000); }
+    else { $currentPanel.css({left: 0, opacity: 1}); }
+
+    var color = $currentPanel.data('color');
+    if (color && app.colors.indexOf(color) > -1) {
+      app.changeColor(color);
+    }
 
     // if we're at 0, there is no prior elements to animate
     if ( currentPanel > 0 ) {
-      $panels.slice( 0, currentPanel ).addClass( 'old' ).removeClass( 'active' );
+      $oldPanels = $panels.slice( 0, currentPanel );
+      $oldPanels.addClass( 'old' ).removeClass( 'active' );
+      if (!force) { $oldPanels.animate({left: -880, opacity: 0}, 1000); }
+      else { $oldPanels.animate({left: -880, opacity: 0}); }
     }
 
     //make sure any slides ahead of the current one aren't active or old
-    $panels.slice( currentPanel + 1 ).removeClass( 'old active' );
+    $otherPanels = $panels.slice( currentPanel + 1 );
+    $otherPanels.removeClass( 'old active' );
+    if (!force) { $otherPanels.animate({left: 880, opacity: 0}, 1000); }
+    else { $otherPanels.css({left: 880, opacity: 0}); }
     
     //set the tray's panel button thingy to active
     $trayLinks.removeClass( 'active' ).filter( '.panel' + currentPanel ).addClass( 'active' );
   };
-  
+
+  var panel;
+  $panels.each(function(index) {
+    panel = $(this);
+    if (panel.data('color') === app.currentColor) {
+      gotoPanel(index, true);
+    }
+  });
+
   app.ready.carousel = function() {
-    // cache dom elems
-    $carousel = $( '#carousel' );
-    $tray = $carousel.find( '.tray' );
-    $buttons = $carousel.find( 'button' );
-    $trayLinks = $tray.find( 'a' );
-    $panels = $carousel.find( '.panel' );
-    
-    // get the index of the 'active' panel
-    var index = $panels.filter( 'active' ).prevAll().length;
-    
-    // if there is no active panel, assume the first
-    currentPanel = ( index || 1 ) - 1;
-    
     $buttons.click(function(e) {
       e.preventDefault();
       // handle name="previous" and name="next"

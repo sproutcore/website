@@ -29,6 +29,21 @@
   <script src="/js/libs/modernizr-1.7.min.js"></script>
 </head>
 <body id="<%= @item[:id] %>" class="green">
+  <script type="text/javascript" charset="utf-8">
+  
+  var cookies = document.cookie.split(';'),
+      color = 'green';
+
+  if (cookies) {
+    for (var idx = 0; idx < cookies.length; idx++) {
+      if (cookies[idx].indexOf(' scColor=') === 0) {
+        color = cookies[idx].substring(9);
+      }
+    }
+  }
+
+  document.body.className = color;
+  </script>
   <div id="wrap">
     <header role="banner">
       <div class="container">
