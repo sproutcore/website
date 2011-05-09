@@ -2638,3 +2638,34 @@ html.ready #community .visible #map a {
 #search #tabs nav li:first-child {
 	margin-left: 0;
 }
+
+#results .cse .gsc-control-cse, 
+#results .gsc-control-cse {
+	background: none;
+	border: none;
+}
+
+#results .cse .gsc-webResult.gsc-result, 
+#results .gsc-webResult.gsc-result {
+	border: none;
+}
+
+#results .gs-result .gs-title, 
+#results .gs-result .gs-title * {
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#results .gs-result .gs-title > a > b {
+	color: inherit;
+	font-weight: bold;
+}
+
+#results .gs-result a.gs-visibleUrl, 
+#results .gs-result .gs-visibleUrl {
+	color: #ccc;
+}
+
+.gsc-search-box {
+	display: none;
+}

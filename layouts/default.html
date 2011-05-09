@@ -44,8 +44,8 @@
             <%= nav "Blog", "blog", "http://blog.sproutcore.com" %>
           </ul>
         </nav>
-        <form action="#" role="search">
-          <input type="text" />
+        <form action="" role="search" onSubmit="return submitQuery()">
+          <input type="text" id="query-input"/>
         </form>
       </div>
     </header>

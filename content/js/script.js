@@ -322,3 +322,13 @@ app.ready.domReadyClass = function() {
   $( 'html' ).addClass( 'ready' );
 };
 
+// Pass search query to results page
+
+function submitQuery() {
+  window.location = '/search/#results?q='
+      + encodeURIComponent(
+          document.getElementById('query-input').value);
+  return false;
+}
+
+// Parse URL and populate search results
