@@ -18,7 +18,7 @@ var app = {
       processing: "Processing",
       signup: "Sign-Up",
       commError: "An communication error occured",
-      done: "Done"
+      done: ""
     }
   },
   events: [

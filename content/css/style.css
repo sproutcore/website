@@ -1782,7 +1782,8 @@ html.js #application-slider-tray {
   background: linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); /* W3C */
 }
 #subscribe button[name="subscribe"]:disabled {
-  opacity: .5;
+  opacity: .16;
+	cursor: pointer;
 }
 
 /* Docs
