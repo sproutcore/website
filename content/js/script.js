@@ -361,4 +361,3 @@ function submitQuery() {
   return false;
 }
 
-// Parse URL and populate search results
