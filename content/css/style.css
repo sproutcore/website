@@ -1826,7 +1826,7 @@ html.js #application-slider-tray {
 --------------------------------------------- */
 
 #newsletter.button.secondary {
-	opacity: 0.5;
+	opacity: 0.55;
 	padding: 10px 15px;
 	border-color: #000;
 	color: #fff;
@@ -2674,7 +2674,6 @@ html.ready #community .visible #map a {
 	margin-left: 0;
 }
 
-<<<<<<< HEAD
 #search #tabs #clip {
   height: auto !important; /* Clip is normally resized through JS on page ready or tab change */
 }
