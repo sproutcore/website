@@ -330,7 +330,7 @@ app.ready.domReadyClass = function() {
 // Pass search query to results page
 
 function submitQuery() {
-  window.location = '/search/#results?q='
+  window.location = '/search/?q='
       + encodeURIComponent(
           document.getElementById('query-input').value);
   return false;
