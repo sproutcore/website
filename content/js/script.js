@@ -56,7 +56,7 @@ app.changeColor = function(color) {
 
   body.removeClass(app.currentColor).addClass(color);
   app.currentColor = color;
-  document.cookie = 'scColor=' + color '; domain=.sproutcore.com';
+  document.cookie = 'scColor=' + color + '; domain=.sproutcore.com';
 };
 
 app.carousel = (function() {
