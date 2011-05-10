@@ -167,7 +167,14 @@ body > footer .col:nth-child(3) {
 
 body > footer .col:nth-child(1) > a {
   display: inline-block;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+}
+
+/* License */
+
+body > footer .col:nth-child(1) > #license {
+	margin-top: 1px;
+	line-height: 22px;
 }
 
 /* Headers */
@@ -201,13 +208,10 @@ body > footer .social li:nth-child(2) {
   margin: 5px 8px 0 8px
 }
 
-body > footer .social li:nth-child(3) {
-  width: 160px;
-}
-
-body > footer .social li:nth-child(3) img {
-  float: left;
-  margin-right: 7px;
+body > footer .social li:nth-child(4) a {
+	display: inline-block;
+	width: 140px;
+	margin: -2px 0 0 5px;
 }
 
 b,
