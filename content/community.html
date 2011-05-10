@@ -328,7 +328,19 @@ subnav:
     'userName':'strobecorp', 
     'formHash':'m7x3p9', 
     'autoResize':true,
-    'height':'565', 
+    
+    // Resize the wufoo iframe and content wrapper
+    'resizeDone': function(height) {
+      // In FF & IE, the first height is 0, in Webkit, the first height(s) are really big
+      // Wufoo also calls the resizeDone function of all its forms on the page when one of them resizes!
+      // Über hack: set the height to a good value unless it looks like a legitimate resize
+      if (height == 0 || height > 664) height = 588;
+
+      $('#wufooFormm7x3p9').attr('height', height);
+      $('#local-meetup .modal-content').height(height);
+    },
+    
+    'height':'588', 
     'ssl':true});
     m7x3p9.display();
   </script>

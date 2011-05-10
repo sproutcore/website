@@ -10,7 +10,19 @@
     'userName':'strobecorp', 
     'formHash':'r7x3q1', 
     'autoResize':true,
-    'height':'574', 
+    
+    // Resize the wufoo iframe and content wrapper
+    'resizeDone': function(height) {
+      // In FF & IE, the first height is 0, in Webkit, the first height(s) are really big
+      // Wufoo also calls the resizeDone function of all its forms on the page when one of them resizes!
+      // Über hack: set the height to a good value unless it looks like a legitimate resize
+      if (height == 0 || height > 664) height = 588;
+
+      $('#wufooFormr7x3q1').attr('height', height);
+      $('#contact-us .modal-content').height(height);
+    },
+
+    'height':'588', 
     'ssl':true});
     r7x3q1.display();
   </script>
