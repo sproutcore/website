@@ -57,7 +57,6 @@ app.changeColor = function(color) {
   body.removeClass(app.currentColor).addClass(color);
   app.currentColor = color;
   document.cookie = 'scColor=' + color;
-  console.log(document.cookie);
 };
 
 app.carousel = (function() {
@@ -72,6 +71,7 @@ app.carousel = (function() {
     var $currentPanel, $oldPanels, $otherPanels;
 
     if (force === undefined) force = false;
+    if (navigator.appVersion.match(/iPad/)) { force = true; }
 
     // cap
     currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
@@ -199,6 +199,9 @@ app.detectPlatform = function() {
       platform = PLATFORM[ v ];
     }
   });
+
+  if (navigator.appVersion.match(/iPad|iPhone|Android/)) { $('html').addClass('mobile'); }
+
   return platform;
 };
 

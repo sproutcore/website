@@ -79,6 +79,14 @@ body {
   transition: background-color 1s ease-in-out;
 }
 
+html.mobile #wrap {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+
 #main {
 	padding-bottom: 275px;  /* must be same height as the footer (including paddings), took off 5px for overlap of #tabs bottom */
   padding-top: 80px;
@@ -332,6 +340,18 @@ pre {
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+html.mobile .button.primary {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
 }
 
 .button.primary:active {
