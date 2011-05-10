@@ -202,11 +202,11 @@ app.startDownload = function(platform) {
   platform = platform || app.platform;
   switch (platform) {
     case PLATFORM.windows:
-      window.location.href = "/installers/SproutCore Installer Windows.zip";
+      window.location.href = "http://installers.sproutcore.com/SproutCore.exe";
       break;
     
     case PLATFORM.mac:
-      window.location.href = "/installers/SproutCore Installer Mac.dmg";
+      window.location.href = "http://installers.sproutcore.com/SproutCore.pkg";
       break;
     
     default:

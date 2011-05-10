@@ -10,7 +10,7 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile %r{^\/(js|css|img|installers|favicon)} do
+compile %r{^\/(js|css|img|favicon)} do
   # don’t filter or layout
 end
 
@@ -27,7 +27,7 @@ compile '*' do
   layout 'main'
 end
 
-route %r{^\/(js|css|img|installers|favicon)} do
+route %r{^\/(js|css|img|favicon)} do
   filename = item.attributes[:filename].sub(%r{content/}, '')
   "/#{filename}"
 end
