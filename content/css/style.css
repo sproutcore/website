@@ -1452,8 +1452,8 @@ html.js #carousel > button {
   text-align: center;
 }
 
-#carousel .panel.tutorials div.video {
-  background-color: #444;
+#carousel .panel.tutorials .video {
+  border: 1px solid #666;
   float: left;
   height: 250px;
   margin-right: 20px;
