@@ -211,23 +211,23 @@ app.detectPlatform = function() {
  */
 app.gotoInstall = function(platform, alwaysRedirect) {
   if (alwaysRedirect === undefined) { alwaysRedirect = true; }
-
+  
   platform = platform || app.platform;
   switch (platform) {
     case PLATFORM.windows:
-      window.location.href = "/install_win/";
+      window.location.href = "http://sproutcore.com/install_win/";
       break;
     
     case PLATFORM.mac:
-      window.location.href = "/install_mac/";
+      window.location.href = "http://sproutcore.com/install_mac/";
       break;
     
     case PLATFORM.linux:
-      window.location.href = "/install_linux/";
+      window.location.href = "http://sproutcore.com/install_linux/";
       break;
-
+    
     default:
-      if (alwaysRedirect) { window.location.href = "/install/"; }
+      if (alwaysRedirect) { window.location.href = "http://sproutcore.com/install/"; }
   }
 };
 
