@@ -67,10 +67,10 @@ body {
   background-image: url(../img/pixels.png), url(../img/cross.png), -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
   background-image: url(../img/pixels.png), url(../img/cross.png), -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
   background-image: url(../img/pixels.png), url(../img/cross.png), -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-image: url(../img/pixels.png), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(62%, rgba(255, 255, 255, 0.8)));
-  background-image: url(../img/pixels.png), linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-image: url(../img/pixels.png), -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-repeat: repeat-x;
+  background-image: url(../img/pixels.png), url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(62%, rgba(255, 255, 255, 0.8)));
+  background-image: url(../img/pixels.png), url(../img/cross.png), linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
+  background-image: url(../img/pixels.png), url(../img/cross.png), -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
+  background-repeat: repeat-x, repeat-both, repeat-x;
 
   -webkit-transition: background-color 1s ease-in-out;
   -moz-transition: background-color 1s ease-in-out;
