@@ -215,7 +215,7 @@ app.startDownload = function(platform) {
   
   setTimeout(function () {
     app.gotoInstall(platform);
-  }, 700);
+  }, 1000);
 };
 
 /**
