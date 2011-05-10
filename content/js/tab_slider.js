@@ -14,20 +14,20 @@ app.tabSlider = (function() {
         tabs,
         transitionFunc,
         width;
-    
+
     tabs = $('#tabs');
     clip = tabs.find('#clip');
     panel = clip.find('#panel');
     sections = panel.find('> section'); //$('#tabs #sections > section');
     links = tabs.find('nav ul > li a');
-    
+
     // Get the currently selected tab
     // If none, default to index 0
     var tab = $.bbq.getState("tab");
     var link = $("#tabs nav ul > li a[href='" + tab + "']");
     tabIndex = links.index(link);
     tabIndex = (tabIndex === -1) ? 0 : tabIndex;
-    
+
     // Layout the individual sections left to right
     width = 958;
     $(panel).css('width', sections.length * width);
@@ -35,7 +35,7 @@ app.tabSlider = (function() {
     $.each(sections, function(index, section) {
       $(section).css('left', index * width);
     });
-    
+
     $(links[tabIndex]).parent().toggleClass('active');
     // Invoke in a different run loop so CSS transitions are invoked
 
@@ -46,42 +46,40 @@ app.tabSlider = (function() {
         $(sections[tabIndex]).toggleClass('visible');
       });
     }
-    
+
     // Show the panel once our sections are laid out
     $(panel).show();
-    
+
     // Resize to fit the first section
-    height = $(sections[tabIndex]).height();
-    $(clip).css('height', height);
-    
+    app.resizeClippingWindow(tabIndex);
+
     // The transition function
     transitionFunc = function(e) {
       var newTabIndex;
-      
+
       // Determine the index of the new tab
       newTabIndex = links.index(this);
-      
+
       if (tabIndex !== newTabIndex) {
         // 1. Remove active class from the current tab and visible class from current section
         $(links[tabIndex]).parent().toggleClass('active');
         $(sections[tabIndex]).toggleClass('visible');
-        
+
         // 2. Stretch/shrink the window to fit
-        height = $(sections[newTabIndex]).height();
-        $(clip).css('height', height);
-        
+        app.resizeClippingWindow(newTabIndex);
+
         // 3. Make the new section visible
         $(panel).animate({
           left: -newTabIndex * width
           }, 500, function() {
           // Animation complete.
-          // 4. Set the section's visible class (used to trigger CSS animations)
+          // Set the section's visible class (used to trigger CSS animations)
           $(sections[newTabIndex]).toggleClass('visible');
         });
-        
+
         // 4. Add active class to the new tab
         $(links[newTabIndex]).parent().toggleClass('active');
-        
+
         tabIndex = newTabIndex;
       }
 
@@ -100,4 +98,13 @@ app.tabSlider = (function() {
     });
   };
 })();
-/** ^-- Insert into script.js? --^ **/
+
+app.resizeClippingWindow = function(index) {
+  var tabs = $('#tabs'),
+      clip = tabs.find('#clip'),
+      panel = clip.find('#panel'),
+      sections = panel.find('> section'),
+      height = $(sections[index]).height();
+
+  $(clip).css('height', height);
+};
