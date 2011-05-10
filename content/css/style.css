@@ -1793,6 +1793,7 @@ html.js #application-slider-tray {
 --------------------------------------------- */
 
 #newsletter.button.secondary {
+	opacity: 0.5;
 	padding: 10px 15px;
 	border-color: #000;
 	color: #fff;
