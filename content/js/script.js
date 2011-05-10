@@ -22,9 +22,19 @@ var app = {
     }
   },
   events: [
-    {year: 2011, month: 5, day: 12, title: "WD", lat: 47.561484, lng: -52.712681},
-    {year: 2011, month: 5, day: 18, title: "Rails Conf", lat: 47.561484, lng: -52.712681},
-    {year: 2011, month: 6, day: 15, title: "Velocity", lat: 47.561484, lng: -52.712681}
+    {year: 2011, month: 1, day: 26, title: "Facebook", lat: 37.419677, lng: -122.146119},
+    {year: 2011, month: 1, day: 27, title: "Day of JS", lat: 37.422756, lng: -122.083501},
+    {year: 2011, month: 3, day: 21, title: "DevNexus", lat: 33.927978, lng: -84.451218},
+    {year: 2011, month: 4, day: 16, title: "jQuery Conf", lat: 37.413168, lng: -122.0713},
+    {year: 2011, month: 4, day: 27, title: "Philly ETE", lat: 39.946274, lng: -75.144162},
+    {year: 2011, month: 4, day: 28, title: "jQuery Boston", lat: 42.350209, lng: -71.048281},
+    {year: 2011, month: 4, day: 30, title: "BarCamp", lat: 27.341761, lng: -82.549151},
+    {year: 2011, month: 5, day: 11, title: "JS Day Italy", lat: 45.443753, lng: 10.971866},
+    {year: 2011, month: 5, day: 12, title: "WD", lat: 47.612196, lng: -122.332227},
+    {year: 2011, month: 5, day: 18, title: "Rails Conf", lat: 39.284963, lng: -76.616871},
+    {year: 2011, month: 5, day: 19, title: "Budapest.rb", lat: 47.498416, lng: 19.04068},
+    {year: 2011, month: 6, day: 15, title: "Velocity", lat: 37.405517, lng: -121.974828},
+    {year: 2011, month: 7, day: 27, title: "OSCON", lat: 45.528246, lng: -122.661645}
   ],
   colors: ['green', 'pink', 'blue', 'orange', 'purple'],
   currentColor: document.body.className

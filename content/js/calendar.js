@@ -264,16 +264,23 @@ app.mapsLoaded = false;
 
 function initialize() {
   var currentEvent = jQuery("#event-info .event.active"),
-      e;
+      e, loc;
 
   if (currentEvent.length > 0) {
     e = app.events[currentEvent[0].id.replace(/event\-/, '')];
-    console.log(e);
+    loc = new google.maps.LatLng(e.lat, e.lng);
+
     var googleMap = new google.maps.Map(currentEvent.find('.map')[0], {
-      zoom: 12,
-      center: new google.maps.LatLng(e.lat, e.lng),
+      zoom: 16,
+      center: loc,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+
+    var marker = new google.maps.Marker({
+      position: loc,
+      title: "Venue"
+    });
+    marker.setMap(googleMap);
   }
 
   app.mapsLoaded = true;
@@ -304,11 +311,19 @@ jQuery(document).ready(function() {
       }
       console.log(app.mapsLoaded);
       if (app.mapsLoaded) {
+        var loc = new google.maps.LatLng(e.lat, e.lng);
+
         var googleMap = new google.maps.Map(map, {
-          zoom: 12,
-          center: new google.maps.LatLng(e.lat, e.lng),
+          zoom: 16,
+          center: loc,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         });
+
+        var marker = new google.maps.Marker({
+          position: loc,
+          title: "Venue"
+        });
+        marker.setMap(googleMap);
       }
     }
   });
