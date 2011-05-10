@@ -38,3 +38,11 @@ subnav:
       <a href="/install_other/" class="button secondary">Learn More</a></p>
   </section>
 </section>
+
+<% content_for :javascript do %>
+  <script type="text/javascript" charset="utf-8">
+    if (window.location.href.match(/\?redirect=1$/)) {
+      app.gotoInstall(app.detectPlatform(), false);
+    }
+  </script>
+<% end %>

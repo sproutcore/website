@@ -209,28 +209,26 @@ app.detectPlatform = function() {
   Goes to the install page for the current platform.
   
  */
-app.gotoInstall = function(platform) {
-  var url = "docs.html#install";
-  
+app.gotoInstall = function(platform, alwaysRedirect) {
+  if (alwaysRedirect === undefined) { alwaysRedirect = true; }
+
   platform = platform || app.platform;
   switch (platform) {
     case PLATFORM.windows:
-      url = "install_win";
+      window.location.href = "/install_win/";
       break;
     
     case PLATFORM.mac:
-      url = "install_mac";
+      window.location.href = "/install_mac/";
       break;
     
     case PLATFORM.linux:
-      url = "install_linux";
+      window.location.href = "/install_linux/";
       break;
-    
+
     default:
-      url = "install";
+      if (alwaysRedirect) { window.location.href = "/install/"; }
   }
-  
-  window.location.href = '/'+url+'/';
 };
 
 app.subscribe = (function( $, window ) {
