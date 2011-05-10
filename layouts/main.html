@@ -3,7 +3,7 @@
     <h1><%= @item[:h1] %>
     <% if @item[:download] %>
       <ul id="action">
-        <li><a href="#" class="button primary" onclick="app.startDownload(); return false;"><span class="download">Download Latest</span></a></li>
+        <li><a href="#" class="button primary" onclick="app.gotoInstall(); return false;"><span class="download">Download Latest</span></a></li>
       </ul>
     <% end %>
     </h1>
