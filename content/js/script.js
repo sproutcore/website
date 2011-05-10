@@ -69,8 +69,8 @@ app.carousel = (function() {
     // active the target panel
     $currentPanel = $panels.eq( currentPanel );
     $currentPanel.addClass( 'active' ).removeClass( 'old' );
-    if (!force) { $currentPanel.animate({left: 0, opacity: 1}, 1000); }
-    else { $currentPanel.css({left: 0, opacity: 1}); }
+    if (!force) { $currentPanel.animate({left: 44, opacity: 1}, 1000); }
+    else { $currentPanel.css({left: 44, opacity: 1}); }
 
     var color = $currentPanel.data('color');
     if (color && app.colors.indexOf(color) > -1) {

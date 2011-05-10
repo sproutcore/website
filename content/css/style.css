@@ -46,21 +46,23 @@ table {
 /* Base
 --------------------------------------------- */
 
+html, body {
+  min-width: 970px;
+}
+
 html {
   height: 100%;
-  overflow-y: scroll;
 }
 
 body {
   color: #444;
   font: 12px/1.5 "Helvetica Neue", Arial, sans-serif;
   height: 100%;
-  overflow: visible;
 }
 
 #wrap {
+  min-width: 970px;
   min-height: 100%;
-  overflow-x: hidden;
   background-image: url(../img/cross.png);
   background-image: url(../img/pixels.png), url(../img/cross.png), -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
   background-image: url(../img/pixels.png), url(../img/cross.png), -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
@@ -78,7 +80,6 @@ body {
 }
 
 #main {
-  overflow: visible;
 	padding-bottom: 275px;  /* must be same height as the footer (including paddings), took off 5px for overlap of #tabs bottom */
   padding-top: 80px;
 }
@@ -579,8 +580,9 @@ a.button.secondary {
 --------------------------------------------- */
 
 header[role="banner"] {
-  width: 100%;
   position: absolute;
+  left: 0;
+  right: 0;
   overflow: hidden;
   border-bottom: 1px solid #000; /* Find more suitable fallback color */
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -1216,7 +1218,7 @@ html.ready #home [role="main"] > div {
   margin-right: auto;
   position: relative;
   top: 1em;
-  width: 875px;
+  width: 960px;
 
   /* Override some styles applied automatically to DIV/sections */
   border: 0 none;
@@ -1230,7 +1232,7 @@ html.ready #home [role="main"] > div {
 }
 
 #home [role="main"] > #carousel {
-  overflow: visible;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -1253,7 +1255,7 @@ html.js #carousel .panel {
 }
 
 html.js #carousel .panel.active {
-  left: 0;
+  left: 44;
   opacity: 1;
 }
 
@@ -1370,7 +1372,7 @@ html.js #carousel > button {
 
 #carousel > button.previous {
   background-position: 0 0;
-  left: -60px;
+  left: -15px;
 }
 
 #carousel > button.previous:hover {
@@ -1383,7 +1385,7 @@ html.js #carousel > button {
 
 #carousel > button.next {
   background-position: -48px 0;
-  right: -60px;
+  right: -15px;
 }
 
 #carousel > button.next:hover {
