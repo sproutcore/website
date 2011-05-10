@@ -1,16 +1,24 @@
 
 #modals {
   position: absolute; /* Ensure that modals don't screw up sticky footer */
+  z-index: 100;
 }
 
 #modals section.modal-pane {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+#modals section.modal-pane .modal-background {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   bottom: 0;
   left: 0;
   right: 0;
   top: 0;
-  z-index: 99;
 }
 
 #modals section.modal-pane .modal-content {
@@ -27,7 +35,6 @@
   padding: 18px 50px 10px;
   position: fixed;
   top: 50%;
-  z-index: 100;
 }
 
 #modals section.modal-pane .modal-content .close-button a {
@@ -60,17 +67,17 @@
 }
 
 #modals section#contact-us .modal-content {
-  height: 626px;
-  margin-left: -205px;
+  height: 574px;
+  margin-left: -207px;
   margin-top: -326px;
-  width: 310px;
+  width: 314px;
 }
 
 #modals section#local-meetup .modal-content {
   height: 636px;
-  margin-left: -205px;
+  margin-left: -207px;
   margin-top: -331px;
-  width: 310px;
+  width: 314px;
 }
 
 #modals section#core-member-modal .modal-content {
