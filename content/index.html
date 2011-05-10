@@ -5,7 +5,7 @@ id: home
 
 <p id="blurb">SproutCore is an open-source framework for building blazingly fast, innovative user experiences on the web.</p>
 <ul id="action">
-  <li><a href="#" class="button primary" onclick="app.gotoInstall(); return false;"><span class="download">Download Latest</span></a></li>
+  <li><a href="#" class="button primary" onclick="_gaq.push(['_trackEvent', 'Download', 'Button']); app.gotoInstall(); return false;"><span class="download">Download Latest</span></a></li>
   <li><a href="https://github.com/sproutcore/sproutcore/" class="button primary"><span class="github">View on GitHub</span></a></li>
 </ul>
 <div id="carousel">
@@ -19,7 +19,7 @@ id: home
       <li>How to add new interactive elements</li>
       <li>...and much more!</li>
     </ul>
-    <a href="#" class="button primary" onclick="app.gotoInstall(); return false;"><span class="check-out">Get Started Now!</span></a>
+    <a href="#" class="button primary" onclick="_gaq.push(['_trackEvent', 'Download', 'TutorialCarousel']); app.gotoInstall(); return false;"><span class="check-out">Get Started Now!</span></a>
   </div>
   <div class="panel guides blue" data-color="blue">
     <div>
