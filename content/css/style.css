@@ -2534,6 +2534,22 @@ html.ready #community .visible #map a {
 	margin-left: 0;
 }
 
+#search #tabs #clip {
+  height: auto !important; /* Clip is normally resized through JS on page ready or tab change */
+}
+
+#search #tabs #clip #panel {
+  position: static; /* The panel is normally abs. positioned so that it can be slid */
+}
+
+#search #tabs #clip #panel {
+  position: static; /* The panel is normally abs. positioned so that it can be slid */
+}
+
+#search #tabs #clip #panel > section {
+  position: static; /* The sections are normally abs. positioned by JS across the panel */
+}
+
 #results .cse .gsc-control-cse, 
 #results .gsc-control-cse {
 	background: none;
