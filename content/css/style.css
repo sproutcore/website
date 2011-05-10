@@ -2696,6 +2696,8 @@ html.ready #community .visible #map a {
 #results .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
 	color: #2a2a2a;	
 	background: rgba(0,0,0,.2);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 	border-radius: 15px;
 	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.4), inset 0 1px 3px rgba(0,0,0,.4);
   -moz-box-shadow: 0 1px 0 rgba(255,255,255,.4), inset 0 1px 3px rgba(0,0,0,.4);
