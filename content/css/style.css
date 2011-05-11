@@ -1244,14 +1244,7 @@ html.ready #home [role="main"] > div {
 /* Homepage carousel 
 ----------------------------------------------*/
 
-#carousel {
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 1em;
-  width: 960px;
-
+#home [role="main"] #carousel-container {
   /* Override some styles applied automatically to DIV/sections */
   border: 0 none;
   background: transparent;
@@ -1261,6 +1254,26 @@ html.ready #home [role="main"] > div {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  padding: 0;
+}
+
+html.js #home [role="main"] #carousel-container {
+  height: 500px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 220px;
+}
+
+html.js #features {
+  margin-top: 660px;
+}
+
+#carousel {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 960px;
 }
 
 #home [role="main"] > #carousel {
