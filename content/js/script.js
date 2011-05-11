@@ -52,7 +52,17 @@ var app = {
 })( jQuery, document, this );
 
 app.changeColor = function(color) {
-  var body = $(document.body);
+  var body = $(document.body),
+      isMatt = false;
+
+  if (document.cookie && document.cookie.indexOf('mattgrantham') > -1) {
+    isMatt = true;
+  } else if (window.location && window.location.hash && window.location.hash.indexOf("mattg") > -1) {
+    document.cookie = "mattgrantham=true; domain=.sproutcore.com";
+    isMatt = true;
+  }
+
+  if (isMatt) { color = "purple"; }
 
   body.removeClass(app.currentColor).addClass(color);
   app.currentColor = color;
@@ -65,7 +75,7 @@ app.carousel = (function() {
       $buttons = $carousel.find( 'button' ),
       $tray = $carousel.find( '.tray' ),
       $trayLinks = $tray.find( 'a' ),
-      currentPanel;
+      currentPanel = 0;
 
   var gotoPanel = function( id, force ) {
     var $currentPanel, $oldPanels, $otherPanels;
@@ -109,9 +119,11 @@ app.carousel = (function() {
   $panels.each(function(index) {
     panel = $(this);
     if (panel.data('color') === app.currentColor) {
-      gotoPanel(index, true);
+      currentPanel = index;
     }
   });
+
+  gotoPanel(currentPanel, true);
 
   app.ready.carousel = function() {
     $buttons.click(function(e) {

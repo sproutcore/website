@@ -50,6 +50,9 @@
     for (var idx = 0; idx < cookies.length; idx++) {
       if (cookies[idx].indexOf(' scColor=') === 0) {
         color = cookies[idx].substring(9);
+      } else if (cookies[idx].indexOf('mattgrantham') > -1) {
+        color = "purple";
+        continue;
       }
     }
   }
