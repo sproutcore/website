@@ -64,7 +64,7 @@ var VISIBLE_MEMBERS = [
     name: "Yehuda Katz",
     location: "San Francisco, CA, USA",
     shortBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action and is a ",
-    fullBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action, and is a contributor to Ruby in Practice. He spends most of his time hacking on open source—his main projects, along with others, like Thor, Handlebars and Janus—or traveling the world doing evangelism work. He blogs at <a href=\"http://yehudakatz.om\" target=\"_blank\">http://yehudakatz.com</a> and can be found on Twitter as @wycats."
+    fullBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action, and is a contributor to Ruby in Practice. He spends most of his time hacking on open source—his main projects, along with others, like Thor, Handlebars and Janus—or traveling the world doing evangelism work. He blogs at <a href=\"http://yehudakatz.com\" target=\"_blank\">http://yehudakatz.com</a> and can be found on Twitter as @wycats."
   }
 ];
 
