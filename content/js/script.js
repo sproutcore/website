@@ -13,10 +13,10 @@ var app = {
   ready: {},
   messages: {
     subscribe: {
-      success: "Thanks, Sign-Up Successful",
+      success: "Thanks, Sign Up Successful",
       validation: "Please enter a valid email address",
       processing: "Processing",
-      signup: "Sign-Up",
+      signup: "Sign Up",
       commError: "An communication error occured",
       done: ""
     }
