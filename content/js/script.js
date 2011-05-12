@@ -359,3 +359,44 @@ function submitQuery() {
   return false;
 }
 
+(function() {
+  var trigger = [68, 79, 85, 66, 84, 83], current = 0, timer;
+
+  function startDoubts() {
+    var body = $(document.body);
+    var elems = [
+      "<div class='tom'></div>",
+      "<div class='funnyz'>I HAS DOUBTS</div>",
+      "<div class='funnyz'>C/D?</div>",
+      "<div class='funnyz'>Señor</div>"
+    ];
+
+    setInterval(function() {
+      var r = Math.floor(Math.random() * elems.length);
+      $(elems[r]).css({
+        position: 'absolute',
+        top: body.height() * Math.random(),
+        left: body.width() * Math.random(),
+        webkitTransform: "rotate(" + (Math.random() * 360) + "deg) scale(" + (Math.random() * 1.5) + ")"
+      }).appendTo(body);
+    }, 1000);
+  }
+
+  function clear() {
+    current = 0;
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (timer) { clearTimeout(timer); }
+
+    if (trigger[current] === e.which) {
+      current++;
+      if (current === trigger.length) {
+        // success
+        startDoubts();
+      }
+    } else {
+      timer = setTimeout(clear, 1000);
+    }
+  });
+})();

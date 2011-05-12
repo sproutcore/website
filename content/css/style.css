@@ -2780,3 +2780,23 @@ html.ready #community .visible #map a {
 #tabs #panel #search-results {
 	overflow: visible;
 }
+
+
+/* LOLZ */
+
+.tom, .funnyz {
+  z-index: 100;
+}
+
+.funnyz {
+  color: #ff256a;
+  font-size: 96px;
+  font-weight: bold;
+  text-shadow: 0 0 4px #fff;
+}
+
+.tom {
+  background-image: url(/img/lolz/tom.png);
+  height: 397px;
+  width: 318px;
+}
