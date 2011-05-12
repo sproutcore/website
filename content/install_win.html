@@ -110,7 +110,9 @@ $ rvm --default use 1.9.2</code></pre>
 </section>
 <script type="text/javascript" charset="utf-8">
   var download = function() {
-    window.location.href = "http://installers.sproutcore.com/SproutCore.exe";
+     if (window.location.hash === '' || window.location.hash === '#tab=package-install') {
+       window.location.href = "http://installers.sproutcore.com/SproutCore.exe";
+    }
   }
   
   window.setTimeout(download, 2500);
