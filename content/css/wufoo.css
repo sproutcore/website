@@ -1,6 +1,5 @@
-body {
-  color: #444;
-  font: 12px/1.5 "Helvetica Neue", Arial, sans-serif;
+.wufoo {
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 #header h2 {
