@@ -514,9 +514,9 @@ header[role="banner"] {
   left: 0;
   right: 0;
   overflow: hidden;
-  border-bottom: 1px solid #000; /* Find more suitable fallback color */
+  border-bottom: 1px solid #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  background: #000; /* Find more suitable fallback color */
+  background: #000;
   background: rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
@@ -538,7 +538,7 @@ html.ready #home header[role="banner"] {
 
 #logo,
 [role="banner"] nav,
-[role="banner"] form {
+[role="search"] {
   float: left;
 }
 
@@ -605,14 +605,18 @@ html.ready #home header[role="banner"] {
 
 /* Search */
 
-[role="banner"] input {
-  width: 145px;
-  height: 14px;
+[role="search"] {
+  position: relative;
   margin-top: 13px;
-  padding: 5px 22px 5px 27px;
+}
+
+[role="search"] input[type="text"] {
+  width: 146px;
+  height: 14px;
+  padding: 5px 23px 5px 27px;
   border: 0;
   color: #eee;
-  background: #000 url(../img/search.png) no-repeat 8px 6px; /* Find more suitable fallback color */
+  background: #000 url(../img/search.png) no-repeat 8px 6px;
   background: rgba(0, 0, 0, 0.19) url(../img/search.png) no-repeat 8px 6px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -622,20 +626,33 @@ html.ready #home header[role="banner"] {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), inset 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 
-[role="banner"] input:focus {
+[role="search"] input[type="text"]:focus {
   outline: 0;
-  background-color: #000; /* Find more suitable fallback color */
+  background-color: #000;
   background-color: rgba(0, 0, 0, 0.07);
 }
 
-.search-clear {
-	display: none;
-	margin: 19px 0 0 -19px;
-	width: 12px;
-	height: 13px;
-	background: url(../img/search-clear.png);
-	border: 0;
+[role="search"] input[type="reset"] {
+  width: 12px;
+  height: 13px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 0;
+  border: 0;
+  text-indent: -999em;
+  background: url(../img/clear.png);
+  cursor: pointer;
 }
+
+html.js [role="search"] input[type="reset"] {
+  display: none;
+}
+
+[role="search"] input[type="reset"]:active {
+  background-position: 0 -13px;
+}
+
 
 /* Page
 --------------------------------------------- */

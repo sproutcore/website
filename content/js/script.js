@@ -359,6 +359,27 @@ function submitQuery() {
   return false;
 }
 
+// Show/hide search clear button
+
+$(document).ready(function() {
+  
+  $('[role="search"] input[type="text"]').keyup(function() {
+    if ($(this).val() == "") {
+      $('[role="search"] input[type="reset"]').hide();
+    } else {
+      $('[role="search"] input[type="reset"]').show();
+    }
+  });
+  
+  $('[role="search"] input[type="reset"]').click(function(event) {
+    $('[role="search"] input[type="text"]').focus();
+    $(this).hide();
+  });
+  
+});
+
+// Doubts
+
 (function() {
   var trigger = [68, 79, 85, 66, 84, 83], current = 0, timer;
 
