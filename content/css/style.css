@@ -2463,6 +2463,18 @@ html.ready #community .visible #map a {
   top: 24px;
 }
 
+#community #calendar .month .day .event.sel {
+  border-color: #8bafc1;
+  color: #537793;
+  background: #b5dcf0;
+  background: -moz-linear-gradient(top, #d0efff, #c1e2f3 50%, #b5dcf0 51%, #a4cee3);
+  background: -ms-linear-gradient(top, #d0efff, #c1e2f3 50%, #b5dcf0 51%, #a4cee3);
+  background: -o-linear-gradient(top, #d0efff, #c1e2f3 50%, #b5dcf0 51%, #a4cee3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d0efff), color-stop(50%, #c1e2f3), color-stop(51%, #b5dcf0), to(#a4cee3));
+  background: -webkit-linear-gradient(top, #d0efff, #c1e2f3 50%, #b5dcf0 51%, #a4cee3);
+  background: linear-gradient(top, #d0efff, #c1e2f3 50%, #b5dcf0 51%, #a4cee3);
+}
+
 #community #event-info {
   height: 431px;
   left: 445px;
