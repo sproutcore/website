@@ -2702,22 +2702,21 @@ html.ready #community .visible #map a {
 --------------------------------------------- */
 
 #error {
-  min-height: 215px;
+  min-height: 172px;
   margin-top: 34px;
-  padding: 0;
 }
 
 #error img {
   float: left;
-  margin: -34px 0 0 9px;
+  margin: -47px 0 0 9px;
 }
 
 #error h1 {
-  width: 135px;
+  width: 125px;
   height: 32px;
   float: right;
-  margin: 5px -7px 0 0;
-  padding: 3px 4px 6px 10px;
+  margin: -2px -7px 0 0;
+  padding: 3px 9px 6px 15px;
   color: #590f0f;
   font: 18px/34px "Allan", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
@@ -2727,13 +2726,8 @@ html.ready #community .visible #map a {
   overflow: hidden;
 }
 
-#error h2,
-#error p {
-  margin: 0 30px 0 273px;
-}
-
 #error h2 {
-  margin-top: 50px;
+  clear: right;
   font-weight: bold;
   font-size: 28px;
 }
