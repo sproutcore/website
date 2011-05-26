@@ -2069,24 +2069,12 @@ html.ready #community #get-involved.visible #ipad a.blue {
   width: 18px;
 }
 
-html.js #community #map .pin.sf,
-html.js #community #map .pin.la,
-html.js #community #map .pin.pro,
-html.js #community #map .pin.chi,
-html.js #community #map .pin.was,
-html.js #community #map .pin.ny,
-html.js #community #map .pin.bos {
+html.js #community #map .pin {
   top: 0;
   opacity: 0;
 }
 
-html.ready #community .visible #map .pin.sf,
-html.ready #community .visible #map .pin.la,
-html.ready #community .visible #map .pin.pro,
-html.ready #community .visible #map .pin.chi,
-html.ready #community .visible #map .pin.was,
-html.ready #community .visible #map .pin.ny,
-html.ready #community .visible #map .pin.bos {
+html.ready #community .visible #map .pin {
   opacity: 1;
 }
 
@@ -2129,17 +2117,30 @@ html.ready #community .visible #map .pin.pro {
   transition: all 0.4s ease-in-out 0.4s;
 }
 
+#community #map .pin.aus {
+  left: 329px;
+}
+
+html.ready #community .visible #map .pin.aus {
+  top: 260px;
+  -webkit-transition: all 0.4s ease-in-out 0.6s;
+  -moz-transition: all 0.4s ease-in-out 0.6s;
+  -o-transition: all 0.4s ease-in-out 0.6s;
+  -ms-transition: all 0.4s ease-in-out 0.6s;
+  transition: all 0.4s ease-in-out 0.6s;
+}
+
 #community #map .pin.chi {
   left: 444px;
 }
 
 html.ready #community .visible #map .pin.chi {
   top: 95px;
-  -webkit-transition: all 0.4s ease-in-out 0.6s;
-  -moz-transition: all 0.4s ease-in-out 0.6s;
-  -o-transition: all 0.4s ease-in-out 0.6s;
-  -ms-transition: all 0.4s ease-in-out 0.6s;
-  transition: all 0.4s ease-in-out 0.6s;
+  -webkit-transition: all 0.4s ease-in-out 0.8s;
+  -moz-transition: all 0.4s ease-in-out 0.8s;
+  -o-transition: all 0.4s ease-in-out 0.8s;
+  -ms-transition: all 0.4s ease-in-out 0.8s;
+  transition: all 0.4s ease-in-out 0.8s;
 }
 
 #community #map .pin.was {
@@ -2148,11 +2149,11 @@ html.ready #community .visible #map .pin.chi {
 
 html.ready #community .visible #map .pin.was {
   top: 142px;
-  -webkit-transition: all 0.4s ease-in-out 0.8s;
-  -moz-transition: all 0.4s ease-in-out 0.8s;
-  -o-transition: all 0.4s ease-in-out 0.8s;
-  -ms-transition: all 0.4s ease-in-out 0.8s;
-  transition: all 0.4s ease-in-out 0.8s;
+  -webkit-transition: all 0.4s ease-in-out 1s;
+  -moz-transition: all 0.4s ease-in-out 1s;
+  -o-transition: all 0.4s ease-in-out 1s;
+  -ms-transition: all 0.4s ease-in-out 1s;
+  transition: all 0.4s ease-in-out 1s;
 }
 
 #community #map .pin.ny {
@@ -2161,11 +2162,11 @@ html.ready #community .visible #map .pin.was {
 
 html.ready #community .visible #map .pin.ny {
   top: 114px;
-  -webkit-transition: all 0.4s ease-in-out 1s;
-  -moz-transition: all 0.4s ease-in-out 1s;
-  -o-transition: all 0.4s ease-in-out 1s;
-  -ms-transition: all 0.4s ease-in-out 1s;
-  transition: all 0.4s ease-in-out 1s;
+  -webkit-transition: all 0.4s ease-in-out 1.2s;
+  -moz-transition: all 0.4s ease-in-out 1.2s;
+  -o-transition: all 0.4s ease-in-out 1.2s;
+  -ms-transition: all 0.4s ease-in-out 1.2s;
+  transition: all 0.4s ease-in-out 1.2s;
 }
 
 #community #map .pin.bos {
@@ -2174,11 +2175,11 @@ html.ready #community .visible #map .pin.ny {
 
 html.ready #community .visible #map .pin.bos {
   top: 93px;
-  -webkit-transition: all 0.4s ease-in-out 1.2s;
-  -moz-transition: all 0.4s ease-in-out 1.2s;
-  -o-transition: all 0.4s ease-in-out 1.2s;
-  -ms-transition: all 0.4s ease-in-out 1.2s;
-  transition: all 0.4s ease-in-out 1.2s;
+  -webkit-transition: all 0.4s ease-in-out 1.4s;
+  -moz-transition: all 0.4s ease-in-out 1.4s;
+  -o-transition: all 0.4s ease-in-out 1.4s;
+  -ms-transition: all 0.4s ease-in-out 1.4s;
+  transition: all 0.4s ease-in-out 1.4s;
 }
 
 #community #map .hover {
@@ -2309,6 +2310,14 @@ html.ready #community .visible #map a {
 
 #community #meetups .pro {
   background-image: url(../img/cities/pro.png);
+}
+
+#community #meetups .aus {
+  background-image: url(../img/cities/austin.png);
+}
+
+#community #meetups .ber {
+  background-image: url(../img/cities/berlin.png);
 }
 
 #community #meetups .soon {
