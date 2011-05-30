@@ -1,15 +1,17 @@
 module SubnavHelper
+  def content_for_modals
+    @content_for_modals ||= ''
+  end
+
   def subnav(*tabs)
     render 'subnav', :tab_names => tabs
   end
 
   def modal(id, &block)
-    @item[:content_for_modals] ||= ''
-
     content = capture(&block)
     result = render 'modal', :content => content, :id => id
 
-    item[:content_for_modals] << result
+    content_for_modals << result
   end
 end
 

@@ -32,6 +32,10 @@ compile '*' do
   layout 'main'
 end
 
+route "/404/" do
+  "/404.html"
+end
+
 route %r{^\/(js|css|img|favicon)} do
   filename = item.attributes[:filename].sub(%r{content/}, '')
   "/#{filename}"
