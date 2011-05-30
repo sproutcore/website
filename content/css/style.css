@@ -1975,10 +1975,6 @@ html.ready #community #get-involved.visible #ipad a.blue {
   background: linear-gradient(top, #3b5a99, #5677bd);
 }
 
-/* iPad Animation */
-
-
-
 /* Tweet Stream */
 
 #community #get-involved .twtr-hd,
@@ -2008,34 +2004,37 @@ html.ready #community #get-involved.visible #ipad a.blue {
   font: 12px/1.5 "Helvetica Neue", Arial, sans-serif !important;
 }
 
-#community #get-involved #upcoming-events,
-#community #get-involved #upcoming-meetups {
-	margin-top: 66px;
-	width: 45%;
+/* Guides & Code Sections */
+
+#community #get-involved #guides,
+#community #get-involved #code {
+  width: 45%;
+  margin-top: 50px;
 }
 
-#community #get-involved #upcoming-meetups {
-	margin-right: 81px;
+#community #get-involved #guides {
+  margin-right: 10%;
 }
 
-#community #get-involved .events li:nth-child(2) {
-  margin: 14px 0;
+#community #get-involved #guides p,
+#community #get-involved #code p {
+  padding-left: 65px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
 
-#community #get-involved ul.events .date {
-	float: left;
-	margin-right: 10px;
+#community #get-involved #guides p {
+  background-image: url(../img/guide.png);
 }
 
-#community #get-involved ul.events > li {
-	margin-left: 0;
-	list-style: none;
+#community #get-involved #code p {
+  background-image: url(../img/code.png);
 }
 
-#community #get-involved footer {
-	float: right;
+#community #get-involved #guides .button,
+#community #get-involved #code .button {
+  float: right;
 }
-
 
 /* User Groups - Map */
 
