@@ -1467,7 +1467,8 @@ html.js #carousel > button {
 }
 
 html.js #application-slider {
-  height: 195px;
+  /*height: 195px;*/
+  height: 170px;
 }
 
 html.js #application-slider.large {
