@@ -364,14 +364,14 @@ function submitQuery() {
 $(document).ready(function() {
   
   $('[role="search"] input[type="text"]').keyup(function() {
-    if ($(this).val() == "") {
+    if ($(this).val() === "") {
       $('[role="search"] input[type="reset"]').hide();
     } else {
       $('[role="search"] input[type="reset"]').show();
     }
   });
   
-  $('[role="search"] input[type="reset"]').click(function(event) {
+  $('[role="search"] input[type="reset"]').click(function() {
     $('[role="search"] input[type="text"]').focus();
     $(this).hide();
   });
