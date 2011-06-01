@@ -2654,10 +2654,6 @@ html.ready #community .visible #map a {
 	width: 100%;
 }
 
-#results .gsc-thinWrapper {
-	width: 100%;
-}
-
 #results .gs-result .gs-bidi-start-align.gs-snippet {
 	font-size: 12px;
 }
