@@ -1135,33 +1135,20 @@ html.ready #home [role="main"] > div {
 
 /* Logos */
 
-#about #logos ul {
-  overflow: hidden;
+#logos section {
+  width: 236px;
+  float: left;
+  padding: 20px;
+  background: #f1f1f1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
-#about #logos li {
-	float: left;
-	margin: 0 0 54px 18px;
-	width: 380px;
-	list-style: none;
+#logos section:nth-child(3) {
+  margin: 0 35px;
 }
 
-#about #logos li:nth-child(odd) {
-	padding: 0 20px 0 0;
-}
-
-#about #logos li:nth-child(even) {
-	float: right;
-	padding: 0;
-}
-
-#about #logos img.outdent {
-	margin-left: -6px;
-}
-
-#about #logos .links {
-	font-size: 12px;
-}
 
 /* Homepage carousel 
 ----------------------------------------------*/
