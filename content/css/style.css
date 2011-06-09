@@ -2328,6 +2328,10 @@ html.ready #community .visible #map a {
   background-image: url(../img/cities/berlin.png);
 }
 
+#community #meetups .kl {
+  background-image: url(../img/cities/kl.png);
+}
+
 #community #meetups .soon {
   background-position: 0 -139px;
 }
