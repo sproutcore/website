@@ -442,8 +442,8 @@ a.button.secondary {
 	text-align: center;
 }
 
-.download-cloud {
-	background-image: url(../img/download-cloud.png);
+.pictures {
+	background-image: url(../img/pictures.png);
 }
 
 .app {
@@ -1138,7 +1138,7 @@ html.ready #home [role="main"] > div {
 #logos section {
   width: 236px;
   float: left;
-  padding: 20px;
+  padding: 20px 20px 10px;
   background: #f1f1f1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1147,6 +1147,27 @@ html.ready #home [role="main"] > div {
 
 #logos section:nth-child(3) {
   margin: 0 35px;
+}
+
+#logos section ul li {
+  float: right;
+  margin: 0 0 10px 10px;
+  list-style: none;
+  font-size: 12px;
+}
+
+#logos .dark,
+#logos .light {
+  padding: 10px 13px;
+  background-image: url(../img/checker.png);
+}
+
+#logos .dark {
+  background-color: #e0e0e0;
+}
+
+#logos .light {
+  background-color: #000;
 }
 
 
