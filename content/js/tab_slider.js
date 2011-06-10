@@ -104,7 +104,25 @@ app.resizeClippingWindow = function(index) {
       clip = tabs.find('#clip'),
       panel = clip.find('#panel'),
       sections = panel.find('> section'),
-      height = $(sections[index]).height();
+      minHeight = $(sections[index]).height();
 
-  $(clip).css('height', height);
+  $(clip).css('height', minHeight);
+  
+  app.bringingFlexyBack();
+};
+
+app.bringingFlexyBack = function() {
+  var tabTop,
+      footerTop,
+      height;
+  
+  // Determine the top offsets
+  footerTop = $('footer').offset().top;
+  tabTop = $('#tabs').offset().top;
+  
+  // The minHeight is simply the difference between the tops or the
+  // height required for the content
+  height = footerTop - tabTop;
+  
+  $('#tabs-back').css('height', height);
 };

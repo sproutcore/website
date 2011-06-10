@@ -701,13 +701,22 @@ html.ready #home [role="main"] > div {
 	line-height: 21px;
 }
 
+#tabs-back {
+  border-bottom: 0;
+  height: 1200px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 178px;
+  width: 958px;
+  z-index: 1;
+}
 
 #tabs {
-  margin-bottom: 0;
-  border-bottom: 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  border: 0;
+  margin: 0 1px;
+  position: relative;
+  z-index: 2;
 }
 
 #tabs nav {
@@ -2775,6 +2784,8 @@ body > footer {
   -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.6);
   box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.6);
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 /* Columns */
