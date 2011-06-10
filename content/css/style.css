@@ -2282,54 +2282,61 @@ html.ready #community .visible #map a {
 }
 
 #community #meetups a {
-  width: 149px;
-  height: 35px;
+  height: 100%;
   display: block;
-  padding: 58px 18px 40px 19px;
   text-indent: -999em;
   background-repeat: no-repeat;
-  background-position: 21px 59px;
   overflow: hidden;
 }
 
 #community #meetups .sf {
   background-image: url(../img/cities/sf.png);
+  background-position: 50% 72px;
 }
 
 #community #meetups .la {
   background-image: url(../img/cities/la.png);
+  background-position: 50% 79px;
 }
 
 #community #meetups .chi {
   background-image: url(../img/cities/chi.png);
+  background-position: 50% 79px;
 }
 
 #community #meetups .was {
   background-image: url(../img/cities/was.png);
+  background-position: 50% 72px;
 }
 
 #community #meetups .ny {
   background-image: url(../img/cities/ny.png);
+  background-position: 50% 75px;
 }
 
 #community #meetups .bos {
   background-image: url(../img/cities/bos.png);
+  background-position: 50% 70px;
 }
 
 #community #meetups .pro {
   background-image: url(../img/cities/pro.png);
+  background-position: 50% 76px;
 }
 
 #community #meetups .aus {
-  background-image: url(../img/cities/austin.png);
+  background-image: url(../img/cities/aus.png);
+  background-position: 50% 76px;
 }
 
 #community #meetups .ber {
-  background-image: url(../img/cities/berlin.png);
+  background-image: url(../img/cities/ber.png);
+  background-position: 50% 76px;
 }
 
 #community #meetups .kl {
   background-image: url(../img/cities/kl.png);
+  background-position: 50% 72px;
 }
 
 #community #meetups .soon {
