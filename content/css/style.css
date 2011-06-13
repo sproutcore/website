@@ -1505,6 +1505,33 @@ html.js #carousel > button {
   margin-right: 0;
 }
 
+#carousel .panel.dispatches {
+  height: 420px;
+  padding-top: 40px;
+  background: url(../img/carousel/dispatches/bg.png) no-repeat;
+  text-align: center;
+}
+
+#carousel .panel.dispatches h2 {
+  color: #382d43;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#carousel .panel.dispatches p {
+  color: #4f2e64;
+  font: 22px/1.5 "Architects Daughter", "Helvetica Neue", Arial, sans-serif;
+}
+
+#carousel .panel.dispatches .button {
+  float: none;
+  margin-top: 250px;
+}
+
+#carousel .panel.dispatches .button span {
+  background: url(../img/carousel/dispatches/article.png) no-repeat;
+}
+
 
 /* Application slider 
 ----------------------------------------------*/
