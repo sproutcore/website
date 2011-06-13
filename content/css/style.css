@@ -1431,7 +1431,6 @@ html.js #carousel > button {
   background: url(../img/carousel/tutorials/button_icon.png) no-repeat;
 }
 
-
 #carousel .panel.guides {
   background: url(../img/carousel/guides/bg.png) no-repeat;
   height: 420px;
@@ -1458,18 +1457,52 @@ html.js #carousel > button {
   background: url(../img/carousel/guides/button_icon.png) no-repeat;
 }
 
-#carousel .panel.wwdc-bash {
-  background: url(../img/carousel/wwdc_bash/bg.png) no-repeat;
+#carousel .panel.wwdc {
+  height: 415px;
+  padding-top: 45px;
+  background: url(../img/carousel/wwdc/bg.png) no-repeat;
   text-align: center;
 }
 
-#carousel .panel.wwdc-bash .button {
-  float: none;
-  margin-top: 310px;
+#carousel .panel.wwdc h2 {
+  width: 715px;
+  height: 46px;
+  margin: 0 auto;
+  text-indent: -999em;
+  background: url(../img/carousel/wwdc/title.png);  
 }
 
-#carousel .panel.wwdc-bash .button span {
-  background: url(../img/carousel/wwdc_bash/star.png) no-repeat;
+#carousel .panel.wwdc .button {
+  float: none;
+  margin-top: 278px;
+}
+
+#carousel .panel.wwdc .button span {
+  background: url(../img/carousel/wwdc/album.png) no-repeat;
+}
+
+#carousel .panel.wwdc div {
+  position: absolute;
+  bottom: 14px;
+  right: 46px;
+  text-align: right;
+}
+
+#carousel .panel.wwdc h3 {
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#carousel .panel.wwdc li {
+  margin: 6px 0;
+}
+
+#carousel .panel.wwdc img {
+  float: none;
+  margin-right: 0;
 }
 
 
