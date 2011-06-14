@@ -360,10 +360,26 @@ html.mobile .button.primary {
 
 #action {
   float: right;
+  position: relative;
+  z-index: 1;
+}
+
+#action:before {
+  width: 422px;
+  height: 347px;
+  content: url(../img/sparkle.png);
+  position: absolute;
+  top: -80px;
+  right: -63px;
+  z-index: -1;
 }
 
 h1 > #action {
 	margin-top: 10px;
+}
+
+h1 > #action:before {
+  top: -90px;
 }
 
 #action li:first-child {
@@ -512,6 +528,7 @@ header[role="banner"] {
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 2;
   overflow: hidden;
   border-bottom: 1px solid #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
