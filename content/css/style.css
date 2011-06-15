@@ -1219,6 +1219,7 @@ html.js #home [role="main"] #carousel-container {
   position: absolute;
   right: 0;
   top: 220px;
+  z-index: 2;
 }
 
 html.js #features {
