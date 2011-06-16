@@ -57,6 +57,11 @@ var app = {
   window.app = app;
 })(jQuery, document, this);
 
+// add 'ready' to html when the dom's ready to go
+app.ready.domReadyClass = function() {
+  $('html').addClass('ready');
+};
+
 app.changeColor = function(color) {
   var body = $(document.body),
   isMatt = false;
@@ -397,11 +402,6 @@ app.subscribe = (function($, window) {
   };
 })(jQuery, this);
 
-// add 'ready' to html when the dom's ready to go
-app.ready.domReadyClass = function() {
-  $('html').addClass('ready');
-};
-
 // Pass search query to results page
 function submitQuery() {
   window.location = '/search/?q=' + encodeURIComponent(
@@ -410,8 +410,7 @@ function submitQuery() {
 }
 
 // Show/hide search clear button
-$(document).ready(function() {
-
+app.ready.clearSearch = function() {
   $('[role="search"] input[type="text"]').keyup(function() {
     if ($(this).val() === "") {
       $('[role="search"] input[type="reset"]').hide();
@@ -424,8 +423,7 @@ $(document).ready(function() {
     $('[role="search"] input[type="text"]').focus();
     $(this).hide();
   });
-
-});
+};
 
 // Doubts
 (function() {
