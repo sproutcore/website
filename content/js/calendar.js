@@ -11,10 +11,11 @@
       onEventSelected: function() {},
       month: now.getMonth(),
       year: now.getYear() + 1900
-    }, options);
+    },
+    options);
 
     var len = settings.events.length,
-        idx, e;
+    idx, e;
 
     for (idx = 0; idx < len; idx++) {
       settings.events[idx].id = idx;
@@ -22,11 +23,11 @@
 
     function eventsForMonth(month, year) {
       var all = settings.events,
-          len = all.length,
-          events = [], e;
+      len = all.length,
+      events = [],
+      e;
 
       month++; // months are 0-based, events are 1-based
-
       for (var idx = 0; idx < len; idx++) {
         e = all[idx];
         if (e.month === month && e.year === year) {
@@ -41,7 +42,7 @@
       var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
       // leap years
-      if (month === 1 && year % 4 === 0 && (year % 100 !==0 || year % 400 ===0)) {
+      if (month === 1 && year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
         return 29;
       }
 
@@ -50,13 +51,16 @@
 
     function renderMonth(month, year) {
       var currentEvents = eventsForMonth(month, year),
-          previousMonth = month === 0 ? 11 : month - 1,
-          previousYear = previousMonth === 11 ? year - 1 : year,
-          previousEvents = eventsForMonth(previousMonth, previousYear),
-          nextMonth = month === 11 ? 0 : month + 1,
-          nextYear = month === 11 ? year + 1 : year,
-          nextEvents = eventsForMonth(nextMonth, nextYear),
-          s = '', idx, len, e;
+      previousMonth = month === 0 ? 11 : month - 1,
+      previousYear = previousMonth === 11 ? year - 1 : year,
+      previousEvents = eventsForMonth(previousMonth, previousYear),
+      nextMonth = month === 11 ? 0 : month + 1,
+      nextYear = month === 11 ? year + 1 : year,
+      nextEvents = eventsForMonth(nextMonth, nextYear),
+      s = '',
+      idx,
+      len,
+      e;
 
       s += '<div class="month">';
 
@@ -69,13 +73,12 @@
       s += '</div>';
 
       var days = getDaysInMonth(month, year),
-          firstDate = new Date(year, month, 1),
-          firstDay = firstDate.getDay(),
-          previousDays = getDaysInMonth(previousMonth, previousYear);
+      firstDate = new Date(year, month, 1),
+      firstDay = firstDate.getDay(),
+      previousDays = getDaysInMonth(previousMonth, previousYear);
 
       // note that if firstDay === 0, ie a Sunday, then no days from the
       // past month will be rendered
-
       idx = 0;
 
       // render days for last month
@@ -84,10 +87,10 @@
         previousDays -= firstDay; // start of days from last month to display
         for (idx = 0; idx < firstDay; idx++) {
           e = previousEvents[previousDays + idx + 1];
-          s += '<div class="day other-month last-month' + (e ? ' has-event' : '') + '">';
+          s += '<div class="day other-month last-month' + (e ? ' has-event': '') + '">';
           s += '<span>' + (previousDays + idx + 1) + '</span>';
           if (e) {
-            s +=  '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
+            s += '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
           }
           s += '</div>';
         }
@@ -101,10 +104,10 @@
           s += '<div class="week">'; // open the week
         }
 
-        s += '<div class="day current-month' + (e ? ' has-event' : '') + '">';
+        s += '<div class="day current-month' + (e ? ' has-event': '') + '">';
         s += '<span>' + (idx - firstDay + 1) + '</span>';
         if (e) {
-          s +=  '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
+          s += '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
         }
         s += '</div>';
 
@@ -122,12 +125,12 @@
           s += '<div class="week">'; // open the week
         }
 
-        s += '<div class="day other-month next-month' + (e ? ' has-event' : '') + '">';
+        s += '<div class="day other-month next-month' + (e ? ' has-event': '') + '">';
         s += '<span>' + i + '</span>';
         i++;
 
         if (e) {
-          s +=  '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
+          s += '<a href="#" class="event button secondary" id="event-button-' + e.id + '">' + e.title + '</a>';
         }
 
         s += '</div>';
@@ -139,24 +142,25 @@
 
       s += '</div>'; // close the final week
       s += '</div>'; // close the calendar-month
-
       return s;
     }
 
     return this.each(function() {
       var calendar = $(this),
-          monthContainer = calendar.find('.month-container'),
-          monthHeader = calendar.find('.month-nav .month-name'),
-          buttons = calendar.find('.month-nav button'),
-          eventButtons = monthContainer.find('.event'),
-          now = new Date(),
-          depth = 10,
-          self = this,
-          currentMonth, currentYear, lastEvent;
+      monthContainer = calendar.find('.month-container'),
+      monthHeader = calendar.find('.month-nav .month-name'),
+      buttons = calendar.find('.month-nav button'),
+      eventButtons = monthContainer.find('.event'),
+      now = new Date(),
+      depth = 10,
+      self = this,
+      currentMonth,
+      currentYear,
+      lastEvent;
 
       function gotoMonth(month, year) {
         var $newMonth = $(renderMonth(month, year)),
-            $currentMonth = monthContainer.find('.month');
+        $currentMonth = monthContainer.find('.month');
 
         if (currentMonth < month || currentYear < year) {
           // next
@@ -164,7 +168,12 @@
           $currentMonth.css('zIndex', ++depth);
           $newMonth.appendTo(monthContainer);
 
-          $currentMonth.animate({'top': -395, opacity: 0}, 350, function() {
+          $currentMonth.animate({
+            'top': -395,
+            opacity: 0
+          },
+          350,
+          function() {
             $currentMonth.remove();
             depth--;
           });
@@ -177,7 +186,12 @@
           });
           $newMonth.appendTo(monthContainer);
 
-          $newMonth.animate({'top': 0, opacity: 1}, 250, function() {
+          $newMonth.animate({
+            'top': 0,
+            opacity: 1
+          },
+          250,
+          function() {
             $currentMonth.remove();
             depth--;
           });
@@ -194,7 +208,9 @@
 
       function selectEvent(e) {
         $('#event-button-' + e.id).addClass('sel');
-        if (lastEvent) { $('#event-button-' + lastEvent.id).removeClass('sel'); }
+        if (lastEvent) {
+          $('#event-button-' + lastEvent.id).removeClass('sel');
+        }
 
         settings.onEventSelected.call(self, e);
 
@@ -204,11 +220,15 @@
       gotoMonth(settings.month, settings.year);
 
       var startEvents = eventsForMonth(currentMonth, currentYear),
-          len = startEvents.length, idx, e;
+      len = startEvents.length,
+      idx,
+      e;
 
       for (idx = 0; idx < len; idx++) {
         e = startEvents[idx];
-        if (e) { break; }
+        if (e) {
+          break;
+        }
       }
 
       selectEvent(e);
@@ -241,11 +261,14 @@
         }
       });
 
-      eventButtons.live('click', function(event) {
+      eventButtons.live('click',
+      function(event) {
         var id = event.target.id,
-            e;
+        e;
 
-        if (id) { id = id.replace(/event\-button\-/, ''); }
+        if (id) {
+          id = id.replace(/event\-button\-/, '');
+        }
 
         event.preventDefault();
 
@@ -264,7 +287,8 @@ app.mapsLoaded = false;
 
 function initialize() {
   var currentEvent = jQuery("#event-info .event.active"),
-      e, loc;
+  e,
+  loc;
 
   if (currentEvent.length > 0) {
     e = app.events[currentEvent[0].id.replace(/event\-/, '')];
@@ -291,23 +315,36 @@ jQuery(document).ready(function() {
   script.type = "text/javascript";
   script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
   document.body.appendChild(script);
-  
+
   var info = $('#event-info');
 
   $('#calendar').calendar({
     events: app.events,
     onEventSelected: function(e) {
       var currentEvent = info.find('.event.active'),
-          newEvent = info.find('#event-' + e.id),
-          map = newEvent.find('.map')[0];
+      newEvent = info.find('#event-' + e.id),
+      map = newEvent.find('.map')[0];
 
-      if (newEvent.hasClass('active')) { return; }
+      if (newEvent.hasClass('active')) {
+        return;
+      }
 
       if (currentEvent.length > 0) {
-        currentEvent.removeClass('active').animate({left: -435, opacity: 0}, 350);
-        newEvent.animate({left: 0, opacity: 1}, 350).addClass('active');
+        currentEvent.removeClass('active').animate({
+          left: -435,
+          opacity: 0
+        },
+        350);
+        newEvent.animate({
+          left: 0,
+          opacity: 1
+        },
+        350).addClass('active');
       } else {
-        newEvent.css({left: 0, opacity: 1}).addClass('active');
+        newEvent.css({
+          left: 0,
+          opacity: 1
+        }).addClass('active');
       }
       console.log(app.mapsLoaded);
       if (app.mapsLoaded) {

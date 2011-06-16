@@ -9,7 +9,12 @@ var PLATFORM = {
 // basic app object
 var app = {
   platform: 'unknown',
-  platformMap: { Win: 'windows', Mac: 'mac', X11: 'linux', Linux: 'linux' },
+  platformMap: {
+    Win: 'windows',
+    Mac: 'mac',
+    X11: 'linux',
+    Linux: 'linux'
+  },
   ready: {},
   messages: {
     subscribe: {
@@ -40,20 +45,21 @@ var app = {
   currentColor: document.body.className
 };
 
-(function($,document, window) {
+(function($, document, window) {
   // run any function on app.ready
-  $( document ).ready( function() {
+  $(document).ready(function() {
     app.platform = app.detectPlatform();
-    $.each( app.ready, function() {
-        typeof this === "function" && this.call( app );
+    $.each(app.ready,
+    function() {
+      typeof this === "function" && this.call(app);
     });
   });
   window.app = app;
-})( jQuery, document, this );
+})(jQuery, document, this);
 
 app.changeColor = function(color) {
   var body = $(document.body),
-      isMatt = false;
+  isMatt = false;
 
   if (document.cookie && document.cookie.indexOf('mattgrantham') > -1) {
     isMatt = true;
@@ -62,7 +68,9 @@ app.changeColor = function(color) {
     isMatt = true;
   }
 
-  if (isMatt) { color = "purple"; }
+  if (isMatt) {
+    color = "purple";
+  }
 
   body.removeClass(app.currentColor).addClass(color);
   app.currentColor = color;
@@ -70,27 +78,40 @@ app.changeColor = function(color) {
 };
 
 app.carousel = (function() {
-  var $carousel = $( '#carousel' ),
-      $panels = $carousel.find( '.panel' ),
-      $buttons = $carousel.find( 'button' ),
-      $tray = $carousel.find( '.tray' ),
-      $trayLinks = $tray.find( 'a' ),
-      currentPanel = 0;
+  var $carousel = $('#carousel'),
+  $panels = $carousel.find('.panel'),
+  $buttons = $carousel.find('button'),
+  $tray = $carousel.find('.tray'),
+  $trayLinks = $tray.find('a'),
+  currentPanel = 0;
 
-  var gotoPanel = function( id, force ) {
+  var gotoPanel = function(id, force) {
     var $currentPanel, $oldPanels, $otherPanels;
 
     if (force === undefined) force = false;
-    if (navigator.appVersion.match(/iPad/)) { force = true; }
+    if (navigator.appVersion.match(/iPad/)) {
+      force = true;
+    }
 
     // cap
-    currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
+    currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length - 1 : id;
 
     // active the target panel
-    $currentPanel = $panels.eq( currentPanel );
-    $currentPanel.addClass( 'active' ).removeClass( 'old' );
-    if (!force) { $currentPanel.animate({left: 44, opacity: 1}, 1000); }
-    else { $currentPanel.css({left: 44, opacity: 1}); }
+    $currentPanel = $panels.eq(currentPanel);
+    $currentPanel.addClass('active').removeClass('old');
+    if (!force) {
+      $currentPanel.animate({
+        left: 44,
+        opacity: 1
+      },
+      1000);
+    }
+    else {
+      $currentPanel.css({
+        left: 44,
+        opacity: 1
+      });
+    }
 
     var color = $currentPanel.data('color');
     if (color && app.colors.indexOf(color) > -1) {
@@ -98,21 +119,43 @@ app.carousel = (function() {
     }
 
     // if we're at 0, there is no prior elements to animate
-    if ( currentPanel > 0 ) {
-      $oldPanels = $panels.slice( 0, currentPanel );
-      $oldPanels.addClass( 'old' ).removeClass( 'active' );
-      if (!force) { $oldPanels.animate({left: -880, opacity: 0}, 1000); }
-      else { $oldPanels.animate({left: -880, opacity: 0}); }
+    if (currentPanel > 0) {
+      $oldPanels = $panels.slice(0, currentPanel);
+      $oldPanels.addClass('old').removeClass('active');
+      if (!force) {
+        $oldPanels.animate({
+          left: -880,
+          opacity: 0
+        },
+        1000);
+      }
+      else {
+        $oldPanels.animate({
+          left: -880,
+          opacity: 0
+        });
+      }
     }
 
     //make sure any slides ahead of the current one aren't active or old
-    $otherPanels = $panels.slice( currentPanel + 1 );
-    $otherPanels.removeClass( 'old active' );
-    if (!force) { $otherPanels.animate({left: 880, opacity: 0}, 1000); }
-    else { $otherPanels.css({left: 880, opacity: 0}); }
-    
+    $otherPanels = $panels.slice(currentPanel + 1);
+    $otherPanels.removeClass('old active');
+    if (!force) {
+      $otherPanels.animate({
+        left: 880,
+        opacity: 0
+      },
+      1000);
+    }
+    else {
+      $otherPanels.css({
+        left: 880,
+        opacity: 0
+      });
+    }
+
     //set the tray's panel button thingy to active
-    $trayLinks.removeClass( 'active' ).filter( '.panel' + currentPanel ).addClass( 'active' );
+    $trayLinks.removeClass('active').filter('.panel' + currentPanel).addClass('active');
   };
 
   var panel;
@@ -129,70 +172,67 @@ app.carousel = (function() {
     $buttons.click(function(e) {
       e.preventDefault();
       // handle name="previous" and name="next"
-      if ( e.target.name ) {
-        gotoPanel( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
+      if (e.target.name) {
+        gotoPanel(currentPanel + (e.target.name === "previous" ? -1 : 1));
       }
     });
-    
+
     // get all the clicks in the tray
-    $tray.click( function(e) {
+    $tray.click(function(e) {
       e.preventDefault();
       // go to a particular panel
-      var match = /panel([0-9]+)/.exec( e.target.className );
-      if ( match && typeof match[1] !== "undefined" ) {
-        gotoPanel( +match[1] );
+      var match = /panel([0-9]+)/.exec(e.target.className);
+      if (match && typeof match[1] !== "undefined") {
+        gotoPanel( + match[1]);
       }
     });
   };
 })();
 
-
 app.slider = (function() {
-  var $slider, $panels, currentPanel, $tray, $trayLinks,
-  gotoPanel = function( id, force ) {
+  var $slider, $panels, currentPanel, $tray, $trayLinks, gotoPanel = function(id, force) {
     // cap
-    currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length -1 : id;
+    currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length - 1 : id;
 
     // active the target panel
-    $panels.eq( currentPanel ).addClass( 'active' ).removeClass( 'old' );
+    $panels.eq(currentPanel).addClass('active').removeClass('old');
 
     // if we're at 0, there is no prior elements to animate
-    if ( currentPanel > 0 ) {
-      $panels.slice( 0, currentPanel ).addClass( 'old' ).removeClass( 'active' );
+    if (currentPanel > 0) {
+      $panels.slice(0, currentPanel).addClass('old').removeClass('active');
     }
 
     //make sure any slides ahead of the current one aren't active or old
-    $panels.slice( currentPanel + 1 ).removeClass( 'old active' );
-    
+    $panels.slice(currentPanel + 1).removeClass('old active');
+
     //set the tray's panel button thingy to active
-    $trayLinks.removeClass( 'active' ).filter( '.panel' + currentPanel ).addClass( 'active' );
+    $trayLinks.removeClass('active').filter('.panel' + currentPanel).addClass('active');
   };
-  
+
   app.ready.slider = function() {
     // cache dom elems
-    $slider = $( '#application-slider' );
-    $tray = $( '#application-slider-tray' );
-    $trayLinks = $tray.find( 'a' );
-    $panels = $slider.find( '.panel' ); // these are the panels of 4 slides
-    
+    $slider = $('#application-slider');
+    $tray = $('#application-slider-tray');
+    $trayLinks = $tray.find('a');
+    $panels = $slider.find('.panel'); // these are the panels of 4 slides
     // get the index of the 'active' panel
-    var index = $panels.filter( 'active' ).prevAll().length;
-    
+    var index = $panels.filter('active').prevAll().length;
+
     // if there is no active panel, assume the first
-    currentPanel = ( index || 1 ) -1;
-    
+    currentPanel = (index || 1) - 1;
+
     // get all the clicks in the tray
-    $tray.click( function(e) {
+    $tray.click(function(e) {
       e.preventDefault();
       // handle name="previous" and name="next"
-      if ( e.target.name ) {
-        gotoPanel( currentPanel + ( e.target.name === "previous" ? -1 : 1 ) );
+      if (e.target.name) {
+        gotoPanel(currentPanel + (e.target.name === "previous" ? -1 : 1));
         return;
       }
       // go to a particular panel
-      var match = /panel([0-9]+)/.exec( e.target.className );
-      if ( match && typeof match[1] !== "undefined" ) {
-        gotoPanel( +match[1] );
+      var match = /panel([0-9]+)/.exec(e.target.className);
+      if (match && typeof match[1] !== "undefined") {
+        gotoPanel( + match[1]);
       }
     });
   };
@@ -206,13 +246,16 @@ app.slider = (function() {
 app.detectPlatform = function() {
   // This probably sucks and is unreliable
   var platform = PLATFORM.unknown;
-  $.each( app.platformMap, function(i,v) {
-    if ((new RegExp( i )).test( navigator.appVersion ) ) {
-      platform = PLATFORM[ v ];
+  $.each(app.platformMap,
+  function(i, v) {
+    if ((new RegExp(i)).test(navigator.appVersion)) {
+      platform = PLATFORM[v];
     }
   });
 
-  if (navigator.appVersion.match(/iPad|iPhone|Android/)) { $('html').addClass('mobile'); }
+  if (navigator.appVersion.match(/iPad|iPhone|Android/)) {
+    $('html').addClass('mobile');
+  }
 
   return platform;
 };
@@ -222,124 +265,133 @@ app.detectPlatform = function() {
   
  */
 app.gotoInstall = function(platform, alwaysRedirect) {
-  if (alwaysRedirect === undefined) { alwaysRedirect = true; }
-  
+  if (alwaysRedirect === undefined) {
+    alwaysRedirect = true;
+  }
+
   platform = platform || app.platform;
   switch (platform) {
-    case PLATFORM.windows:
-      window.location.href = "http://sproutcore.com/install_win/";
-      break;
-    
-    case PLATFORM.mac:
-      window.location.href = "http://sproutcore.com/install_mac/";
-      break;
-    
-    case PLATFORM.linux:
-      window.location.href = "http://sproutcore.com/install_linux/";
-      break;
-    
-    default:
-      if (alwaysRedirect) { window.location.href = "http://sproutcore.com/install/"; }
+  case PLATFORM.windows:
+    window.location.href = "http://sproutcore.com/install_win/";
+    break;
+
+  case PLATFORM.mac:
+    window.location.href = "http://sproutcore.com/install_mac/";
+    break;
+
+  case PLATFORM.linux:
+    window.location.href = "http://sproutcore.com/install_linux/";
+    break;
+
+  default:
+    if (alwaysRedirect) {
+      window.location.href = "http://sproutcore.com/install/";
+    }
   }
 };
 
-app.subscribe = (function( $, window ) {
+app.subscribe = (function($, window) {
   // dom elements
   var $subscribe, $subscribeButton, $subscribeInput, $subscribeError, $subscribeProcessing,
-  
+
   // email regex from jquery-validate
   rEmail = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i,
-  
+
   // prevent double submissions
   processed = false,
-  
+
   // old width of the container
   width,
-  
-      // handles all rendering of text, animations, etc
-      views = {
-        
-        processing: function() {
-          width = width || $subscribe.width();
-          $subscribe.animate({ 
-              width: $subscribeButton.width() + $subscribeProcessing.width() +  10
-            }, { 
-              duration:1200
-            });
-          $subscribeProcessing.fadeIn();
-          $subscribeInput.fadeOut();    
-          $subscribeButton.html( app.messages.subscribe.processing );    
-        },
-        
-        done:  function( errorMessage, email ) {
-          $subscribe.find( '.processing' ).fadeOut();
-          $subscribe.animate({ 
-              width: width
-            }, { 
-              duration:1200, 
-              complete: function() {
-                if ( errorMessage && errorMessage !== "success" ) {
-                  $subscribeInput.val( email ).fadeIn();
-                  views.error( errorMessage );
-                }  else {
-                  $subscribeInput.val( app.messages.subscribe.success ).addClass( 'processed' ).fadeIn().attr( 'readonly', true );
-                  $subscribeButton.html( app.messages.subscribe.done ).attr( 'disabled', true);
-                  processed = true;
-                }                      
-              }
-          });
-        },
-        
-        error: function( errorMessage ) {
-          $subscribeError.html( errorMessage ).stop(true, true).fadeIn();
-          $subscribeButton.html( app.messages.subscribe.signup );
-        }
-      },
-      
-      // all of the actions
-      subscribe = function( email ) {
-        if ( processed ) {
-          return false;
-        }
 
-        if ( !email.length || !rEmail.test( email ) ) {
-          views.error( app.messages.subscribe.validation );
-          return false;
-        }
-        
-        views.processing();
-        
-        views.done();
-        return;
-        
-        // view.done() for success, view.done( errorMessage, email ) for comm error and orig. email
-        $.ajax({
-          url: "subscribe.php",
-          type: 'post',
-          data: { email: email }
-        }).done( function( data, success ) {
-          if ( success === "success" ) {
-            view.done();
+  // handles all rendering of text, animations, etc
+  views = {
+
+    processing: function() {
+      width = width || $subscribe.width();
+      $subscribe.animate({
+        width: $subscribeButton.width() + $subscribeProcessing.width() + 10
+      },
+      {
+        duration: 1200
+      });
+      $subscribeProcessing.fadeIn();
+      $subscribeInput.fadeOut();
+      $subscribeButton.html(app.messages.subscribe.processing);
+    },
+
+    done: function(errorMessage, email) {
+      $subscribe.find('.processing').fadeOut();
+      $subscribe.animate({
+        width: width
+      },
+      {
+        duration: 1200,
+        complete: function() {
+          if (errorMessage && errorMessage !== "success") {
+            $subscribeInput.val(email).fadeIn();
+            views.error(errorMessage);
+          } else {
+            $subscribeInput.val(app.messages.subscribe.success).addClass('processed').fadeIn().attr('readonly', true);
+            $subscribeButton.html(app.messages.subscribe.done).attr('disabled', true);
+            processed = true;
           }
-        }).fail( function() {
-          views.done( app.messages.subscribe.commError, email );
-        });
-      };
-  
+        }
+      });
+    },
+
+    error: function(errorMessage) {
+      $subscribeError.html(errorMessage).stop(true, true).fadeIn();
+      $subscribeButton.html(app.messages.subscribe.signup);
+    }
+  },
+
+  // all of the actions
+  subscribe = function(email) {
+    if (processed) {
+      return false;
+    }
+
+    if (!email.length || !rEmail.test(email)) {
+      views.error(app.messages.subscribe.validation);
+      return false;
+    }
+
+    views.processing();
+
+    views.done();
+    return;
+
+    // view.done() for success, view.done( errorMessage, email ) for comm error and orig. email
+    $.ajax({
+      url: "subscribe.php",
+      type: 'post',
+      data: {
+        email: email
+      }
+    }).done(function(data, success) {
+      if (success === "success") {
+        view.done();
+      }
+    }).fail(function() {
+      views.done(app.messages.subscribe.commError, email);
+    });
+  };
+
   app.ready.subscribe = function() {
     // cache this stuff, ya
-    $subscribe = $( '#subscribe' );
-    $subscribeButton = $subscribe.find( 'button[name="subscribe"]' );
-    $subscribeError = $subscribe.find( '.error' );
-    $subscribeInput = $subscribe.find( 'input' );
-    $subscribeProcessing = $subscribe.find( '.processing' );
+    $subscribe = $('#subscribe');
+    $subscribeButton = $subscribe.find('button[name="subscribe"]');
+    $subscribeError = $subscribe.find('.error');
+    $subscribeInput = $subscribe.find('input');
+    $subscribeProcessing = $subscribe.find('.processing');
 
     // event listeners
-    $subscribe.bind( 'click keydown submit' , function( e ) {
+    $subscribe.bind('click keydown submit',
+    function(e) {
       $subscribeError.fadeOut();
-      if ( e.type === "submit" ) {
+      if (e.type === "submit") {
         e.preventDefault();
-        subscribe( $subscribeInput.val() );
+        subscribe($subscribeInput.val());
       }
     });
   };
@@ -347,22 +399,19 @@ app.subscribe = (function( $, window ) {
 
 // add 'ready' to html when the dom's ready to go
 app.ready.domReadyClass = function() {
-  $( 'html' ).addClass( 'ready' );
+  $('html').addClass('ready');
 };
 
 // Pass search query to results page
-
 function submitQuery() {
-  window.location = '/search/?q='
-      + encodeURIComponent(
-          document.getElementById('query-input').value);
+  window.location = '/search/?q=' + encodeURIComponent(
+  document.getElementById('query-input').value);
   return false;
 }
 
 // Show/hide search clear button
-
 $(document).ready(function() {
-  
+
   $('[role="search"] input[type="text"]').keyup(function() {
     if ($(this).val() === "") {
       $('[role="search"] input[type="reset"]').hide();
@@ -370,27 +419,23 @@ $(document).ready(function() {
       $('[role="search"] input[type="reset"]').show();
     }
   });
-  
+
   $('[role="search"] input[type="reset"]').click(function() {
     $('[role="search"] input[type="text"]').focus();
     $(this).hide();
   });
-  
+
 });
 
 // Doubts
-
 (function() {
-  var trigger = [68, 79, 85, 66, 84, 83], current = 0, timer;
+  var trigger = [68, 79, 85, 66, 84, 83],
+  current = 0,
+  timer;
 
   function startDoubts() {
     var body = $(document.body);
-    var elems = [
-      "<div class='tom'></div>",
-      "<div class='funnyz'>I HAS DOUBTS</div>",
-      "<div class='funnyz'>C/D?</div>",
-      "<div class='funnyz'>Señor</div>"
-    ];
+    var elems = ["<div class='tom'></div>", "<div class='funnyz'>I HAS DOUBTS</div>", "<div class='funnyz'>C/D?</div>", "<div class='funnyz'>Señor</div>"];
 
     setInterval(function() {
       var r = Math.floor(Math.random() * elems.length);
@@ -400,15 +445,19 @@ $(document).ready(function() {
         left: body.width() * Math.random(),
         webkitTransform: "rotate(" + (Math.random() * 360) + "deg) scale(" + (Math.random() * 1.5) + ")"
       }).appendTo(body);
-    }, 1000);
+    },
+    1000);
   }
 
   function clear() {
     current = 0;
   }
 
-  document.addEventListener('keydown', function(e) {
-    if (timer) { clearTimeout(timer); }
+  document.addEventListener('keydown',
+  function(e) {
+    if (timer) {
+      clearTimeout(timer);
+    }
 
     if (trigger[current] === e.which) {
       current++;

@@ -4,16 +4,7 @@
 app.tabSlider = (function() {
   // Called on jQuery ready
   app.ready.tabSlider = function() {
-    var a,
-        clip,
-        height,
-        links,
-        panel,
-        sections,
-        tabIndex,
-        tabs,
-        transitionFunc,
-        width;
+    var a, clip, height, links, panel, sections, tabIndex, tabs, transitionFunc, width;
 
     tabs = $('#tabs');
     clip = tabs.find('#clip');
@@ -32,16 +23,16 @@ app.tabSlider = (function() {
     width = 958;
     $(panel).css('width', sections.length * width);
     $(panel).css('left', -tabIndex * width);
-    $.each(sections, function(index, section) {
+    $.each(sections,
+    function(index, section) {
       $(section).css('left', index * width);
     });
 
     $(links[tabIndex]).parent().toggleClass('active');
     // Invoke in a different run loop so CSS transitions are invoked
-
     var map = $("#map img[src*=map]");
 
-    if(tab === "user-groups") {
+    if (tab === "user-groups") {
       map.load(function() {
         $(sections[tabIndex]).toggleClass('visible');
       });
@@ -71,7 +62,9 @@ app.tabSlider = (function() {
         // 3. Make the new section visible
         $(panel).animate({
           left: -newTabIndex * width
-          }, 500, function() {
+        },
+        500,
+        function() {
           // Animation complete.
           // Set the section's visible class (used to trigger CSS animations)
           $(sections[newTabIndex]).toggleClass('visible');
@@ -84,14 +77,17 @@ app.tabSlider = (function() {
       }
 
       var href = $(e.target).attr("href");
-      $.bbq.pushState({ tab: href });
+      $.bbq.pushState({
+        tab: href
+      });
 
       return false;
     };
 
     $("#tabs nav ul > li a").live("click", transitionFunc);
 
-    $(window).bind("hashchange", function() {
+    $(window).bind("hashchange",
+    function() {
       var tab = $.bbq.getState("tab");
       var link = $("#tabs nav ul > li a[href='" + tab + "']");
       link.click();
@@ -101,28 +97,26 @@ app.tabSlider = (function() {
 
 app.resizeClippingWindow = function(index) {
   var tabs = $('#tabs'),
-      clip = tabs.find('#clip'),
-      panel = clip.find('#panel'),
-      sections = panel.find('> section'),
-      minHeight = $(sections[index]).height();
+  clip = tabs.find('#clip'),
+  panel = clip.find('#panel'),
+  sections = panel.find('> section'),
+  minHeight = $(sections[index]).height();
 
   $(clip).css('height', minHeight);
-  
+
   app.bringingFlexyBack();
 };
 
 app.bringingFlexyBack = function() {
-  var tabTop,
-      footerTop,
-      height;
-  
+  var tabTop, footerTop, height;
+
   // Determine the top offsets
   footerTop = $('footer').offset().top;
   tabTop = $('#tabs').offset().top;
-  
+
   // The minHeight is simply the difference between the tops or the
   // height required for the content
   height = footerTop - tabTop;
-  
+
   $('#tabs-back').css('height', height);
 };
