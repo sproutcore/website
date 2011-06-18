@@ -1197,6 +1197,20 @@ html.ready #home [role="main"] > div {
   background-color: #000;
 }
 
+/* License */
+
+#license div {
+  min-height: 419px;
+  padding-left: 380px;
+  background: url(../img/license.png) no-repeat;
+}
+
+#license h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 25px 0 1em;
+}
+
 
 /* Homepage carousel 
 ----------------------------------------------*/
