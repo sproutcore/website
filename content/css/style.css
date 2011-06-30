@@ -240,9 +240,23 @@ pre {
   border-radius: 4px;
 }
 
-.button.primary {
+.button span {
+  display: inline-block;
+  padding-left: 26px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+a.button.primary {
   padding: 9px 15px;
+  color: rgba(0, 0, 0, 0.75);
   font-size: 14px;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), color-stop(50%, rgba(255, 255, 255, 0.22)), color-stop(50%, rgba(255, 255, 255, 0.12)), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
@@ -261,7 +275,22 @@ html.mobile .button.primary {
   transition: none;
 }
 
+.button.primary:hover {
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+}
+
 .button.primary:active {
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -269,137 +298,27 @@ html.mobile .button.primary {
 
 .green .button.primary {
   border-color: #5a8942;
-  color: #263d1b;
-  background: #7dca59 url(/img/sheen.png) repeat-x;
-}
-
-.green .button.primary:hover {
-  background: #85d66a;
-}
-
-.green .button.primary:active {
-  background: #7dc957;
+  background-color: #7ec957;
 }
 
 .pink .button.primary {
   border-color: #a75878;
-  color: #6e2d48;
-  background: #f88eb9 url(/img/sheen.png) repeat-x;
-}
-
-.pink .button.primary:hover {
-  background: #fbadcc;
-}
-
-.pink .button.primary:active {
-  background: #f571a6;
+  background-color: #f86ea5;
 }
 
 .blue .button.primary {
   border-color: #3e7fb4;
-  color: #29404f;
-  background: #73baf5 url(/img/sheen.png) repeat-x;
-}
-
-.blue .button.primary:hover {
-  background-color: #97d0ff;
-}
-
-.blue .button.primary:active {
-  background: #51a6ec;
+  background-color: #6eb8f4;
 }
 
 .orange .button.primary {
   border-color: #c17b3a;
-  color: #3d331b;
-  background: #f5ad69 url(/img/sheen.png) repeat-x;
-}
-
-.orange .button.primary:hover {
-  background: #ffbf84;
-}
-
-.orange .button.primary:active {
-  background: #eb9c50;
+  background-color: #fda159;
 }
 
 .purple .button.primary {
   border-color: #9a69b7;
-  color: #4a3258;
-  background: #c994eb url(/img/sheen.png) repeat-x;
-}
-
-.purple .button.primary:hover {
-  background: #dda9ff;
-}
-
-.purple .button.primary:active {
-  background: #b680d9;
-}
-
-.button.primary span {
-  display: inline-block;
-  padding-left: 26px;
-  background-repeat: no-repeat;
-}
-
-.pink .button.primary span {
- background-position: 0 -21px;
-}
-
-.blue .button.primary span {
- background-position: 0 -42px;
-}
-
-.orange .button.primary span {
- background-position: 0 -63px;
-}
-
-.purple .button.primary span {
- background-position: 0 -84px;
-}
-
-#action {
-  float: right;
-  position: relative;
-  z-index: 1;
-}
-
-#action:before {
-  width: 422px;
-  height: 347px;
-  content: url(../img/sparkle.png);
-  position: absolute;
-  top: -80px;
-  right: -63px;
-  z-index: -1;
-}
-
-h1 > #action {
-	margin-top: 10px;
-}
-
-h1 > #action:before {
-  top: -90px;
-}
-
-#action li:first-child {
-  margin-bottom: 8px;
-}
-
-#action a {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#action .download {
-  background-image: url(../img/download.png);
-}
-
-#action .github {
-  background-image: url(../img/octocat.png);
+  background-color: #be83e3;
 }
 
 a.button.secondary {
@@ -407,16 +326,16 @@ a.button.secondary {
   border-color: #a8a8a8;
   color: #606060;
   font-size: 11px;
+  background: #d3d3d3;
+  background: -moz-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
+  background: -ms-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
+  background: -o-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), color-stop(50%, #dbdbdb), color-stop(50%, #d3d3d3), to(#c3c3c3));
+  background: -webkit-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
+  background: linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  background: #d3d3d3;
-  background: -moz-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 51%, #c3c3c3);
-  background: -ms-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 51%, #c3c3c3);
-  background: -o-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 51%, #c3c3c3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), color-stop(50%, #dbdbdb), color-stop(51%, #d3d3d3), to(#c3c3c3));
-  background: -webkit-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 51%, #c3c3c3);
-  background: linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 51%, #c3c3c3);
 }
 
 .button.secondary:hover {
@@ -445,26 +364,6 @@ a.button.secondary {
 .button.secondary.large {
   padding: 9px 30px;
   font-size: 14px;
-}
-
-.button.secondary.large span {
-  display: inline-block;
-  padding-left: 22px;
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-}
-
-.button-center {
-	width: 100%;
-	text-align: center;
-}
-
-.pictures {
-	background-image: url(../img/pictures.png);
-}
-
-.app {
-	background-image: url(../img/app.png);
 }
 
 /* Date */
@@ -704,6 +603,51 @@ html.ready #home [role="main"] > div {
   transition: all 1s ease-in-out .5s;
 }
 
+/* Action Buttons */
+
+#action {
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+#action:before {
+  width: 422px;
+  height: 347px;
+  content: url(../img/sparkle.png);
+  position: absolute;
+  top: -80px;
+  right: -63px;
+  z-index: -1;
+}
+
+h1 > #action {
+	margin-top: 10px;
+}
+
+h1 > #action:before {
+  top: -90px;
+}
+
+#action li:first-child {
+  margin-bottom: 8px;
+}
+
+#action a {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.button .download {
+  background-image: url(../img/download.png);
+}
+
+.button .github {
+  background-image: url(../img/octocat.png);
+}
+
 /* Tab Pages */
 
 [role="main"] > h1 {
@@ -883,6 +827,11 @@ html.ready #home [role="main"] > div {
 
 #tabs p + pre {
   margin-top: -9px;
+}
+
+#tabs .button-center {
+	width: 100%;
+	text-align: center;
 }
 
 
@@ -1105,6 +1054,12 @@ html.ready #home [role="main"] > div {
   background: url(../img/fast.jpg) no-repeat;
 }
 
+/* Who's Using SproutCore */
+
+.button .app {
+	background-image: url(../img/app.png);
+}
+
 /* Core Team */
 
 #about #core-team ul {
@@ -1195,6 +1150,10 @@ html.ready #home [role="main"] > div {
 
 #logos .light {
   background-color: #000;
+}
+
+.button .pictures {
+	background-image: url(../img/pictures.png);
 }
 
 /* License */
@@ -1461,7 +1420,7 @@ html.js #carousel > button {
 }
 
 #carousel .panel.tutorials .button span {
-  background: url(../img/carousel/tutorials/button_icon.png) no-repeat;
+  background-image: url(../img/carousel/tutorials/video.png);
 }
 
 #carousel .panel.guides {
@@ -1487,7 +1446,7 @@ html.js #carousel > button {
 }
 
 #carousel .panel.guides .button span {
-  background: url(../img/carousel/guides/button_icon.png) no-repeat;
+  background-image: url(../img/carousel/guides/guides.png);
 }
 
 #carousel .panel.wwdc {
@@ -1511,7 +1470,7 @@ html.js #carousel > button {
 }
 
 #carousel .panel.wwdc .button span {
-  background: url(../img/carousel/wwdc/album.png) no-repeat;
+  background-image: url(../img/carousel/wwdc/album.png);
 }
 
 #carousel .panel.wwdc div {
@@ -1562,7 +1521,7 @@ html.js #carousel > button {
 }
 
 #carousel .panel.dispatches .button span {
-  background: url(../img/carousel/dispatches/article.png) no-repeat;
+  background-image: url(../img/carousel/dispatches/article.png);
 }
 
 
