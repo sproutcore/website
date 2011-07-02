@@ -2669,17 +2669,9 @@ html.ready #community .visible #map a {
 /* Search Results
 --------------------------------------------- */
 
-#search #tabs nav li.active {
-	border: none;
-	background: none;
-}
-
-#search #tabs nav li:first-child {
-	margin-left: 0;
-}
-
 #search #tabs #clip {
   height: auto !important; /* Clip is normally resized through JS on page ready or tab change */
+  overflow: visible;
 }
 
 #search #tabs #clip #panel {
@@ -2692,59 +2684,51 @@ html.ready #community .visible #map a {
 
 #search #tabs #clip #panel > section {
   position: static; /* The sections are normally abs. positioned by JS across the panel */
+  overflow: visible;
 }
 
-#results .cse .gsc-control-cse, 
-#results .gsc-control-cse {
-	background: none;
-	border: none;
+#search #tabs nav li,
+#search .gcsc-branding,
+#search .gsc-search-box,
+#search .gs-visibleUrl-short {
+  display: none;
+  visibility: hidden;
 }
 
-#results .gsc-webResult.gsc-result {
-	border: none;
+#search .gsc-control-cse {
+  font-family: inherit;
 }
 
-#results .gs-result .gs-title, 
-#results .gs-result .gs-title * {
-	text-decoration: none;
-	font-size: 14px;
-	font-weight: bold;
+#search .gsc-thinWrapper {
+  width: 100%;
 }
 
-#results .gs-result .gs-title > a > b {
-	color: inherit;
+#search .gs-title {
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-#results .gs-result a.gs-visibleUrl, 
-#results .gs-result .gs-visibleUrl {
-	color: #bbb;
+#search .gs-title b {
+  color: inherit;
+  text-decoration: inherit;
 }
 
-.gsc-search-box {
-	display: none;
+#search .gs-snippet {
+  font-size: 12px;
 }
 
-#results .gsc-tabsArea,
-#results .gsc-resultsRoot table {
-	border: 0;
+#search .gs-visibleUrl {
+  color: #bbb;
 }
 
-#results .gsc-control-cse {
-	padding: 0;
-	width: 100%;
-}
-
-#results .gs-result .gs-bidi-start-align.gs-snippet {
-	font-size: 12px;
-}
-
-#results #adBlock {
-	border: 1px solid #ccc;
+#search .gs-visibleUrl-long {
+  display: block;
 }
 
 /* Pagination */
 
-#results .gsc-cursor-box {
+#search .gsc-cursor-box {
 	position: absolute;
 	top: -54px;
 	left: 30px;
@@ -2752,33 +2736,26 @@ html.ready #community .visible #map a {
 	font-weight: bold;
 }
 
-#results .gsc-results .gsc-cursor-box .gsc-cursor-page {
-	display: block;
-	float: left;
-	width: 28px;
-	height: 28px;
-	line-height: 30px;
-	text-align: center;
-	color: #6c3e1d;
-	text-decoration: none;
-	margin-right: 2px;
-	text-shadow: 0 1px 0 rgba(255,255,255,.2);
+#search .gsc-cursor-page {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  color: #6c3e1d;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-#results .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
-	color: #2a2a2a;	
-	background: rgba(0,0,0,.2);
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.4), inset 0 1px 3px rgba(0,0,0,.4);
-  -moz-box-shadow: 0 1px 0 rgba(255,255,255,.4), inset 0 1px 3px rgba(0,0,0,.4);
-  box-shadow: 0 1px 0 rgba(255,255,255,.4), inset 0 1px 3px rgba(0,0,0,.4);
-}
-
-#search #tabs  #clip,
-#tabs #panel #search-results {
-	overflow: visible;
+#search .gsc-cursor-current-page {
+  color: #2a2a2a;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 

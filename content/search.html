@@ -1,55 +1,55 @@
 ---
-title: Search Results
+title: SproutCore - Search Results
 id: search
 h1: Search Results
 download: true
 subnav:
-  results:
+  results: Results
 ---
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">
+
+<script src="http://www.google.com/jsapi"></script>
+<script>
+
   google.load('search', '1');
-
+  
   /**
-   * Extracts the users query from the URL.
+   * Extract the user's query from the URL
    */
-  function getQuery() {
-    var url = '' + window.location;
-    var queryStart = url.indexOf('?') + 1;
-    if (queryStart > 0) {
-      var parts = url.substr(queryStart).split('&');
-      for (var i = 0; i < parts.length; i++) {
-        if (parts[i].length > 2 && parts[i].substr(0, 2) == 'q=') {
-          return decodeURIComponent(
-              parts[i].split('=')[1].replace(/\+/g, ' '));
-        }
-      }
-    }
-    return '';
-  }
+   function getQuery() {
+     var url = '' + window.location;
+     var queryStart = url.indexOf('?') + 1;
+     if (queryStart > 0) {
+       var parts = url.substr(queryStart).split('&');
+       for (var i = 0; i < parts.length; i++) {
+         if (parts[i].length > 2 && parts[i].substr(0, 2) == 'q=') {
+           return decodeURIComponent(
+           parts[i].split('=')[1].replace(/\+/g, ' '));
+         }
+       }
+     }
+     return '';
+   }
+   
+   /**
+    * Create a custom search control
+    */
+   function onLoad() {
+     
+     // Create a custom search control that uses a CSE restricted to *.sproutcore.com
+     var customSearchControl = new google.search.CustomSearchControl('010803036737098308835:zpz3rt7h_7y');
 
-  function onLoad() {
-    // Create a custom search control that uses a CSE restricted to
-    // code.google.com
-    var customSearchControl = new google.search.CustomSearchControl(
-        '010803036737098308835:zpz3rt7h_7y');
+     // Draw the control in "results" div
+     customSearchControl.draw('results');
 
-    var drawOptions = new google.search.DrawOptions();
-    drawOptions.setAutoComplete(true);
+     // Run a query
+     customSearchControl.execute(getQuery());
+   };
 
-    // Draw the control in content div
-    customSearchControl.draw('results', drawOptions);
-
-    // Run a query
-    customSearchControl.execute(getQuery());
-  };
-
-  google.setOnLoadCallback(onLoad);
+   google.setOnLoadCallback(onLoad);
+   
 </script>
-
-<section id="search-results" class="visible">
-  <div id="results">Loading Results...</div>
-  <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+<section id="results" class="visible">
+  <p>Loading results...</p>
 </section>
 
 <% content_for :modals do %>
