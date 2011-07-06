@@ -2397,6 +2397,11 @@ html.ready #community .visible #map a {
   background-position: 50% 72px;
 }
 
+#community #meetups .van {
+  background-image: url(../img/cities/van.png);
+  background-position: 50% 76px;
+}
+
 #community #meetups .soon {
   background-position: 0 -139px;
 }
