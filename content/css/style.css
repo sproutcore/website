@@ -1419,8 +1419,9 @@ html.js #carousel > button {
   margin-top: 20px;
 }
 
-#carousel .panel.tutorials .button span {
-  background-image: url(../img/carousel/tutorials/video.png);
+#carousel .panel.tutorials .button span,
+#carousel .panel.guides .button span {
+  background-image: url(../img/carousel/guides/guides.png);
 }
 
 #carousel .panel.guides {
@@ -1443,10 +1444,6 @@ html.js #carousel > button {
   bottom: 50px;
   position: absolute;
   right: 60px;
-}
-
-#carousel .panel.guides .button span {
-  background-image: url(../img/carousel/guides/guides.png);
 }
 
 #carousel .panel.wwdc {
