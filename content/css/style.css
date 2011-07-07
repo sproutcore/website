@@ -2722,10 +2722,21 @@ html.ready #community .visible #map a {
 
 #search .gs-visibleUrl {
   color: #bbb;
+  font-size: 12px;
 }
 
 #search .gs-visibleUrl-long {
   display: block;
+}
+
+/* No Results / Error */
+
+#search .gs-no-results-result .gs-snippet,
+#search .gs-error-result .gs-snippet {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 /* Pagination */
