@@ -39,7 +39,12 @@ var app = {
     {year: 2011, month: 5, day: 18, title: "Rails Conf", lat: 39.284963, lng: -76.616871},
     {year: 2011, month: 5, day: 19, title: "Budapest.rb", lat: 47.498416, lng: 19.04068},
     {year: 2011, month: 6, day: 15, title: "Velocity", lat: 37.405517, lng: -121.974828},
-    {year: 2011, month: 7, day: 27, title: "OSCON", lat: 45.528246, lng: -122.661645}
+    {year: 2011, month: 7, day: 9, title: "GothamJS", lat: 40.770416, lng: -73.982265},
+    {year: 2011, month: 7, day: 27, title: "OSCON", lat: 45.528246, lng: -122.661645},
+    {year: 2011, month: 7, day: 29, title: "re:build", lat: 39.787955, lng: -86.153482},
+    {year: 2011, month: 8, day: 30, title: "MobileJS Summit"},
+    {year: 2011, month: 9, day: 19, title: "Strange Loop", lat: 38.625301, lng: -90.190408},
+    {year: 2011, month: 10, day: 8, title: "Code Camp", lat: 37.36093, lng: -122.127}
   ],
   colors: ['green', 'pink', 'blue', 'orange', 'purple'],
   currentColor: document.body.className
