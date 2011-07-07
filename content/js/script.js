@@ -44,7 +44,9 @@ var app = {
     {year: 2011, month: 7, day: 29, title: "re:build", lat: 39.787955, lng: -86.153482},
     {year: 2011, month: 8, day: 30, title: "MobileJS Summit"},
     {year: 2011, month: 9, day: 19, title: "Strange Loop", lat: 38.625301, lng: -90.190408},
-    {year: 2011, month: 10, day: 8, title: "Code Camp", lat: 37.36093, lng: -122.127}
+    {year: 2011, month: 10, day: 8, title: "Code Camp", lat: 37.36093, lng: -122.127},
+    {year: 2011, month: 7, day: 12, title: "SF Meetup", lat: 37.786139, lng: -122.402621},
+    {year: 2011, month: 7, day: 26, title: "Van Meetup", lat: 49.284182, lng: -123.091224}
   ],
   colors: ['green', 'pink', 'blue', 'orange', 'purple'],
   currentColor: document.body.className
