@@ -891,18 +891,8 @@ h1 > #action:before {
 /* Features */
 
 #home #features li {
-  width: 218px;
+  width: 276px;
   float: left;
-  padding-left: 58px;
-}
-
-#home #features li p {
-	font-size: 15px;
-	line-height: 24px;
-}
-
-#home #features h2 {
-	font-size: 17px;
 }
 
 #home #features li:nth-child(3n+2) {
@@ -913,33 +903,43 @@ h1 > #action:before {
   margin-bottom: 28px;
 }
 
-#home #features li {
-  background-repeat: no-repeat;
-  background-position: 0 50%;
+#home #features li:before {
+  width: 48px;
+  height: 48px;
+  content: "";
+  float: left;
+  margin-right: 10px;
+  background-image: url(../img/features.png);
 }
 
-#home #features .html5 {
-  background-image: url(../img/html5.png);
+#home #features .mvc:before {
+  background-position: -48px 0;
 }
 
-#home #features .mvc {
-  background-image: url(../img/mvc.png);
+#home #features .speed:before {
+  background-position: -96px 0;
 }
 
-#home #features .speed {
-  background-image: url(../img/speed.png);
+#home #features .device:before {
+  background-position: -144px 0;
 }
 
-#home #features .device {
-  background-image: url(../img/ipad.png);
+#home #features .scale:before {
+  background-position: -192px 0;
 }
 
-#home #features .scale {
-  background-image: url(../img/scale.png);
+#home #features .theme:before {
+  background-position: -240px 0;
 }
 
-#home #features .theme {
-  background-image: url(../img/theme.png);
+#home #features h2 {
+	font-size: 17px;
+	line-height: 17px;
+}
+
+#home #features p {
+	font-size: 15px;
+	line-height: 1.5;
 }
 
 /* Callouts */
