@@ -10,7 +10,15 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile %r{^\/(js|css|img|favicon)} do
+require "compass"
+
+Compass.add_project_configuration 'compass.rb'
+
+compile '/css/*/' do
+  filter :sass, Compass.sass_engine_options
+end
+
+compile %r{^\/(js|img|favicon)} do
   # don’t filter or layout
 end
 
@@ -36,7 +44,11 @@ route "/404/" do
   "/404.html"
 end
 
-route %r{^\/(js|css|img|favicon)} do
+route '/css/*/' do
+  item.identifier.chop + '.css'
+end
+
+route %r{^\/(js|img|favicon)} do
   filename = item.attributes[:filename].sub(%r{content/}, '')
   "/#{filename}"
 end

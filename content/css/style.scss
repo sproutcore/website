@@ -1,3 +1,6 @@
+
+@import "compass/css3";
+
 /* Reset
 --------------------------------------------- */
 
@@ -61,28 +64,15 @@ body {
 }
 
 #wrap {
+  @include background(image-url("../img/pixels.png"), image-url("../img/cross.png"), linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%));
+  @include transition(background-color 1s ease-in-out);
+
   min-width: 970px;
   min-height: 100%;
-  background-image: url(../img/cross.png);
-  background-image: url(../img/pixels.png), url(../img/cross.png), -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-image: url(../img/pixels.png), url(../img/cross.png), -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-image: url(../img/pixels.png), url(../img/cross.png), -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-image: url(../img/pixels.png), url(../img/cross.png), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(62%, rgba(255, 255, 255, 0.8)));
-  background-image: url(../img/pixels.png), url(../img/cross.png), linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  background-image: url(../img/pixels.png), url(../img/cross.png), -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%);
-  -webkit-transition: background-color 1s ease-in-out;
-  -moz-transition: background-color 1s ease-in-out;
-  -o-transition: background-color 1s ease-in-out;
-  -ms-transition: background-color 1s ease-in-out;
-  transition: background-color 1s ease-in-out;
 }
 
 html.mobile #wrap {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
+  @include transition(none);
 }
 
 #main {
@@ -121,12 +111,8 @@ html.js #home .container {
 }
 
 html.ready #home .container {
+  @include transition(all 1s ease-in-out);
   opacity: 1;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 b,
@@ -211,16 +197,13 @@ samp {
 }
 
 pre {
+  @include border-radius(4px);
+  @include box-shadow(rgba(255, 255, 255, 0.4) 0 1px 0, #000 0 1px 4px inset);
+
   padding: 12px;
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px 4px #000;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px 4px #000;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 1px 4px #000;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -229,15 +212,14 @@ pre {
 /* Buttons */
 
 .button {
+  @include border-radius(4px);
+  @include text-shadow(rgba(255, 255, 255, 0.3) 0 1px 0);
+
   display: inline-block;
   border-width: 1px;
   border-style: solid;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 
 .button span {
@@ -248,52 +230,26 @@ pre {
 }
 
 a.button.primary {
+  @include background(linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0)));
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 6px, rgba(255, 255, 255, 0.4) 0 1px 0 inset);
+  @include transition(all 1s ease-in-out);
+
   padding: 9px 15px;
   color: rgba(0, 0, 0, 0.75);
   font-size: 14px;
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
-  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), color-stop(50%, rgba(255, 255, 255, 0.22)), color-stop(50%, rgba(255, 255, 255, 0.12)), to(rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
-  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.22) 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0));
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 html.mobile .button.primary {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
+  @include transition(none);
 }
 
 .button.primary:hover {
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  @include background(linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)));
 }
 
 .button.primary:active {
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
-  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
-  background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  @include background(linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3)));
+  @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 6px, rgba(255, 255, 255, 0.3) 0 1px 0 inset);
 }
 
 .green .button.primary {
@@ -322,43 +278,25 @@ html.mobile .button.primary {
 }
 
 a.button.secondary {
+  background-color: #d3d3d3;
+  @include background(linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3));
+  @include box-shadow(rgba(255, 255, 255, 0.4) 0 1px 0 inset);
+
   padding: 4px 15px;
   border-color: #a8a8a8;
   color: #606060;
   font-size: 11px;
-  background: #d3d3d3;
-  background: -moz-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
-  background: -ms-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
-  background: -o-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), color-stop(50%, #dbdbdb), color-stop(50%, #d3d3d3), to(#c3c3c3));
-  background: -webkit-linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
-  background: linear-gradient(top, #ebebeb, #dbdbdb 50%, #d3d3d3 50%, #c3c3c3);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .button.secondary:hover {
-  background: #e7e7e7;
-  background: -moz-linear-gradient(top, #e7e7e7, #c3c3c3);
-  background: -ms-linear-gradient(top, #e7e7e7, #c3c3c3);
-  background: -o-linear-gradient(top, #e7e7e7, #c3c3c3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#c3c3c3));
-  background: -webkit-linear-gradient(top, #e7e7e7, #c3c3c3);
-  background: linear-gradient(top, #e7e7e7, #c3c3c3);
+  background-color: #e7e7e7;
+  @include background(linear-gradient(top, #e7e7e7, #c3c3c3));
 }
 
 .button.secondary:active {
   background: #c3c3c3;
-  background: -moz-linear-gradient(top, #c3c3c3, #e7e7e7);
-  background: -ms-linear-gradient(top, #c3c3c3, #e7e7e7);
-  background: -o-linear-gradient(top, #c3c3c3, #e7e7e7);
-  background: -webkit-gradient(linear, left top, left bottom, from(#c3c3c3), to(#e7e7e7));
-  background: -webkit-linear-gradient(top, #c3c3c3, #e7e7e7);
-  background: linear-gradient(top, #c3c3c3, #e7e7e7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  @include background(linear-gradient(top, #c3c3c3, #e7e7e7));
+  @include box-shadow(rgba(255, 255, 255, 0.3) 0 1px 0 inset);
 }
 
 .button.secondary.large {
@@ -425,6 +363,9 @@ a.button.secondary {
 --------------------------------------------- */
 
 header[role="banner"] {
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0 1px 9px, rgba(255, 255, 255, 0.2) 0 -1px 0 inset);
+  @include transition(all 1s ease-in-out .5s);
+
   position: absolute;
   left: 0;
   right: 0;
@@ -434,14 +375,6 @@ header[role="banner"] {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background: #000;
   background: rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-  -webkit-transition: all 1s ease-in-out .5s;
-  -moz-transition: all 1s ease-in-out .5s;
-  -o-transition: all 1s ease-in-out .5s;
-  -ms-transition: all 1s ease-in-out .5s;
-  transition: all 1s ease-in-out .5s;
 }
 
 html.js #home header[role="banner"] {
@@ -473,12 +406,12 @@ html.ready #home header[role="banner"] {
 }
 
 [role="banner"] nav li {
+  @include text-shadow(rgba(0, 0, 0, 0.75) 0 1px 1px);
   display: inline-block;
   padding: 16px 15px;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 [role="banner"] nav li.active {
@@ -527,6 +460,8 @@ html.ready #home header[role="banner"] {
 }
 
 [role="search"] input[type="text"] {
+  @include border-radius(12px);
+  @include box-shadow(rgba(255, 255, 255, 0.24) 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 6px inset);
   width: 146px;
   height: 14px;
   padding: 5px 23px 5px 27px;
@@ -534,12 +469,6 @@ html.ready #home header[role="banner"] {
   color: #eee;
   background: #000 url(../img/search.png) no-repeat 8px 6px;
   background: rgba(0, 0, 0, 0.19) url(../img/search.png) no-repeat 8px 6px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), inset 0 1px 6px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), inset 0 1px 6px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), inset 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 
 [role="search"] input[type="text"]:focus {
@@ -575,17 +504,13 @@ html.js [role="search"] input[type="reset"] {
 
 [role="main"] > section,
 [role="main"] > div {
+  @include border-radius(4px);
+  @include box-shadow(#fff 0 0 2px inset);
   margin-bottom: 44px;
   padding: 13px 0 30px;
   border: 1px solid #000; /* Find more suitable fallback color */
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: #fbfbfb;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 0 2px #fff;
-  -moz-box-shadow: inset 0 0 2px #fff;
-  box-shadow: inset 0 0 2px #fff;
 }
 
 html.js #home [role="main"] > section,
@@ -595,12 +520,8 @@ html.js #home [role="main"] > div {
 
 html.ready #home [role="main"] > section,
 html.ready #home [role="main"] > div {
+  @include transition(all 1s ease-in-out .5s);
   opacity: 1;
-  -webkit-transition: all 1s ease-in-out .5s;
-  -moz-transition: all 1s ease-in-out .5s;
-  -o-transition: all 1s ease-in-out .5s;
-  -ms-transition: all 1s ease-in-out .5s;
-  transition: all 1s ease-in-out .5s;
 }
 
 /* Action Buttons */
@@ -634,10 +555,8 @@ h1 > #action:before {
 }
 
 #action a {
+  @include box-sizing(border-box);
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .button .download {
@@ -651,12 +570,13 @@ h1 > #action:before {
 /* Tab Pages */
 
 [role="main"] > h1 {
+  @include text-shadow(rgba(255, 255, 255, 0.4) 0 1px 0);
+
   margin-bottom: 30px;
   color: #161616;
   font-weight: bold;
   font-size: 54px;
   line-height: 1.3;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 [role="main"] > h1 > ul > li {
@@ -689,33 +609,26 @@ h1 > #action:before {
 }
 
 #tabs nav ul {
+  background-color: #ffb47d;
+  @include background(image-url("../img/diagonal.png"), linear-gradient(top, #ffb47d, #ff8e3c));
+  @include border-radius(rgba(0, 0, 0, 0.28) 0 2px 4px, rgba(255, 255, 255, 0.33) 0 1px 0 inset);
+
   width: 100%;
   height: 48px;
   margin-left: -2px;
   padding: 0 1px;
   border: 1px solid #cc7d44;
   line-height: 48px;
-  background: #ffb47d url(../img/diagonal.png);
-  background: url(../img/diagonal.png), -moz-linear-gradient(top, #ffb47d, #ff8e3c);
-  background: url(../img/diagonal.png), -ms-linear-gradient(top, #ffb47d, #ff8e3c);
-  background: url(../img/diagonal.png), -o-linear-gradient(top, #ffb47d, #ff8e3c);
-  background: url(../img/diagonal.png), -webkit-gradient(linear, left top, left bottom, from(#ffb47d), to(#ff8e3c));
-  background: url(../img/diagonal.png), -webkit-linear-gradient(top, #ffb47d, #ff8e3c);
-  background: url(../img/diagonal.png), linear-gradient(top, #ffb47d, #ff8e3c);
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.33);
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.33);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.33);
 }
 
 #tabs nav li {
+  @include border-radius(4px);
+
   display: inline;
   padding: 8px 15px 25px;
   border-width: 1px 1px 0;
   border-style: solid;
   border-color: transparent;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
 }
 
 #tabs nav li:first-child {
@@ -729,10 +642,11 @@ h1 > #action:before {
 
 #tabs nav a:link,
 #tabs nav a:visited {
+  @include text-shadow(rgba(255, 255, 255, 0.2) 0 1px 0);
+
   color: #6c3e1d;
   font-weight: bold;
   font-size: 14px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 #tabs nav a:hover {
@@ -762,22 +676,12 @@ h1 > #action:before {
 }
 
 #tabs #clip #left, #application-slider #left {
-  background-image: -moz-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -ms-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -o-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -webkit-gradient(linear,  left center, right center, color-stop(0%, #fbfbfb), color-stop(100%, rgba(251, 251, 251, 0))); 
-  background-image: -webkit-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
+  @include background(linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0)));
   left: 0;
 }
 
 #tabs #clip #right, #application-slider #right {
-  background-image: -moz-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -ms-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -o-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -webkit-gradient(linear,  right center, left center, color-stop(0%, #fbfbfb), color-stop(100%, rgba(251, 251, 251, 0))); 
-  background-image: -webkit-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
+  @include background(linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0)));
   right: 0;
 }
 
@@ -849,6 +753,8 @@ h1 > #action:before {
 /* Blurb */
 
 #home #blurb {
+  @include text-shadow(rgba(255, 255, 255, 0.4) 0 1px 0);
+
   width: 580px;
   float: left;
   margin-bottom: 44px;
@@ -856,7 +762,6 @@ h1 > #action:before {
   font-weight: bold;
   font-size: 28px;
   line-height: 1.3;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* Sections */
@@ -1007,10 +912,8 @@ h1 > #action:before {
 }
 
 #home article img {
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0 1px 3px);
   border: 1px solid #3d3d3d;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 #home [role="main"] > div footer li {
@@ -1087,17 +990,14 @@ h1 > #action:before {
 
 #core-team .social,
 #core-team-modal .social {
+  @include border-radius(4px);
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0 1px 3px);
+
   position: relative;
   float: left;
   overflow: hidden;
   margin-right: 10px;
   border: 1px solid #444;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 #core-team img,
@@ -1110,6 +1010,9 @@ h1 > #action:before {
 
 #core-team .social ul,
 #core-team-modal .social ul {
+  @include box-shadow(rgba(255, 255, 255, 0.2) 0 1px 0 inset);
+  @include transition(all 0.3s ease-in-out);
+ 
   width: 100%;
   height: 22px;
   position: absolute;
@@ -1119,14 +1022,6 @@ h1 > #action:before {
   text-align: center;
   background: #000;
   background: rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 #core-team .social:hover ul,
@@ -1181,13 +1076,12 @@ h1 > #action:before {
 /* Logos */
 
 #logos section {
+  @include border-radius(4px);
+
   width: 236px;
   float: left;
   padding: 20px 20px 10px;
   background: #f1f1f1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 
 #logos section:nth-child(3) {
@@ -1239,14 +1133,11 @@ h1 > #action:before {
 
 #home [role="main"] #carousel-container {
   /* Override some styles applied automatically to DIV/sections */
+  @include border-radius(0);
+  @include box-shadow(none);
+
   border: 0 none;
   background: transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   padding: 0;
 }
 
@@ -1316,81 +1207,50 @@ html.js #carousel .tray {
 }
 
 #carousel .tray a {
+  @include box-shadow(rgba(0, 0, 0, .3) 0 1px 4px inset);
+  @include border-radius(7px);
   display: inline-block;
   width: 10px;
   height: 10px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
 	border: 1px solid rgba(0, 0, 0, .3);
 	margin: 0 2px;
   background: rgba(0,0,0,.1);
   text-indent: 100em;
   overflow: hidden;
-	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
-  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
 }
 
 #carousel .tray a.active {
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
+  @include box-shadow(rgba(255, 255, 255, .8) 0 1px 0 inset);
 }
 
 .green #carousel .tray a.active {
+  @include background(linear-gradient(top, #93df70, #61bb35));
 	background-color: #93df70;
 	border-color: #5e913f;
-  background-image: -moz-linear-gradient(top, #93df70, #61bb35);
-  background-image: -ms-linear-gradient(top, #93df70, #61bb35);
-  background-image: -o-linear-gradient(top, #93df70, #61bb35);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#93df70), to(#61bb35));
-  background-image: -webkit-linear-gradient(top, #93df70, #61bb35);
-  background-image: linear-gradient(top, #93df70, #61bb35);
 }
 
 .pink #carousel .tray a.active {
+  @include background(linear-gradient(top, #ff9dc4, #ff5b9d));
 	background-color: #ff9dc4;
 	border-color: #ea5893;
-  background-image: -moz-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: -ms-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: -o-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9dc4), to(#ff5b9d));
-  background-image: -webkit-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: linear-gradient(top, #ff9dc4, #ff5b9d);
 }
 
 .blue #carousel .tray a.active {
+  @include background(linear-gradient(top, #7fcbff, #54abe7));
 	background-color: #7fcbff;
 	border-color: #3f709a;
-  background-image: -moz-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: -ms-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: -o-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7fcbff), to(#54abe7));
-  background-image: -webkit-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: linear-gradient(top, #7fcbff, #54abe7);
 }
 
 .orange #carousel .tray a.active {
+  @include background(linear-gradient(top, #ffc476, #eba548));
 	background-color: #ffc476;
 	border-color: #c28b41;
-  background-image: -moz-linear-gradient(top, #ffc476, #eba548);
-  background-image: -ms-linear-gradient(top, #ffc476, #eba548);
-  background-image: -o-linear-gradient(top, #ffc476, #eba548);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc476), to(#eba548));
-  background-image: -webkit-linear-gradient(top, #ffc476, #eba548);
-  background-image: linear-gradient(top, #ffc476, #eba548);
 }
 
 .purple #carousel .tray a.active {
+  @include background(linear-gradient(top, #d796ff, #a84ae1));
 	background-color: #d796ff;
 	border-color: #994eb1;
-  background-image: -moz-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: -ms-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: -o-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d796ff), to(#a84ae1));
-  background-image: -webkit-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: linear-gradient(top, #d796ff, #a84ae1);
 }
 
 #carousel > button {
@@ -1611,14 +1471,10 @@ html.js #application-slider.large {
 }
 
 html.js #application-slider .panel {
+  @include transition(all 1s ease-in-out);
   position: absolute;
   top: 0;
   left: 958px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 html.js #application-slider .panel.active {
@@ -1630,6 +1486,8 @@ html.js #application-slider .panel.old {
 }
 
 #application-slider .panel a{
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0 1px 6px);
+
   float: left;
   position: relative;
   width: 202px;
@@ -1637,9 +1495,6 @@ html.js #application-slider .panel.old {
   margin-right: 26px;
   overflow: hidden;
 	border: 1px solid #777;
-	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
 }
 
 #application-slider.large .panel a{
@@ -1657,6 +1512,9 @@ html.js #application-slider .panel.old {
 }
 
 #application-slider .panel a div.caption {
+  @include box-shadow(rgba(255, 255, 255, 0.2) 0 1px 0 inset);
+  @include transition(all .4s ease-in-out .1s);
+
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1666,15 +1524,7 @@ html.js #application-slider .panel.old {
 	font-weight: bold;
   text-align: center;
   border-top: 1px solid #000;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
   padding: .4em 0em;
-  -webkit-transition: all .4s ease-in-out .1s;
-  -moz-transition: all .4s ease-in-out .1s;
-  -o-transition: all .4s ease-in-out .1s;
-  -ms-transition: all .4s ease-in-out .1s;
-  transition: all .4s ease-in-out .1s;
 }
 
 #application-slider .panel a:hover div.caption {
@@ -1682,12 +1532,8 @@ html.js #application-slider .panel.old {
 }
 
 #application-slider .panel a img {
+  @include transition(all .4s ease-in-out);
   opacity: .4;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
 }
 
 #application-slider .panel a:hover img {
@@ -1707,82 +1553,54 @@ html.js #application-slider-tray {
 }
 
 #application-slider-tray a {
+  @include border-radius(7px);
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0 1px 4px inset);
+
   display: inline-block;
   width: 10px;
   height: 10px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
   background:#00CC11;
   border: 1px solid #999;
   margin: 0 2px;
   text-indent: 100em;
   overflow: hidden;
   background-color: #d8d8d8;
-	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
-  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, .3);
 }
 
 #application-slider-tray a.active {
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
+  @include box-shadow(rgba(255, 255, 255, .8) 0 1px 0 inset);
 }
 
 .green #application-slider-tray a.active {
+  @include background(linear-gradient(top, #93df70, #61bb35));
+
 	background-color: #93df70;
 	border-color: #5e913f;
-  background-image: -moz-linear-gradient(top, #93df70, #61bb35);
-  background-image: -ms-linear-gradient(top, #93df70, #61bb35);
-  background-image: -o-linear-gradient(top, #93df70, #61bb35);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#93df70), to(#61bb35));
-  background-image: -webkit-linear-gradient(top, #93df70, #61bb35);
-  background-image: linear-gradient(top, #93df70, #61bb35);
 }
 
 .pink #application-slider-tray a.active {
+  @include background(linear-gradient(top, #ff9dc4, #ff5b9d));
+
 	background-color: #ff9dc4;
 	border-color: #ea5893;
-  background-image: -moz-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: -ms-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: -o-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9dc4), to(#ff5b9d));
-  background-image: -webkit-linear-gradient(top, #ff9dc4, #ff5b9d);
-  background-image: linear-gradient(top, #ff9dc4, #ff5b9d);
 }
 
 .blue #application-slider-tray a.active {
+  @include background(linear-gradient(top, #7fcbff, #54abe7));
 	background-color: #7fcbff;
 	border-color: #3f709a;
-  background-image: -moz-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: -ms-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: -o-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7fcbff), to(#54abe7));
-  background-image: -webkit-linear-gradient(top, #7fcbff, #54abe7);
-  background-image: linear-gradient(top, #7fcbff, #54abe7);
 }
 
 .orange #application-slider-tray a.active {
+  @include background(linear-gradient(top, #ffc476, #eba548));
 	background-color: #ffc476;
 	border-color: #c28b41;
-  background-image: -moz-linear-gradient(top, #ffc476, #eba548);
-  background-image: -ms-linear-gradient(top, #ffc476, #eba548);
-  background-image: -o-linear-gradient(top, #ffc476, #eba548);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc476), to(#eba548));
-  background-image: -webkit-linear-gradient(top, #ffc476, #eba548);
-  background-image: linear-gradient(top, #ffc476, #eba548);
 }
 
 .purple #application-slider-tray a.active {
+  @include background(linear-gradient(top, #d796ff, #a84ae1));
 	background-color: #d796ff;
 	border-color: #994eb1;
-  background-image: -moz-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: -ms-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: -o-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d796ff), to(#a84ae1));
-  background-image: -webkit-linear-gradient(top, #d796ff, #a84ae1);
-  background-image: linear-gradient(top, #d796ff, #a84ae1);
 }
 
 #application-slider-tray button {
@@ -1806,15 +1624,13 @@ html.js #application-slider-tray {
 /* Subscribe (commented out until we have full mailchimp integration)
 
 #subscribe {
+  @include box-shadow(#1b1b1b 0px 0px 11px inset);
+  @include border-radius(5px);
+
   position: relative;
-  border:1px solid #000;
+  border: 1px solid #000;
   height:28px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   background:#282828;
-  -webkit-box-shadow: inset 0px 0px 11px #1b1b1b;
-  -moz-box-shadow: inset 0px 0px 11px #1b1b1b;
-  box-shadow: inset 0px 0px 11px #1b1b1b;
 }
 
 #subscribe .error {
