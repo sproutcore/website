@@ -1082,7 +1082,7 @@ h1 > #action:before {
   width: 200px;
   height: 52px;
   padding: 0 35px 0 60px;
-  background: url(../img/avatars/blank-small.png) no-repeat;
+  background: url(../img/avatar-default.png) no-repeat;
 }
 
 #core-team .social,
