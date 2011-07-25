@@ -809,7 +809,8 @@ h1 > #action:before {
 }
 
 #tabs #panel > section > section > h1,
-#tabs #panel > section h2, #core-member-modal-content h2 {
+#tabs #panel > section h2,
+#core-team-modal h2 {
   margin-bottom: 9px;
   font-weight: bold;
   font-size: 18px;
@@ -820,7 +821,7 @@ h1 > #action:before {
   list-style: outside url(../img/bullet.png);
 }
 
-#tabs p, #core-member-modal-content p {
+#tabs p {
   margin-bottom: 17px;
   line-height: 1.2;
 }
@@ -1062,57 +1063,119 @@ h1 > #action:before {
 
 /* Core Team */
 
-#about #core-team ul {
+#core-team > ul {
   overflow: hidden;
 }
 
-#about #core-team li {
-	float: left;
-	margin: 0 0 30px 0;
-	min-height: 137px;
-	width: 420px;
-	list-style: none;
+#tabs #core-team > ul > li {
+  width: 420px;
+  float: left;
+  margin: 0 0 30px;
+  list-style: none;
 }
 
-#about #core-team img, #core-member-modal-content img {
-	float: left;
-	margin-right: 10px;
-	border: 1px solid #444;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+#tabs #core-team .shown > li:nth-child(odd) {
+  margin-right: 50px;
+}
+
+#tabs #core-team .not-shown li {
+  width: 200px;
+  height: 52px;
+  padding: 0 35px 0 60px;
+  background: url(../img/avatars/blank-small.png) no-repeat;
+}
+
+#core-team .social,
+#core-team-modal .social {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-right: 10px;
+  border: 1px solid #444;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-#about #core-team li:nth-child(odd) {
-	padding-right: 50px;
+#core-team img,
+#core-team-modal img {
+  display: block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
-#about #core-team > ul > li > h2, #core-member-modal-content h2 {
-	margin-bottom: 4px;
-	line-height: 14px;
+#core-team .social ul,
+#core-team-modal .social ul {
+  width: 100%;
+  height: 22px;
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  border-top: 1px solid #000;
+  text-align: center;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-#about #core-team i, #core-member-modal-content i {
-	display: block;
-	margin-bottom: 2px;
-	color: #888;
+#core-team .social:hover ul,
+#core-team-modal .social:hover ul {
+  bottom: 0;
 }
 
-#about #core-team p, #core-member-modal-content p {
-	font-size: 12px;
-	margin-left: 138px;
-	line-height: 1.5;
+#core-team .social li,
+#core-team-modal .social li {
+  display: inline-block;
+  margin: 3px;
+  list-style: none;
 }
 
-#about #core-team .not-shown li {
-	padding: 0 35px 0 60px;
-	margin-bottom: 30px;
-	min-height: 60px;
-	width: 200px;
-	background: url(../img/avatars/blank-small.png) no-repeat;
+#core-team .social a,
+#core-team-modal .social a {
+  width: 16px;
+  height: 16px;
+  display: block;
+  text-indent: -999em;
+  background: url(../img/social.png);
+}
+
+#core-team .social .github,
+#core-team-modal .social .github {
+  background-position: -16px 0;
+}
+
+#tabs #core-team li h2,
+#core-team-modal h2 {
+  margin: 0;
+  line-height: 1;
+}
+
+#core-team i,
+#core-team-modal i {
+  color: #888;
+}
+
+#core-team p,
+#core-team-modal p {
+  margin: 9px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#core-team a {
+  float: right;
+  font-weight: bold;
 }
 
 /* Logos */

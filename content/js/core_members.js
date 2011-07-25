@@ -7,72 +7,90 @@ var VISIBLE_MEMBERS = [{
   srcS: '/img/avatars/32/charles_jolley.png',
   name: "Charles Jolley",
   location: "Los Altos, CA, USA",
-  shortBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the SproutCore open source framework. Before founding Strobe, Charles was responsible ",
-  fullBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the SproutCore open source framework. Before founding Strobe, Charles was responsible for Mobile Me application development at Apple."
+  shortBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the",
+  fullBio: "Charles Jolley is Founder and CEO of Strobe, a software and cloud services company focused on the mobile web. He is also the creator of the SproutCore open source framework. Before founding Strobe, Charles was responsible for Mobile Me application development at Apple.",
+  twitter: "okito",
+  github: "charlesjolley"
 },
 {
   src: '/img/avatars/128/colin_campbell.png',
   srcS: '/img/avatars/32/colin_campbell.png',
   name: "Colin Campbell",
   location: "St. John’s, Newfoundland, Canada",
-  shortBio: "Colin has a background in web development, and works for Strobe writing mobile applications. He has mostly worked on media and publishing apps for iPhone, Android, iPad and desktop. Before joining Strobe in July ’10, he worked in advertising ",
-  fullBio: "Colin has a background in web development, and works for Strobe writing mobile applications. He has mostly worked on media and publishing apps for iPhone, Android, iPad and desktop. Before joining Strobe in July ’10, he worked in advertising, using mostly Flash and jQuery. He believes wholeheartedly that SproutCore is the best way to make kickass apps."
+  shortBio: "Colin has a background in web development, and works for Strobe writing mobile applications. He has mostly worked on media and publishing apps for",
+  fullBio: "Colin has a background in web development, and works for Strobe writing mobile applications. He has mostly worked on media and publishing apps for iPhone, Android, iPad and desktop. Before joining Strobe in July ’10, he worked in advertising, using mostly Flash and jQuery. He believes wholeheartedly that SproutCore is the best way to make kickass apps.",
+  twitter: "colin_campbell",
+  github: "colincampbell"
 },
 {
   src: '/img/avatars/128/evin_grano.png',
   srcS: '/img/avatars/32/evin_grano.png',
   name: "Evin Grano",
   location: "Culpepper, VA, USA",
-  shortBio: "Evin has been working with Sproutcore ever since he took his job at Eloqua in 2008. Working closely with a large team of developers, Evin was the Technical and Team Lead for developing one of the largest Sproutcore Application at Eloqua. ",
-  fullBio: "Evin has been working with Sproutcore ever since he took his job at Eloqua in 2008. Working closely with a large team of developers, Evin was the Technical and Team Lead for developing one of the largest Sproutcore Application at Eloqua. Evin joined the SproutCore Core Team about 2 years ago because of his contributions to the core framework (Statecharts, Nested Records) and his work on the widely used 3rd party frameworks for SproutCore: SproutCore-UI (SCUI), SproutCore Universal DataSource (SCUDS), and Sai, a vector graphics library for SproutCore. He has been a contributor to Greenhouse, SpoutCore’s UI builder, with fellow core member Mike Ball. Evin has done talks about SproutCore for local meetups and JSConf 2009 and sometime posts to his blog about SproutCore."
+  shortBio: "Evin has been working with Sproutcore ever since he took his job at Eloqua in 2008. Working closely with a large team of developers, Evin was the",
+  fullBio: "Evin has been working with Sproutcore ever since he took his job at Eloqua in 2008. Working closely with a large team of developers, Evin was the Technical and Team Lead for developing one of the largest Sproutcore Application at Eloqua. Evin joined the SproutCore Core Team about 2 years ago because of his contributions to the core framework (Statecharts, Nested Records) and his work on the widely used 3rd party frameworks for SproutCore: SproutCore-UI (SCUI), SproutCore Universal DataSource (SCUDS), and Sai, a vector graphics library for SproutCore. He has been a contributor to Greenhouse, SpoutCore’s UI builder, with fellow core member Mike Ball. Evin has done talks about SproutCore for local meetups and JSConf 2009 and sometime posts to his blog about SproutCore.",
+  twitter: "etgryphon",
+  github: "etgryphon"
 },
 {
   src: '/img/avatars/128/michael_cohen.png',
   srcS: '/img/avatars/32/michael_cohen.png',
   name: "Michael Cohen",
   location: "San Francisco, CA, USA",
-  shortBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the framework for 2 years. As a core team member, he is the creator of two SproutCore frameworks ",
-  fullBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the framework for two years. As a core team member, he is the creator of two SproutCore frameworks: Ki, a full featured statechart framework that is now part of latest SproutCore release, version 1.5; and Lebowski, a test integration framework for SproutCore applications. Michael also maintains a blog focused on helping people learn about SproutCore."
+  shortBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the",
+  fullBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the framework for two years. As a core team member, he is the creator of two SproutCore frameworks: Ki, a full featured statechart framework that is now part of latest SproutCore release, version 1.5; and Lebowski, a test integration framework for SproutCore applications. Michael also maintains a blog focused on helping people learn about SproutCore.",
+  twitter: "frozencanuck",
+  github: "frozencanuck"
 },
 {
   src: '/img/avatars/128/mike_ball.png',
   srcS: '/img/avatars/32/mike_ball.png',
   name: "Mike Ball",
   location: "Fairfax, VA, USA",
-  shortBio: "Mike has been involved with SproutCore for nearly 3 years. During that period he used SproutCore to transform Eloqua's UX. As a core team member Mike has been primarily involved developing SpoutCore's UI builder Greenhouse and its associated ",
-  fullBio: "Mike has been involved with SproutCore for nearly three years. During that period he used SproutCore to transform Eloqua’s UX. As a core team member Mike has been primarily involved developing SpoutCore’s UI builder Greenhouse and its associated frameworks and infrastructure. Mike has also contributes to the SproutCore-UI and SproutCore Universal Datastore frameworks, and on rare occasions posts to his blog about SproutCore design patterns."
+  shortBio: "Mike has been involved with SproutCore for nearly 3 years. During that period he used SproutCore to transform Eloqua's UX. As a core team member",
+  fullBio: "Mike has been involved with SproutCore for nearly three years. During that period he used SproutCore to transform Eloqua’s UX. As a core team member Mike has been primarily involved developing SpoutCore’s UI builder Greenhouse and its associated frameworks and infrastructure. Mike has also contributes to the SproutCore-UI and SproutCore Universal Datastore frameworks, and on rare occasions posts to his blog about SproutCore design patterns.",
+  twitter: "onkis",
+  github: "onkis"
 },
 {
   src: '/img/avatars/128/peter_wagenet.png',
   srcS: '/img/avatars/32/peter_wagenet.png',
   name: "Peter Wagenet",
   location: "Orange County, CA, USA",
-  shortBio: "Peter Wagenet is a member of the SproutCore Core Team and a SproutCore engineer at Strobe. Prior to working at Strobe, Peter was also a Ruby on Rails engineer and still enjoys tinkering around with it in his free time. His projects can be found ",
-  fullBio: "Peter Wagenet is a member of the SproutCore Core Team and a SproutCore engineer at Strobe. Prior to working at Strobe, Peter was also a Ruby on Rails engineer and still enjoys tinkering around with it in his free time. His projects can be found at <a href=\"http://github.com/wagenet\" target=\"_blank\">http://github.com/wagenet</a> and his Twitter at @wagenet."
+  shortBio: "Peter Wagenet is a member of the SproutCore Core Team and a SproutCore engineer at Strobe. Prior to working at Strobe, Peter was also a Ruby on Rails",
+  fullBio: "Peter Wagenet is a member of the SproutCore Core Team and a SproutCore engineer at Strobe. Prior to working at Strobe, Peter was also a Ruby on Rails engineer and still enjoys tinkering around with it in his free time. His projects can be found at <a href=\"http://github.com/wagenet\" target=\"_blank\">http://github.com/wagenet</a> and his Twitter at @wagenet.",
+  twitter: "wagenet",
+  github: "wagenet"
 },
 {
   src: '/img/avatars/128/tyler_keating.jpg',
   srcS: '/img/avatars/32/tyler_keating.png',
   name: "Tyler Keating",
   location: "Regina, SK, Canada",
-  shortBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina.  A persistent desire to write software eventually led him to new work writing OS X desktop apps ",
-  fullBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina.  A persistent desire to write software eventually led him to new work writing OS X desktop apps, Rails web apps, iPhone & Blackberry mobile apps and most recently, SproutCore, best of all worlds, apps.  He currently works for Strobe Inc., where he works on improving SproutCore, developing applications and supporting other companies with their mobile strategies.<br><br>He lives in Regina Saskatchewan with his wife and two daughters."
+  shortBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina. A",
+  fullBio: "After finishing school at the University of Saskatchewan, Tyler began his career as an Engineering Manager at SaskTel in Regina. A persistent desire to write software eventually led him to new work writing OS X desktop apps, Rails web apps, iPhone & Blackberry mobile apps and most recently, SproutCore, best of all worlds, apps.  He currently works for Strobe Inc., where he works on improving SproutCore, developing applications and supporting other companies with their mobile strategies.</p><p>He lives in Regina Saskatchewan with his wife and two daughters.",
+  twitter: "publickeating",
+  github: "tylerkeating"
 },
 {
   src: '/img/avatars/128/tom_dale.png',
   srcS: '/img/avatars/32/tom_dale.png',
   name: "Tom Dale",
   location: "San Francisco, CA, USA",
-  shortBio: "Tom graduated from UC Irvine with a degree in criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time using SproutCore, his first exposure to JavaScript, and his first time meeting Charles Jolley ",
-  fullBio: "Tom graduated from UC Irvine with a degree in Criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time using SproutCore, his first exposure to JavaScript, and his first time meeting Charles Jolley. From 2009 to the end of 2010, he helped maintain SproutCore at Apple and assisted building the next generation of their web applications. Now he works at Strobe where he couldn’t be more excited about making web applications the big thing instead of just the next big thing. In his spare time he runs a cash-for-beer exchange program at many local San Francisco dive bars."
+  shortBio: "Tom graduated from UC Irvine with a degree in criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time",
+  fullBio: "Tom graduated from UC Irvine with a degree in Criminology in 2008. He built an internal tool for the Apple retail stores in 2009, which was his first time using SproutCore, his first exposure to JavaScript, and his first time meeting Charles Jolley. From 2009 to the end of 2010, he helped maintain SproutCore at Apple and assisted building the next generation of their web applications. Now he works at Strobe where he couldn’t be more excited about making web applications the big thing instead of just the next big thing. In his spare time he runs a cash-for-beer exchange program at many local San Francisco dive bars.",
+  twitter: "tomdale",
+  github: "tomdale"
 },
 {
   src: '/img/avatars/128/yehuda_katz.png',
   srcS: '/img/avatars/32/yehuda_katz.png',
   name: "Yehuda Katz",
   location: "San Francisco, CA, USA",
-  shortBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action and is a ",
-  fullBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action, and is a contributor to Ruby in Practice. He spends most of his time hacking on open source—his main projects, along with others, like Thor, Handlebars and Janus—or traveling the world doing evangelism work. He blogs at <a href=\"http://yehudakatz.com\" target=\"_blank\">http://yehudakatz.com</a> and can be found on Twitter as @wycats."
+  shortBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe.",
+  fullBio: "Yehuda Katz is a member of the SproutCore, Ruby on Rails and jQuery Core Teams; during the daytime, he works as Chief Technologist at Strobe. Yehuda is the co-author of the best-selling jQuery in Action, the upcoming Rails 3 in Action, and is a contributor to Ruby in Practice. He spends most of his time hacking on open source—his main projects, along with others, like Thor, Handlebars and Janus—or traveling the world doing evangelism work. He blogs at <a href=\"http://yehudakatz.com\" target=\"_blank\">http://yehudakatz.com</a> and can be found on Twitter as @wycats.",
+  twitter: "wycats",
+  github: "wycats"
 }];
 
 app.coreMembers = (function() {
@@ -86,21 +104,21 @@ app.coreMembers = (function() {
     // Insert the visible members in the list dynamically
     for (i = 0; i < length; i++) {
       member = VISIBLE_MEMBERS[i];
-      target.append('<li><img src="' + member.src + '" width="128" height="128"><h2>' + member.name + '</h2><i>' + member.location + '</i><p>' + member.shortBio + '<a href="#" onclick="app.setUpMemberModal(' + i + '); app.openModal($(\'#core-member-modal\')); return false;">...cont’d</a></p></li>');
+      target.append('<li><div class="social"><img src="' + member.src + '" alt="Picture of ' + member.name + '"><ul><li><a href="http://twitter.com/' + member.twitter + '">Twitter</a></li><li><a href="https://github.com/' + member.github + '" class="github">GitHub</a></li></ul></div><h2>' + member.name + '</h2><i>' + member.location + '</i><p>' + member.shortBio + '<br /><a href="#" onclick="app.setUpMemberModal(' + i + '); app.openModal($(\'#core-team-modal\')); return false;">...cont’d</a></p></li>');
     }
   };
 })();
 
 app.setUpMemberModal = function(index) {
-  var modal = $('#core-member-modal'),
-  target = $('#core-member-modal-content'),
+  var modal = $('#core-team-modal'),
+  target = $('#core-team-modal-content'),
   member,
   height;
 
   member = VISIBLE_MEMBERS[index];
   if (member) {
     // Replace the modal content with the source content
-    target.html('<img src="' + member.src + '"><h2>' + member.name + '</h2><i>' + member.location + '</i><p>' + member.fullBio + '</p>');
+    target.html('<div class="social"><img src="' + member.src + '" alt="Picture of ' + member.name + '"><ul><li><a href="http://twitter.com/' + member.twitter + '">Twitter</a></li><li><a href="https://github.com/' + member.github + '" class="github">GitHub</a></li></ul></div><h2>' + member.name + '</h2><i>' + member.location + '</i><p>' + member.fullBio + '</p>');
   } else {
     console.warn('Unable to find source for core team member.');
   }
