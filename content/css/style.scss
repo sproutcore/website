@@ -108,6 +108,7 @@ html.mobile #wrap {
 
 html.js #home .container {
   opacity: 0;
+  position: static;
 }
 
 html.ready #home .container {
@@ -1184,18 +1185,18 @@ html.js #carousel .panel {
   top: 0;
 }
 
-html.js #carousel .panel {
+html.js #carousel .panel.animate {
   @include transition-property(left opacity);
   @include transition-duration(1s);
   @include transition-timing-function(ease-in-out);
 }
 
-html.js.csstransforms3d #carousel .panel {
+html.js.csstransforms3d #carousel .panel.animate {
   @include transition-property(-webkit-transform opacity);
 }
 
 html.js #carousel .panel.active {
-  left: 44;
+  left: 44px;
   opacity: 1;
 }
 

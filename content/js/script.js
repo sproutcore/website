@@ -108,6 +108,12 @@ app.carousel = (function() {
     // cap
     currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length - 1 : id;
 
+    if (force) {
+      $panels.removeClass('animate');
+    } else {
+      $panels.addClass('animate');
+    }
+
     // active the target panel
     $currentPanel = $panels.eq(currentPanel);
     $currentPanel.addClass('active').removeClass('old');
