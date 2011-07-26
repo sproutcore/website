@@ -111,19 +111,6 @@ app.carousel = (function() {
     // active the target panel
     $currentPanel = $panels.eq(currentPanel);
     $currentPanel.addClass('active').removeClass('old');
-    if (!force) {
-      $currentPanel.animate({
-        left: 44,
-        opacity: 1
-      },
-      1000);
-    }
-    else {
-      $currentPanel.css({
-        left: 44,
-        opacity: 1
-      });
-    }
 
     var color = $currentPanel.data('color');
     if (color && app.colors.indexOf(color) > -1) {
@@ -134,37 +121,11 @@ app.carousel = (function() {
     if (currentPanel > 0) {
       $oldPanels = $panels.slice(0, currentPanel);
       $oldPanels.addClass('old').removeClass('active');
-      if (!force) {
-        $oldPanels.animate({
-          left: -880,
-          opacity: 0
-        },
-        1000);
-      }
-      else {
-        $oldPanels.animate({
-          left: -880,
-          opacity: 0
-        });
-      }
     }
 
     //make sure any slides ahead of the current one aren't active or old
     $otherPanels = $panels.slice(currentPanel + 1);
     $otherPanels.removeClass('old active');
-    if (!force) {
-      $otherPanels.animate({
-        left: 880,
-        opacity: 0
-      },
-      1000);
-    }
-    else {
-      $otherPanels.css({
-        left: 880,
-        opacity: 0
-      });
-    }
 
     //set the tray's panel button thingy to active
     $trayLinks.removeClass('active').filter('.panel' + currentPanel).addClass('active');

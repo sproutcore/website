@@ -1180,8 +1180,18 @@ html.js #carousel {
 html.js #carousel .panel {
   left: 880px;
   position: absolute;
-  top: 0;
   opacity: 0;
+  top: 0;
+}
+
+html.js #carousel .panel {
+  @include transition-property(left opacity);
+  @include transition-duration(1s);
+  @include transition-timing-function(ease-in-out);
+}
+
+html.js.csstransforms3d #carousel .panel {
+  @include transition-property(-webkit-transform opacity);
 }
 
 html.js #carousel .panel.active {
@@ -1189,9 +1199,19 @@ html.js #carousel .panel.active {
   opacity: 1;
 }
 
+html.js.csstransforms3d #carousel .panel.active {
+  left: 0;
+  @include translate3d(44px, 0, 0);
+}
+
 html.js #carousel .panel.old {
   left: -880px;
   opacity: 0;
+}
+
+html.js.csstransforms3d #carousel .panel.old {
+  left: 0;
+  @include translate3d(-880px, 0, 0);
 }
 
 #carousel .tray {
