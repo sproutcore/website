@@ -1595,18 +1595,26 @@ html.js #carousel > button {
   margin-right: -15px;
 }
 
+#application-slider.large {
+  margin: 0;
+}
+
 html.js #application-slider {
   height: 195px;
 }
 
 html.js #application-slider.large {
-	margin-top: 50px;
-  height: 954px;
+  height: 753px;
 }
 
 #application-slider .panel {
   width: 928px;
   height: 180px;
+}
+
+#application-slider.large .panel {
+  width: auto;
+  height: auto;
 }
 
 html.js #application-slider .panel {
@@ -1628,7 +1636,11 @@ html.js #application-slider .panel.old {
   left: -928px;
 }
 
-#application-slider .panel a{
+html.js #application-slider.large .panel {
+  left: 0;
+}
+
+#application-slider .panel a {
   float: left;
   position: relative;
   width: 202px;
@@ -1641,18 +1653,14 @@ html.js #application-slider .panel.old {
   box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
 }
 
-#application-slider.large .panel a{
-  width: 360px;
-  height: 254px;
-	margin: 0 60px 60px 0;
+#application-slider.large .panel a {
+  width: 270px;
+  height: 209px;
+  margin: 0 0 40px 0;
 }
 
-#application-slider.large .panel a:nth-child(odd){
-	margin-left: 57px;
-}
-
-#application-slider.large .panel a:nth-child(even){
-	margin-right: 0;
+#application-slider.large .panel a:nth-child(3n+2) {
+  margin: 0 41px;
 }
 
 #application-slider .panel a div.caption {
@@ -1681,6 +1689,7 @@ html.js #application-slider .panel.old {
 }
 
 #application-slider .panel a img {
+  max-width: 100%;
   opacity: .4;
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
