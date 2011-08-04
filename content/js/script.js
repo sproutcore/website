@@ -71,23 +71,17 @@ app.ready.domReadyClass = function() {
 };
 
 app.changeColor = function(color) {
-  var body = $(document.body),
-  isMatt = false;
+  var body = $(document.body);
 
-  if (document.cookie && document.cookie.indexOf('mattgrantham') > -1) {
-    isMatt = true;
-  } else if (window.location && window.location.hash && window.location.hash.indexOf("mattg") > -1) {
-    document.cookie = "mattgrantham=true; domain=.sproutcore.com";
-    isMatt = true;
+  // Matt only gets purple
+  if (location.hash.match(/mattg/)) {
+    $.cookie('mattgrantham', true);
   }
-
-  if (isMatt) {
-    color = "purple";
-  }
+  if ($.cookie('mattgrantham')) { color = "purple"; }
 
   body.removeClass(app.currentColor).addClass(color);
   app.currentColor = color;
-  document.cookie = 'scColor=' + color + '; domain=.sproutcore.com';
+  $.cookie('scColor', color);
 };
 
 app.carousel = (function() {
