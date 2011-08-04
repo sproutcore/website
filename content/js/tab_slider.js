@@ -108,15 +108,15 @@ app.resizeClippingWindow = function(index) {
 };
 
 app.bringingFlexyBack = function() {
-  var tabTop, footerTop, height;
-
   // Determine the top offsets
-  footerTop = $('footer').offset().top;
-  tabTop = $('#tabs').offset().top;
+  var footer = $('footer');
+  var tab = $('#tabs');
+  var footerTop = footer.length && footer.offset().top;
+  var tabTop = tab.length && tab.offset().top;
 
   // The minHeight is simply the difference between the tops or the
   // height required for the content
-  height = footerTop - tabTop;
+  var height = footerTop - tabTop;
 
   $('#tabs-back').css('height', height);
 };
