@@ -75,20 +75,13 @@
 </head>
 <body id="<%= @item[:id] %>" class="green">
   <script>
-    var cookies = document.cookie.split(';'),
-    color = 'green';
-
-    if (cookies) {
-      for (var idx = 0; idx < cookies.length; idx++) {
-        if (cookies[idx].indexOf(' scColor=') === 0) {
-          color = cookies[idx].substring(9);
-        } else if (cookies[idx].indexOf('mattgrantham') > -1) {
-          color = "purple";
-          continue;
-        }
-      }
+    var color = 'green';
+    var match = document.cookie.match(/scColor=(.*?);/);
+    if (match) {
+      color = match[1];
+    } else if (document.cookie.match(/mattgrantham/)) {
+      color = "purple";
     }
-
     document.body.className = color;
   </script>
   <div id="wrap">
