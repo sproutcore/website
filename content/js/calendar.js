@@ -346,7 +346,7 @@ jQuery(document).ready(function() {
           opacity: 1
         }).addClass('active');
       }
-      console.log(app.mapsLoaded);
+
       if (app.mapsLoaded) {
         var loc = new google.maps.LatLng(e.lat, e.lng);
 
