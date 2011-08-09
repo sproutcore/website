@@ -67,7 +67,11 @@ var app = {
 
 // add 'ready' to html when the dom's ready to go
 app.ready.domReadyClass = function() {
-  $('html').addClass('ready');
+  var html = $('html');
+  if (!$.cookie('scVisited')) {
+    $.cookie('scVisited', true);
+  }
+  html.addClass('ready');
 };
 
 app.changeColor = function(color) {
