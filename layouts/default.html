@@ -75,7 +75,7 @@
 </head>
 <body id="<%= @item[:id] %>" class="green">
   <script>
-    var match = document.cookie.match(/scColor=(.*?);/);
+    var match = document.cookie.match(/scColor=([^;]+)/);
     document.body.className = (match && match[1]) || 'green';
   </script>
   <div id="wrap">
