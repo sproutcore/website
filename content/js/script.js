@@ -241,7 +241,7 @@ app.slider = (function() {
 
 /**
   Detects the current platform.
-  
+
   @returns {app.PLATFORM}
 */
 app.detectPlatform = function() {
@@ -263,7 +263,7 @@ app.detectPlatform = function() {
 
 /**
   Goes to the install page for the current platform.
-  
+
  */
 app.gotoInstall = function(platform, alwaysRedirect) {
   if (alwaysRedirect === undefined) {
