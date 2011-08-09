@@ -69,6 +69,7 @@ var app = {
 app.ready.domReadyClass = function() {
   var html = $('html');
   if (!$.cookie('scVisited')) {
+    html.addClass('firstTime');
     $.cookie('scVisited', true);
   }
   html.addClass('ready');

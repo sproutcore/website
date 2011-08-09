@@ -122,6 +122,9 @@ html.js #home .container {
 
 html.ready #home .container {
   opacity: 1;
+}
+
+html.firstTime #home .container {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -437,11 +440,6 @@ header[role="banner"] {
   -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   box-shadow: 0 1px 9px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-  -webkit-transition: all 1s ease-in-out .5s;
-  -moz-transition: all 1s ease-in-out .5s;
-  -o-transition: all 1s ease-in-out .5s;
-  -ms-transition: all 1s ease-in-out .5s;
-  transition: all 1s ease-in-out .5s;
 }
 
 html.js #home header[role="banner"] {
@@ -450,6 +448,14 @@ html.js #home header[role="banner"] {
 
 html.ready #home header[role="banner"] {
   top: 0;
+}
+
+html.firstTime #home header[role="banner"] {
+  -webkit-transition: all 1s ease-in-out .5s;
+  -moz-transition: all 1s ease-in-out .5s;
+  -o-transition: all 1s ease-in-out .5s;
+  -ms-transition: all 1s ease-in-out .5s;
+  transition: all 1s ease-in-out .5s;
 }
 
 #logo,
@@ -596,6 +602,10 @@ html.js #home [role="main"] > div {
 html.ready #home [role="main"] > section,
 html.ready #home [role="main"] > div {
   opacity: 1;
+}
+
+html.firstTime #home [role="main"] > section,
+html.firstTime #home [role="main"] > div {
   -webkit-transition: all 1s ease-in-out .5s;
   -moz-transition: all 1s ease-in-out .5s;
   -o-transition: all 1s ease-in-out .5s;
@@ -765,7 +775,7 @@ h1 > #action:before {
   background-image: -moz-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
   background-image: -ms-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
   background-image: -o-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -webkit-gradient(linear,  left center, right center, color-stop(0%, #fbfbfb), color-stop(100%, rgba(251, 251, 251, 0))); 
+  background-image: -webkit-gradient(linear,  left center, right center, color-stop(0%, #fbfbfb), color-stop(100%, rgba(251, 251, 251, 0)));
   background-image: -webkit-linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
   background-image: linear-gradient(left, #fbfbfb, rgba(251, 251, 251, 0));
   left: 0;
@@ -775,7 +785,7 @@ h1 > #action:before {
   background-image: -moz-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
   background-image: -ms-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
   background-image: -o-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
-  background-image: -webkit-gradient(linear,  right center, left center, color-stop(0%, #fbfbfb), color-stop(100%, rgba(251, 251, 251, 0))); 
+  background-image: -webkit-gradient(linear,  right center, left center, color-stop(0%, #fbfbfb), color-stop(100%, rgba(251, 251, 251, 0)));
   background-image: -webkit-linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
   background-image: linear-gradient(right, #fbfbfb, rgba(251, 251, 251, 0));
   right: 0;
@@ -843,7 +853,7 @@ h1 > #action:before {
 #home [role="main"] > div {
   clear: both;
   overflow: hidden;
-  padding: 30px; 
+  padding: 30px;
 }
 
 /* Blurb */
@@ -1234,7 +1244,7 @@ h1 > #action:before {
 }
 
 
-/* Homepage carousel 
+/* Homepage carousel
 ----------------------------------------------*/
 
 #home [role="main"] #carousel-container {
@@ -1521,7 +1531,7 @@ html.js #carousel > button {
   height: 46px;
   margin: 0 auto;
   text-indent: -999em;
-  background: url(../img/carousel/wwdc/title.png);  
+  background: url(../img/carousel/wwdc/title.png);
 }
 
 #carousel .panel.wwdc .button {
@@ -1585,7 +1595,7 @@ html.js #carousel > button {
 }
 
 
-/* Application slider 
+/* Application slider
 ----------------------------------------------*/
 
 #application-slider {
@@ -1847,7 +1857,7 @@ html.js #application-slider-tray {
   height:22px;
   color:#CCC;
   background:none;
-  border:0px;    
+  border:0px;
 }
 
 #subscribe input[name="email"]:active, #subscribe input[name="email"]:focus {
@@ -1859,7 +1869,7 @@ html.js #application-slider-tray {
 
 #subscribe button[name="subscribe"] {
   position:absolute;
-  top:-1px; right:-1px; 
+  top:-1px; right:-1px;
   height:30px;
   color:#FFF;
   width: 7em;
@@ -1868,14 +1878,14 @@ html.js #application-slider-tray {
   border:1px solid #000;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: #494949; 
-  background: -moz-linear-gradient(top, #494949 0%, #404040 50%, #393939 51%, #303030 100%); 
+  background: #494949;
+  background: -moz-linear-gradient(top, #494949 0%, #404040 50%, #393939 51%, #303030 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#494949), color-stop(50%,#404040), color-stop(51%,#393939), color-stop(100%,#303030));
-  background: -webkit-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); 
-  background: -o-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); 
-  background: -ms-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#303030',GradientType=0 ); 
-  background: linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%); 
+  background: -webkit-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%);
+  background: -o-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%);
+  background: -ms-linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#303030',GradientType=0 );
+  background: linear-gradient(top, #494949 0%,#404040 50%,#393939 51%,#303030 100%);
 }
 #subscribe button[name="subscribe"]:disabled {
   opacity: .16;
@@ -1912,7 +1922,10 @@ html.js #application-slider-tray {
 }
 
 html.ready #community #get-involved.visible #ipad {
-	background-position: bottom;
+  background-position: bottom;
+}
+
+html.firstTime #community #get-involved.visible #ipad {
 	-webkit-transition: all 0.8s ease-in-out;
 	-moz-transition: all 0.8s ease-in-out;
 	-o-transition: all 0.8s ease-in-out;
@@ -1929,8 +1942,11 @@ html.js #community #get-involved #ipad img.instructions {
 }
 
 html.ready #community  #get-involved.visible #ipad > img.instructions {
-	opacity: 1;
-	top: 100px;
+  opacity: 1;
+  top: 100px;
+}
+
+html.firstTime #community  #get-involved.visible #ipad > img.instructions {
 	-webkit-transition: all 0.4s ease-in-out 0.8s;
 	-moz-transition: all 0.4s ease-in-out 0.8s;
 	-o-transition: all 0.4s ease-in-out 0.8s;
@@ -1965,13 +1981,17 @@ html.ready #community  #get-involved.visible #ipad > img.instructions {
 }
 
 html.ready #community #get-involved.visible #ipad a.red {
-	opacity: 1;
+  opacity: 1;
+}
+
+html.firstTime #community #get-involved.visible #ipad a.red {
 	-webkit-transition: all 0.4s ease-in-out 1.1s;
 	-moz-transition: all 0.4s ease-in-out 1.1s;
 	-o-transition: all 0.4s ease-in-out 1.1s;
-	-ms-transition: all 0.4s ease-in-out 1.1s; 
+	-ms-transition: all 0.4s ease-in-out 1.1s;
 	transition: all 0.4s ease-in-out 1.1s;
 }
+
 #community #get-involved #ipad a.red {
 	border-color: #480000;
 	background: #ed474c;
@@ -2002,11 +2022,14 @@ html.ready #community #get-involved.visible #ipad a.red {
 }
 
 html.ready #community #get-involved.visible #ipad a.orange {
-	opacity: 1;
+  opacity: 1;
+}
+
+html.firstTime #community #get-involved.visible #ipad a.orange {
 	-webkit-transition: all 0.4s ease-in-out 1.3s;
 	-moz-transition: all 0.4s ease-in-out 1.3s;
 	-o-transition: all 0.4s ease-in-out 1.3s;
-	-ms-transition: all 0.4s ease-in-out 1.3s; 
+	-ms-transition: all 0.4s ease-in-out 1.3s;
 	transition: all 0.4s ease-in-out 1.3s;
 }
 #community #get-involved #ipad a.orange {
@@ -2039,11 +2062,13 @@ html.ready #community #get-involved.visible #ipad a.orange {
 }
 
 html.ready #community #get-involved.visible #ipad a.aqua {
-	opacity: 1;
+  opacity: 1;
+}
+html.firstTime #community #get-involved.visible #ipad a.aqua {
 	-webkit-transition: all 0.4s ease-in-out 1.5s;
 	-moz-transition: all 0.4s ease-in-out 1.5s;
 	-o-transition: all 0.4s ease-in-out 1.5s;
-	-ms-transition: all 0.4s ease-in-out 1.5s; 
+	-ms-transition: all 0.4s ease-in-out 1.5s;
 	transition: all 0.4s ease-in-out 1.5s;
 }
 #community #get-involved #ipad a.aqua {
@@ -2076,11 +2101,13 @@ html.ready #community #get-involved.visible #ipad a.aqua {
 }
 
 html.ready #community #get-involved.visible #ipad a.blue {
-	opacity: 1;
+  opacity: 1;
+}
+html.firstTime #community #get-involved.visible #ipad a.blue {
 	-webkit-transition: all 0.4s ease-in-out 1.7s;
 	-moz-transition: all 0.4s ease-in-out 1.7s;
 	-o-transition: all 0.4s ease-in-out 1.7s;
-	-ms-transition: all 0.4s ease-in-out 1.7s; 
+	-ms-transition: all 0.4s ease-in-out 1.7s;
 	transition: all 0.4s ease-in-out 1.7s;
 }
 #community #get-involved #ipad a.blue {
@@ -2187,7 +2214,7 @@ html.ready #community #get-involved.visible #ipad a.blue {
 }
 
 #community #map img {
-  display: block; 
+  display: block;
 }
 
 #community #map .pin,
@@ -2221,6 +2248,9 @@ html.ready #community .visible #map .pin {
 
 html.ready #community .visible #map .pin.sf {
   top: 156px;
+}
+
+html.firstTime #community .visible #map .pin.sf {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -2234,6 +2264,9 @@ html.ready #community .visible #map .pin.sf {
 
 html.ready #community .visible #map .pin.la {
   top: 209px;
+}
+
+html.firstTime #community .visible #map .pin.la {
   -webkit-transition: all 0.4s ease-in-out 0.2s;
   -moz-transition: all 0.4s ease-in-out 0.2s;
   -o-transition: all 0.4s ease-in-out 0.2s;
@@ -2247,6 +2280,9 @@ html.ready #community .visible #map .pin.la {
 
 html.ready #community .visible #map .pin.pro {
   top: 119px;
+}
+
+html.firstTime #community .visible #map .pin.pro {
   -webkit-transition: all 0.4s ease-in-out 0.4s;
   -moz-transition: all 0.4s ease-in-out 0.4s;
   -o-transition: all 0.4s ease-in-out 0.4s;
@@ -2260,6 +2296,9 @@ html.ready #community .visible #map .pin.pro {
 
 html.ready #community .visible #map .pin.aus {
   top: 260px;
+}
+
+html.firstTime #community .visible #map .pin.aus {
   -webkit-transition: all 0.4s ease-in-out 0.6s;
   -moz-transition: all 0.4s ease-in-out 0.6s;
   -o-transition: all 0.4s ease-in-out 0.6s;
@@ -2273,6 +2312,9 @@ html.ready #community .visible #map .pin.aus {
 
 html.ready #community .visible #map .pin.chi {
   top: 95px;
+}
+
+html.firstTime #community .visible #map .pin.chi {
   -webkit-transition: all 0.4s ease-in-out 0.8s;
   -moz-transition: all 0.4s ease-in-out 0.8s;
   -o-transition: all 0.4s ease-in-out 0.8s;
@@ -2286,6 +2328,9 @@ html.ready #community .visible #map .pin.chi {
 
 html.ready #community .visible #map .pin.was {
   top: 142px;
+}
+
+html.firstTime #community .visible #map .pin.was {
   -webkit-transition: all 0.4s ease-in-out 1s;
   -moz-transition: all 0.4s ease-in-out 1s;
   -o-transition: all 0.4s ease-in-out 1s;
@@ -2299,6 +2344,9 @@ html.ready #community .visible #map .pin.was {
 
 html.ready #community .visible #map .pin.ny {
   top: 114px;
+}
+
+html.firstTime #community .visible #map .pin.ny {
   -webkit-transition: all 0.4s ease-in-out 1.2s;
   -moz-transition: all 0.4s ease-in-out 1.2s;
   -o-transition: all 0.4s ease-in-out 1.2s;
@@ -2312,6 +2360,9 @@ html.ready #community .visible #map .pin.ny {
 
 html.ready #community .visible #map .pin.bos {
   top: 93px;
+}
+
+html.firstTime #community .visible #map .pin.bos {
   -webkit-transition: all 0.4s ease-in-out 1.4s;
   -moz-transition: all 0.4s ease-in-out 1.4s;
   -o-transition: all 0.4s ease-in-out 1.4s;
@@ -2387,6 +2438,10 @@ html.js #community #map a {
 html.ready #community .visible #map p,
 html.ready #community .visible #map a {
   opacity: 1;
+}
+
+html.firstTime #community .visible #map p,
+html.firstTime #community .visible #map a {
   -webkit-transition: opacity 0.5s ease-in-out 1.5s;
   -moz-transition: opacity 0.5s ease-in-out 1.5s;
   -o-transition: opacity 0.5s ease-in-out 1.5s;
