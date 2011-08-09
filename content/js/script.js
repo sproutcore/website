@@ -71,15 +71,9 @@ app.ready.domReadyClass = function() {
 };
 
 app.changeColor = function(color) {
-  var body = $(document.body);
-
-  // Matt only gets purple
-  if (location.hash.match(/mattg/)) {
-    $.cookie('mattgrantham', true);
-  }
-  if ($.cookie('mattgrantham')) { color = "purple"; }
-
-  body.removeClass(app.currentColor).addClass(color);
+  $(document.body).
+    removeClass(app.currentColor).
+    addClass(color);
   app.currentColor = color;
   $.cookie('scColor', color);
 };

@@ -75,14 +75,8 @@
 </head>
 <body id="<%= @item[:id] %>" class="green">
   <script>
-    var color = 'green';
     var match = document.cookie.match(/scColor=(.*?);/);
-    if (match) {
-      color = match[1];
-    } else if (document.cookie.match(/mattgrantham/)) {
-      color = "purple";
-    }
-    document.body.className = color;
+    document.body.className = (match && match[1]) || 'green';
   </script>
   <div id="wrap">
     <header role="banner">
