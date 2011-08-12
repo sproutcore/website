@@ -1575,12 +1575,9 @@ html.js #application-slider.large .panel {
 }
 
 #application-slider .panel a img {
-<<<<<<< HEAD
-  max-width: 100%;
-=======
   @include transition(all .4s ease-in-out);
->>>>>>> Start bringing over style.css to use SCSS
-  opacity: .4;
+  max-width: 100%;
+  opacity: 0.4;
 }
 
 #application-slider .panel a:hover img {
