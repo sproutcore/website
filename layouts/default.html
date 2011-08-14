@@ -1,3 +1,66 @@
+<% modal "contact-us" do %>
+  <!-- Embed WUFOO Form -->
+  <script>
+    var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  <script>
+    var r7x3q1 = new WufooForm();
+    r7x3q1.initialize({
+    'userName':'strobecorp',
+    'formHash':'r7x3q1',
+    'autoResize':true,
+
+    // Resize the wufoo iframe and content wrapper
+    'resizeDone': function(height) {
+      // In FF & IE, the first height is 0, in Webkit, the first height(s) are really big
+      // Wufoo also calls the resizeDone function of all its forms on the page when one of them resizes!
+      // Über hack: set the height to a good value unless it looks like a legitimate resize
+      if (height == 0 || height > 664) height = 588;
+
+      $('#wufooFormr7x3q1').attr('height', height);
+      $('#contact-us .modal-content').height(height);
+    },
+
+    'height':'588',
+    'ssl':false});
+    r7x3q1.display();
+  </script>
+  <!-- End Embed -->
+<% end %>
+<% modal "local-meetup" do %>
+  <!-- Embed WUFOO Form -->
+  <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  <script type="text/javascript">
+    var m7x3p9 = new WufooForm();
+    m7x3p9.initialize({
+    'userName':'strobecorp',
+    'formHash':'m7x3p9',
+    'autoResize':true,
+
+    // Resize the wufoo iframe and content wrapper
+    'resizeDone': function(height) {
+      // In FF & IE, the first height is 0, in Webkit, the first height(s) are really big
+      // Wufoo also calls the resizeDone function of all its forms on the page when one of them resizes!
+      // Über hack: set the height to a good value unless it looks like a legitimate resize
+      if (height == 0 || height > 664) height = 588;
+
+      $('#wufooFormm7x3p9').attr('height', height);
+      $('#local-meetup .modal-content').height(height);
+    },
+
+    'height':'588',
+    'ssl':false});
+    m7x3p9.display();
+  </script>
+  <!-- End Embed -->
+<% end %>
+<% modal 'core-team-modal' do %>
+  <div id="core-team-modal-content">
+    <!-- This will be replaced with the full-bio content -->
+  </div>
+<% end %>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -128,67 +191,3 @@
 	</script>
 </body>
 </html>
-
-<% modal "contact-us" do %>
-  <!-- Embed WUFOO Form -->
-  <script>
-    var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-
-  <script>
-    var r7x3q1 = new WufooForm();
-    r7x3q1.initialize({
-    'userName':'strobecorp',
-    'formHash':'r7x3q1',
-    'autoResize':true,
-
-    // Resize the wufoo iframe and content wrapper
-    'resizeDone': function(height) {
-      // In FF & IE, the first height is 0, in Webkit, the first height(s) are really big
-      // Wufoo also calls the resizeDone function of all its forms on the page when one of them resizes!
-      // Über hack: set the height to a good value unless it looks like a legitimate resize
-      if (height == 0 || height > 664) height = 588;
-
-      $('#wufooFormr7x3q1').attr('height', height);
-      $('#contact-us .modal-content').height(height);
-    },
-
-    'height':'588',
-    'ssl':false});
-    r7x3q1.display();
-  </script>
-  <!-- End Embed -->
-<% end %>
-<% modal "local-meetup" do %>
-  <!-- Embed WUFOO Form -->
-  <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
-
-  <script type="text/javascript">
-    var m7x3p9 = new WufooForm();
-    m7x3p9.initialize({
-    'userName':'strobecorp',
-    'formHash':'m7x3p9',
-    'autoResize':true,
-
-    // Resize the wufoo iframe and content wrapper
-    'resizeDone': function(height) {
-      // In FF & IE, the first height is 0, in Webkit, the first height(s) are really big
-      // Wufoo also calls the resizeDone function of all its forms on the page when one of them resizes!
-      // Über hack: set the height to a good value unless it looks like a legitimate resize
-      if (height == 0 || height > 664) height = 588;
-
-      $('#wufooFormm7x3p9').attr('height', height);
-      $('#local-meetup .modal-content').height(height);
-    },
-
-    'height':'588',
-    'ssl':false});
-    m7x3p9.display();
-  </script>
-  <!-- End Embed -->
-<% end %>
-<% modal 'core-team-modal' do %>
-  <div id="core-team-modal-content">
-    <!-- This will be replaced with the full-bio content -->
-  </div>
-<% end %>
