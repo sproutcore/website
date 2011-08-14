@@ -30,6 +30,15 @@ var VISIBLE_MEMBERS = [{
   github: "etgryphon"
 },
 {
+  name: "Majd Taby",
+  location: "San Francisco, CA, USA",
+  shortBio: "Majd graduated from The University of Michigan with a B.S. in Computer Science in 2010. He started his career at Apple, where he helped build the",
+  fullBio: "Majd graduated from The University of Michigan with a B.S. in Computer Science in 2010. He started his career at Apple, where he helped build the MobileMe Gallery iPad/iPhone app. He also helped maintain the SproutCore framework and contributed to the various MobileMe web application. Now he works at Strobe where he is building SproutCore UI. Talk to him about drawing, biking, running, tailoring, or design.",
+  gravatar: "6a4524a5dd3c32b3fd2e707bbc39034e",
+  twitter: "jtaby",
+  github: "jtaby"
+},
+{
   name: "Michael Cohen",
   location: "San Francisco, CA, USA",
   shortBio: "Starting with Eloqua to help build the company’s new Eloqua10 user interface that is entirely based on SproutCore, Michael has been involved with the",
