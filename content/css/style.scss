@@ -63,7 +63,7 @@ body {
 }
 
 #wrap {
-  @include background(image-url("../img/pixels.png"), image-url("../img/cross.png"), linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%));
+  @include background(image-url("/img/pixels.png"), image-url("/img/cross.png"), linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 62%));
   @include transition(background-color 1s ease-in-out);
 
   min-width: 970px;
@@ -625,7 +625,7 @@ h1 > #action:before {
 
 #tabs nav ul {
   background-color: #ffb47d;
-  @include background(image-url("../img/diagonal.png"), linear-gradient(top, #ffb47d, #ff8e3c));
+  @include background(image-url("/img/diagonal.png"), linear-gradient(top, #ffb47d, #ff8e3c));
   @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.28), 0 1px 0 rgba(255, 255, 255, 0.33) inset);
 
   width: 100%;
