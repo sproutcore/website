@@ -14,11 +14,15 @@ require "compass"
 
 Compass.add_project_configuration 'compass.rb'
 
+# compile '/installers/*' do
+
+# end
+
 compile '/css/*/' do
   filter :sass, Compass.sass_engine_options
 end
 
-compile %r{^\/(js|img|favicon)} do
+compile %r{^\/(js|img|favicon|installers)} do
   # don’t filter or layout
 end
 
@@ -48,7 +52,7 @@ route '/css/*/' do
   item.identifier.chop + '.css'
 end
 
-route %r{^\/(js|img|favicon)} do
+route %r{^\/(js|img|favicon|installers)} do
   filename = item.attributes[:filename].sub(%r{content/}, '')
   "/#{filename}"
 end
