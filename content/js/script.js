@@ -123,9 +123,12 @@ app.carousel = (function() {
       $oldPanels.addClass('old').removeClass('active');
     }
 
-    //make sure any slides ahead of the current one aren't active or old
+    //make sure any slides ahead of the current one aren't active
     $otherPanels = $panels.slice(currentPanel + 1);
-    $otherPanels.removeClass('old active');
+    $otherPanels.removeClass('active');
+    //place old on future panels for smooth transition when scrolling the carousel backwards
+    $otherPanels = $panels.slice(currentPanel + 1);
+    $otherPanels.addClass('old');
 
     //set the tray's panel button thingy to active
     $trayLinks.removeClass('active').filter('.panel' + currentPanel).addClass('active');
