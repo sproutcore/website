@@ -29,7 +29,7 @@ subnav:
   <p>If you already do Ruby development on Windows or would just like
     to have greater flexibility, you can install the SproutCore Dev
     Tools as a Ruby gem. If you want to install Ruby, start on Part A.
-    If you already have a Ruby 1.9.2 installation, skip to Part B.</p>
+    If you already have a Ruby 1.9.3 installation, skip to Part B.</p>
   </section>
   <section>
     <h1>Part A: Installing Ruby</h1>
@@ -39,8 +39,8 @@ subnav:
   <section>
     <h1>Easiest: One-Click Ruby Installer</h1>
     <ol class="steps">
-      <li>First download and install Ruby 1.9.2 from http://rubyinstaller.org/downloads/.</li>
-      <li>Next open "Ruby-1.9.2-*/Command Prompt with Ruby" from your Start Menu.
+      <li>First download and install Ruby 1.9.3 from http://rubyinstaller.org/downloads/.</li>
+      <li>Next open "Ruby-1.9.3-*/Command Prompt with Ruby" from your Start Menu.
         (If you installed to your system $PATH, you can just open a normal command prompt.)</li>
       <li>Continue to Part B.</li>
     </ol>
@@ -79,18 +79,8 @@ $ c_rehash</code></pre>
       <h2>Install RVM and Ruby</h2>
       <ol class="steps">
         <li>
-          <strong>If you have Git:</strong>
-          <pre><code>$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)</code></pre>
-          <br>
-          <strong>If you don't have Git:</strong>
-          <pre><code>$ curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer
-$ chmod +x rvm-installer
-$ ./rvm-installer --version latest</code></pre>
-        </li>
-        <li>
-          <strong>Install Ruby:</strong>
-          <pre><code>$ rvm install ruby-1.9.2
-$ rvm --default use 1.9.2</code></pre>
+          Install RVM along with Ruby 1.9.3.
+          <pre><code>$ \curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby=1.9.3</code></pre>
         </li>
       </ol>
     </section>
