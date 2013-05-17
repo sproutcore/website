@@ -55,7 +55,7 @@ and JavaScript are absolute (/js/myjs.js, not js/myjs.js).
 
 # Deploying Changes
 
-___Note:__ Before deploying, please preview the site and make sure that everything looks
+_**Note:** Before deploying, please preview the site and make sure that everything looks
 correct! Additionally, when you run the `git status` command below, please make sure the
 changes are sane._
 
