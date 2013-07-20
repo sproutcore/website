@@ -11,9 +11,9 @@ directory (this is the live site and what):
 
         rm -rf output && git clone git@github.com:sproutcore/sproutcore.github.com.git output
 
-1. Install nanoc so you can preview the SproutCore website:
+1. Install the dependencies (mainly nanoc) so you can preview the SproutCore website:
 
-        gem install nanoc
+        bundle install
 
 # Updating the Site
 
