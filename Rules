@@ -18,6 +18,14 @@ Compass.add_project_configuration 'compass.rb'
 
 # end
 
+compile '/assets/*' do
+end
+
+route '/assets/*' do
+  # /static/foo.html/ → /foo.html
+  item.identifier[7..-2]
+end
+
 compile '/css/*/' do
   filter :sass, Compass.sass_engine_options
 end
