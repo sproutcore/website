@@ -63,6 +63,7 @@ Deploying your changes is a simple 2 step process:
 
 1. Compile the changes into the output directory:
 
+        rm -rf tmp
         nanoc compile
 
 1. Commit and push your changes
