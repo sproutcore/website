@@ -12,24 +12,41 @@ subnav:
 ---
 
 <section id="what-is-sproutcore" class="visible">
-  <h1>A JavaScript framework for writing powerful web applications with less code.</h1>
-  <div id="slow">
-    <p>SproutCore applications <strong>move business logic to the browser</strong> so they can respond to your users' taps and clicks immediately, avoiding an agonizing roundtrip across often intermittent network connections.</p>
-    <p>As web application users go increasingly mobile, applications can no longer depend on reliable connections to a remote server to do the heavy lifting.</p>
-    <p>At the same time, web browsers continue to radically improve their ability to quickly process data and deliver polished user interfaces&mdash;a perfect opportunity to rethink the architecture of modern web applications.</p>
-  </div>
-  <div id="fast">
-    <p>Building web applications with traditional web development techniques is painful. Making sure your HTML is always up-to-date is challenging, and swapping information back and forth with your server can be error-prone.</p>
-    <p>There <em>is</em> a better way. <strong>SproutCore's robust bindings system allows you to create data-centric applications</strong>. Just describe the state of your application and how the data flows from your models to your views and let SproutCore do the rest.</p>
-    <p>Semantic templates allow you to write HTML and CSS that update automatically when your models change&mdash;like magic. And an in-memory database lets you intelligently manage and query your data and synchronize with your server.</p>
-    <p>SproutCore will change the way you think about building applications and surprise you with how little code you have to write.</p>
-  </div>
-	<ul>
-		<li class="hosting">
-        <h2>Hosting</h2>
-        <p>SproutCore apps build to a directory of static assets that can be deployed to any server. Hosting providers specifically targeting HTML5 apps will likely be best suited for SproutCore apps.</p>
-      </li>
-	</ul>
+  <h1>SproutCore: A Native Experience on the Web.</h1>
+  <p>SproutCore is the original JavaScript MVC library, kicking off the JS-MVC movement in 2007. Developed by Apple and maintained by a robust and growing community, it continues to power the web application revolution. More than a plugin, it builds on top of JavaScript to provide an application-style runtime and MVC object model inspired by the best ideas from Cocoa.</p>
+  <p>With dozens of core and third-party frameworks delivering native-caliber features, SproutCore remains the best choice for a full-stack, native-caliber experience on the web.</p>
+
+  <h2>A Full Stack. For Free.</h2>
+  <p>SproutCore delivers sophisticated features for sophisticated applications, including:</p>
+  <ul>
+    <li>Cocoa-inspired KVO: first-class support for two-way, transformable data bindings, dependent properties, and observer methods.</li>
+    <li>A fully queryable in-memory database that can connect to your existing back end.</li>
+    <li>A rich, responsive, highly-optimized view layer, built on top of the fastest parts of the web stack, brings you years of hard-to-implement best practice optimizations for free.</li>
+    <li>Huge, smooth-scrolling lists: <a href="http://showcase.sproutcore.com/#demos/Displaying%20Big%20Data">50,000 items</a> with the same DOM overhead as 50 items.</li>
+    <li>An explicit state machine for amazingly well-organized, maintainable application code and business logic.</li>
+    <li>Built-in, regulatory-compliant accessibility with WAI-ARIA.</li>
+    <li>Easy offline support via AppCache or Cordova.</li>
+  </ul>
+  <p>These features, and many more, combine to provide your application with a rock-solid foundation for building incredibly sophisticated apps. Statecharts organize your app’s code, setting you up for worry-free future changes. Big lists display big data, loaded lazily or queried dynamically through your data store. And the view layer provides all the tools you need to build responsive, intuitive, native-style interfaces.</p>
+  <p><strong>Your team gets all this for free.</strong> You benefit from event delegation, progressive rendering and efficient, searchable data storage, without having to invest in implementing them. And with its permissive MIT license, SproutCore is free as in speech too.</p>
+
+  <h2>No Compromises: When To Choose SproutCore. (And When To Not.)</h2>
+  <p>SproutCore is not for drop-in widgets, and it’s not for fancy web pages. SproutCore <em>is</em> for building feature-packed, high-performance applications... that happen to run in the browser.</p>
+  <p>The web was not originally built for applications: Its technology stack was designed for – and remains steeped in – a linked-static-document use case. Think blogs, newspapers, and marketing or informational sites like this one. Most JS-MVC frameworks represent varying degrees of compromise between the needs of an application, and the web’s history of document-focused best practices and talent base.</p>
+  <p><strong>SproutCore doesn’t compromise.</strong> It ditches the document-focused cruft, replacing it with decades of well-established best practices from the application development space instead. SproutCore reimagines web development from the perspective of the application.</p>
+  <p>For many projects, compromise is exactly what you’re looking for. If your web development team wants to add a little data-heavy widget to an existing page, AngularJS is a great option. For a fancier, more dynamic app-like web page, you might want something like Ember.</p>
+  <p>But if you want to deliver a cross-platform, desktop-level productivity experience like Apple’s iCloud.com, or a data-heavy marketing service like Oracle’s Eloqua, or rich, interactive dashboards and internal business applications like dozens of other companies; if your project is a no-compromise, feature-packed <em>application,</em> then you want to build with SproutCore.</p>
+  <p>It gives you the tools you need to build rock-solid, long-lived, single-page applications with features like fast, dynamic queries and infinitely-scrolling lists that your users expect from an app. SproutCore isn’t for blogs, and it isn't for fancying up your company's brand site. It's for applications... which happen to run in the browser.</p>
+
+  <h2>Organized for Developers. Optimized for Deployment.</h2>
+  <p>With any large codebase, the best practices for organizing readable, maintainable code are very different than the best practices for optimized serving. SproutCore optimizes fully for both cases, bridging the gap with the included set of build tools. You can organize your source code any way you like, for example with your model classes and your view classes living in small, readable files in separate folders. There’s even built-in support for shareable frameworks and lazy-loading modules.</p>
+  <p>When it’s time to deploy your application, combining, minifying, auto-spriting and optimizing it is as easy as <code>sc-build myapp</code>. Like a native executable, SproutCore builds your application’s code into a small number of static files, suitable for hosting anywhere, and compatible with back end data APIs built on any server-side technology. It wraps them in a build-numbered, highly cacheable folder for incredible load speed.</p>
+
+  <h2>Great Power. Great Community.</h2>
+  <p>No framework is complete without a vibrant community of passionate developers eager to help. The <a href="https://groups.google.com/group/sproutcore">mailing list</a> is an active question-and-answer center, and core team members are active on <a href="http://sproutcore.com/community/#tab=irc">the IRC channel</a> nearly 24/7. And our strong developer base can provide any consulting, mentoring, or development services that your team needs.</p>
+
+  <h2>The Bottom Line.</h2>
+  <p>If you're looking to build the next generation of native-caliber applications for the web, SproutCore is not only the best, it's alone in its class. <a href="http://sproutcore.com/install/">Download SproutCore</a> today and start developing the best web applications on the planet.</p>
 </section>
 <section id="contact-us-tab">
   <div>
@@ -38,7 +55,7 @@ subnav:
     <div><a href="http://sproutcore.com/community/#tab=irc">The IRC Channel</a></div>
     <br />
     <h2>For Consulting Inquiries:</h2>
-		<div><a href="http://www.appnovation.com/">Appnovation</a></div>
+    <div><a href="http://www.appnovation.com/">Appnovation</a></div>
   </div>
 </section>
 <section id="whos-using-sproutcore">
