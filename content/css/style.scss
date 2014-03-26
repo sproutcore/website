@@ -80,7 +80,7 @@ html.mobile #wrap {
 }
 
 .green #wrap {
-  background-color: #72cb47;
+  background-color: #7db46f;
 }
 
 .pink #wrap {
@@ -1352,6 +1352,19 @@ html.js #carousel > button {
   font-weight: bold;
 }
 
+.blue #carousel .panel h2 {
+  color: #3998e7;
+}
+.green #carousel .panel h2 {
+  color: #42a114;
+}
+.purple #carousel .panel h2 {
+  color: #382d43;
+}
+.purple #carousel .panel p {
+  color: #4f2e64;
+}
+
 #carousel .panel p, #carousel .panel ul {
   font-size: 15px;
   line-height: 26px;
@@ -1362,7 +1375,6 @@ html.js #carousel > button {
 }
 
 #carousel .panel.tutorials h2 {
-  color: #42a114;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -1407,62 +1419,10 @@ html.js #carousel > button {
   padding: 0 0 10px 90px;
 }
 
-#carousel .panel.guides h2 {
-  color: #3998e7;
-}
-
 #carousel .panel.guides .button {
   bottom: 50px;
   position: absolute;
   right: 60px;
-}
-
-#carousel .panel.wwdc {
-  height: 415px;
-  padding-top: 45px;
-  background: url(../img/carousel/wwdc/bg.png) no-repeat;
-  text-align: center;
-}
-
-#carousel .panel.wwdc h2 {
-  width: 715px;
-  height: 46px;
-  margin: 0 auto;
-  text-indent: -999em;
-  background: url(../img/carousel/wwdc/title.png);
-}
-
-#carousel .panel.wwdc .button {
-  float: none;
-  margin-top: 278px;
-}
-
-#carousel .panel.wwdc .button span {
-  background-image: url(../img/carousel/wwdc/album.png);
-}
-
-#carousel .panel.wwdc div {
-  position: absolute;
-  bottom: 14px;
-  right: 46px;
-  text-align: right;
-}
-
-#carousel .panel.wwdc h3 {
-  padding-bottom: 5px;
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#carousel .panel.wwdc li {
-  margin: 6px 0;
-}
-
-#carousel .panel.wwdc img {
-  float: none;
-  margin-right: 0;
 }
 
 #carousel .panel.dispatches {
@@ -1473,13 +1433,11 @@ html.js #carousel > button {
 }
 
 #carousel .panel.dispatches h2 {
-  color: #382d43;
   font-family: "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
 }
 
 #carousel .panel.dispatches p {
-  color: #4f2e64;
   font: 22px/1.5 "Architects Daughter", "Helvetica Neue", Arial, sans-serif;
 }
 
