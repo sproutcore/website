@@ -49,6 +49,8 @@ var app = {
     {year: 2011, month: 7, day: 26, title: "Van Meetup", lat: 49.284182, lng: -123.091224},
     {year: 2011, month: 8, day: 17, title: "SF Meetup", lat: 37.376003, lng: -122.034185}
   ],
+  // This is the list of colors with CSS coverage, but the list is no longer used; instead we're just
+  // toggling between blue and green.
   colors: ['green', 'pink', 'blue', 'orange', 'purple'],
   currentColor: document.body.className
 };
@@ -85,11 +87,11 @@ app.changeColor = function(color) {
 
 app.carousel = (function() {
   var $carousel = $('#carousel'),
-  $panels = $carousel.find('.panel'),
-  $buttons = $carousel.find('button'),
-  $tray = $carousel.find('.tray'),
-  $trayLinks = $tray.find('a'),
-  currentPanel = 0;
+      $panels = $carousel.find('.panel'),
+      $buttons = $carousel.find('button'),
+      $tray = $carousel.find('.tray'),
+      $trayLinks = $tray.find('a'),
+      currentPanel = $.cookie('scPanel') || 0;
 
   var gotoPanel = function(id, force) {
     var $currentPanel, $oldPanels, $otherPanels;
@@ -102,6 +104,8 @@ app.carousel = (function() {
     // cap
     currentPanel = id > $panels.length - 1 ? 0 : id < 0 ? $panels.length - 1 : id;
 
+    $.cookie('scPanel', currentPanel);
+
     if (force) {
       $panels.removeClass('animate');
     } else {
@@ -112,8 +116,9 @@ app.carousel = (function() {
     $currentPanel = $panels.eq(currentPanel);
     $currentPanel.addClass('active').removeClass('old');
 
-    var color = $currentPanel.data('color');
-    if (color && app.colors.indexOf(color) > -1) {
+    var color = app.currentColor === 'green' ? 'blue' : 'green';
+
+    if (!force) {
       app.changeColor(color);
     }
 
@@ -133,14 +138,6 @@ app.carousel = (function() {
     //set the tray's panel button thingy to active
     $trayLinks.removeClass('active').filter('.panel' + currentPanel).addClass('active');
   };
-
-  var panel;
-  $panels.each(function(index) {
-    panel = $(this);
-    if (panel.data('color') === app.currentColor) {
-      currentPanel = index;
-    }
-  });
 
   gotoPanel(currentPanel, true);
 
