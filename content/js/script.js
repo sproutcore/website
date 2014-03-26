@@ -91,7 +91,7 @@ app.carousel = (function() {
       $buttons = $carousel.find('button'),
       $tray = $carousel.find('.tray'),
       $trayLinks = $tray.find('a'),
-      currentPanel = $.cookie('scPanel') || 0;
+      currentPanel = parseInt($.cookie('scPanel'), 10) || 0;
 
   var gotoPanel = function(id, force) {
     var $currentPanel, $oldPanels, $otherPanels;
