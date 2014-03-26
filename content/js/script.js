@@ -117,7 +117,10 @@ app.carousel = (function() {
     $currentPanel.addClass('active').removeClass('old');
 
     var color = app.currentColor === 'green' ? 'blue' : 'green';
-    app.changeColor(color);
+
+    if (!force) {
+      app.changeColor(color);
+    }
 
     // if we're at 0, there is no prior elements to animate
     if (currentPanel > 0) {
